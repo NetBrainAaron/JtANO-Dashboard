@@ -541,10 +541,10 @@ body {
     </div>
 
     <div class="card">
-      <div class="card-head">Email Performance <span>Prospect vs Customer</span></div>
+      <div class="card-head">Email Performance <span id="email-card-subtitle">Loading...</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
-          <canvas id="emailChart" role="img" aria-label="Bar chart comparing open rate and CTOR for prospect and customer emails.">Email performance chart.</canvas>
+          <canvas id="emailChart" role="img" aria-label="Bar chart comparing open rate and CTOR across campaign emails.">Email performance chart.</canvas>
         </div>
       </div>
     </div>
@@ -571,6 +571,31 @@ body {
       </div>
     </div>
 
+  </div>
+
+  <!-- EMAIL BREAKDOWN TABLE -->
+  <div class="section-label">Email send breakdown</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-head">All JtANO sends <span id="email-table-updated">—</span></div>
+    <div class="card-body" style="padding:0;">
+      <table class="nb-table" id="email-breakdown-table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th style="text-align:right;">Sent</th>
+            <th style="text-align:right;">Delivered</th>
+            <th style="text-align:right;">Open Rate</th>
+            <th style="text-align:right;">CTOR</th>
+            <th style="text-align:right;">Click Rate</th>
+            <th style="text-align:right;">Bounce Rate</th>
+            <th style="text-align:center;">Status</th>
+          </tr>
+        </thead>
+        <tbody id="email-breakdown-body">
+          <tr><td colspan="8" style="text-align:center;color:var(--nb-muted);padding:20px;">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- CHANNELS TABLE -->
@@ -853,34 +878,6 @@ body {
 
   <div class="section-label">In-person events &mdash; Las Vegas</div>
 
-  <!-- Pipedream integration callout -->
-  <div class="pipedream-callout">
-    <div class="pipedream-callout-head">&#9881; Pipedream Integration &mdash; HubSpot List Size Step</div>
-    <div style="color:var(--nb-muted);margin-bottom:10px;">Add a new step to the existing Pipedream workflow to fetch list sizes for all four event lists. Write results under the <code style="background:rgba(32,11,78,0.08);padding:1px 5px;border-radius:3px;">events</code> key in the <code style="background:rgba(32,11,78,0.08);padding:1px 5px;border-radius:3px;">jtano-campaign-kpis</code> Data Store.</div>
-    <div class="list-id-row">
-      <div class="list-id-chip">
-        <div class="lid-label">Agentic NetOps</div>
-        <div class="lid-val">3389</div>
-        <div class="lid-type">Registered</div>
-      </div>
-      <div class="list-id-chip">
-        <div class="lid-label">Agentic NetOps</div>
-        <div class="lid-val">3388</div>
-        <div class="lid-type">Attended</div>
-      </div>
-      <div class="list-id-chip">
-        <div class="lid-label">Zero Outage Lounge</div>
-        <div class="lid-val">3481</div>
-        <div class="lid-type">Registered</div>
-      </div>
-      <div class="list-id-chip">
-        <div class="lid-label">Zero Outage Lounge</div>
-        <div class="lid-val">3482</div>
-        <div class="lid-type">Attended</div>
-      </div>
-    </div>
-  </div>
-
   <!-- Event cards -->
   <div class="events-grid">
 
@@ -1034,30 +1031,6 @@ body {
     </div>
   </div>
 
-  <!-- Data schema reference -->
-  <div class="section-label">Data Store schema &mdash; events key</div>
-  <div class="card" style="margin-bottom:20px;">
-    <div class="card-head">Canonical JSON written by Pipedream on each run</div>
-    <div class="card-body">
-      <pre style="font-size:12px;line-height:1.7;color:var(--nb-dark-text);overflow-x:auto;">"events": {
-  "agentic_netops": {
-    "registered":      <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// HubSpot List 3389 size</span>
-    "attended":        <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// HubSpot List 3388 size</span>
-    "walkins":         <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// max(attended - registered, 0)</span>
-    "attendance_rate": <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// attended / registered (decimal)</span>
-    "last_updated":    <span style="color:var(--nb-tangerine);">"ISO timestamp"</span>
-  },
-  "zero_outage_lounge": {
-    "registered":      <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// HubSpot List 3481 size</span>
-    "attended":        <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// HubSpot List 3482 size</span>
-    "walkins":         <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// max(attended - registered, 0)</span>
-    "attendance_rate": <span style="color:var(--nb-blue);">0</span>,          <span style="color:var(--nb-muted);">// attended / registered (decimal)</span>
-    "last_updated":    <span style="color:var(--nb-tangerine);">"ISO timestamp"</span>
-  }
-}</pre>
-    </div>
-  </div>
-
 </div><!-- /main events -->
 </div><!-- /tab-events -->
 
@@ -1075,11 +1048,11 @@ const DATA_URL = 'https://raw.githubusercontent.com/NetBrainAaron/JtANO-Dashboar
 // ── LIVE DATA LOADER ──────────────────────────────────────────────────────────
 async function loadKPIs() {
   try {
-    const res  = await fetch(DATA_URL + '?t=' + Date.now());
-    const d    = await res.json();
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const d   = await res.json();
 
-    // Last updated
-    const ts = new Date(d.updatedAt);
+    // Last updated timestamp in topbar
+    const ts    = new Date(d.updatedAt);
     const tsStr = ts.toLocaleDateString('en-US', { month:'short', day:'numeric' })
                 + ' ' + ts.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
     const topbarRight = document.querySelector('.topbar-right');
@@ -1087,44 +1060,86 @@ async function loadKPIs() {
       topbarRight.innerHTML = `<span class="live-dot"></span> Updated ${tsStr} &nbsp;|&nbsp; jtano_q2fy26_integrated`;
     }
 
-    // ── KPI summary cards ──
+    // ── MQL card ──
     const mqlEl = document.getElementById('kpi-mqls');
     if (mqlEl) mqlEl.textContent = d.mqls?.formFills > 0 ? d.mqls.formFills : '—';
 
-    // ── Email chart (live) ──
-    const ep = d.email_prospect;
-    const ec = d.email_customer;
-    const epa = d.email_partners;
-    if (ep && ec && emailChartInstance) {
-      emailChartInstance.data.labels = ['Open Rate', 'CTOR'];
-      emailChartInstance.data.datasets[0].data = [
-        +(ep.openRate * 100).toFixed(1),
-        +(ep.ctor     * 100).toFixed(1)
-      ];
-      emailChartInstance.data.datasets[1].data = [
-        +(ec.openRate * 100).toFixed(1),
-        +(ec.ctor     * 100).toFixed(1)
-      ];
-      emailChartInstance.data.datasets[2].data = [
-        +(ep.benchmark_open * 100).toFixed(1),
-        +(ep.benchmark_ctor * 100).toFixed(1)
-      ];
-      emailChartInstance.update();
+    // ── Email chart + table (dynamic emails array) ──
+    const emails = d.emails || [];
+
+    if (emails.length > 0) {
+      // Update card subtitle
+      const subtitle = document.getElementById('email-card-subtitle');
+      if (subtitle) subtitle.textContent = emails.map(e => e.name).join(' · ');
+
+      // Update chart
+      if (emailChartInstance) {
+        emailChartInstance.data.labels = ['Open Rate', 'CTOR'];
+        // Rebuild datasets dynamically
+        const colors = [P, L, '#007DE7', '#2EAE5A'];
+        emailChartInstance.data.datasets = emails.map((e, i) => ({
+          label: e.name,
+          data: [
+            +(e.openRate * 100).toFixed(1),
+            +(e.ctor     * 100).toFixed(1),
+          ],
+          backgroundColor: colors[i % colors.length],
+          borderRadius: 4,
+          borderSkipped: false,
+        }));
+        // Add benchmark bar
+        const benchmarkOpen = 22.5;
+        const benchmarkCtor = 12.5;
+        emailChartInstance.data.datasets.push({
+          label: 'Benchmark',
+          data: [benchmarkOpen, benchmarkCtor],
+          backgroundColor: 'rgba(255,115,71,0.25)',
+          borderColor: T,
+          borderWidth: 1,
+          borderRadius: 4,
+          borderSkipped: false,
+        });
+        emailChartInstance.update();
+      }
+
+      // Render email breakdown table
+      const tbody = document.getElementById('email-breakdown-body');
+      const tableUpdated = document.getElementById('email-table-updated');
+      if (tableUpdated) tableUpdated.textContent = tsStr;
+      if (tbody) {
+        tbody.innerHTML = emails.map(e => {
+          const openPct   = (e.openRate  * 100).toFixed(1) + '%';
+          const ctorPct   = (e.ctor      * 100).toFixed(1) + '%';
+          const clickPct  = (e.clickRate * 100).toFixed(1) + '%';
+          const bouncePct = (e.bounceRate* 100).toFixed(1) + '%';
+          const openVsBench = e.openRate >= 0.20
+            ? '<span class="badge b-grn">On target</span>'
+            : e.openRate > 0
+              ? '<span class="badge b-red">Below target</span>'
+              : '<span class="badge b-info">Pending</span>';
+          const stateLabel = e.state === 'PROCESSING'
+            ? '<span class="badge b-amb">Sending</span>'
+            : e.state === 'PUBLISHED'
+              ? '<span class="badge b-grn">Sent</span>'
+              : `<span class="badge b-info">${e.state}</span>`;
+          return `<tr>
+            <td>
+              <div style="font-weight:600;color:var(--nb-purple);">${e.name}</div>
+              <div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${e.subject || ''}</div>
+            </td>
+            <td style="text-align:right;">${e.sent.toLocaleString()}</td>
+            <td style="text-align:right;">${e.delivered.toLocaleString()}</td>
+            <td style="text-align:right;font-weight:600;">${openPct} ${openVsBench}</td>
+            <td style="text-align:right;">${ctorPct}</td>
+            <td style="text-align:right;">${clickPct}</td>
+            <td style="text-align:right;">${bouncePct}</td>
+            <td style="text-align:center;">${stateLabel}</td>
+          </tr>`;
+        }).join('');
+      }
     }
 
-    // ── Email channel table badges ──
-    function emailBadge(rate, benchmark) {
-      if (rate === 0) return '<span class="badge b-info">Pending</span>';
-      return rate >= benchmark
-        ? '<span class="badge b-grn">On target</span>'
-        : '<span class="badge b-red">Below target</span>';
-    }
-    const emailStatusCells = document.querySelectorAll('.email-status-cell');
-    if (emailStatusCells.length && ep) {
-      emailStatusCells[0].innerHTML = emailBadge(ep.openRate, ep.benchmark_open);
-    }
-
-    // ── Events tab (wired via existing renderEventCard) ──
+    // ── Events tab ──
     if (d.events) {
       renderEventCard('an',  d.events.agentic_netops);
       renderEventCard('zol', d.events.zero_outage_lounge);
