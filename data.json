@@ -1,0 +1,67 @@
+{
+  "updatedAt": "2026-05-29T18:14:59.651Z",
+  "runDate": "2026-05-29",
+  "runHour": "18",
+  "campaignUtm": "jtano_q2fy26_integrated",
+  "mqls": {
+    "mqlCount": 0,
+    "formFills": 0,
+    "totalInCRM": 0
+  },
+  "email_prospect": {
+    "sent": 1726,
+    "delivered": 1717,
+    "openRate": 0.0973,
+    "ctor": 0.0958,
+    "clickRate": 0.0093,
+    "bounceRate": 0.0046,
+    "benchmark_open": 0.225,
+    "benchmark_ctor": 0.125
+  },
+  "email_customer": {
+    "sent": 14961,
+    "delivered": 14876,
+    "openRate": 0.0484,
+    "ctor": 0.0819,
+    "clickRate": 0.004,
+    "bounceRate": 0.0017,
+    "benchmark_open": 0.35,
+    "benchmark_ctor": 0.125
+  },
+  "email_partners": {
+    "sent": 10645,
+    "delivered": 10347,
+    "openRate": 0.0538,
+    "ctor": 0.1005,
+    "clickRate": 0.0054,
+    "bounceRate": 0.0209,
+    "benchmark_open": 0.28,
+    "benchmark_ctor": 0.125
+  },
+  "events": {
+    "agentic_netops": {
+      "registered": 164,
+      "attended": 1,
+      "walkins": 0,
+      "attendance_rate": 0.0061,
+      "last_updated": "2026-05-29T18:03:45.062Z"
+    },
+    "zero_outage_lounge": {
+      "registered": 59,
+      "attended": 0,
+      "walkins": 0,
+      "attendance_rate": 0,
+      "last_updated": "2026-05-29T18:03:45.062Z"
+    }
+  },
+  "lounge_visits": {
+    "total_checkins": 1,
+    "unique_visitors": 1,
+    "by_date": {
+      "2026-05-29": 1
+    },
+    "unique_by_date": {
+      "2026-05-29": 1
+    }
+  }
+}
