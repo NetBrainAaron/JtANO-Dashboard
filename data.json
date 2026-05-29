@@ -1,43 +1,54 @@
 {
-  "updatedAt": "2026-05-29T18:14:59.651Z",
+  "updatedAt": "2026-05-29T19:25:35.546Z",
   "runDate": "2026-05-29",
-  "runHour": "18",
+  "runHour": "19",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
     "formFills": 0,
     "totalInCRM": 0
   },
-  "email_prospect": {
-    "sent": 1726,
-    "delivered": 1717,
-    "openRate": 0.0973,
-    "ctor": 0.0958,
-    "clickRate": 0.0093,
-    "bounceRate": 0.0046,
-    "benchmark_open": 0.225,
-    "benchmark_ctor": 0.125
-  },
-  "email_customer": {
-    "sent": 14961,
-    "delivered": 14876,
-    "openRate": 0.0484,
-    "ctor": 0.0819,
-    "clickRate": 0.004,
-    "bounceRate": 0.0017,
-    "benchmark_open": 0.35,
-    "benchmark_ctor": 0.125
-  },
-  "email_partners": {
-    "sent": 10645,
-    "delivered": 10347,
-    "openRate": 0.0538,
-    "ctor": 0.1005,
-    "clickRate": 0.0054,
-    "bounceRate": 0.0209,
-    "benchmark_open": 0.28,
-    "benchmark_ctor": 0.125
-  },
+  "emails": [
+    {
+      "id": "213725140794",
+      "name": "EM1 - JtANO Partner Announcement v2",
+      "subject": "The journey to Agentic NetOps starts here.",
+      "publishDate": "2026-05-29T13:03:47Z",
+      "state": "PUBLISHED",
+      "sent": 10623,
+      "delivered": 10347,
+      "openRate": 0.0551,
+      "ctor": 0.1,
+      "clickRate": 0.0055,
+      "bounceRate": 0.0209
+    },
+    {
+      "id": "213794745256",
+      "name": "Customer Email (12.3a + NBL)",
+      "subject": "NetBrain 12.3a: The Journey to Agentic NetOps starts here",
+      "publishDate": "2026-05-29T14:00:43Z",
+      "state": "PROCESSING",
+      "sent": 14961,
+      "delivered": 14876,
+      "openRate": 0.0501,
+      "ctor": 0.0805,
+      "clickRate": 0.004,
+      "bounceRate": 0.0017
+    },
+    {
+      "id": "213734672128",
+      "name": "(B) May 2026 Newsletter",
+      "subject": "See Agentic NetOps in Production",
+      "publishDate": "2026-05-29T16:00:57Z",
+      "state": "PROCESSING",
+      "sent": 1726,
+      "delivered": 1717,
+      "openRate": 0.0996,
+      "ctor": 0.0936,
+      "clickRate": 0.0093,
+      "bounceRate": 0.0046
+    }
+  ],
   "events": {
     "agentic_netops": {
       "registered": 164,
