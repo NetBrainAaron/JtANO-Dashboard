@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-05-30T17:44:48.915Z",
+  "updatedAt": "2026-05-30T21:44:48.655Z",
   "runDate": "2026-05-30",
-  "runHour": "17",
+  "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -15,10 +15,10 @@
       "subject": "The journey to Agentic NetOps starts here.",
       "publishDate": "2026-05-29T13:03:47Z",
       "state": "PUBLISHED",
-      "sent": 10583,
+      "sent": 10581,
       "delivered": 10347,
-      "openRate": 0.0581,
-      "ctor": 0.1015,
+      "openRate": 0.0582,
+      "ctor": 0.1013,
       "clickRate": 0.0059,
       "bounceRate": 0.021
     },
@@ -30,9 +30,9 @@
       "state": "PUBLISHED",
       "sent": 14965,
       "delivered": 14891,
-      "openRate": 0.0535,
-      "ctor": 0.0878,
-      "clickRate": 0.0047,
+      "openRate": 0.0536,
+      "ctor": 0.089,
+      "clickRate": 0.0048,
       "bounceRate": 0.0019
     },
     {
@@ -43,8 +43,8 @@
       "state": "PUBLISHED_AB_VARIANT",
       "sent": 1726,
       "delivered": 1718,
-      "openRate": 0.1088,
-      "ctor": 0.0909,
+      "openRate": 0.11,
+      "ctor": 0.0899,
       "clickRate": 0.0099,
       "bounceRate": 0.0046
     }
@@ -55,14 +55,14 @@
       "attended": 1,
       "walkins": 0,
       "attendance_rate": 0.006,
-      "last_updated": "2026-05-30T17:44:48.461Z"
+      "last_updated": "2026-05-30T21:44:48.279Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 0,
       "walkins": 0,
       "attendance_rate": 0,
-      "last_updated": "2026-05-30T17:44:48.461Z"
+      "last_updated": "2026-05-30T21:44:48.279Z"
     }
   },
   "lounge_visits": {
