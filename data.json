@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-05-29T19:25:35.546Z",
-  "runDate": "2026-05-29",
-  "runHour": "19",
+  "updatedAt": "2026-05-30T01:44:48.326Z",
+  "runDate": "2026-05-30",
+  "runHour": "01",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -15,24 +15,24 @@
       "subject": "The journey to Agentic NetOps starts here.",
       "publishDate": "2026-05-29T13:03:47Z",
       "state": "PUBLISHED",
-      "sent": 10623,
+      "sent": 10583,
       "delivered": 10347,
-      "openRate": 0.0551,
-      "ctor": 0.1,
-      "clickRate": 0.0055,
-      "bounceRate": 0.0209
+      "openRate": 0.0564,
+      "ctor": 0.0993,
+      "clickRate": 0.0056,
+      "bounceRate": 0.021
     },
     {
       "id": "213794745256",
       "name": "Customer Email (12.3a + NBL)",
       "subject": "NetBrain 12.3a: The Journey to Agentic NetOps starts here",
       "publishDate": "2026-05-29T14:00:43Z",
-      "state": "PROCESSING",
-      "sent": 14961,
-      "delivered": 14876,
-      "openRate": 0.0501,
-      "ctor": 0.0805,
-      "clickRate": 0.004,
+      "state": "PUBLISHED",
+      "sent": 14965,
+      "delivered": 14893,
+      "openRate": 0.0521,
+      "ctor": 0.0799,
+      "clickRate": 0.0042,
       "bounceRate": 0.0017
     },
     {
@@ -40,29 +40,29 @@
       "name": "(B) May 2026 Newsletter",
       "subject": "See Agentic NetOps in Production",
       "publishDate": "2026-05-29T16:00:57Z",
-      "state": "PROCESSING",
+      "state": "PUBLISHED_AB_VARIANT",
       "sent": 1726,
-      "delivered": 1717,
-      "openRate": 0.0996,
-      "ctor": 0.0936,
-      "clickRate": 0.0093,
+      "delivered": 1718,
+      "openRate": 0.1065,
+      "ctor": 0.0929,
+      "clickRate": 0.0099,
       "bounceRate": 0.0046
     }
   ],
   "events": {
     "agentic_netops": {
-      "registered": 164,
+      "registered": 166,
       "attended": 1,
       "walkins": 0,
-      "attendance_rate": 0.0061,
-      "last_updated": "2026-05-29T18:03:45.062Z"
+      "attendance_rate": 0.006,
+      "last_updated": "2026-05-30T01:44:47.912Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 0,
       "walkins": 0,
       "attendance_rate": 0,
-      "last_updated": "2026-05-29T18:03:45.062Z"
+      "last_updated": "2026-05-30T01:44:47.912Z"
     }
   },
   "lounge_visits": {
