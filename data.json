@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-05-31T05:44:48.690Z",
+  "updatedAt": "2026-05-31T09:44:47.033Z",
   "runDate": "2026-05-31",
-  "runHour": "05",
+  "runHour": "09",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -17,8 +17,8 @@
       "state": "PUBLISHED",
       "sent": 10578,
       "delivered": 10347,
-      "openRate": 0.0584,
-      "ctor": 0.101,
+      "openRate": 0.0586,
+      "ctor": 0.1007,
       "clickRate": 0.0059,
       "bounceRate": 0.021
     },
@@ -30,9 +30,9 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0536,
-      "ctor": 0.0901,
-      "clickRate": 0.0048,
+      "openRate": 0.0537,
+      "ctor": 0.0912,
+      "clickRate": 0.0049,
       "bounceRate": 0.0019
     },
     {
@@ -55,14 +55,14 @@
       "attended": 1,
       "walkins": 0,
       "attendance_rate": 0.006,
-      "last_updated": "2026-05-31T05:44:48.327Z"
+      "last_updated": "2026-05-31T09:44:46.543Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 0,
       "walkins": 0,
       "attendance_rate": 0,
-      "last_updated": "2026-05-31T05:44:48.327Z"
+      "last_updated": "2026-05-31T09:44:46.543Z"
     }
   },
   "lounge_visits": {
