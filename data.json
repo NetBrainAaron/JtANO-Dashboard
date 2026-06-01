@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-01T09:44:47.880Z",
+  "updatedAt": "2026-06-01T13:44:45.048Z",
   "runDate": "2026-06-01",
-  "runHour": "09",
+  "runHour": "13",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -17,9 +17,9 @@
       "state": "PUBLISHED",
       "sent": 10578,
       "delivered": 10347,
-      "openRate": 0.0623,
-      "ctor": 0.0992,
-      "clickRate": 0.0062,
+      "openRate": 0.0625,
+      "ctor": 0.102,
+      "clickRate": 0.0064,
       "bounceRate": 0.021
     },
     {
@@ -30,9 +30,9 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0563,
-      "ctor": 0.0965,
-      "clickRate": 0.0054,
+      "openRate": 0.0577,
+      "ctor": 0.0953,
+      "clickRate": 0.0055,
       "bounceRate": 0.0019
     },
     {
@@ -43,26 +43,26 @@
       "state": "PUBLISHED_AB_VARIANT",
       "sent": 1726,
       "delivered": 1718,
-      "openRate": 0.1158,
-      "ctor": 0.0905,
+      "openRate": 0.1193,
+      "ctor": 0.0878,
       "clickRate": 0.0105,
       "bounceRate": 0.0046
     }
   ],
   "events": {
     "agentic_netops": {
-      "registered": 169,
+      "registered": 170,
       "attended": 1,
       "walkins": 0,
       "attendance_rate": 0.0059,
-      "last_updated": "2026-06-01T09:44:47.421Z"
+      "last_updated": "2026-06-01T13:44:44.554Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 0,
       "walkins": 0,
       "attendance_rate": 0,
-      "last_updated": "2026-06-01T09:44:47.421Z"
+      "last_updated": "2026-06-01T13:44:44.554Z"
     }
   },
   "lounge_visits": {
