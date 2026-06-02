@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T21:11:25.069Z",
+  "updatedAt": "2026-06-02T21:17:00.109Z",
   "runDate": "2026-06-02",
   "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
@@ -68,14 +68,14 @@
       "attended": 4,
       "walkins": 4,
       "attendance_rate": 0,
-      "last_updated": "2026-06-02T21:11:23.988Z"
+      "last_updated": "2026-06-02T21:16:59.237Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 31,
       "walkins": 0,
       "attendance_rate": 0.5254,
-      "last_updated": "2026-06-02T21:11:23.988Z"
+      "last_updated": "2026-06-02T21:16:59.237Z"
     }
   },
   "lounge_visits": {
