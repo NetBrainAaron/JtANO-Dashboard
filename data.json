@@ -159,5 +159,34 @@
       "ciscoLive": 29,
       "requestDemo": 63
     }
+  },
+  "social": {
+    "fetchedAt": "2026-06-02T22:25:36.872Z",
+    "campaignWindow": {
+      "start": "2026-05-29T00:00:00",
+      "end": "2026-06-02T22:25:34"
+    },
+    "combined": {
+      "total": 200,
+      "byDate": {
+        "2026-05-29": 200
+      }
+    },
+    "searches": {
+      "ciscoLiveSphere": {
+        "name": "CiscoLive Sphere",
+        "total": 100,
+        "byDate": {
+          "2026-05-29": 100
+        }
+      },
+      "jtano": {
+        "name": "Agentic Network Operations",
+        "total": 100,
+        "byDate": {
+          "2026-05-29": 100
+        }
+      }
+    }
   }
 }
