@@ -1109,16 +1109,16 @@ async function loadKPIs() {
     const mqlEl = document.getElementById('kpi-mqls');
     if (mqlEl) mqlEl.textContent = d.mqls?.mqlCount > 0 ? d.mqls.mqlCount : '—';
 
-    // ── CVR card (from landingPage block) ──
+    // ── CVR card (calculated from GA4 pages + MQL form fills) ──
     const cvrEl = document.getElementById('kpi-cvr');
     if (cvrEl) {
-      const cvr = d.landingPage?.cvr?.overallCvr;
-      cvrEl.textContent = cvr != null ? cvr.toFixed(1) + '%' : '—';
-      if (cvr != null) {
-        const card = cvrEl.closest('.kpi-card');
-        if (card) {
-          card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
-        }
+      const lpViews   = d.pages?.totals?.agenticNetOps || 0;
+      const formFills = d.mqls?.formFills || 0;
+      const cvr       = lpViews > 0 ? (formFills / lpViews) * 100 : null;
+      cvrEl.textContent = cvr != null ? cvr.toFixed(2) + '%' : '—';
+      const card = cvrEl.closest('.kpi-card');
+      if (card && cvr != null) {
+        card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
       }
     }
 
