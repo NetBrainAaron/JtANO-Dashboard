@@ -542,13 +542,22 @@ body {
 
   <!-- CHARTS ROW -->
   <div class="section-label" style="margin-top:24px;">Performance trends (illustrative baselines)</div>
-  <div style="margin-bottom:16px;">
+  <div class="row-2" style="margin-bottom:16px;">
 
     <div class="card">
       <div class="card-head">Website Page Views <span id="pages-card-subtitle">GA4 · May 29 – Jun 3</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
-          <canvas id="cvrChart" role="img" aria-label="Line chart of landing page CVR and daily visits over the campaign window.">Campaign CVR trend chart.</canvas>
+          <canvas id="cvrChart" role="img" aria-label="Line chart of page views by page over the campaign window.">Page views chart.</canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">MQL Form Fills <span id="fills-card-subtitle">GA4 · May 29 – Jun 3</span></div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:200px;">
+          <canvas id="fillsChart" role="img" aria-label="Bar chart of daily MQL form fills over the campaign window.">Form fills chart.</canvas>
         </div>
       </div>
     </div>
@@ -1150,6 +1159,27 @@ async function loadKPIs() {
       }
     }
 
+    // ── Form fills chart (daily MQL byDate) ──
+    const mqlByDate = d.mqls?.byDate || {};
+    const fillDates = Object.keys(mqlByDate).sort();
+    if (fillDates.length > 0 && fillsChartInstance) {
+      const formatDate = str => {
+        const s = String(str).replace(/-/g, '');
+        if (s.length === 8) {
+          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+        }
+        return str;
+      };
+      fillsChartInstance.data.labels = fillDates.map(formatDate);
+      fillsChartInstance.data.datasets[0].data = fillDates.map(d => mqlByDate[d] || 0);
+      fillsChartInstance.update();
+
+      const fillsSubtitle = document.getElementById('fills-card-subtitle');
+      const totalFills = fillDates.reduce((s, d) => s + (mqlByDate[d] || 0), 0);
+      if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total fills · GA4`;
+    }
+
     // ── Email table (dynamic emails array) ──
     const emails = d.emails || [];
 
@@ -1340,6 +1370,37 @@ cvrLeg.innerHTML = PAGE_CONFIGS.map(p =>
   </span>`
 ).join('');
 cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
+
+// ── FORM FILLS (MQL daily bar chart) ──
+const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
+  type: 'bar',
+  data: {
+    labels: [],
+    datasets: [
+      {
+        label: 'Form Fills',
+        data: [],
+        backgroundColor: T,
+        borderRadius: 4,
+        borderSkipped: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: {
+        ticks: { font:{ size:10 }, stepSize: 1, callback: v => Math.round(v) },
+        grid:  { color:'rgba(0,0,0,0.06)' },
+        title: { display:true, text:'Form Fills', font:{ size:10 }, color:'#6B6880' },
+        beginAtZero: true
+      },
+      x: { ticks:{ font:{ size:10 } }, grid:{ display:false } }
+    }
+  }
+});
 
 // ── SPHERE PROXY ──
 new Chart(document.getElementById('sphereChart'), {
