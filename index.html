@@ -475,7 +475,21 @@ body {
   </div>
   <div class="topbar-right">
     <span class="live-dot"></span>
-    Live window: May 29 – Jun 3, 2026 &nbsp;|&nbsp; jtano_q2fy26_integrated
+    <span id="last-updated-label">Loading...</span>
+    &nbsp;|&nbsp;
+    <span id="next-refresh-label">Next refresh in —</span>
+    &nbsp;|&nbsp;
+    <button id="force-refresh-btn" onclick="forceRefresh()" style="
+      background: rgba(227,232,135,0.15);
+      border: 1px solid rgba(227,232,135,0.4);
+      color: var(--nb-citron);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.15s;
+    ">&#8635; Refresh now</button>
   </div>
 </div>
 
@@ -1045,24 +1059,93 @@ const P = '#200B4E', T = '#FF7347', L = '#876BCF', B = '#007DE7', LB = '#78BDE3'
 
 const DATA_URL = 'https://raw.githubusercontent.com/NetBrainAaron/JtANO-Dashboard/main/data.json';
 
+// ── REFRESH TIMER ─────────────────────────────────────────────────────────────
+const REFRESH_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes (dashboard auto-refresh)
+let nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+
+function updateCountdown() {
+  const el = document.getElementById('next-refresh-label');
+  if (!el) return;
+  const remaining = Math.max(0, nextRefreshAt - Date.now());
+  const mins = Math.floor(remaining / 60000);
+  const secs = Math.floor((remaining % 60000) / 1000);
+  el.textContent = `Next refresh in ${mins}:${String(secs).padStart(2,'0')}`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ── FORCE REFRESH ─────────────────────────────────────────────────────────────
+const PIPEDREAM_TRIGGER_URL = 'https://eomw3p2yiqf58p5.m.pipedream.net';
+
+async function forceRefresh() {
+  const btn = document.getElementById('force-refresh-btn');
+  if (btn) {
+    btn.textContent = '⏳ Triggering...';
+    btn.disabled = true;
+  }
+  try {
+    // Fire the Pipedream workflow
+    await fetch(PIPEDREAM_TRIGGER_URL, { method: 'POST', mode: 'no-cors' });
+    // Wait 8 seconds for the workflow to run and push to GitHub
+    await new Promise(r => setTimeout(r, 8000));
+    // Then reload the dashboard data
+    await loadKPIs();
+    nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+    if (btn) { btn.textContent = '✓ Done'; btn.disabled = false; }
+    setTimeout(() => { if (btn) btn.textContent = '⟳ Refresh now'; }, 2000);
+  } catch(e) {
+    console.warn('Force refresh failed:', e);
+    if (btn) { btn.textContent = '⟳ Refresh now'; btn.disabled = false; }
+  }
+}
+
 // ── LIVE DATA LOADER ──────────────────────────────────────────────────────────
 async function loadKPIs() {
   try {
     const res = await fetch(DATA_URL + '?t=' + Date.now());
     const d   = await res.json();
 
-    // Last updated timestamp in topbar
+    // ── Last updated label ──
     const ts    = new Date(d.updatedAt);
     const tsStr = ts.toLocaleDateString('en-US', { month:'short', day:'numeric' })
                 + ' ' + ts.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
-    const topbarRight = document.querySelector('.topbar-right');
-    if (topbarRight) {
-      topbarRight.innerHTML = `<span class="live-dot"></span> Updated ${tsStr} &nbsp;|&nbsp; jtano_q2fy26_integrated`;
-    }
+    const lastUpdatedEl = document.getElementById('last-updated-label');
+    if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${tsStr}`;
 
     // ── MQL card ──
     const mqlEl = document.getElementById('kpi-mqls');
     if (mqlEl) mqlEl.textContent = d.mqls?.formFills > 0 ? d.mqls.formFills : '—';
+
+    // ── CVR card (from landingPage block) ──
+    const cvrEl = document.getElementById('kpi-cvr');
+    if (cvrEl) {
+      const cvr = d.landingPage?.cvr?.overallCvr;
+      cvrEl.textContent = cvr != null ? cvr.toFixed(1) + '%' : '—';
+      if (cvr != null) {
+        const card = cvrEl.closest('.kpi-card');
+        if (card) {
+          card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
+        }
+      }
+    }
+
+    // ── CVR chart (wired to live landingPage.daily) ──
+    const lpDaily = d.landingPage?.daily || [];
+    if (lpDaily.length > 0 && typeof cvrChartInstance !== 'undefined' && cvrChartInstance) {
+      // Format GA4-style date strings (YYYYMMDD or YYYY-MM-DD) to readable labels
+      const formatDate = str => {
+        const s = String(str).replace(/-/g,'');
+        if (s.length === 8) {
+          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+        }
+        return str;
+      };
+      cvrChartInstance.data.labels = lpDaily.map(d => formatDate(d.date));
+      cvrChartInstance.data.datasets[0].data = lpDaily.map(d => d.cvr ?? 0);
+      cvrChartInstance.data.datasets[1].data = lpDaily.map(d => d.pageViews ?? 0);
+      cvrChartInstance.update();
+    }
 
     // ── Email chart + table (dynamic emails array) ──
     const emails = d.emails || [];
@@ -1075,7 +1158,6 @@ async function loadKPIs() {
       // Update chart
       if (emailChartInstance) {
         emailChartInstance.data.labels = ['Open Rate', 'CTOR'];
-        // Rebuild datasets dynamically
         const colors = [P, L, '#007DE7', '#2EAE5A'];
         emailChartInstance.data.datasets = emails.map((e, i) => ({
           label: e.name,
@@ -1087,12 +1169,9 @@ async function loadKPIs() {
           borderRadius: 4,
           borderSkipped: false,
         }));
-        // Add benchmark bar
-        const benchmarkOpen = 22.5;
-        const benchmarkCtor = 12.5;
         emailChartInstance.data.datasets.push({
           label: 'Benchmark',
-          data: [benchmarkOpen, benchmarkCtor],
+          data: [22.5, 12.5],
           backgroundColor: 'rgba(255,115,71,0.25)',
           borderColor: T,
           borderWidth: 1,
@@ -1154,7 +1233,7 @@ async function loadKPIs() {
 
 
 // ── CVR + Visits ──
-new Chart(document.getElementById('cvrChart'), {
+const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
   type: 'line',
   data: {
     labels: ['May 29','May 30','May 31','Jun 1','Jun 2','Jun 3'],
@@ -1454,7 +1533,10 @@ renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge);
 // ── LOAD LIVE DATA ──
 loadKPIs();
 // Refresh every 10 minutes while the tab is open
-setInterval(loadKPIs, 10 * 60 * 1000);
+setInterval(() => {
+  loadKPIs();
+  nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+}, REFRESH_INTERVAL_MS);
 
 </script>
 
