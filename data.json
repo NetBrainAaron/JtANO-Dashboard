@@ -1,12 +1,25 @@
 {
-  "updatedAt": "2026-06-02T18:31:10.319Z",
+  "updatedAt": "2026-06-02T21:11:25.069Z",
   "runDate": "2026-06-02",
-  "runHour": "18",
+  "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 2,
     "formFills": 2,
-    "totalInCRM": 3
+    "totalInCRM": 3,
+    "byDate": {
+      "2026-06-02": 2
+    },
+    "gartner": {
+      "formFills": 12,
+      "totalInCRM": 13,
+      "byDate": {
+        "2026-06-02": 3,
+        "2026-06-01": 3,
+        "2026-05-30": 1,
+        "2026-05-29": 5
+      }
+    }
   },
   "emails": [
     {
@@ -30,8 +43,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0604,
-      "ctor": 0.1001,
+      "openRate": 0.0605,
+      "ctor": 0.0999,
       "clickRate": 0.006,
       "bounceRate": 0.0019
     },
@@ -43,8 +56,8 @@
       "state": "PUBLISHED_AB_VARIANT",
       "sent": 1726,
       "delivered": 1718,
-      "openRate": 0.124,
-      "ctor": 0.0845,
+      "openRate": 0.1246,
+      "ctor": 0.0841,
       "clickRate": 0.0105,
       "bounceRate": 0.0046
     }
@@ -52,17 +65,17 @@
   "events": {
     "agentic_netops": {
       "registered": 0,
-      "attended": 3,
-      "walkins": 3,
+      "attended": 4,
+      "walkins": 4,
       "attendance_rate": 0,
-      "last_updated": "2026-06-02T18:31:09.033Z"
+      "last_updated": "2026-06-02T21:11:23.988Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
-      "attended": 24,
+      "attended": 31,
       "walkins": 0,
-      "attendance_rate": 0.4068,
-      "last_updated": "2026-06-02T18:31:09.033Z"
+      "attendance_rate": 0.5254,
+      "last_updated": "2026-06-02T21:11:23.988Z"
     }
   },
   "lounge_visits": {
@@ -76,99 +89,18 @@
     }
   },
   "landingPage": {
-    "formGuid": "2ce90972-1b59-4c9d-a1ac-0bea9f9bbab4",
-    "dateRange": {
-      "startDate": "2026-05-29",
-      "endDate": "2026-06-02"
-    },
-    "totalSubmissions": 2,
+    "formGuid": null,
+    "dateRange": null,
+    "totalSubmissions": 0,
     "totalPageViews": null,
-    "daily": [
-      {
-        "date": "2026-05-29",
-        "formSubmissions": 0
-      },
-      {
-        "date": "2026-05-30",
-        "formSubmissions": 0
-      },
-      {
-        "date": "2026-05-31",
-        "formSubmissions": 0
-      },
-      {
-        "date": "2026-06-01",
-        "formSubmissions": 0
-      },
-      {
-        "date": "2026-06-02",
-        "formSubmissions": 2
-      }
-    ],
-    "note": "Phase 1 proxy for LP engagement. Replace with GA4 page views in Phase 2.",
+    "daily": [],
+    "note": null,
     "cvr": {
-      "formFills": 2,
+      "formFills": 0,
       "pageViews": null,
       "overallCvr": null,
       "cvrTarget": 2,
       "cvrOnTarget": null
-    }
-  },
-  "social": {
-    "fetchedAt": "2026-06-02T19:30:25.174Z",
-    "campaignWindow": {
-      "start": "2026-05-29T00:00:00",
-      "end": "2026-06-02T19:30:21"
-    },
-    "searches": {
-      "jtano": {
-        "name": "Agentic Network Operations",
-        "total": 100,
-        "byPlatform": {
-          "twitter": 54,
-          "linkedin": 0,
-          "facebook": 0,
-          "instagram": 0,
-          "news": 0,
-          "other": 46
-        }
-      },
-      "netbrain": {
-        "name": "NetBrain Technologies",
-        "total": 100,
-        "byPlatform": {
-          "twitter": 4,
-          "linkedin": 0,
-          "facebook": 0,
-          "instagram": 0,
-          "news": 0,
-          "other": 96
-        }
-      },
-      "ciscoLiveSphere": {
-        "name": "CiscoLive Sphere",
-        "total": 100,
-        "byPlatform": {
-          "twitter": 4,
-          "linkedin": 0,
-          "facebook": 0,
-          "instagram": 0,
-          "news": 0,
-          "other": 96
-        }
-      },
-      "sphere": {
-        "name": "Sphere",
-        "total": 1,
-        "byPlatform": {
-          "twitter": 0,
-          "linkedin": 0,
-          "facebook": 0,
-          "instagram": 0,
-          "news": 0,
-          "other": 1
-        }
-      }
     }
   }
 }
