@@ -576,13 +576,23 @@ body {
     </div>
 
     <div class="card">
-      <div class="card-head">Earned Media Mentions <span id="social-card-subtitle">Loading...</span></div>
+      <div class="card-head">Earned Media Mentions <span id="social-card-subtitle">Meltwater · CiscoLive Sphere + Agentic NetOps</span></div>
       <div class="card-body">
-        <div class="chart-wrap" style="height:200px;">
-          <canvas id="socialChart" role="img" aria-label="Bar chart showing earned media mention counts by platform across Meltwater searches.">Social mentions chart.</canvas>
+        <div style="display:flex;gap:24px;margin-bottom:12px;align-items:flex-end;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">Total Mentions</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;" id="social-total">—</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">Daily Average</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="social-daily-avg">—</div>
+          </div>
+          <div style="margin-left:auto;font-size:11px;color:var(--nb-muted);text-align:right;" id="social-daily-note" style="display:none;">
+            &#9432; Refreshes daily<br>Last pull: <span id="social-fetched-at">—</span>
+          </div>
         </div>
-        <div id="social-daily-note" style="font-size:11px;color:var(--nb-muted);margin-top:8px;display:none;">
-          &#9432; Social data via Meltwater refreshes daily. Last pull: <span id="social-fetched-at">—</span>
+        <div class="chart-wrap" style="height:150px;">
+          <canvas id="socialChart" role="img" aria-label="Area line chart showing daily earned media mentions over campaign window.">Social mentions chart.</canvas>
         </div>
       </div>
     </div>
@@ -1159,9 +1169,20 @@ async function loadKPIs() {
       }
     }
 
-    // ── Form fills chart (daily MQL byDate) ──
-    const mqlByDate = d.mqls?.byDate || {};
-    const fillDates = Object.keys(mqlByDate).sort();
+    // ── Form fills chart (stacked bar by form) ──
+    const mqlByDate      = d.mqls?.byDate        || {};
+    const jtanoByDate    = d.mqls?.jtano?.byDate  || {};
+    const gartnerByDate  = d.mqls?.gartner?.byDate || {};
+    const demoByDate     = d.mqls?.requestDemo?.byDate || {};
+
+    // Union of all dates across all forms, sorted
+    const fillDates = [...new Set([
+      ...Object.keys(mqlByDate),
+      ...Object.keys(jtanoByDate),
+      ...Object.keys(gartnerByDate),
+      ...Object.keys(demoByDate)
+    ])].sort();
+
     if (fillDates.length > 0 && fillsChartInstance) {
       const formatDate = str => {
         const s = String(str).replace(/-/g, '');
@@ -1171,13 +1192,15 @@ async function loadKPIs() {
         }
         return str;
       };
-      fillsChartInstance.data.labels = fillDates.map(formatDate);
-      fillsChartInstance.data.datasets[0].data = fillDates.map(d => mqlByDate[d] || 0);
+      fillsChartInstance.data.labels                  = fillDates.map(formatDate);
+      fillsChartInstance.data.datasets[0].data        = fillDates.map(d => jtanoByDate[d]   || 0);
+      fillsChartInstance.data.datasets[1].data        = fillDates.map(d => gartnerByDate[d] || 0);
+      fillsChartInstance.data.datasets[2].data        = fillDates.map(d => demoByDate[d]    || 0);
       fillsChartInstance.update();
 
       const fillsSubtitle = document.getElementById('fills-card-subtitle');
-      const totalFills = fillDates.reduce((s, d) => s + (mqlByDate[d] || 0), 0);
-      if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total fills · GA4`;
+      const totalFills = d.mqls?.formFills || 0;
+      if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total · 3 forms`;
     }
 
     // ── Email table (dynamic emails array) ──
@@ -1240,77 +1263,44 @@ async function loadKPIs() {
 
 // ── SOCIAL CHART RENDERER ─────────────────────────────────────────────────────
 function renderSocialChart(social) {
-  const searches = social.searches;
+  const combined = social.combined || {};
+  const total    = combined.total  || 0;
+  const byDate   = combined.byDate || {};
 
-  // Search labels and their platform breakdowns
-  const searchKeys  = ['jtano', 'netbrain', 'ciscoLiveSphere', 'sphere'];
-  const searchLabels = {
-    jtano:           'Agentic NetOps',
-    netbrain:        'NetBrain Brand',
-    ciscoLiveSphere: 'CiscoLive Sphere',
-    sphere:          'Sphere'
-  };
+  // Update headline stats
+  const totalEl = document.getElementById('social-total');
+  const avgEl   = document.getElementById('social-daily-avg');
+  if (totalEl) totalEl.textContent = total.toLocaleString();
 
-  // One grouped bar per platform, one group per search
-  const platforms = [
-    { key: 'twitter',   label: 'X (Twitter)', color: P },
-    { key: 'linkedin',  label: 'LinkedIn',    color: L },
-    { key: 'facebook',  label: 'Facebook',    color: B },
-    { key: 'instagram', label: 'Instagram',   color: '#E3E887' },
-    { key: 'news',      label: 'News / Online', color: '#78BDE3' },
-    { key: 'other',     label: 'Other',       color: '#C0B8DC' }
-  ];
+  const campaignStart = new Date('2026-05-29');
+  const today         = new Date();
+  const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
+  if (avgEl) avgEl.textContent = (total / dayCount).toFixed(1);
 
-  // Filter out platforms with zero counts across all searches to keep chart clean
-  const activePlatforms = platforms.filter(p =>
-    searchKeys.some(sk => (searches[sk]?.byPlatform?.[p.key] || 0) > 0)
-  );
-
-  const labels = searchKeys
-    .filter(sk => searches[sk])
-    .map(sk => searchLabels[sk]);
-
-  const datasets = activePlatforms.map(p => ({
-    label: p.label,
-    data: searchKeys
-      .filter(sk => searches[sk])
-      .map(sk => searches[sk]?.byPlatform?.[p.key] || 0),
-    backgroundColor: p.color,
-    borderRadius: 3,
-    borderSkipped: false
-  }));
-
-  // Update chart
-  socialChartInstance.data.labels   = labels;
-  socialChartInstance.data.datasets = datasets;
-  socialChartInstance.update();
-
-  // Update card subtitle with total mentions for JtANO search
-  const jtanoTotal = searches.jtano?.total || 0;
-  const subtitle = document.getElementById('social-card-subtitle');
-  if (subtitle) subtitle.textContent = `${jtanoTotal} JtANO mentions · Meltwater`;
+  // Build daily chart from real byDate data
+  const dates = Object.keys(byDate).sort();
+  if (dates.length > 0) {
+    const formatDate = str => {
+      const s = String(str).replace(/-/g, '');
+      if (s.length === 8) {
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+      }
+      return str;
+    };
+    socialChartInstance.data.labels           = dates.map(formatDate);
+    socialChartInstance.data.datasets[0].data = dates.map(d => byDate[d] || 0);
+    socialChartInstance.update();
+  }
 
   // Show last-fetched note
-  const noteEl = document.getElementById('social-daily-note');
+  const noteEl    = document.getElementById('social-daily-note');
   const fetchedEl = document.getElementById('social-fetched-at');
   if (noteEl && fetchedEl && social.fetchedAt) {
     const ft = new Date(social.fetchedAt);
     fetchedEl.textContent = ft.toLocaleDateString('en-US', { month:'short', day:'numeric' })
       + ' ' + ft.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
     noteEl.style.display = 'block';
-  }
-
-  // Rebuild legend dynamically -- only show active platforms
-  const legendEl = document.getElementById('social-legend');
-  if (legendEl) {
-    legendEl.innerHTML = activePlatforms.map(p =>
-      `<span style="display:flex;align-items:center;gap:4px;">
-        <span style="width:10px;height:10px;background:${p.color};border-radius:2px;display:inline-block;"></span>
-        ${p.label}
-      </span>`
-    ).join('') + (activePlatforms.length === 0
-      ? '<span style="font-style:italic;">No social mentions yet in campaign window</span>'
-      : '');
   }
 }
 
@@ -1371,36 +1361,59 @@ cvrLeg.innerHTML = PAGE_CONFIGS.map(p =>
 ).join('');
 cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
 
-// ── FORM FILLS (MQL daily bar chart) ──
+// ── FORM FILLS (stacked bar by form) ──
 const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
   type: 'bar',
   data: {
     labels: [],
     datasets: [
-      {
-        label: 'Form Fills',
-        data: [],
-        backgroundColor: T,
-        borderRadius: 4,
-        borderSkipped: false,
-      }
+      { label: 'JtANO LP',        data: [], backgroundColor: P,          borderRadius: 0, borderSkipped: false },
+      { label: 'Gartner',         data: [], backgroundColor: L,          borderRadius: 0, borderSkipped: false },
+      { label: 'Request a Demo',  data: [], backgroundColor: T,          borderRadius: 4, borderSkipped: false },
     ]
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          footer: items => {
+            const total = items.reduce((s, i) => s + i.parsed.y, 0);
+            return `Total: ${total}`;
+          }
+        }
+      }
+    },
     scales: {
+      x: { stacked: true, ticks:{ font:{ size:10 } }, grid:{ display:false } },
       y: {
+        stacked: true,
         ticks: { font:{ size:10 }, stepSize: 1, callback: v => Math.round(v) },
         grid:  { color:'rgba(0,0,0,0.06)' },
         title: { display:true, text:'Form Fills', font:{ size:10 }, color:'#6B6880' },
         beginAtZero: true
-      },
-      x: { ticks:{ font:{ size:10 } }, grid:{ display:false } }
+      }
     }
   }
 });
+
+// Legend for fills chart
+const fillsCtx = document.getElementById('fillsChart').parentElement;
+const fillsLeg = document.createElement('div');
+fillsLeg.style = 'display:flex;gap:12px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
+fillsLeg.innerHTML = [
+  { label: 'JtANO LP',       color: P },
+  { label: 'Gartner',        color: L },
+  { label: 'Request a Demo', color: T },
+].map(p =>
+  `<span style="display:flex;align-items:center;gap:4px;">
+    <span style="width:10px;height:10px;background:${p.color};border-radius:2px;display:inline-block;"></span>
+    ${p.label}
+  </span>`
+).join('');
+fillsCtx.insertBefore(fillsLeg, fillsCtx.firstChild);
 
 // ── SPHERE PROXY ──
 new Chart(document.getElementById('sphereChart'), {
@@ -1458,13 +1471,24 @@ sphereLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bot
 sphereLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>Branded search</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Direct traffic</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span>LV geo traffic</span>`;
 document.getElementById('sphereChart').parentElement.insertBefore(sphereLeg, document.getElementById('sphereChart').parentElement.firstChild);
 
-// ── SOCIAL (Meltwater) ──
-// Initialized empty -- populated by loadKPIs() once data.json is fetched
+// ── SOCIAL (Meltwater -- area line, daily mentions) ──
 const socialChartInstance = new Chart(document.getElementById('socialChart'), {
-  type: 'bar',
+  type: 'line',
   data: {
     labels: [],
-    datasets: []
+    datasets: [
+      {
+        label: 'Daily Mentions',
+        data: [],
+        borderColor: L,
+        backgroundColor: 'rgba(135,107,207,0.15)',
+        fill: true,
+        tension: 0.4,
+        pointRadius: 4,
+        pointBackgroundColor: L,
+        borderWidth: 2,
+      }
+    ]
   },
   options: {
     responsive: true,
@@ -1472,19 +1496,17 @@ const socialChartInstance = new Chart(document.getElementById('socialChart'), {
     plugins: { legend: { display: false } },
     scales: {
       y: {
-        ticks: { font:{ size:10 }, callback: v => v },
-        beginAtZero: true,
-        grid: { color:'rgba(0,0,0,0.06)' },
-        title: { display:true, text:'Mentions', font:{ size:10 }, color:'#6B6880' }
+        ticks: { font:{ size:10 }, stepSize: 1, callback: v => Math.round(v) },
+        grid:  { color:'rgba(0,0,0,0.06)' },
+        beginAtZero: true
       },
-      x: { ticks:{ font:{ size:10 } }, grid:{ display:false } }
+      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
     }
   }
 });
-// Legend injected dynamically by renderSocialChart()
+// No static legend needed -- headline stats above the chart serve that purpose
 const socialLegEl = document.createElement('div');
 socialLegEl.id = 'social-legend';
-socialLegEl.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
 document.getElementById('socialChart').parentElement.insertBefore(socialLegEl, document.getElementById('socialChart').parentElement.firstChild);
 
 // ── TAB SWITCHING ──
