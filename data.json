@@ -113,5 +113,62 @@
       "cvrTarget": 2,
       "cvrOnTarget": null
     }
+  },
+  "social": {
+    "fetchedAt": "2026-06-02T19:30:25.174Z",
+    "campaignWindow": {
+      "start": "2026-05-29T00:00:00",
+      "end": "2026-06-02T19:30:21"
+    },
+    "searches": {
+      "jtano": {
+        "name": "Agentic Network Operations",
+        "total": 100,
+        "byPlatform": {
+          "twitter": 54,
+          "linkedin": 0,
+          "facebook": 0,
+          "instagram": 0,
+          "news": 0,
+          "other": 46
+        }
+      },
+      "netbrain": {
+        "name": "NetBrain Technologies",
+        "total": 100,
+        "byPlatform": {
+          "twitter": 4,
+          "linkedin": 0,
+          "facebook": 0,
+          "instagram": 0,
+          "news": 0,
+          "other": 96
+        }
+      },
+      "ciscoLiveSphere": {
+        "name": "CiscoLive Sphere",
+        "total": 100,
+        "byPlatform": {
+          "twitter": 4,
+          "linkedin": 0,
+          "facebook": 0,
+          "instagram": 0,
+          "news": 0,
+          "other": 96
+        }
+      },
+      "sphere": {
+        "name": "Sphere",
+        "total": 1,
+        "byPlatform": {
+          "twitter": 0,
+          "linkedin": 0,
+          "facebook": 0,
+          "instagram": 0,
+          "news": 0,
+          "other": 1
+        }
+      }
+    }
   }
 }
