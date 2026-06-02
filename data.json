@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-02T09:44:43.328Z",
+  "updatedAt": "2026-06-02T13:44:44.478Z",
   "runDate": "2026-06-02",
-  "runHour": "09",
+  "runHour": "13",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -30,8 +30,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0599,
-      "ctor": 0.1009,
+      "openRate": 0.0601,
+      "ctor": 0.1006,
       "clickRate": 0.006,
       "bounceRate": 0.0019
     },
@@ -55,14 +55,14 @@
       "attended": 3,
       "walkins": 3,
       "attendance_rate": 0,
-      "last_updated": "2026-06-02T09:44:42.933Z"
+      "last_updated": "2026-06-02T13:44:43.949Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 19,
       "walkins": 0,
       "attendance_rate": 0.322,
-      "last_updated": "2026-06-02T09:44:42.933Z"
+      "last_updated": "2026-06-02T13:44:43.949Z"
     }
   },
   "lounge_visits": {
