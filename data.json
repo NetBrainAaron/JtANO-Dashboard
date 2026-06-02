@@ -161,30 +161,33 @@
     }
   },
   "social": {
-    "fetchedAt": "2026-06-02T22:25:36.872Z",
+    "fetchedAt": "2026-06-02T22:55:01.004Z",
     "campaignWindow": {
-      "start": "2026-05-29T00:00:00",
-      "end": "2026-06-02T22:25:34"
+      "start": "2026-05-29T00:00:00Z",
+      "end": "2026-06-02T23:59:59Z"
     },
     "combined": {
-      "total": 200,
+      "total": 391,
       "byDate": {
-        "2026-05-29": 200
+        "2026-05-30": 30,
+        "2026-05-29": 250,
+        "2026-06-02": 14,
+        "2026-06-01": 96,
+        "2026-05-31": 1
       }
     },
     "searches": {
-      "ciscoLiveSphere": {
-        "name": "CiscoLive Sphere",
-        "total": 100,
+      "netbrain": {
+        "name": "NetBrain Technologies",
+        "searchId": 26737817,
+        "total": 391,
+        "fetchedCount": 391,
         "byDate": {
-          "2026-05-29": 100
-        }
-      },
-      "jtano": {
-        "name": "Agentic Network Operations",
-        "total": 100,
-        "byDate": {
-          "2026-05-29": 100
+          "2026-05-30": 30,
+          "2026-05-29": 250,
+          "2026-06-02": 14,
+          "2026-06-01": 96,
+          "2026-05-31": 1
         }
       }
     }
