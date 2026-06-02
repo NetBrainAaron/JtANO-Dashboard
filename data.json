@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-02T13:44:44.478Z",
+  "updatedAt": "2026-06-02T18:07:59.424Z",
   "runDate": "2026-06-02",
-  "runHour": "13",
+  "runHour": "18",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 0,
@@ -30,8 +30,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0601,
-      "ctor": 0.1006,
+      "openRate": 0.0603,
+      "ctor": 0.1002,
       "clickRate": 0.006,
       "bounceRate": 0.0019
     },
@@ -55,14 +55,14 @@
       "attended": 3,
       "walkins": 3,
       "attendance_rate": 0,
-      "last_updated": "2026-06-02T13:44:43.949Z"
+      "last_updated": "2026-06-02T18:07:59.012Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
-      "attended": 19,
+      "attended": 21,
       "walkins": 0,
-      "attendance_rate": 0.322,
-      "last_updated": "2026-06-02T13:44:43.949Z"
+      "attendance_rate": 0.3559,
+      "last_updated": "2026-06-02T18:07:59.012Z"
     }
   },
   "lounge_visits": {
@@ -73,6 +73,45 @@
     },
     "unique_by_date": {
       "2026-05-29": 1
+    }
+  },
+  "landingPage": {
+    "formGuid": "2ce90972-1b59-4c9d-a1ac-0bea9f9bbab4",
+    "dateRange": {
+      "startDate": "2026-05-29",
+      "endDate": "2026-06-02"
+    },
+    "totalSubmissions": 2,
+    "totalPageViews": null,
+    "daily": [
+      {
+        "date": "2026-05-29",
+        "formSubmissions": 0
+      },
+      {
+        "date": "2026-05-30",
+        "formSubmissions": 0
+      },
+      {
+        "date": "2026-05-31",
+        "formSubmissions": 0
+      },
+      {
+        "date": "2026-06-01",
+        "formSubmissions": 0
+      },
+      {
+        "date": "2026-06-02",
+        "formSubmissions": 2
+      }
+    ],
+    "note": "Phase 1 proxy for LP engagement. Replace with GA4 page views in Phase 2.",
+    "cvr": {
+      "formFills": 2,
+      "pageViews": null,
+      "overallCvr": null,
+      "cvrTarget": 2,
+      "cvrOnTarget": null
     }
   }
 }
