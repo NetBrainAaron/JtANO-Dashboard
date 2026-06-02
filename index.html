@@ -542,22 +542,13 @@ body {
 
   <!-- CHARTS ROW -->
   <div class="section-label" style="margin-top:24px;">Performance trends (illustrative baselines)</div>
-  <div class="row-2" style="margin-bottom:16px;">
+  <div style="margin-bottom:16px;">
 
     <div class="card">
-      <div class="card-head">Landing Page: Form Submissions &amp; Page Views <span>May 29 – Jun 3</span></div>
+      <div class="card-head">Website Page Views <span id="pages-card-subtitle">GA4 · May 29 – Jun 3</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
           <canvas id="cvrChart" role="img" aria-label="Line chart of landing page CVR and daily visits over the campaign window.">Campaign CVR trend chart.</canvas>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-head">Email Performance <span id="email-card-subtitle">Loading...</span></div>
-      <div class="card-body">
-        <div class="chart-wrap" style="height:200px;">
-          <canvas id="emailChart" role="img" aria-label="Bar chart comparing open rate and CTOR across campaign emails.">Email performance chart.</canvas>
         </div>
       </div>
     </div>
@@ -576,10 +567,13 @@ body {
     </div>
 
     <div class="card">
-      <div class="card-head">Social Engagement Rate <span>LinkedIn · X</span></div>
+      <div class="card-head">Earned Media Mentions <span id="social-card-subtitle">Loading...</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
-          <canvas id="socialChart" role="img" aria-label="Bar chart showing daily social engagement rate across LinkedIn and X.">Social engagement chart.</canvas>
+          <canvas id="socialChart" role="img" aria-label="Bar chart showing earned media mention counts by platform across Meltwater searches.">Social mentions chart.</canvas>
+        </div>
+        <div id="social-daily-note" style="font-size:11px;color:var(--nb-muted);margin-top:8px;display:none;">
+          &#9432; Social data via Meltwater refreshes daily. Last pull: <span id="social-fetched-at">—</span>
         </div>
       </div>
     </div>
@@ -1128,58 +1122,38 @@ async function loadKPIs() {
       }
     }
 
-    // ── CVR chart (wired to live landingPage.daily) ──
-    const lpDaily = d.landingPage?.daily || [];
-    if (lpDaily.length > 0 && typeof cvrChartInstance !== 'undefined' && cvrChartInstance) {
-      // Format GA4-style date strings (YYYYMMDD or YYYY-MM-DD) to readable labels
+    // ── Page views chart (GA4 -- 5 lines) ──
+    const pagesDaily = d.pages?.daily || [];
+    if (pagesDaily.length > 0 && cvrChartInstance) {
       const formatDate = str => {
-        const s = String(str).replace(/-/g,'');
+        const s = String(str).replace(/-/g, '');
         if (s.length === 8) {
           const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
           return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
         }
         return str;
       };
-      cvrChartInstance.data.labels = lpDaily.map(row => formatDate(row.date));
-      cvrChartInstance.data.datasets[0].data = lpDaily.map(row => row.formSubmissions ?? 0);
-      cvrChartInstance.data.datasets[1].data = lpDaily.map(row => row.pageViews ?? null);
+      cvrChartInstance.data.labels = pagesDaily.map(row => formatDate(row.date));
+      PAGE_CONFIGS.forEach((p, i) => {
+        cvrChartInstance.data.datasets[i].data = pagesDaily.map(row => row[p.key] ?? 0);
+      });
       cvrChartInstance.update();
+
+      // Update card subtitle with totals
+      const totals = d.pages.totals || {};
+      const subtitle = document.getElementById('pages-card-subtitle');
+      if (subtitle) {
+        const parts = PAGE_CONFIGS
+          .filter(p => (totals[p.key] || 0) > 0)
+          .map(p => `${p.label}: ${totals[p.key].toLocaleString()}`);
+        subtitle.textContent = parts.length > 0 ? parts.join(' · ') : 'GA4 · live';
+      }
     }
 
-    // ── Email chart + table (dynamic emails array) ──
+    // ── Email table (dynamic emails array) ──
     const emails = d.emails || [];
 
     if (emails.length > 0) {
-      // Update card subtitle
-      const subtitle = document.getElementById('email-card-subtitle');
-      if (subtitle) subtitle.textContent = emails.map(e => e.name).join(' · ');
-
-      // Update chart
-      if (emailChartInstance) {
-        emailChartInstance.data.labels = ['Open Rate', 'CTOR'];
-        const colors = [P, L, '#007DE7', '#2EAE5A'];
-        emailChartInstance.data.datasets = emails.map((e, i) => ({
-          label: e.name,
-          data: [
-            +(e.openRate * 100).toFixed(1),
-            +(e.ctor     * 100).toFixed(1),
-          ],
-          backgroundColor: colors[i % colors.length],
-          borderRadius: 4,
-          borderSkipped: false,
-        }));
-        emailChartInstance.data.datasets.push({
-          label: 'Benchmark',
-          data: [22.5, 12.5],
-          backgroundColor: 'rgba(255,115,71,0.25)',
-          borderColor: T,
-          borderWidth: 1,
-          borderRadius: 4,
-          borderSkipped: false,
-        });
-        emailChartInstance.update();
-      }
-
       // Render email breakdown table
       const tbody = document.getElementById('email-breakdown-body');
       const tableUpdated = document.getElementById('email-table-updated');
@@ -1224,111 +1198,148 @@ async function loadKPIs() {
       renderCombined(d.events.agentic_netops, d.events.zero_outage_lounge);
     }
 
+    // ── Social (Meltwater earned media) ──
+    if (d.social && d.social.searches) {
+      renderSocialChart(d.social);
+    }
+
   } catch(e) {
     console.warn('KPI fetch failed:', e);
   }
 }
 
+// ── SOCIAL CHART RENDERER ─────────────────────────────────────────────────────
+function renderSocialChart(social) {
+  const searches = social.searches;
+
+  // Search labels and their platform breakdowns
+  const searchKeys  = ['jtano', 'netbrain', 'ciscoLiveSphere', 'sphere'];
+  const searchLabels = {
+    jtano:           'Agentic NetOps',
+    netbrain:        'NetBrain Brand',
+    ciscoLiveSphere: 'CiscoLive Sphere',
+    sphere:          'Sphere'
+  };
+
+  // One grouped bar per platform, one group per search
+  const platforms = [
+    { key: 'twitter',   label: 'X (Twitter)', color: P },
+    { key: 'linkedin',  label: 'LinkedIn',    color: L },
+    { key: 'facebook',  label: 'Facebook',    color: B },
+    { key: 'instagram', label: 'Instagram',   color: '#E3E887' },
+    { key: 'news',      label: 'News / Online', color: '#78BDE3' },
+    { key: 'other',     label: 'Other',       color: '#C0B8DC' }
+  ];
+
+  // Filter out platforms with zero counts across all searches to keep chart clean
+  const activePlatforms = platforms.filter(p =>
+    searchKeys.some(sk => (searches[sk]?.byPlatform?.[p.key] || 0) > 0)
+  );
+
+  const labels = searchKeys
+    .filter(sk => searches[sk])
+    .map(sk => searchLabels[sk]);
+
+  const datasets = activePlatforms.map(p => ({
+    label: p.label,
+    data: searchKeys
+      .filter(sk => searches[sk])
+      .map(sk => searches[sk]?.byPlatform?.[p.key] || 0),
+    backgroundColor: p.color,
+    borderRadius: 3,
+    borderSkipped: false
+  }));
+
+  // Update chart
+  socialChartInstance.data.labels   = labels;
+  socialChartInstance.data.datasets = datasets;
+  socialChartInstance.update();
+
+  // Update card subtitle with total mentions for JtANO search
+  const jtanoTotal = searches.jtano?.total || 0;
+  const subtitle = document.getElementById('social-card-subtitle');
+  if (subtitle) subtitle.textContent = `${jtanoTotal} JtANO mentions · Meltwater`;
+
+  // Show last-fetched note
+  const noteEl = document.getElementById('social-daily-note');
+  const fetchedEl = document.getElementById('social-fetched-at');
+  if (noteEl && fetchedEl && social.fetchedAt) {
+    const ft = new Date(social.fetchedAt);
+    fetchedEl.textContent = ft.toLocaleDateString('en-US', { month:'short', day:'numeric' })
+      + ' ' + ft.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
+    noteEl.style.display = 'block';
+  }
+
+  // Rebuild legend dynamically -- only show active platforms
+  const legendEl = document.getElementById('social-legend');
+  if (legendEl) {
+    legendEl.innerHTML = activePlatforms.map(p =>
+      `<span style="display:flex;align-items:center;gap:4px;">
+        <span style="width:10px;height:10px;background:${p.color};border-radius:2px;display:inline-block;"></span>
+        ${p.label}
+      </span>`
+    ).join('') + (activePlatforms.length === 0
+      ? '<span style="font-style:italic;">No social mentions yet in campaign window</span>'
+      : '');
+  }
+}
 
 
-// ── CVR + Visits ──
+
+// ── PAGE VIEWS (GA4 -- 5 lines) ──
+// Page configs: key matches data.pages.daily field names
+const PAGE_CONFIGS = [
+  { key: 'homepage',      label: 'Homepage',         color: P,    dash: [] },
+  { key: 'agenticNetOps', label: 'Agentic NetOps LP', color: T,    dash: [] },
+  { key: 'gartner',       label: 'Gartner',           color: L,    dash: [5,3] },
+  { key: 'ciscoLive',     label: 'Cisco Live',        color: B,    dash: [5,3] },
+  { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] }
+];
+
 const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
   type: 'line',
   data: {
-    labels: ['May 29','May 30','May 31','Jun 1','Jun 2','Jun 3'],
-    datasets: [
-      {
-        label: 'Form Submissions',
-        data: [1.2, 1.8, 2.3, 2.1, 2.6, 2.4],
-        borderColor: T,
-        backgroundColor: 'rgba(255,115,71,0.1)',
-        fill: true,
-        tension: 0.4,
-        yAxisID: 'y',
-        pointRadius: 4,
-        pointBackgroundColor: T,
-        borderDash: [],
-      },
-      {
-        label: 'Page Views (Phase 2)',
-        data: [420, 680, 810, 760, 920, 870],
-        borderColor: B,
-        backgroundColor: 'rgba(0,125,231,0.07)',
-        fill: true,
-        tension: 0.4,
-        yAxisID: 'y1',
-        pointRadius: 4,
-        pointBackgroundColor: B,
-        borderDash: [5,3],
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-    },
-    scales: {
-      y: { type:'linear', position:'left', title:{ display:true, text:'Submissions', font:{size:10}, color:'#FF7347' }, ticks:{ font:{size:10}, stepSize:1, callback: v => Math.round(v) }, grid:{ color:'rgba(0,0,0,0.06)' }, suggestedMin:0, suggestedMax:10 },
-      y1: { type:'linear', position:'right', title:{ display:true, text:'Page Views', font:{size:10}, color:'#007DE7' }, ticks:{ font:{size:10} }, grid:{ drawOnChartArea:false }, suggestedMin:0, suggestedMax:1000 },
-      x: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.04)' } }
-    }
-  }
-});
-
-// Legend for CVR
-const cvrCtx = document.getElementById('cvrChart').parentElement;
-const cvrLeg = document.createElement('div');
-cvrLeg.style = 'display:flex;gap:16px;font-size:11px;color:#6B6880;margin-bottom:6px;';
-cvrLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span> Form Submissions</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#007DE7;display:inline-block;border-top:2px dashed #007DE7;"></span> Page Views (Phase 2 — GA4)</span>`;
-cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
-
-// ── EMAIL ──
-const emailChartInstance = new Chart(document.getElementById('emailChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Open Rate','CTOR'],
-    datasets: [
-      {
-        label: 'Prospect',
-        data: [22, 11],
-        backgroundColor: P,
-        borderRadius: 4,
-        borderSkipped: false,
-      },
-      {
-        label: 'Customer',
-        data: [34, 16],
-        backgroundColor: L,
-        borderRadius: 4,
-        borderSkipped: false,
-      },
-      {
-        label: 'Benchmark (prospect)',
-        data: [25, 15],
-        backgroundColor: 'rgba(255,115,71,0.25)',
-        borderColor: T,
-        borderWidth: 1,
-        borderRadius: 4,
-        borderSkipped: false,
-      }
-    ]
+    labels: [],
+    datasets: PAGE_CONFIGS.map(p => ({
+      label:              p.label,
+      data:               [],
+      borderColor:        p.color,
+      backgroundColor:    'transparent',
+      fill:               false,
+      tension:            0.4,
+      pointRadius:        4,
+      pointBackgroundColor: p.color,
+      borderDash:         p.dash,
+      borderWidth:        2,
+    }))
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
     plugins: { legend: { display: false } },
     scales: {
-      y: { ticks:{ font:{size:10}, callback: v=>v+'%' }, grid:{ color:'rgba(0,0,0,0.06)' }, suggestedMax:45 },
-      x: { ticks:{ font:{size:11} }, grid:{ display:false } }
+      y: {
+        ticks: { font:{ size:10 }, callback: v => v.toLocaleString() },
+        grid:  { color:'rgba(0,0,0,0.06)' },
+        title: { display:true, text:'Page Views', font:{ size:10 }, color:'#6B6880' },
+        beginAtZero: true
+      },
+      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
     }
   }
 });
-const emailLeg = document.createElement('div');
-emailLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
-emailLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:#200B4E;border-radius:2px;display:inline-block;"></span>Prospect</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:#876BCF;border-radius:2px;display:inline-block;"></span>Customer</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:rgba(255,115,71,0.25);border:1px solid #FF7347;border-radius:2px;display:inline-block;"></span>Benchmark</span>`;
-document.getElementById('emailChart').parentElement.insertBefore(emailLeg, document.getElementById('emailChart').parentElement.firstChild);
+
+// Legend -- built once, stays static
+const cvrCtx = document.getElementById('cvrChart').parentElement;
+const cvrLeg = document.createElement('div');
+cvrLeg.style = 'display:flex;gap:12px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
+cvrLeg.innerHTML = PAGE_CONFIGS.map(p =>
+  `<span style="display:flex;align-items:center;gap:4px;">
+    <span style="width:14px;height:2px;background:${p.color};display:inline-block;"></span>
+    ${p.label}
+  </span>`
+).join('');
+cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
 
 // ── SPHERE PROXY ──
 new Chart(document.getElementById('sphereChart'), {
@@ -1386,45 +1397,34 @@ sphereLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bot
 sphereLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>Branded search</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Direct traffic</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span>LV geo traffic</span>`;
 document.getElementById('sphereChart').parentElement.insertBefore(sphereLeg, document.getElementById('sphereChart').parentElement.firstChild);
 
-// ── SOCIAL ──
-new Chart(document.getElementById('socialChart'), {
+// ── SOCIAL (Meltwater) ──
+// Initialized empty -- populated by loadKPIs() once data.json is fetched
+const socialChartInstance = new Chart(document.getElementById('socialChart'), {
   type: 'bar',
   data: {
-    labels: ['May 29','May 30','May 31','Jun 1','Jun 2','Jun 3'],
-    datasets: [
-      {
-        label: 'LinkedIn eng. rate %',
-        data: [3.2, 4.8, 6.1, 5.4, 7.2, 6.8],
-        backgroundColor: P,
-        borderRadius: 4,
-        borderSkipped: false,
-      },
-      {
-        label: 'X eng. rate %',
-        data: [2.1, 3.4, 4.2, 3.8, 5.1, 4.7],
-        backgroundColor: L,
-        borderRadius: 4,
-        borderSkipped: false,
-      }
-    ]
+    labels: [],
+    datasets: []
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      annotation: {}
-    },
+    plugins: { legend: { display: false } },
     scales: {
-      y: { ticks:{ font:{size:10}, callback:v=>v+'%' }, suggestedMax:9, grid:{ color:'rgba(0,0,0,0.06)' } },
-      x: { ticks:{ font:{size:10} }, grid:{ display:false } }
+      y: {
+        ticks: { font:{ size:10 }, callback: v => v },
+        beginAtZero: true,
+        grid: { color:'rgba(0,0,0,0.06)' },
+        title: { display:true, text:'Mentions', font:{ size:10 }, color:'#6B6880' }
+      },
+      x: { ticks:{ font:{ size:10 } }, grid:{ display:false } }
     }
   }
 });
-const socialLeg = document.createElement('div');
-socialLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
-socialLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:#200B4E;border-radius:2px;display:inline-block;"></span>LinkedIn</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;background:#876BCF;border-radius:2px;display:inline-block;"></span>X (Twitter)</span><span style="display:flex;align-items:center;gap:4px;font-style:italic;">&#8212; 5% boost threshold</span>`;
-document.getElementById('socialChart').parentElement.insertBefore(socialLeg, document.getElementById('socialChart').parentElement.firstChild);
+// Legend injected dynamically by renderSocialChart()
+const socialLegEl = document.createElement('div');
+socialLegEl.id = 'social-legend';
+socialLegEl.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
+document.getElementById('socialChart').parentElement.insertBefore(socialLegEl, document.getElementById('socialChart').parentElement.firstChild);
 
 // ── TAB SWITCHING ──
 document.querySelectorAll('.topbar-nav a').forEach(function(link) {
