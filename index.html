@@ -502,7 +502,6 @@ body {
   <div class="hero-chips">
     <span class="chip chip-live">&#9679; Live</span>
     <span class="chip chip-utm">utm: jtano_q2fy26_integrated</span>
-    <span class="chip chip-int">Gong · HubSpot · Salesforce</span>
   </div>
 </div>
 
@@ -546,7 +545,7 @@ body {
   <div class="row-2" style="margin-bottom:16px;">
 
     <div class="card">
-      <div class="card-head">Landing Page CVR &amp; Daily Visits <span>May 29 – Jun 3</span></div>
+      <div class="card-head">Landing Page: Form Submissions &amp; Page Views <span>May 29 – Jun 3</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
           <canvas id="cvrChart" role="img" aria-label="Line chart of landing page CVR and daily visits over the campaign window.">Campaign CVR trend chart.</canvas>
@@ -1114,7 +1113,7 @@ async function loadKPIs() {
 
     // ── MQL card ──
     const mqlEl = document.getElementById('kpi-mqls');
-    if (mqlEl) mqlEl.textContent = d.mqls?.formFills > 0 ? d.mqls.formFills : '—';
+    if (mqlEl) mqlEl.textContent = d.mqls?.mqlCount > 0 ? d.mqls.mqlCount : '—';
 
     // ── CVR card (from landingPage block) ──
     const cvrEl = document.getElementById('kpi-cvr');
@@ -1141,9 +1140,9 @@ async function loadKPIs() {
         }
         return str;
       };
-      cvrChartInstance.data.labels = lpDaily.map(d => formatDate(d.date));
-      cvrChartInstance.data.datasets[0].data = lpDaily.map(d => d.cvr ?? 0);
-      cvrChartInstance.data.datasets[1].data = lpDaily.map(d => d.pageViews ?? 0);
+      cvrChartInstance.data.labels = lpDaily.map(row => formatDate(row.date));
+      cvrChartInstance.data.datasets[0].data = lpDaily.map(row => row.formSubmissions ?? 0);
+      cvrChartInstance.data.datasets[1].data = lpDaily.map(row => row.pageViews ?? null);
       cvrChartInstance.update();
     }
 
@@ -1239,7 +1238,7 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
     labels: ['May 29','May 30','May 31','Jun 1','Jun 2','Jun 3'],
     datasets: [
       {
-        label: 'CVR (%)',
+        label: 'Form Submissions',
         data: [1.2, 1.8, 2.3, 2.1, 2.6, 2.4],
         borderColor: T,
         backgroundColor: 'rgba(255,115,71,0.1)',
@@ -1251,7 +1250,7 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
         borderDash: [],
       },
       {
-        label: 'Daily visits',
+        label: 'Page Views (Phase 2)',
         data: [420, 680, 810, 760, 920, 870],
         borderColor: B,
         backgroundColor: 'rgba(0,125,231,0.07)',
@@ -1271,8 +1270,8 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
       legend: { display: false },
     },
     scales: {
-      y: { type:'linear', position:'left', ticks:{ font:{size:10}, callback: v => v+'%' }, grid:{ color:'rgba(0,0,0,0.06)' }, suggestedMin:0, suggestedMax:4 },
-      y1: { type:'linear', position:'right', ticks:{ font:{size:10} }, grid:{ drawOnChartArea:false }, suggestedMin:0 },
+      y: { type:'linear', position:'left', title:{ display:true, text:'Submissions', font:{size:10}, color:'#FF7347' }, ticks:{ font:{size:10}, stepSize:1, callback: v => Math.round(v) }, grid:{ color:'rgba(0,0,0,0.06)' }, suggestedMin:0, suggestedMax:10 },
+      y1: { type:'linear', position:'right', title:{ display:true, text:'Page Views', font:{size:10}, color:'#007DE7' }, ticks:{ font:{size:10} }, grid:{ drawOnChartArea:false }, suggestedMin:0, suggestedMax:1000 },
       x: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.04)' } }
     }
   }
@@ -1282,7 +1281,7 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
 const cvrCtx = document.getElementById('cvrChart').parentElement;
 const cvrLeg = document.createElement('div');
 cvrLeg.style = 'display:flex;gap:16px;font-size:11px;color:#6B6880;margin-bottom:6px;';
-cvrLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span> CVR (%)</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#007DE7;display:inline-block;border-top:2px dashed #007DE7;"></span> Daily visits</span>`;
+cvrLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span> Form Submissions</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#007DE7;display:inline-block;border-top:2px dashed #007DE7;"></span> Page Views (Phase 2 — GA4)</span>`;
 cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
 
 // ── EMAIL ──
