@@ -4516,6 +4516,16 @@
     "manual_articles": [
       {
         "id": "manual_aHR0cHM6Ly93d3cu",
+        "url": "https://www.thefastmode.com/technology-solutions/48800-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
+        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
+        "source": "thefastmode.com",
+        "publishDate": "2026-06-03T22:18:27.062Z",
+        "description": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
+        "addedAt": "2026-06-03T22:18:27.063Z",
+        "_type": "manual"
+      },
+      {
+        "id": "manual_aHR0cHM6Ly93d3cu",
         "url": "https://www.apmdigest.com/netbrain-introduces-ai-path-doctor-and-more-new-capabilities",
         "title": "Netbrain Introduces AI Path Doctor and More New Capabilities | APMdigest",
         "source": "apmdigest.com",
@@ -4525,6 +4535,6 @@
         "_type": "manual"
       }
     ],
-    "manual_articles_updatedAt": "2026-06-03T22:02:34.849Z"
+    "manual_articles_updatedAt": "2026-06-03T22:18:29.005Z"
   }
 }
