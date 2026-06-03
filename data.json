@@ -4512,6 +4512,19 @@
           "2026-05-31": 1
         }
       }
-    }
+    },
+    "manual_articles": [
+      {
+        "id": "manual_aHR0cHM6Ly93d3cu",
+        "url": "https://www.apmdigest.com/netbrain-introduces-ai-path-doctor-and-more-new-capabilities",
+        "title": "Netbrain Introduces AI Path Doctor and More New Capabilities | APMdigest",
+        "source": "apmdigest.com",
+        "publishDate": "2026-06-03T22:02:32.912Z",
+        "description": "NetBrain Technologies announced major new platform features that advance Agentic NetOps from an emerging category to operational reality. These new features further extend the platform with new agent ",
+        "addedAt": "2026-06-03T22:02:32.970Z",
+        "_type": "manual"
+      }
+    ],
+    "manual_articles_updatedAt": "2026-06-03T22:02:34.849Z"
   }
 }
