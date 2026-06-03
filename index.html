@@ -1842,10 +1842,19 @@ function renderMediaTab(social) {
   mediaVolumeChart.data.datasets[0].data = sortedDates.map(d => byDate[d] || 0);
   mediaVolumeChart.update();
 
-  // Merge meltwater articles + manual articles from data.json
+  // Merge meltwater articles + manual articles, deduplicate by URL
   const meltwater = (social.articles || []).map(a => ({ ...a, _type: 'meltwater' }));
   const manual    = (social.manual_articles || []).map(a => ({ ...a, _type: 'manual' }));
-  mediaArticlesAll = [...manual, ...meltwater]; // manual first so team additions are prominent
+  // Manual entries take precedence — if same URL exists in both, keep the manual version
+  const seenUrls  = new Set();
+  const merged    = [];
+  for (const a of [...manual, ...meltwater]) {
+    const key = (a.url || '').toLowerCase().replace(/\/$/, ''); // normalize trailing slash
+    if (key && seenUrls.has(key)) continue;
+    if (key) seenUrls.add(key);
+    merged.push(a);
+  }
+  mediaArticlesAll = merged;
 
   refreshArticleTable();
 }
