@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-03T09:44:51.617Z",
+  "updatedAt": "2026-06-03T13:44:47.852Z",
   "runDate": "2026-06-03",
-  "runHour": "09",
+  "runHour": "13",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 19,
@@ -49,8 +49,8 @@
       "state": "PUBLISHED",
       "sent": 10578,
       "delivered": 10347,
-      "openRate": 0.0639,
-      "ctor": 0.1029,
+      "openRate": 0.064,
+      "ctor": 0.1027,
       "clickRate": 0.0066,
       "bounceRate": 0.021
     },
@@ -62,8 +62,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0606,
-      "ctor": 0.0998,
+      "openRate": 0.0607,
+      "ctor": 0.0996,
       "clickRate": 0.006,
       "bounceRate": 0.0019
     },
@@ -87,14 +87,14 @@
       "attended": 110,
       "walkins": 110,
       "attendance_rate": 0,
-      "last_updated": "2026-06-03T09:44:50.843Z"
+      "last_updated": "2026-06-03T13:44:46.987Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
       "attended": 36,
       "walkins": 0,
       "attendance_rate": 0.6102,
-      "last_updated": "2026-06-03T09:44:50.843Z"
+      "last_updated": "2026-06-03T13:44:46.987Z"
     }
   },
   "lounge_visits": {
@@ -109,7 +109,7 @@
   },
   "lp": null,
   "pages": {
-    "fetchedAt": "2026-06-03T09:44:51.603Z",
+    "fetchedAt": "2026-06-03T13:44:47.848Z",
     "campaignWindow": {
       "start": "2026-05-29",
       "end": "2026-06-03"
@@ -157,51 +157,19 @@
       },
       {
         "date": "20260603",
-        "homepage": 26,
-        "agenticNetOps": 54,
+        "homepage": 154,
+        "agenticNetOps": 61,
         "gartner": 0,
-        "ciscoLive": 7,
-        "requestDemo": 32
+        "ciscoLive": 13,
+        "requestDemo": 34
       }
     ],
     "totals": {
-      "homepage": 1661,
-      "agenticNetOps": 1488,
+      "homepage": 1789,
+      "agenticNetOps": 1495,
       "gartner": 60,
-      "ciscoLive": 66,
-      "requestDemo": 107
-    }
-  },
-  "social": {
-    "fetchedAt": "2026-06-03T12:00:33.001Z",
-    "campaignWindow": {
-      "start": "2026-05-29T00:00:00Z",
-      "end": "2026-06-03T23:59:59Z"
-    },
-    "combined": {
-      "total": 393,
-      "byDate": {
-        "2026-05-31": 1,
-        "2026-06-02": 14,
-        "2026-05-29": 250,
-        "2026-05-30": 31,
-        "2026-06-01": 97
-      }
-    },
-    "searches": {
-      "netbrain": {
-        "name": "NetBrain Technologies",
-        "searchId": 26737817,
-        "total": 393,
-        "fetchedCount": 393,
-        "byDate": {
-          "2026-05-31": 1,
-          "2026-06-02": 14,
-          "2026-05-29": 250,
-          "2026-05-30": 31,
-          "2026-06-01": 97
-        }
-      }
+      "ciscoLive": 72,
+      "requestDemo": 109
     }
   }
 }
