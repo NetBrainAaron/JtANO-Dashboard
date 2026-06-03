@@ -1759,36 +1759,47 @@ renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge);
 const MANUAL_ARTICLE_WEBHOOK = 'https://eopkva5nw5feokv.m.pipedream.net';
 
 let mediaArticlesAll = []; // combined: meltwater + manual
+let mediaVolumeChart  = null; // initialized lazily on first render
 
-const mediaVolumeChart = new Chart(document.getElementById('mediaVolumeChart'), {
-  type: 'bar',
-  data: { labels: [], datasets: [{
-    label: 'Mentions',
-    data: [],
-    backgroundColor: 'rgba(135,107,207,0.75)',
-    borderColor: '#876BCF',
-    borderWidth: 1,
-    borderRadius: 4,
-    hoverBackgroundColor: '#FF7347'
-  }]},
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          title: ctx => ctx[0].label,
-          label: ctx => ctx.parsed.y + ' mention' + (ctx.parsed.y !== 1 ? 's' : '')
+function getOrCreateMediaVolumeChart() {
+  if (mediaVolumeChart) return mediaVolumeChart;
+  const canvas = document.getElementById('mediaVolumeChart');
+  if (!canvas) return null;
+  try {
+    mediaVolumeChart = new Chart(canvas, {
+      type: 'bar',
+      data: { labels: [], datasets: [{
+        label: 'Mentions',
+        data: [],
+        backgroundColor: 'rgba(135,107,207,0.75)',
+        borderColor: '#876BCF',
+        borderWidth: 1,
+        borderRadius: 4,
+        hoverBackgroundColor: '#FF7347'
+      }]},
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: ctx => ctx[0].label,
+              label: ctx => ctx.parsed.y + ' mention' + (ctx.parsed.y !== 1 ? 's' : '')
+            }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+          y: { beginAtZero: true, ticks: { stepSize: 50, font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } }
         }
       }
-    },
-    scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-      y: { beginAtZero: true, ticks: { stepSize: 50, font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } }
-    }
+    });
+  } catch(e) {
+    console.warn('mediaVolumeChart init failed:', e);
   }
-});
+  return mediaVolumeChart;
+}
 
 function renderMediaTab(social) {
   if (!social) return;
@@ -1838,9 +1849,12 @@ function renderMediaTab(social) {
     }
     return str;
   };
-  mediaVolumeChart.data.labels           = sortedDates.map(fmtLbl);
-  mediaVolumeChart.data.datasets[0].data = sortedDates.map(d => byDate[d] || 0);
-  mediaVolumeChart.update();
+  const chart = getOrCreateMediaVolumeChart();
+  if (chart) {
+    chart.data.labels           = sortedDates.map(fmtLbl);
+    chart.data.datasets[0].data = sortedDates.map(d => byDate[d] || 0);
+    chart.update();
+  }
 
   // Merge meltwater articles + manual articles, deduplicate by URL
   const meltwater = (social.articles || []).map(a => ({ ...a, _type: 'meltwater' }));
