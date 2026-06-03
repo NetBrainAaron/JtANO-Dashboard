@@ -227,6 +227,29 @@ body {
 .chan { font-weight: 600; color: var(--nb-purple); }
 .bench { font-size: 11px; color: var(--nb-muted); }
 
+/* ── TOAST ── */
+#nb-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--nb-purple);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(32,11,78,0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 9999;
+  white-space: nowrap;
+}
+#nb-toast.toast-warn  { background: #C07000; }
+#nb-toast.toast-error { background: #D63030; }
+#nb-toast.toast-show  { opacity: 1; transform: translateX(-50%) translateY(0); }
+
 /* ── MANUAL ARTICLE FORM ── */
 .manual-form-wrap {
   background: var(--nb-light-bg);
@@ -1158,6 +1181,9 @@ body {
 </div><!-- /main media -->
 </div><!-- /tab-media -->
 
+<!-- TOAST -->
+<div id="nb-toast"></div>
+
 <!-- FOOTER -->
 <div class="footer">
   <span>Copyright &copy; 2026 NetBrain Technologies, Inc. All trademarks referenced herein belong to NetBrain Technologies, Inc.</span>
@@ -1928,6 +1954,17 @@ function filterMediaArticles() {
   renderArticleRows(filtered);
 }
 
+// ── TOAST ────────────────────────────────────────────────────────────────────
+let toastTimer = null;
+function showToast(msg, type) {
+  const el = document.getElementById('nb-toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.className = 'toast-show' + (type ? ' toast-' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = ''; }, 3200);
+}
+
 // ── MANUAL ARTICLE SUBMISSION ────────────────────────────────────────────────
 async function submitManualArticle() {
   const urlInput = document.getElementById('mf-url');
@@ -1940,6 +1977,18 @@ async function submitManualArticle() {
   if (!url || !url.startsWith('http')) {
     errorEl.textContent = 'Please enter a valid URL starting with http:// or https://';
     errorEl.style.display = 'block';
+    return;
+  }
+
+  // Duplicate check against current article feed
+  const normalizedInput = url.toLowerCase().replace(/\/$/, '');
+  const duplicate = mediaArticlesAll.find(a =>
+    (a.url || '').toLowerCase().replace(/\/$/, '') === normalizedInput
+  );
+  if (duplicate) {
+    const source = duplicate._type === 'manual' ? 'manually added' : 'already captured by Meltwater';
+    showToast(`Already in the feed — ${source}`, 'warn');
+    urlInput.value = '';
     return;
   }
 
@@ -1962,6 +2011,7 @@ async function submitManualArticle() {
 
     urlInput.value = '';
     statusEl.textContent = '✓ Submitted — refreshing in 10s...';
+    showToast('Article submitted — fetching metadata...');
 
     // Give Pipedream ~10s to fetch, enrich, and push to GitHub
     setTimeout(async () => {
