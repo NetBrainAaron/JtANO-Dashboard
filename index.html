@@ -1306,7 +1306,7 @@ async function loadKPIs() {
       // Render email breakdown table
       const tbody = document.getElementById('email-breakdown-body');
       const tableUpdated = document.getElementById('email-table-updated');
-      if (tableUpdated) tableUpdated.textContent = tsStr;
+      if (tableUpdated) tableUpdated.textContent = fmtTimestamp(ts);
       if (tbody) {
         tbody.innerHTML = emails.map(e => {
           const openPct   = (e.openRate  * 100).toFixed(1) + '%';
