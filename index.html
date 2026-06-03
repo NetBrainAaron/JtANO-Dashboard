@@ -227,6 +227,71 @@ body {
 .chan { font-weight: 600; color: var(--nb-purple); }
 .bench { font-size: 11px; color: var(--nb-muted); }
 
+/* ── MANUAL ARTICLE FORM ── */
+.manual-form-wrap {
+  background: var(--nb-light-bg);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.manual-form-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--nb-purple);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.manual-form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 8px;
+  align-items: end;
+}
+@media(max-width:800px){ .manual-form-grid { grid-template-columns: 1fr; } }
+.mf-field { display: flex; flex-direction: column; gap: 4px; }
+.mf-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--nb-muted); }
+.mf-input {
+  padding: 7px 10px;
+  border: 1px solid var(--nb-border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-family: var(--nb-font);
+  color: var(--nb-dark-text);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.mf-input:focus { border-color: var(--nb-lavender); }
+.mf-btn {
+  padding: 7px 16px;
+  background: var(--nb-purple);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  font-family: var(--nb-font);
+}
+.mf-btn:hover { background: #3B1A7A; }
+.b-manual { background: #FFF4E5; color: #C07000; }
+.del-btn {
+  background: none;
+  border: none;
+  color: var(--nb-muted);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.del-btn:hover { color: #D63030; }
+
 /* ── TRIGGER LIST ── */
 .trig-list { list-style:none; }
 .trig-item {
@@ -470,7 +535,7 @@ body {
       <a href="#" data-tab="events">Events</a>
       <a href="#" data-tab="pipeline">Pipeline</a>
       <a href="#" data-tab="brandlift">Brand Lift</a>
-      <a href="#" data-tab="salesforce">Salesforce</a>
+      <a href="#" data-tab="media">Media Mentions</a>
     </nav>
   </div>
   <div class="topbar-right">
@@ -516,28 +581,16 @@ body {
     <div class="kpi-card">
       <div class="kpi-label">Landing Page CVR</div>
       <div class="kpi-value" id="kpi-cvr">—</div>
-      <div class="kpi-target">Target: <strong>&ge;2%</strong> &nbsp;·&nbsp; Benchmark 2–5%</div>
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">MQLs / Form Fills</div>
       <div class="kpi-value" id="kpi-mqls">—</div>
-      <div class="kpi-target">Daily target <strong>TBD</strong></div>
     </div>
     <div class="kpi-card lav">
       <div class="kpi-label">Branded Search Lift</div>
       <div class="kpi-value" id="kpi-search">—</div>
-      <div class="kpi-target">Target: <strong>&ge;15%</strong> vs baseline</div>
     </div>
-    <div class="kpi-card grn">
-      <div class="kpi-label">New Opps (Salesforce)</div>
-      <div class="kpi-value" id="kpi-opps">—</div>
-      <div class="kpi-target">Campaign window total</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Pipeline Moved ($)</div>
-      <div class="kpi-value" id="kpi-pipeline">—</div>
-      <div class="kpi-target">Stage advancement value</div>
-    </div>
+
   </div>
 
   <!-- CHARTS ROW -->
@@ -707,69 +760,6 @@ body {
     </table>
   </div>
 
-  <!-- SPHERE + SF ROW -->
-  <div class="row-3" style="margin-bottom:16px;">
-
-    <div class="card">
-      <div class="card-head">Sphere Brand Ad — Proxy Signals <span>No direct tracking · inferential only</span></div>
-      <div class="card-body">
-        <div style="margin-bottom:14px;">
-          <div class="bar-row">
-            <span class="bar-lbl">Branded search lift</span>
-            <div class="bar-bg"><div class="bar-fill" style="width:0%;background:var(--nb-purple);"></div></div>
-            <span class="bar-val">vs baseline</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-lbl">LV geo traffic</span>
-            <div class="bar-bg"><div class="bar-fill" style="width:0%;background:var(--nb-lavender);"></div></div>
-            <span class="bar-val">vs baseline</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-lbl">Direct traffic</span>
-            <div class="bar-bg"><div class="bar-fill" style="width:0%;background:var(--nb-blue);"></div></div>
-            <span class="bar-val">vs baseline</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-lbl">Brand mentions</span>
-            <div class="bar-bg"><div class="bar-fill" style="width:0%;background:var(--nb-light-blue);"></div></div>
-            <span class="bar-val">vs baseline</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-lbl">Organic sessions</span>
-            <div class="bar-bg"><div class="bar-fill" style="width:0%;background:var(--nb-tangerine);"></div></div>
-            <span class="bar-val">vs baseline</span>
-          </div>
-        </div>
-        <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 12px;font-size:11px;">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="color:var(--nb-muted);">Hashtag</span><strong>#AgenticNetOps</strong></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="color:var(--nb-muted);">Listening tool</span><strong>Meltwater / Oktopost</strong></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="color:var(--nb-muted);">Check cadence</span><strong>2× daily (AM + PM)</strong></div>
-          <div style="display:flex;justify-content:space-between;"><span style="color:var(--nb-muted);">UGC owner</span><strong>Brian</strong></div>
-        </div>
-      </div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:16px;">
-      <div class="card">
-        <div class="card-head">Salesforce Pipeline</div>
-        <div class="card-body">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:8px;">New Opp Creation</div>
-          <div class="sf-row"><span class="sf-key">Opp count</span><span class="sf-val">—</span></div>
-          <div class="sf-row"><span class="sf-key">Total ACV ($)</span><span class="sf-val">—</span></div>
-          <div class="sf-row"><span class="sf-key">Tagged w/ Campaign ID</span><span class="sf-val">—</span></div>
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin:12px 0 8px;">Stage Advancement</div>
-          <div class="sf-row"><span class="sf-key">Opps advanced</span><span class="sf-val">—</span></div>
-          <div class="sf-row"><span class="sf-key">Pipeline moved ($)</span><span class="sf-val">—</span></div>
-          <div class="sf-row"><span class="sf-key">LV contact + advance</span><span class="sf-val">—</span></div>
-          <div class="sf-row"><span class="sf-key">Days-in-stage vs baseline</span><span class="sf-val">—</span></div>
-          <div class="cp-row">
-            <span class="cp-chip">Day 7 — Jun 10</span>
-            <span class="cp-chip">Day 30 — Jun 29</span>
-            <span class="cp-chip">Day 90 — Sep 1</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 
@@ -1072,6 +1062,102 @@ body {
 </div><!-- /main events -->
 </div><!-- /tab-events -->
 
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MEDIA MENTIONS TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-media" class="tab-panel">
+<div class="main">
+
+  <!-- KPI ROW -->
+  <div class="section-label">Earned media summary <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Meltwater &bull; Campaign window May 29 – Jun 3</span></div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Mentions</div>
+      <div class="kpi-value" id="media-total">—</div>
+      <div class="kpi-target">Campaign window</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Daily Average</div>
+      <div class="kpi-value" id="media-daily-avg">—</div>
+      <div class="kpi-target">Mentions / day</div>
+    </div>
+    <div class="kpi-card lav">
+      <div class="kpi-label">Peak Day</div>
+      <div class="kpi-value" id="media-peak-val">—</div>
+      <div class="kpi-target" id="media-peak-date">—</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#2EAE5A;">
+      <div class="kpi-label">Last Fetched</div>
+      <div style="font-size:14px;font-weight:600;color:var(--nb-purple);line-height:1.4;margin-top:4px;" id="media-fetched-at">—</div>
+      <div class="kpi-target">Meltwater pull</div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="row-2" style="margin-bottom:20px;">
+    <div class="card" style="grid-column:1/-1;">
+      <div class="card-head">Daily Mention Volume <span>Meltwater · NetBrain Technologies search</span></div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:180px;">
+          <canvas id="mediaVolumeChart" role="img" aria-label="Bar chart showing daily media mention volume over campaign window."></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD ARTICLE -->
+  <div class="section-label">Add article manually</div>
+  <div class="manual-form-wrap">
+    <div class="manual-form-title">&#43; Paste a URL — we'll pull the title, source, and date automatically</div>
+    <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;">
+      <input id="mf-url" class="mf-input" type="url" placeholder="https://www.example.com/article..." />
+      <button class="mf-btn" onclick="submitManualArticle()">Add Article</button>
+      <span id="mf-status" style="font-size:12px;color:var(--nb-muted);white-space:nowrap;"></span>
+    </div>
+    <div id="mf-error" style="display:none;font-size:12px;color:#D63030;margin-top:8px;"></div>
+  </div>
+
+  <!-- ARTICLE FEED -->
+  <div class="section-label" style="display:flex;justify-content:space-between;align-items:center;">
+    <span>Article feed</span>
+    <input id="media-search-input" type="text" placeholder="Filter by keyword or source..."
+      style="width:260px;padding:5px 10px;border:1px solid var(--nb-border);border-radius:var(--radius);font-size:12px;font-family:var(--nb-font);color:var(--nb-dark-text);outline:none;"
+      oninput="filterMediaArticles()" />
+  </div>
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-head">
+      Article Feed
+      <span id="media-article-count-label"></span>
+    </div>
+    <div class="card-body" style="padding:0;">
+
+      <!-- Empty state -->
+      <div id="media-empty-state" style="padding:24px 20px;text-align:center;color:var(--nb-muted);font-size:13px;">
+        No articles yet. Paste a URL above to add the first one, or wait for Meltwater data.
+      </div>
+
+      <!-- Article table -->
+      <div id="media-article-table-wrap" style="display:none;overflow-x:auto;">
+        <table class="nb-table">
+          <thead>
+            <tr>
+              <th style="min-width:280px;">Article</th>
+              <th>Source</th>
+              <th>Date</th>
+              <th style="text-align:center;">Type</th>
+              <th style="text-align:center;"></th>
+            </tr>
+          </thead>
+          <tbody id="media-article-tbody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /main media -->
+</div><!-- /tab-media -->
+
 <!-- FOOTER -->
 <div class="footer">
   <span>Copyright &copy; 2026 NetBrain Technologies, Inc. All trademarks referenced herein belong to NetBrain Technologies, Inc.</span>
@@ -1131,10 +1217,8 @@ async function loadKPIs() {
 
     // ── Last updated label ──
     const ts    = new Date(d.updatedAt);
-    const tsStr = ts.toLocaleDateString('en-US', { month:'short', day:'numeric' })
-                + ' ' + ts.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
     const lastUpdatedEl = document.getElementById('last-updated-label');
-    if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${tsStr}`;
+    if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${fmtTimestamp(ts)}`;
 
     // ── MQL card ──
     const mqlEl = document.getElementById('kpi-mqls');
@@ -1266,6 +1350,7 @@ async function loadKPIs() {
     // ── Social (Meltwater earned media) ──
     if (d.social && d.social.searches) {
       renderSocialChart(d.social);
+      renderMediaTab(d.social);
     }
 
     // ── Branded Search (GSC) ──
@@ -1571,6 +1656,13 @@ document.querySelectorAll('.topbar-nav a').forEach(function(link) {
   });
 });
 
+// ── TIMESTAMP FORMATTER ──
+function fmtTimestamp(date) {
+  var d = date.toLocaleDateString('en-US', { month:'numeric', day:'numeric', year:'numeric', timeZone:'America/New_York' });
+  var t = date.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true, timeZone:'America/New_York' });
+  return d + ' @ ' + t + ' ET';
+}
+
 // ── EVENTS DATA RENDERER ──
 // Stub data — replace with fetch() from Pipedream Data Store once live
 // Shape mirrors the canonical schema in the Data Store under key jtano:hubspot:latest
@@ -1626,7 +1718,7 @@ function renderEventCard(prefix, data) {
 
   // Timestamp
   var ts = data.last_updated;
-  document.getElementById(prefix + '-updated').textContent = ts ? ts : 'Pending live data';
+  document.getElementById(prefix + '-updated').textContent = ts ? fmtTimestamp(new Date(ts)) : 'Pending live data';
 }
 
 function renderCombined(an, zol) {
@@ -1659,6 +1751,226 @@ function renderCombined(an, zol) {
 renderEventCard('an',  eventsStub.agentic_netops);
 renderEventCard('zol', eventsStub.zero_outage_lounge);
 renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge);
+
+// ── MEDIA MENTIONS TAB ──────────────────────────────────────────────────────
+
+// Webhook URL for the manual articles Pipedream workflow
+// Replace with the real URL once the workflow is created in Pipedream
+const MANUAL_ARTICLE_WEBHOOK = 'https://eopkva5nw5feokv.m.pipedream.net';
+
+let mediaArticlesAll = []; // combined: meltwater + manual
+
+const mediaVolumeChart = new Chart(document.getElementById('mediaVolumeChart'), {
+  type: 'bar',
+  data: { labels: [], datasets: [{
+    label: 'Mentions',
+    data: [],
+    backgroundColor: 'rgba(135,107,207,0.75)',
+    borderColor: '#876BCF',
+    borderWidth: 1,
+    borderRadius: 4,
+    hoverBackgroundColor: '#FF7347'
+  }]},
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          title: ctx => ctx[0].label,
+          label: ctx => ctx.parsed.y + ' mention' + (ctx.parsed.y !== 1 ? 's' : '')
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { beginAtZero: true, ticks: { stepSize: 50, font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } }
+    }
+  }
+});
+
+function renderMediaTab(social) {
+  if (!social) return;
+  const combined = social.combined || {};
+  const total    = combined.total || 0;
+  const byDate   = combined.byDate || {};
+  const campaignStart = new Date('2026-05-29');
+  const today         = new Date();
+  const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
+
+  // KPI cards
+  const totalEl = document.getElementById('media-total');
+  const avgEl   = document.getElementById('media-daily-avg');
+  const peakVal = document.getElementById('media-peak-val');
+  const peakDt  = document.getElementById('media-peak-date');
+  const fetchEl = document.getElementById('media-fetched-at');
+
+  if (totalEl) totalEl.textContent = total.toLocaleString();
+  if (avgEl)   avgEl.textContent   = dayCount > 0 ? (total / dayCount).toFixed(1) : '—';
+
+  // Peak day
+  let maxVal = 0, maxDate = '';
+  Object.entries(byDate).forEach(([d, v]) => { if (v > maxVal) { maxVal = v; maxDate = d; } });
+  if (peakVal) peakVal.textContent = maxVal > 0 ? maxVal.toLocaleString() : '—';
+  if (peakDt && maxDate) {
+    const parts = maxDate.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    peakDt.textContent = parts.length === 3
+      ? months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10)
+      : maxDate;
+  }
+
+  // Last fetched
+  if (fetchEl && social.fetchedAt) {
+    const ft = new Date(social.fetchedAt);
+    fetchEl.textContent = ft.toLocaleDateString('en-US', { month:'short', day:'numeric' })
+      + ' ' + ft.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
+  }
+
+  // Bar chart
+  const sortedDates = Object.keys(byDate).sort();
+  const fmtLbl = str => {
+    const p = str.split('-');
+    if (p.length === 3) {
+      const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return m[parseInt(p[1],10)-1] + ' ' + parseInt(p[2],10);
+    }
+    return str;
+  };
+  mediaVolumeChart.data.labels           = sortedDates.map(fmtLbl);
+  mediaVolumeChart.data.datasets[0].data = sortedDates.map(d => byDate[d] || 0);
+  mediaVolumeChart.update();
+
+  // Merge meltwater articles + manual articles from data.json
+  const meltwater = (social.articles || []).map(a => ({ ...a, _type: 'meltwater' }));
+  const manual    = (social.manual_articles || []).map(a => ({ ...a, _type: 'manual' }));
+  mediaArticlesAll = [...manual, ...meltwater]; // manual first so team additions are prominent
+
+  refreshArticleTable();
+}
+
+function refreshArticleTable() {
+  const tableWrap  = document.getElementById('media-article-table-wrap');
+  const emptyState = document.getElementById('media-empty-state');
+  const countLbl   = document.getElementById('media-article-count-label');
+
+  if (mediaArticlesAll.length === 0) {
+    if (tableWrap)  tableWrap.style.display  = 'none';
+    if (emptyState) emptyState.style.display = 'block';
+    if (countLbl)   countLbl.textContent     = '';
+  } else {
+    if (tableWrap)  tableWrap.style.display  = 'block';
+    if (emptyState) emptyState.style.display = 'none';
+    const n = mediaArticlesAll.length;
+    if (countLbl) countLbl.textContent = n + ' article' + (n !== 1 ? 's' : '');
+    filterMediaArticles();
+  }
+}
+
+function renderArticleRows(articles) {
+  const tbody = document.getElementById('media-article-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = articles.slice(0, 200).map(a => {
+    const date  = a.publishDate
+      ? new Date(a.publishDate).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })
+      : '—';
+    const titleHtml = a.url
+      ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--nb-blue);text-decoration:none;font-weight:600;">${a.title || a.url}</a>`
+      : (a.title || '—');
+    const typeBadge = a._type === 'manual'
+      ? '<span class="badge b-amb">Manual</span>'
+      : '<span class="badge b-info">Meltwater</span>';
+    const deleteBtn = a._type === 'manual' && a.id
+      ? `<button class="del-btn" onclick="deleteManualArticle('${a.id}')" title="Remove">&#x2715;</button>`
+      : '';
+    return `<tr>
+      <td>${titleHtml}${a.description ? `<div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${a.description}</div>` : ''}</td>
+      <td style="color:var(--nb-muted);white-space:nowrap;">${a.source || '—'}</td>
+      <td style="white-space:nowrap;">${date}</td>
+      <td style="text-align:center;">${typeBadge}</td>
+      <td style="text-align:center;">${deleteBtn}</td>
+    </tr>`;
+  }).join('');
+}
+
+function filterMediaArticles() {
+  const q = (document.getElementById('media-search-input').value || '').toLowerCase();
+  const filtered = q
+    ? mediaArticlesAll.filter(a =>
+        (a.title  || '').toLowerCase().includes(q) ||
+        (a.source || '').toLowerCase().includes(q) ||
+        (a.url    || '').toLowerCase().includes(q))
+    : mediaArticlesAll;
+  renderArticleRows(filtered);
+}
+
+// ── MANUAL ARTICLE SUBMISSION ────────────────────────────────────────────────
+async function submitManualArticle() {
+  const urlInput = document.getElementById('mf-url');
+  const statusEl = document.getElementById('mf-status');
+  const errorEl  = document.getElementById('mf-error');
+  const url = (urlInput.value || '').trim();
+
+  errorEl.style.display = 'none';
+
+  if (!url || !url.startsWith('http')) {
+    errorEl.textContent = 'Please enter a valid URL starting with http:// or https://';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  if (MANUAL_ARTICLE_WEBHOOK === 'PASTE_PIPEDREAM_WEBHOOK_URL_HERE') {
+    errorEl.textContent = 'Pipedream webhook URL not configured yet — paste the URL into MANUAL_ARTICLE_WEBHOOK in the dashboard script.';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  statusEl.textContent = '⏳ Fetching metadata...';
+  urlInput.disabled = true;
+
+  try {
+    await fetch(MANUAL_ARTICLE_WEBHOOK, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'add', url })
+    });
+
+    urlInput.value = '';
+    statusEl.textContent = '✓ Submitted — refreshing in 10s...';
+
+    // Give Pipedream ~10s to fetch, enrich, and push to GitHub
+    setTimeout(async () => {
+      await loadKPIs();
+      statusEl.textContent = '✓ Done';
+      setTimeout(() => { statusEl.textContent = ''; }, 3000);
+    }, 10000);
+
+  } catch(e) {
+    errorEl.textContent = 'Submission failed: ' + e.message;
+    errorEl.style.display = 'block';
+    statusEl.textContent = '';
+  } finally {
+    urlInput.disabled = false;
+  }
+}
+
+// ── MANUAL ARTICLE DELETE ────────────────────────────────────────────────────
+async function deleteManualArticle(id) {
+  if (!confirm('Remove this article?')) return;
+  try {
+    await fetch(MANUAL_ARTICLE_WEBHOOK, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'remove', id })
+    });
+    setTimeout(() => loadKPIs(), 10000);
+  } catch(e) {
+    console.warn('Delete failed:', e);
+  }
+}
 
 // ── LOAD LIVE DATA ──
 loadKPIs();
