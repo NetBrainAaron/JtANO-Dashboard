@@ -156,7 +156,38 @@
       "requestDemo": 128
     }
   },
-  "social": null,
+  "social": {
+    "fetchedAt": "2026-06-03T18:24:22.166Z",
+    "campaignWindow": {
+      "start": "2026-05-29T00:00:00Z",
+      "end": "2026-06-03T23:59:59Z"
+    },
+    "combined": {
+      "total": 393,
+      "byDate": {
+        "2026-06-02": 14,
+        "2026-06-01": 97,
+        "2026-05-29": 250,
+        "2026-05-30": 31,
+        "2026-05-31": 1
+      }
+    },
+    "searches": {
+      "netbrain": {
+        "name": "NetBrain Technologies",
+        "searchId": 26737817,
+        "total": 393,
+        "fetchedCount": 393,
+        "byDate": {
+          "2026-06-02": 14,
+          "2026-06-01": 97,
+          "2026-05-29": 250,
+          "2026-05-30": 31,
+          "2026-05-31": 1
+        }
+      }
+    }
+  },
   "search": {
     "dateRange": {
       "start": "2026-05-04",
