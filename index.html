@@ -567,10 +567,22 @@ body {
   <div class="row-2" style="margin-bottom:16px;">
 
     <div class="card">
-      <div class="card-head">Sphere Proxy: Branded Search Lift &amp; Direct Traffic <span>vs 14-day baseline</span></div>
+      <div class="card-head">Branded Search Impressions <span id="search-card-subtitle">Google Search Console &middot; NetBrain &amp; Agentic NetOps</span></div>
       <div class="card-body">
-        <div class="chart-wrap" style="height:200px;">
-          <canvas id="sphereChart" role="img" aria-label="Area chart of branded search lift and direct traffic indexed against pre-campaign baseline.">Sphere proxy signals chart.</canvas>
+        <div style="display:flex;gap:24px;margin-bottom:12px;align-items:flex-end;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">NetBrain Lift Index</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;" id="search-nb-lift">—</div>
+            <div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">impressions vs baseline</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">Agentic NetOps Lift Index</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="search-ano-lift">—</div>
+            <div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">impressions vs baseline</div>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:150px;">
+          <canvas id="searchChart" role="img" aria-label="Dual-line chart of daily branded search impressions for NetBrain and Agentic NetOps.">Branded search impressions chart.</canvas>
         </div>
       </div>
     </div>
@@ -1256,6 +1268,11 @@ async function loadKPIs() {
       renderSocialChart(d.social);
     }
 
+    // ── Branded Search (GSC) ──
+    if (d.search) {
+      renderSearchChart(d.search);
+    }
+
   } catch(e) {
     console.warn('KPI fetch failed:', e);
   }
@@ -1415,44 +1432,33 @@ fillsLeg.innerHTML = [
 ).join('');
 fillsCtx.insertBefore(fillsLeg, fillsCtx.firstChild);
 
-// ── SPHERE PROXY ──
-new Chart(document.getElementById('sphereChart'), {
+// ── BRANDED SEARCH (GSC) ──
+const searchChartInstance = new Chart(document.getElementById('searchChart'), {
   type: 'line',
   data: {
-    labels: ['May 29','May 30','May 31','Jun 1','Jun 2','Jun 3'],
+    labels: [],
     datasets: [
       {
-        label: 'Branded search index',
-        data: [100, 118, 134, 129, 142, 138],
+        label: 'NetBrain',
+        data: [],
         borderColor: P,
         backgroundColor: 'rgba(32,11,78,0.08)',
-        fill: true,
-        tension: 0.4,
-        pointRadius: 4,
-        pointBackgroundColor: P,
-        borderDash: [],
-      },
-      {
-        label: 'Direct traffic index',
-        data: [100, 108, 121, 117, 130, 125],
-        borderColor: L,
-        backgroundColor: 'rgba(135,107,207,0.06)',
-        fill: true,
-        tension: 0.4,
-        pointRadius: 4,
-        pointBackgroundColor: L,
-        borderDash: [5,3],
-      },
-      {
-        label: 'LV geo traffic index',
-        data: [100, 115, 145, 138, 162, 155],
-        borderColor: T,
-        backgroundColor: 'rgba(255,115,71,0.05)',
         fill: false,
         tension: 0.4,
-        pointRadius: 4,
-        pointBackgroundColor: T,
-        borderDash: [3,2],
+        pointRadius: 3,
+        pointBackgroundColor: P,
+        borderWidth: 2,
+      },
+      {
+        label: 'Agentic NetOps',
+        data: [],
+        borderColor: L,
+        backgroundColor: 'rgba(135,107,207,0.08)',
+        fill: false,
+        tension: 0.4,
+        pointRadius: 3,
+        pointBackgroundColor: L,
+        borderWidth: 2,
       }
     ]
   },
@@ -1461,15 +1467,55 @@ new Chart(document.getElementById('sphereChart'), {
     maintainAspectRatio: false,
     plugins: { legend: { display: false } },
     scales: {
-      y: { ticks:{ font:{size:10}, callback: v=>v }, suggestedMin:90, grid:{ color:'rgba(0,0,0,0.06)' } },
+      y: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
       x: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.04)' } }
     }
   }
 });
-const sphereLeg = document.createElement('div');
-sphereLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
-sphereLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>Branded search</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Direct traffic</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#FF7347;display:inline-block;"></span>LV geo traffic</span>`;
-document.getElementById('sphereChart').parentElement.insertBefore(sphereLeg, document.getElementById('sphereChart').parentElement.firstChild);
+const searchLeg = document.createElement('div');
+searchLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
+searchLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>NetBrain</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Agentic NetOps</span>`;
+document.getElementById('searchChart').parentElement.insertBefore(searchLeg, document.getElementById('searchChart').parentElement.firstChild);
+
+// ── SEARCH CHART RENDERER ─────────────────────────────────────────────────────
+function renderSearchChart(search) {
+  if (!search) return;
+  const nb  = search.netbrain      || {};
+  const ano = search.agenticNetOps || {};
+
+  // Lift index stat cards
+  const nbLift  = nb.liftIndex  && nb.liftIndex.impressions  != null ? nb.liftIndex.impressions  : null;
+  const anoLift = ano.liftIndex && ano.liftIndex.impressions != null ? ano.liftIndex.impressions : null;
+  const nbLiftEl  = document.getElementById('search-nb-lift');
+  const anoLiftEl = document.getElementById('search-ano-lift');
+  if (nbLiftEl  && nbLift  != null) nbLiftEl.textContent  = nbLift;
+  if (anoLiftEl && anoLift != null) anoLiftEl.textContent = anoLift;
+
+  // Top KPI card (NetBrain lift expressed as +/- % vs baseline)
+  const kpiSearchEl = document.getElementById('kpi-search');
+  if (kpiSearchEl && nbLift != null) {
+    const pct = nbLift - 100;
+    kpiSearchEl.textContent = (pct >= 0 ? '+' : '') + pct + '%';
+  }
+
+  // Dual-line chart -- merge dates from both series
+  const nbDaily  = nb.daily  || [];
+  const anoDaily = ano.daily || [];
+  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])].sort();
+
+  if (allDates.length > 0) {
+    const formatDate = str => {
+      const parts = str.split('-');
+      return parts.length === 3 ? parts[1] + '/' + parts[2] : str;
+    };
+    const nbByDate  = Object.fromEntries(nbDaily.map(d  => [d.date,  d.impressions]));
+    const anoByDate = Object.fromEntries(anoDaily.map(d => [d.date, d.impressions]));
+    searchChartInstance.data.labels                  = allDates.map(formatDate);
+    searchChartInstance.data.datasets[0].data        = allDates.map(d => nbByDate[d]  ?? null);
+    searchChartInstance.data.datasets[1].data        = allDates.map(d => anoByDate[d] ?? null);
+    searchChartInstance.update();
+  }
+}
 
 // ── SOCIAL (Meltwater -- area line, daily mentions) ──
 const socialChartInstance = new Chart(document.getElementById('socialChart'), {
@@ -1532,6 +1578,7 @@ var eventsStub = {
   agentic_netops: {
     registered: 0,
     attended: 0,
+    registeredAttended: 0,
     walkins: 0,
     attendance_rate: 0,
     last_updated: ''
@@ -1539,6 +1586,7 @@ var eventsStub = {
   zero_outage_lounge: {
     registered: 0,
     attended: 0,
+    registeredAttended: 0,
     walkins: 0,
     attendance_rate: 0,
     last_updated: ''
@@ -1546,33 +1594,32 @@ var eventsStub = {
 };
 
 function renderEventCard(prefix, data) {
-  var reg = data.registered;
-  var att = data.attended;
-  var walkins = Math.max(att - reg, 0);
-  var rate = reg > 0 ? Math.round((att / reg) * 100) : 0;
-  var max = Math.max(reg, att, 1);
+  var reg     = data.registered;
+  var att     = data.attended;
+  // Use server-computed set intersection if available, fall back to math
+  var regAtt  = (data.registeredAttended != null) ? data.registeredAttended : Math.min(att, reg);
+  var walkins = (data.walkins != null) ? data.walkins : Math.max(att - reg, 0);
+  // Attendance rate = registered who showed up / total registered
+  var rate    = reg > 0 ? Math.round((regAtt / reg) * 100) : 0;
 
   // Stats
   document.getElementById(prefix + '-registered').textContent = reg > 0 ? reg : '\u2014';
   document.getElementById(prefix + '-attended').textContent   = att > 0 ? att : '\u2014';
   document.getElementById(prefix + '-rate').textContent       = reg > 0 ? rate + '%' : '\u2014';
-  document.getElementById(prefix + '-walkins').textContent    = reg > 0 ? walkins : '\u2014';
+  document.getElementById(prefix + '-walkins').textContent    = reg > 0 ? walkins : (att > 0 ? walkins : '\u2014');
 
   // Walk-in badge
   var badgeWrap = document.getElementById(prefix + '-walkin-badge');
   if (walkins > 0) {
     badgeWrap.style.display = 'block';
     document.getElementById(prefix + '-walkin-badge-text').textContent = walkins;
+  } else {
+    badgeWrap.style.display = 'none';
   }
 
-  // Progress bars — registered as full baseline, attended overlay
+  // Progress bars — registered as full baseline, registeredAttended as overlay
   var regPct = 100;
-  var attPct = reg > 0 ? Math.min((att / reg) * 100, 100) : 0;
-  // If attended > registered, bars flip: attended is the baseline
-  if (att > reg && att > 0) {
-    regPct = Math.round((reg / att) * 100);
-    attPct = 100;
-  }
+  var attPct = reg > 0 ? Math.min((regAtt / reg) * 100, 100) : 0;
   document.getElementById(prefix + '-bar-reg').style.width = regPct + '%';
   document.getElementById(prefix + '-bar-att').style.width = attPct + '%';
   document.getElementById(prefix + '-att-pct-label').textContent = reg > 0 ? rate + '%' : '\u2014';
@@ -1583,13 +1630,14 @@ function renderEventCard(prefix, data) {
 }
 
 function renderCombined(an, zol) {
-  var totalReg = an.registered + zol.registered;
-  var totalAtt = an.attended + zol.attended;
-  var totalWalk = Math.max(an.attended - an.registered, 0) + Math.max(zol.attended - zol.registered, 0);
-  var blended = totalReg > 0 ? Math.round((totalAtt / totalReg) * 100) : 0;
+  var totalReg    = an.registered + zol.registered;
+  var totalAtt    = an.attended + zol.attended;
+  var totalWalk   = (an.walkins || 0) + (zol.walkins || 0);
+  var totalRegAtt = (an.registeredAttended || 0) + (zol.registeredAttended || 0);
+  var blended     = totalReg > 0 ? Math.round((totalRegAtt / totalReg) * 100) : 0;
   document.getElementById('combined-registered').textContent = totalReg > 0 ? totalReg : '\u2014';
   document.getElementById('combined-attended').textContent   = totalAtt > 0 ? totalAtt : '\u2014';
-  document.getElementById('combined-walkins').textContent    = totalReg > 0 ? totalWalk : '\u2014';
+  document.getElementById('combined-walkins').textContent    = totalWalk > 0 ? totalWalk : (totalReg > 0 ? '0' : '\u2014');
   document.getElementById('combined-rate').textContent       = totalReg > 0 ? blended + '%' : '\u2014';
 }
 
