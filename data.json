@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03T18:02:08.807Z",
+  "updatedAt": "2026-06-03T18:09:20.198Z",
   "runDate": "2026-06-03",
   "runHour": "18",
   "campaignUtm": "jtano_q2fy26_integrated",
@@ -93,7 +93,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-03T18:02:08.416Z",
+    "fetchedAt": "2026-06-03T18:09:19.900Z",
     "campaignWindow": {
       "start": "2026-05-29",
       "end": "2026-06-03"
