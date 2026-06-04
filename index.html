@@ -1205,24 +1205,37 @@ body {
   <!-- KPI CARDS -->
   <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
     <div class="kpi-card">
-      <div class="kpi-label">Total UTM Links</div>
-      <div class="kpi-value">11</div>
-      <div class="kpi-target">+ 1 BDR (dest URL TBD)</div>
+      <div class="kpi-label">Total Sessions</div>
+      <div class="kpi-value" id="utm-kpi-total">—</div>
+      <div class="kpi-target">All UTM campaigns combined</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#200B4E;">
+      <div class="kpi-label">JtANO Sessions</div>
+      <div class="kpi-value" id="utm-kpi-jtano">—</div>
+      <div class="kpi-target">jtano_q2fy26_*</div>
     </div>
     <div class="kpi-card blue">
-      <div class="kpi-label">Unique Sources</div>
-      <div class="kpi-value">3</div>
-      <div class="kpi-target">email, businesswire, newsletter</div>
+      <div class="kpi-label">Gartner Sessions</div>
+      <div class="kpi-value" id="utm-kpi-gartner">—</div>
+      <div class="kpi-target">gartner_market_guide_*</div>
     </div>
-    <div class="kpi-card lav">
-      <div class="kpi-label">Unique Campaigns</div>
-      <div class="kpi-value">4</div>
-      <div class="kpi-target">JtANO, Gartner, ZOL, BDR</div>
+    <div class="kpi-card" style="border-left-color:#FF7347;">
+      <div class="kpi-label">ZOL Sessions</div>
+      <div class="kpi-value" id="utm-kpi-zol">—</div>
+      <div class="kpi-target">Tradeshow:Q2FY26_ZOL_*</div>
     </div>
-    <div class="kpi-card" style="border-left-color:#2EAE5A;">
-      <div class="kpi-label">Destination Pages</div>
-      <div class="kpi-value">4</div>
-      <div class="kpi-target">Unique landing pages</div>
+  </div>
+
+  <!-- SESSIONS CHART -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-head">Sessions by Source by Day <span>GA4 &bull; jtano / gartner / zol campaigns &bull; May 29 - Jun 3</span></div>
+    <div class="card-body">
+      <div id="utm-chart-wrap" class="chart-wrap" style="height:200px;">
+        <canvas id="utmSessionChart" role="img" aria-label="Stacked bar chart of sessions by UTM source per day."></canvas>
+      </div>
+      <div id="utm-chart-empty" style="display:none;text-align:center;padding:36px 0;color:var(--nb-muted);font-size:12px;">
+        Session data pending. Add the <strong>fetch_ga4_utm</strong> Pipedream step to populate this chart.
+      </div>
     </div>
   </div>
 
@@ -1247,6 +1260,7 @@ body {
             <th>Medium</th>
             <th>Destination</th>
             <th>Campaign</th>
+            <th style="text-align:right;">Sessions</th>
             <th style="width:60px;"></th>
           </tr>
         </thead>
@@ -1256,7 +1270,7 @@ body {
   </div>
 
   <div style="margin-top:12px;font-size:11px;color:var(--nb-muted);line-height:1.6;">
-    BDR outbound link destination URL is pending. GA4 UTM-level click data is not yet wired into the pipeline. Sources shown here are from Sandra's confirmed UTM list.
+    <strong style="color:#C07000;">Note:</strong> GA4 UTM data has a 2-3 day reporting lag, so the most recent days of the campaign window will appear incomplete until Google processes them. Sessions populate once the <strong>fetch_ga4_utm</strong> Pipedream step is added to the workflow. BDR row destination URL is pending. All links from Sandra's confirmed UTM list.
   </div>
 
 </div><!-- /main utm -->
@@ -1526,6 +1540,24 @@ async function loadKPIs() {
     // ── Branded Search (GSC) ──
     if (d.search) {
       renderSearchChart(d.search?.search || d.search);
+    }
+
+    // ── UTM Traffic (GA4 UTM dimensions -- populated by fetch_ga4_utm step) ──
+    if (d.utm_traffic) {
+      const ut = d.utm_traffic;
+      utmSessionLookup = buildUtmSessionLookup(ut);
+      renderUtmTable(currentUtmFilter);
+      renderUtmSessionChart(ut);
+      const grp = ut.byCampaignGroup || {};
+      const tot = ut.totals?.sessions || 0;
+      const totEl = document.getElementById('utm-kpi-total');
+      if (totEl) totEl.textContent = tot > 0 ? tot.toLocaleString() : '—';
+      const jtEl = document.getElementById('utm-kpi-jtano');
+      if (jtEl) jtEl.textContent = grp.jtano != null ? Number(grp.jtano).toLocaleString() : '—';
+      const gaEl = document.getElementById('utm-kpi-gartner');
+      if (gaEl) gaEl.textContent = grp.gartner != null ? Number(grp.gartner).toLocaleString() : '—';
+      const zoEl = document.getElementById('utm-kpi-zol');
+      if (zoEl) zoEl.textContent = grp.zol != null ? Number(grp.zol).toLocaleString() : '—';
     }
 
   } catch(e) {
@@ -2421,29 +2453,110 @@ var UTM_GROUP_STYLES = {
   zol:     { bg:'rgba(255,115,71,0.12)', color:'#FF7347', label:'ZOL' }
 };
 
+var currentUtmFilter  = 'all';
+var utmSessionLookup  = {};   // "campaign|source|medium" -> sessions total
+var utmChartInst      = null;
+
+function buildUtmSessionLookup(utmTraffic) {
+  var lookup = {};
+  if (!utmTraffic || !utmTraffic.daily) return lookup;
+  utmTraffic.daily.forEach(function(day) {
+    (day.rows || []).forEach(function(r) {
+      var key = r.campaign + '|' + r.source + '|' + r.medium;
+      lookup[key] = (lookup[key] || 0) + r.sessions;
+    });
+  });
+  return lookup;
+}
+
 function renderUtmTable(filter) {
   var tbody = document.getElementById('utm-tbody');
   if (!tbody) return;
+  currentUtmFilter = filter;
   var rows = filter === 'all' ? UTM_LINKS : UTM_LINKS.filter(function(r){ return r.group === filter; });
+  var hasData = Object.keys(utmSessionLookup).length > 0;
   tbody.innerHTML = rows.map(function(r) {
     var origIdx = UTM_LINKS.indexOf(r);
     var gs = UTM_GROUP_STYLES[r.group] || { bg:'#f0f0f8', color:'#6B6880', label:r.group };
-    var badge = '<span class="badge" style="background:'+gs.bg+';color:'+gs.color+';">'+gs.label+'</span>';
+    var badge   = '<span class="badge" style="background:'+gs.bg+';color:'+gs.color+';">'+gs.label+'</span>';
     var copyBtn = r.url
       ? '<button class="utm-copy-btn" onclick="copyUtmByIdx('+origIdx+',this)">Copy</button>'
       : '<span style="font-size:11px;color:var(--nb-muted);">TBD</span>';
     var destCell = r.dest === 'TBD'
       ? '<span style="color:var(--nb-muted);">TBD</span>'
       : '<span title="'+r.dest+'">'+r.dest+'</span>';
+    var sessKey = r.campaign + '|' + r.source + '|' + r.medium;
+    var sessVal = utmSessionLookup[sessKey];
+    var sessCell = !hasData
+      ? '<span style="color:var(--nb-muted);font-size:11px;">pending</span>'
+      : (sessVal != null
+          ? '<span style="font-weight:600;color:var(--nb-purple);">'+sessVal.toLocaleString()+'</span>'
+          : '<span style="color:var(--nb-muted);">0</span>');
     return '<tr>'
       + '<td>'+badge+'</td>'
       + '<td><span class="chan">'+r.source+'</span></td>'
       + '<td>'+r.medium+'</td>'
       + '<td class="utm-dest-cell">'+destCell+'</td>'
       + '<td class="utm-camp-cell" title="'+r.campaign+'">'+r.campaign+'</td>'
+      + '<td style="text-align:right;">'+sessCell+'</td>'
       + '<td style="text-align:right;">'+copyBtn+'</td>'
       + '</tr>';
   }).join('');
+}
+
+function renderUtmSessionChart(utmTraffic) {
+  var canvas  = document.getElementById('utmSessionChart');
+  var emptyEl = document.getElementById('utm-chart-empty');
+  if (!canvas) return;
+  var days = (utmTraffic && utmTraffic.daily) ? utmTraffic.daily : [];
+  if (!days.length) {
+    canvas.style.display = 'none';
+    if (emptyEl) emptyEl.style.display = 'block';
+    return;
+  }
+  canvas.style.display = '';
+  if (emptyEl) emptyEl.style.display = 'none';
+
+  // GA4 returns dates as YYYYMMDD; normalise to readable label
+  var labels = days.map(function(d) {
+    var s = String(d.date).replace(/-/g,'');
+    var iso = s.replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3');
+    return new Date(iso + 'T12:00:00').toLocaleDateString('en-US',{ month:'short', day:'numeric' });
+  });
+
+  var sourceOrder  = ['email','businesswire','newsletter'];
+  var sourceSet    = {};
+  days.forEach(function(day){ (day.rows||[]).forEach(function(r){ sourceSet[r.source]=true; }); });
+  var sources = sourceOrder.filter(function(s){ return sourceSet[s]; });
+  Object.keys(sourceSet).forEach(function(s){ if (sources.indexOf(s)<0) sources.push(s); });
+
+  var srcColors = { email:P, businesswire:T, newsletter:B };
+  var datasets  = sources.map(function(src) {
+    return {
+      label: src,
+      backgroundColor: srcColors[src] || L,
+      borderRadius: 3,
+      data: days.map(function(day) {
+        return (day.rows||[]).filter(function(r){ return r.source===src; })
+          .reduce(function(sum,r){ return sum + r.sessions; }, 0);
+      })
+    };
+  });
+
+  if (utmChartInst) { utmChartInst.destroy(); utmChartInst = null; }
+  utmChartInst = new Chart(canvas, {
+    type: 'bar',
+    data: { labels: labels, datasets: datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position:'bottom', labels:{ font:{size:11}, boxWidth:12 } } },
+      scales: {
+        x: { stacked:true, grid:{display:false}, ticks:{font:{size:11}} },
+        y: { stacked:true, beginAtZero:true, ticks:{ font:{size:11}, precision:0 } }
+      }
+    }
+  });
 }
 
 function copyUtmByIdx(idx, btn) {
@@ -2452,9 +2565,7 @@ function copyUtmByIdx(idx, btn) {
   navigator.clipboard.writeText(link.url).then(function() {
     var orig = btn.textContent;
     btn.textContent = 'Copied!';
-    btn.style.background = '#2EAE5A';
-    btn.style.color = '#fff';
-    btn.style.borderColor = '#2EAE5A';
+    btn.style.background = '#2EAE5A'; btn.style.color = '#fff'; btn.style.borderColor = '#2EAE5A';
     setTimeout(function(){ btn.textContent = orig; btn.style.background=''; btn.style.color=''; btn.style.borderColor=''; }, 1500);
   });
 }
