@@ -1238,7 +1238,11 @@ async function loadKPIs() {
       };
       cvrChartInstance.data.labels = pagesDaily.map(row => formatDate(row.date));
       PAGE_CONFIGS.forEach((p, i) => {
-        cvrChartInstance.data.datasets[i].data = pagesDaily.map(row => row[p.key] ?? 0);
+        cvrChartInstance.data.datasets[i].data = pagesDaily.map(row =>
+          p.key === 'total'
+            ? PAGE_KEYS.reduce((sum, k) => sum + (row[k] ?? 0), 0)
+            : (row[p.key] ?? 0)
+        );
       });
       cvrChartInstance.update();
 
@@ -1336,7 +1340,7 @@ async function loadKPIs() {
     }
 
     // ── Social (Meltwater earned media) ──
-    if (d.social && d.social.searches) {
+    if (d.social && (d.social.combined || d.social.searches)) {
       renderSocialChart(d.social);
       renderMediaTab(d.social);
     }
@@ -1410,8 +1414,10 @@ const PAGE_CONFIGS = [
   { key: 'agenticNetOps', label: 'Agentic NetOps LP', color: T,    dash: [] },
   { key: 'gartner',       label: 'Gartner',           color: L,    dash: [5,3] },
   { key: 'ciscoLive',     label: 'Cisco Live',        color: B,    dash: [5,3] },
-  { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] }
+  { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] },
+  { key: 'total',         label: 'Total (all pages)', color: '#888888', dash: [] },
 ];
+const PAGE_KEYS = ['homepage','agenticNetOps','gartner','ciscoLive','requestDemo'];
 
 // Campaign-start divider — draws a dotted orange line at May 29 on every chart.
 // Matches both label formats used across charts: "May 29" and "05/29".
@@ -1465,10 +1471,10 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
       backgroundColor:    'transparent',
       fill:               false,
       tension:            0.4,
-      pointRadius:        4,
+      pointRadius:        p.key === 'total' ? 3 : 4,
       pointBackgroundColor: p.color,
       borderDash:         p.dash,
-      borderWidth:        2,
+      borderWidth:        p.key === 'total' ? 2.5 : 2,
     }))
   },
   options: {
