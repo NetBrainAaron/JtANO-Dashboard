@@ -462,8 +462,9 @@
     }
   },
   "social": {
+    "fetchedAt": "2026-06-04T15:50:19.101Z",
     "combined": {
-      "total": 0,
+      "total": 426,
       "byDate": []
     },
     "byType": {}
