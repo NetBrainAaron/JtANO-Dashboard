@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JtANO Campaign KPI Dashboard — May 2026</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
 <style>
 :root {
   --nb-purple: #200B4E;
@@ -125,7 +126,7 @@ body {
 /* ── KPI GRID ── */
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 4px;
 }
@@ -613,6 +614,11 @@ body {
       <div class="kpi-label">Branded Search Lift</div>
       <div class="kpi-value" id="kpi-search">—</div>
     </div>
+    <div class="kpi-card grn">
+      <div class="kpi-label">Event Attendance</div>
+      <div class="kpi-value" id="kpi-event-attendance">—</div>
+      <div class="kpi-target" id="kpi-event-attendance-detail"></div>
+    </div>
 
   </div>
 
@@ -876,49 +882,6 @@ body {
     </div>
   </div>
 
-  <!-- REPORTING CADENCE -->
-  <div class="section-label">Reporting cadence</div>
-  <div class="card" style="margin-bottom:16px;">
-    <div class="card-head">Scheduled reporting beats</div>
-    <div class="card-body">
-      <table class="cad-table">
-        <thead>
-          <tr>
-            <th style="width:160px;">Cadence</th>
-            <th style="width:160px;">Audience</th>
-            <th>Focus areas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="cad-when">Daily 9am</span><span class="cad-date">May 29 – Jun 3</span></td>
-            <td>Marketing standup</td>
-            <td>CVR, CTR, branded search, email metrics, LV geo, SF opps + stage changes, UGC tally</td>
-          </tr>
-          <tr>
-            <td><span class="cad-when">Day 3 checkpoint</span><span class="cad-date">May 31</span></td>
-            <td>Marketing + Sales leadership</td>
-            <td>MQL count vs target, email performance, social boosts, geo-fence delivery, stalled opps action plan</td>
-          </tr>
-          <tr>
-            <td><span class="cad-when">Day 7 post-campaign</span><span class="cad-date">June 10</span></td>
-            <td>Marketing + Sales leadership</td>
-            <td>Full funnel (visits → leads → pipeline $), brand lift summary, press pickup, UGC reach, SF campaign influence</td>
-          </tr>
-          <tr>
-            <td><span class="cad-when">Day 30 post-campaign</span><span class="cad-date">June 29</span></td>
-            <td>Executive / VP level</td>
-            <td>Meeting-to-opp conversion, 30-day pipeline from campaign contacts, stage velocity vs baseline, channel ROI</td>
-          </tr>
-          <tr>
-            <td><span class="cad-when">Day 90 post-campaign</span><span class="cad-date">September 1</span></td>
-            <td>Executive / VP level</td>
-            <td>Revenue attribution: closed won deals linked to campaign contacts, sourced vs influenced pipeline</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 
 </div><!-- /main -->
 </div><!-- /tab-main -->
@@ -1444,6 +1407,28 @@ const PAGE_CONFIGS = [
   { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] }
 ];
 
+const LAUNCH_LINE_ANNOTATION = {
+  type: 'line',
+  xMin: 'May 29',
+  xMax: 'May 29',
+  borderColor: '#FF7347',
+  borderWidth: 2,
+  borderDash: [6, 4],
+  label: {
+    display: true,
+    content: '▲ Launch',
+    position: 'start',
+    backgroundColor: 'rgba(255,115,71,0.88)',
+    color: '#fff',
+    font: { size: 10, weight: 'bold' },
+    padding: { x: 6, y: 3 },
+    borderRadius: 4
+  }
+};
+
+// Same annotation for charts whose labels are formatted MM/DD (e.g. search chart)
+const LAUNCH_LINE_ANNOTATION_MMDD = Object.assign({}, LAUNCH_LINE_ANNOTATION, { xMin: '05/29', xMax: '05/29' });
+
 const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
   type: 'line',
   data: {
@@ -1464,7 +1449,10 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
+    },
     scales: {
       y: {
         ticks: { font:{ size:10 }, callback: v => v.toLocaleString() },
@@ -1512,7 +1500,8 @@ const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
             return `Total: ${total}`;
           }
         }
-      }
+      },
+      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
     },
     scales: {
       x: { stacked: true, ticks:{ font:{ size:10 } }, grid:{ display:false } },
@@ -1576,7 +1565,10 @@ const searchChartInstance = new Chart(document.getElementById('searchChart'), {
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION_MMDD } }
+    },
     scales: {
       y: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
       x: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.04)' } }
@@ -1587,6 +1579,40 @@ const searchLeg = document.createElement('div');
 searchLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
 searchLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>NetBrain</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Agentic NetOps</span>`;
 document.getElementById('searchChart').parentElement.insertBefore(searchLeg, document.getElementById('searchChart').parentElement.firstChild);
+
+// ── EARNED MEDIA (Meltwater -- area line, daily mentions) ──
+const socialChartInstance = new Chart(document.getElementById('socialChart'), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'Daily Mentions',
+      data: [],
+      borderColor: L,
+      backgroundColor: 'rgba(135,107,207,0.12)',
+      fill: true,
+      tension: 0.4,
+      pointRadius: 4,
+      pointBackgroundColor: L,
+      borderWidth: 2,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.06)' } },
+      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
+    }
+  }
+});
+const socialLegEl = document.createElement('div');
+socialLegEl.id = 'social-legend';
+document.getElementById('socialChart').parentElement.insertBefore(socialLegEl, document.getElementById('socialChart').parentElement.firstChild);
 
 // ── SEARCH CHART RENDERER ─────────────────────────────────────────────────────
 function renderSearchChart(search) {
@@ -1627,44 +1653,6 @@ function renderSearchChart(search) {
     searchChartInstance.update();
   }
 }
-
-// ── SOCIAL (Meltwater -- area line, daily mentions) ──
-const socialChartInstance = new Chart(document.getElementById('socialChart'), {
-  type: 'line',
-  data: {
-    labels: [],
-    datasets: [
-      {
-        label: 'Daily Mentions',
-        data: [],
-        borderColor: L,
-        backgroundColor: 'rgba(135,107,207,0.15)',
-        fill: true,
-        tension: 0.4,
-        pointRadius: 4,
-        pointBackgroundColor: L,
-        borderWidth: 2,
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
-    scales: {
-      y: {
-        ticks: { font:{ size:10 }, stepSize: 1, callback: v => Math.round(v) },
-        grid:  { color:'rgba(0,0,0,0.06)' },
-        beginAtZero: true
-      },
-      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
-    }
-  }
-});
-// No static legend needed -- headline stats above the chart serve that purpose
-const socialLegEl = document.createElement('div');
-socialLegEl.id = 'social-legend';
-document.getElementById('socialChart').parentElement.insertBefore(socialLegEl, document.getElementById('socialChart').parentElement.firstChild);
 
 // ── TAB SWITCHING ──
 document.querySelectorAll('.topbar-nav a').forEach(function(link) {
@@ -1757,6 +1745,16 @@ function renderCombined(an, zol) {
   document.getElementById('combined-attended').textContent   = totalAtt > 0 ? totalAtt : '\u2014';
   document.getElementById('combined-walkins').textContent    = totalWalk > 0 ? totalWalk : (totalReg > 0 ? '0' : '\u2014');
   document.getElementById('combined-rate').textContent       = totalReg > 0 ? blended + '%' : '\u2014';
+
+  // Home tab KPI card
+  var kpiAtt    = document.getElementById('kpi-event-attendance');
+  var kpiDetail = document.getElementById('kpi-event-attendance-detail');
+  if (kpiAtt) kpiAtt.textContent = totalAtt > 0 ? totalAtt.toLocaleString() : '\u2014';
+  if (kpiDetail && totalAtt > 0) {
+    var anAtt  = an.attended  || 0;
+    var zolAtt = zol.attended || 0;
+    kpiDetail.innerHTML = 'AN&nbsp;' + anAtt + '&nbsp;&bull;&nbsp;ZOL&nbsp;' + zolAtt;
+  }
 }
 
 // To wire live data once the Data Store is ready, replace eventsStub with:
