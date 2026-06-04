@@ -1448,7 +1448,9 @@ async function loadKPIs() {
     }
 
     // ── Email table (dynamic emails array) ──
-    const emails = d.emails || [];
+    // Normalise: pipeline may return emails as a flat array OR {emails:[...]}
+    const emailsRaw = d.emails || [];
+    const emails = Array.isArray(emailsRaw) ? emailsRaw : (emailsRaw.emails || []);
 
     if (emails.length > 0) {
       // Render email breakdown table
