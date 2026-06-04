@@ -1343,7 +1343,7 @@ async function loadKPIs() {
 
     // ── Branded Search (GSC) ──
     if (d.search) {
-      renderSearchChart(d.search);
+      renderSearchChart(d.search?.search || d.search);
     }
 
   } catch(e) {
