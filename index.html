@@ -545,6 +545,51 @@ body {
   .kpi-grid { grid-template-columns: repeat(2,1fr); }
   .row-2, .row-3 { grid-template-columns:1fr; }
 }
+
+/* ── UTM TRACKING ── */
+.utm-filter-btn {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--nb-border);
+  background: #fff;
+  color: var(--nb-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--nb-font);
+}
+.utm-filter-btn.active { background: var(--nb-purple); color: #fff; border-color: var(--nb-purple); }
+.utm-filter-btn:hover:not(.active) { border-color: var(--nb-lavender); color: var(--nb-purple); }
+.utm-copy-btn {
+  background: none;
+  border: 1px solid var(--nb-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--nb-muted);
+  transition: all 0.15s;
+  font-family: var(--nb-font);
+  white-space: nowrap;
+}
+.utm-copy-btn:hover { background: var(--nb-purple); color: #fff; border-color: var(--nb-purple); }
+.utm-dest-cell {
+  font-size: 11px;
+  color: var(--nb-muted);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.utm-camp-cell {
+  font-size: 11px;
+  color: var(--nb-dark-text);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -559,6 +604,7 @@ body {
       <a href="#" data-tab="pipeline">Pipeline</a>
       <a href="#" data-tab="brandlift">Brand Lift</a>
       <a href="#" data-tab="media">Media Mentions</a>
+      <a href="#" data-tab="utm">UTM Tracking</a>
     </nav>
   </div>
   <div class="topbar-right">
@@ -1142,6 +1188,74 @@ body {
 
 </div><!-- /main media -->
 </div><!-- /tab-media -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     UTM TRACKING TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-utm" class="tab-panel">
+<div class="main">
+
+  <div class="section-label">UTM Link Registry <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; All active campaign links &bull; Campaign window May 29 - Jun 3</span></div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
+    <div class="kpi-card">
+      <div class="kpi-label">Total UTM Links</div>
+      <div class="kpi-value">11</div>
+      <div class="kpi-target">+ 1 BDR (dest URL TBD)</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Unique Sources</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-target">email, businesswire, newsletter</div>
+    </div>
+    <div class="kpi-card lav">
+      <div class="kpi-label">Unique Campaigns</div>
+      <div class="kpi-value">4</div>
+      <div class="kpi-target">JtANO, Gartner, ZOL, BDR</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#2EAE5A;">
+      <div class="kpi-label">Destination Pages</div>
+      <div class="kpi-value">4</div>
+      <div class="kpi-target">Unique landing pages</div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;">
+    <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-right:4px;">Filter:</span>
+    <button class="utm-filter-btn active" onclick="filterUtm('all',this)">All (11)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('jtano',this)">JtANO (6)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('gartner',this)">Gartner (2)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('zol',this)">ZOL (3)</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <div class="card-head">UTM Links <span>Click Copy to copy full URL to clipboard</span></div>
+    <div class="card-body" style="padding:0;overflow-x:auto;">
+      <table class="nb-table" id="utm-table">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Source</th>
+            <th>Medium</th>
+            <th>Destination</th>
+            <th>Campaign</th>
+            <th style="width:60px;"></th>
+          </tr>
+        </thead>
+        <tbody id="utm-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-top:12px;font-size:11px;color:var(--nb-muted);line-height:1.6;">
+    BDR outbound link destination URL is pending. GA4 UTM-level click data is not yet wired into the pipeline. Sources shown here are from Sandra's confirmed UTM list.
+  </div>
+
+</div><!-- /main utm -->
+</div><!-- /tab-utm -->
 
 <!-- TOAST -->
 <div id="nb-toast"></div>
@@ -2078,6 +2192,73 @@ setInterval(() => {
   nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
 }, REFRESH_INTERVAL_MS);
 
+
+// ── UTM TRACKING ──────────────────────────────────────────────────────────────
+var UTM_LINKS = [
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'signature_banner', dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=signature_banner' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'businesswire', medium:'text_link',        dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=businesswire&utm_medium=text_link' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'cta_button',       dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=cta_button' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'newsletter',   medium:'text_link',        dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=newsletter&utm_medium=text_link' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'cta_button',       dest:'/news/from-network-automation-to-agentic-netops/',url:'https://www.netbrain.com/news/from-network-automation-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=cta_button' },
+  { group:'jtano',   campaign:'jtano_q2fy26_bdr_outbound',                 source:'email',        medium:'n/a',              dest:'TBD',                                             url:'' },
+  { group:'gartner', campaign:'gartner_market_guide_q2fy26_analyst_report',source:'email',        medium:'header_graphic',   dest:'/ (homepage)',                                    url:'https://www.netbrain.com/?utm_campaign=gartner_market_guide_q2fy26_analyst_report&utm_source=email&utm_medium=header_graphic' },
+  { group:'gartner', campaign:'gartner_market_guide_q2fy26_analyst_report',source:'email',        medium:'text_link',        dest:'/resources/gartner-research/',                    url:'https://www.netbrain.com/resources/gartner-research/?utm_campaign=gartner_market_guide_q2fy26_analyst_report&utm_source=email&utm_medium=text_link' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'cta_button',       dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=cta_button' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'header_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=header_graphic' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'footer_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=footer_graphic' }
+];
+
+var UTM_GROUP_STYLES = {
+  jtano:   { bg:'#EDE8F5', color:'#200B4E', label:'JtANO' },
+  gartner: { bg:'#E6F3FE', color:'#007DE7', label:'Gartner' },
+  zol:     { bg:'rgba(255,115,71,0.12)', color:'#FF7347', label:'ZOL' }
+};
+
+function renderUtmTable(filter) {
+  var tbody = document.getElementById('utm-tbody');
+  if (!tbody) return;
+  var rows = filter === 'all' ? UTM_LINKS : UTM_LINKS.filter(function(r){ return r.group === filter; });
+  tbody.innerHTML = rows.map(function(r) {
+    var origIdx = UTM_LINKS.indexOf(r);
+    var gs = UTM_GROUP_STYLES[r.group] || { bg:'#f0f0f8', color:'#6B6880', label:r.group };
+    var badge = '<span class="badge" style="background:'+gs.bg+';color:'+gs.color+';">'+gs.label+'</span>';
+    var copyBtn = r.url
+      ? '<button class="utm-copy-btn" onclick="copyUtmByIdx('+origIdx+',this)">Copy</button>'
+      : '<span style="font-size:11px;color:var(--nb-muted);">TBD</span>';
+    var destCell = r.dest === 'TBD'
+      ? '<span style="color:var(--nb-muted);">TBD</span>'
+      : '<span title="'+r.dest+'">'+r.dest+'</span>';
+    return '<tr>'
+      + '<td>'+badge+'</td>'
+      + '<td><span class="chan">'+r.source+'</span></td>'
+      + '<td>'+r.medium+'</td>'
+      + '<td class="utm-dest-cell">'+destCell+'</td>'
+      + '<td class="utm-camp-cell" title="'+r.campaign+'">'+r.campaign+'</td>'
+      + '<td style="text-align:right;">'+copyBtn+'</td>'
+      + '</tr>';
+  }).join('');
+}
+
+function copyUtmByIdx(idx, btn) {
+  var link = UTM_LINKS[idx];
+  if (!link || !link.url) return;
+  navigator.clipboard.writeText(link.url).then(function() {
+    var orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.style.background = '#2EAE5A';
+    btn.style.color = '#fff';
+    btn.style.borderColor = '#2EAE5A';
+    setTimeout(function(){ btn.textContent = orig; btn.style.background=''; btn.style.color=''; btn.style.borderColor=''; }, 1500);
+  });
+}
+
+function filterUtm(group, btn) {
+  document.querySelectorAll('.utm-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderUtmTable(group);
+}
+
+renderUtmTable('all');
 </script>
 
 </body>
