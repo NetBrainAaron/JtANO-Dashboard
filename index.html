@@ -652,6 +652,7 @@ body {
     <div class="kpi-card blue">
       <div class="kpi-label">MQLs / Form Fills</div>
       <div class="kpi-value" id="kpi-mqls">—</div>
+      <div class="kpi-target" id="kpi-mqls-lift" style="margin-top:4px;"></div>
     </div>
     <div class="kpi-card lav">
       <div class="kpi-label">Branded Search Lift</div>
@@ -1334,6 +1335,26 @@ async function loadKPIs() {
       .reduce((sum, [, v]) => sum + v, 0);
     if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
 
+    // ── MQL lift: campaign avg (May 29+) vs pre-launch avg (May 22-28) ──
+    const mqlLiftEl = document.getElementById('kpi-mqls-lift');
+    if (mqlLiftEl) {
+      const allMqlByDate = d.mqls?.byDate || {};
+      const preTotal  = Object.entries(allMqlByDate)
+        .filter(([dt]) => dt >= '2026-05-22' && dt < '2026-05-29')
+        .reduce((s, [, v]) => s + v, 0);
+      const preAvg    = preTotal / 7;
+      const campDays  = Object.keys(allMqlByDate).filter(dt => dt >= CAMP_START).length || 1;
+      const campAvg   = campaignMqls / campDays;
+      if (preAvg > 0) {
+        const lift = Math.round(((campAvg - preAvg) / preAvg) * 100);
+        const sign = lift >= 0 ? '+' : '';
+        const color = lift >= 0 ? '#2EAE5A' : '#D63030';
+        mqlLiftEl.innerHTML = `<span style="color:${color};font-weight:700;">${sign}${lift}%</span> vs pre-launch avg`;
+      } else {
+        mqlLiftEl.textContent = `${campAvg.toFixed(1)}/day campaign avg`;
+      }
+    }
+
     // ── CVR card (calculated from GA4 pages + MQL form fills, May 29+) ──
     const cvrEl = document.getElementById('kpi-cvr');
     if (cvrEl) {
@@ -1419,13 +1440,12 @@ async function loadKPIs() {
     const gartnerByDate  = d.mqls?.gartner?.byDate || {};
     const demoByDate     = d.mqls?.requestDemo?.byDate || {};
 
-    // Union of all dates across all forms, sorted
-    const fillDates = [...new Set([
-      ...Object.keys(mqlByDate),
-      ...Object.keys(jtanoByDate),
-      ...Object.keys(gartnerByDate),
-      ...Object.keys(demoByDate)
-    ])].sort();
+    // Full date range May 22 → today (no gaps, zero-fill days included)
+    const fillDates = [];
+    const fillEnd = new Date(Math.min(Date.now(), new Date('2026-06-04')));
+    for (let fd = new Date('2026-05-22'); fd <= fillEnd; fd.setDate(fd.getDate() + 1)) {
+      fillDates.push(fd.toISOString().split('T')[0]);
+    }
 
     if (fillDates.length > 0 && fillsChartInstance) {
       const formatDate = str => {
@@ -2258,6 +2278,12 @@ function filterMediaArticles() {
     chart.data.datasets[0].data = sortedDates.map(d => byDateFiltered[d] || 0);
     chart.update();
   }
+
+  // ── Sync main dashboard social card ──
+  const socialTotalEl = document.getElementById('social-total');
+  const socialAvgEl   = document.getElementById('social-daily-avg');
+  if (socialTotalEl) socialTotalEl.textContent = total.toLocaleString();
+  if (socialAvgEl)   socialAvgEl.textContent   = (total / dayCount).toFixed(1);
 
   // ── Count label ──
   const countLbl  = document.getElementById('media-article-count-label');
