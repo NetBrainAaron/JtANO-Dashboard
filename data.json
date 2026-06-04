@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-04T15:56:05.694Z",
+  "updatedAt": "2026-06-04T17:11:12.707Z",
   "runDate": "2026-06-04",
-  "runHour": "15",
+  "runHour": "17",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -60,49 +60,47 @@
       }
     }
   },
-  "emails": {
-    "emails": [
-      {
-        "id": "213725140794",
-        "name": "EM1 - JtANO Partner Announcement v2",
-        "subject": "The journey to Agentic NetOps starts here.",
-        "publishDate": "2026-05-29T13:03:47Z",
-        "state": "PUBLISHED",
-        "sent": 10578,
-        "delivered": 10347,
-        "openRate": 0.0644,
-        "ctor": 0.1021,
-        "clickRate": 0.0066,
-        "bounceRate": 0.021
-      },
-      {
-        "id": "213794745256",
-        "name": "Customer Email (12.3a + NBL)",
-        "subject": "NetBrain 12.3a: The Journey to Agentic NetOps starts here",
-        "publishDate": "2026-05-29T14:00:43Z",
-        "state": "PUBLISHED",
-        "sent": 14960,
-        "delivered": 14893,
-        "openRate": 0.0614,
-        "ctor": 0.0996,
-        "clickRate": 0.0061,
-        "bounceRate": 0.0019
-      },
-      {
-        "id": "213734672128",
-        "name": "(B) May 2026 Newsletter",
-        "subject": "See Agentic NetOps in Production",
-        "publishDate": "2026-05-29T16:00:57Z",
-        "state": "PUBLISHED_AB_VARIANT",
-        "sent": 1726,
-        "delivered": 1718,
-        "openRate": 0.1246,
-        "ctor": 0.0841,
-        "clickRate": 0.0105,
-        "bounceRate": 0.0046
-      }
-    ]
-  },
+  "emails": [
+    {
+      "id": "213725140794",
+      "name": "EM1 - JtANO Partner Announcement v2",
+      "subject": "The journey to Agentic NetOps starts here.",
+      "publishDate": "2026-05-29T13:03:47Z",
+      "state": "PUBLISHED",
+      "sent": 10578,
+      "delivered": 10347,
+      "openRate": 0.0644,
+      "ctor": 0.1021,
+      "clickRate": 0.0066,
+      "bounceRate": 0.021
+    },
+    {
+      "id": "213794745256",
+      "name": "Customer Email (12.3a + NBL)",
+      "subject": "NetBrain 12.3a: The Journey to Agentic NetOps starts here",
+      "publishDate": "2026-05-29T14:00:43Z",
+      "state": "PUBLISHED",
+      "sent": 14960,
+      "delivered": 14893,
+      "openRate": 0.0614,
+      "ctor": 0.0996,
+      "clickRate": 0.0061,
+      "bounceRate": 0.0019
+    },
+    {
+      "id": "213734672128",
+      "name": "(B) May 2026 Newsletter",
+      "subject": "See Agentic NetOps in Production",
+      "publishDate": "2026-05-29T16:00:57Z",
+      "state": "PUBLISHED_AB_VARIANT",
+      "sent": 1726,
+      "delivered": 1718,
+      "openRate": 0.1246,
+      "ctor": 0.0841,
+      "clickRate": 0.0105,
+      "bounceRate": 0.0046
+    }
+  ],
   "events": {
     "agentic_netops": {
       "registered": 189,
@@ -110,7 +108,7 @@
       "registeredAttended": 72,
       "walkins": 35,
       "attendance_rate": 0.381,
-      "last_updated": "2026-06-04T15:56:04.013Z"
+      "last_updated": "2026-06-04T17:11:10.910Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -118,7 +116,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-04T15:56:04.013Z"
+      "last_updated": "2026-06-04T17:11:10.910Z"
     }
   },
   "lounge_visits": {
@@ -134,7 +132,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-04T15:56:04.684Z",
+    "fetchedAt": "2026-06-04T17:11:11.591Z",
     "dataWindow": {
       "start": "2026-05-22",
       "end": "2026-06-04"
@@ -250,18 +248,18 @@
       },
       {
         "date": "20260604",
-        "homepage": 193,
-        "agenticNetOps": 33,
-        "gartner": 1,
-        "ciscoLive": 18,
+        "homepage": 220,
+        "agenticNetOps": 38,
+        "gartner": 2,
+        "ciscoLive": 19,
         "requestDemo": 15
       }
     ],
     "totals": {
-      "homepage": 2325,
-      "agenticNetOps": 1623,
-      "gartner": 78,
-      "ciscoLive": 127,
+      "homepage": 2352,
+      "agenticNetOps": 1628,
+      "gartner": 79,
+      "ciscoLive": 128,
       "requestDemo": 146
     }
   },
@@ -4693,5 +4691,281 @@
       }
     ],
     "byType": {}
+  },
+  "utm_traffic": {
+    "dateRange": {
+      "start": "2026-05-29",
+      "end": "2026-06-03"
+    },
+    "daily": [
+      {
+        "date": "20260529",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 454
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 129
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "header_graphic",
+            "sessions": 128
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "text_link",
+            "sessions": 28
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "businesswire",
+            "medium": "text_link",
+            "sessions": 9
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 4
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "footer_graphic",
+            "sessions": 4
+          }
+        ]
+      },
+      {
+        "date": "20260530",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 35
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 12
+          },
+          {
+            "campaign": "Gartner",
+            "source": "PR",
+            "medium": "MarketWire",
+            "sessions": 9
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 1
+          }
+        ]
+      },
+      {
+        "date": "20260531",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "geofencing",
+            "medium": "cpm",
+            "sessions": 54
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 23
+          },
+          {
+            "campaign": "Gartner",
+            "source": "PR",
+            "medium": "MarketWire",
+            "sessions": 6
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 2
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 1
+          }
+        ]
+      },
+      {
+        "date": "20260601",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 25
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 14
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "geofencing",
+            "medium": "cpm",
+            "sessions": 14
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 10
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "businesswire",
+            "medium": "text_link",
+            "sessions": 5
+          },
+          {
+            "campaign": "tradeshow:q2fy26_zol_cisco-live-vegas",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 5
+          },
+          {
+            "campaign": "gartner_market_guide_q2fy26_analyst_report",
+            "source": "email",
+            "medium": "footer_graphic",
+            "sessions": 1
+          },
+          {
+            "campaign": "gartner_market_guide_q2fy26_analyst_report",
+            "source": "email",
+            "medium": "text_link",
+            "sessions": 1
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "text_link",
+            "sessions": 1
+          },
+          {
+            "campaign": "tradeshow:q2fy26_zol_cisco-live-vegas",
+            "source": "email",
+            "medium": "header_graphic",
+            "sessions": 1
+          }
+        ]
+      },
+      {
+        "date": "20260602",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 45
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "geofencing",
+            "medium": "cpm",
+            "sessions": 33
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 7
+          },
+          {
+            "campaign": "jtano_q2fy26_bdr_outbound",
+            "source": "email",
+            "medium": "(not set)",
+            "sessions": 1
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "businesswire",
+            "medium": "text_link",
+            "sessions": 1
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 1
+          },
+          {
+            "campaign": "tradeshow:q2fy26_zol_cisco-live-vegas",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 1
+          }
+        ]
+      },
+      {
+        "date": "20260603",
+        "rows": [
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "geofencing",
+            "medium": "cpm",
+            "sessions": 40
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "email",
+            "medium": "signature_banner",
+            "sessions": 4
+          },
+          {
+            "campaign": "jtano_q2fy26_integrated",
+            "source": "newsletter",
+            "medium": "cta_button",
+            "sessions": 2
+          },
+          {
+            "campaign": "tradeshow:q2fy26_zol_cisco-live-vegas",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 1
+          }
+        ]
+      }
+    ],
+    "bySource": {
+      "email": 624,
+      "newsletter": 317,
+      "businesswire": 15,
+      "PR": 15,
+      "geofencing": 141
+    },
+    "byCampaignGroup": {
+      "jtano": 1087,
+      "gartner": 17,
+      "zol": 8,
+      "other": 0
+    },
+    "totals": {
+      "sessions": 1112
+    }
   }
 }
