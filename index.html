@@ -2068,7 +2068,23 @@ function renderMediaTab(social) {
   }
 
   // Merge meltwater articles + manual articles, deduplicate by URL
-  const meltwater = (social.articles || []).map(a => ({ ...a, _type: 'meltwater' }));
+  // Titles containing any of these keywords are excluded from the feed
+  const BLOCKED_TITLE_KEYWORDS = [
+    'jerry masseur',
+  ];
+
+  const meltwater = (social.articles || [])
+    .filter(a => {
+      const url   = (a.url   || '').toLowerCase();
+      const src   = (a.source || '').toLowerCase();
+      const title = (a.title  || '').toLowerCase();
+      // Exclude Twitter/X
+      if (url.includes('twitter.com') || url.includes('x.com') || src.includes('twitter')) return false;
+      // Exclude blocked titles
+      if (BLOCKED_TITLE_KEYWORDS.some(kw => title.includes(kw))) return false;
+      return true;
+    })
+    .map(a => ({ ...a, _type: 'meltwater' }));
   const manual    = (social.manual_articles || []).map(a => ({ ...a, _type: 'manual' }));
   // Manual entries take precedence — if same URL exists in both, keep the manual version
   const seenUrls  = new Set();
@@ -2096,22 +2112,39 @@ function refreshArticleTable() {
   } else {
     if (tableWrap)  tableWrap.style.display  = 'block';
     if (emptyState) emptyState.style.display = 'none';
-    const n = mediaArticlesAll.length;
-    if (countLbl) countLbl.textContent = n + ' article' + (n !== 1 ? 's' : '');
+    const total   = mediaArticlesAll.length;
+    const unique  = new Set(mediaArticlesAll.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
+    if (countLbl) countLbl.textContent = unique + ' unique stor' + (unique !== 1 ? 'ies' : 'y') + ' · ' + total + ' total pickups';
     filterMediaArticles();
   }
+}
+
+function groupArticlesByTitle(articles) {
+  const groups = new Map();
+  for (const a of articles) {
+    const key = (a.title || a.url || '').toLowerCase().trim().replace(/\s+/g, ' ');
+    if (!groups.has(key)) groups.set(key, { rep: a, outlets: [], count: 0 });
+    const g = groups.get(key);
+    g.count++;
+    if (a.source && !g.outlets.includes(a.source)) g.outlets.push(a.source);
+  }
+  return [...groups.values()];
 }
 
 function renderArticleRows(articles) {
   const tbody = document.getElementById('media-article-tbody');
   if (!tbody) return;
-  tbody.innerHTML = articles.slice(0, 200).map(a => {
+  const groups = groupArticlesByTitle(articles);
+  tbody.innerHTML = groups.slice(0, 200).map(({ rep: a, outlets, count }) => {
     const date  = a.publishDate
       ? new Date(a.publishDate).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })
       : '—';
     const titleHtml = a.url
       ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--nb-blue);text-decoration:none;font-weight:600;">${a.title || a.url}</a>`
       : (a.title || '—');
+    const pickupsBadge = count > 1
+      ? `<div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">${count} pickups &mdash; ${outlets.slice(0, 3).join(', ')}${outlets.length > 3 ? ' +' + (outlets.length - 3) + ' more' : ''}</div>`
+      : '';
     const typeBadge = a._type === 'manual'
       ? '<span class="badge b-amb">Manual</span>'
       : '<span class="badge b-info">Meltwater</span>';
@@ -2119,8 +2152,8 @@ function renderArticleRows(articles) {
       ? `<button class="del-btn" onclick="deleteManualArticle('${a.id}')" title="Remove">&#x2715;</button>`
       : '';
     return `<tr>
-      <td>${titleHtml}${a.description ? `<div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${a.description}</div>` : ''}</td>
-      <td style="color:var(--nb-muted);white-space:nowrap;">${a.source || '—'}</td>
+      <td>${titleHtml}${pickupsBadge}</td>
+      <td style="color:var(--nb-muted);white-space:nowrap;">${count > 1 ? count + ' outlets' : (a.source || '—')}</td>
       <td style="white-space:nowrap;">${date}</td>
       <td style="text-align:center;">${typeBadge}</td>
       <td style="text-align:center;">${deleteBtn}</td>
