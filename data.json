@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-04T17:44:54.149Z",
+  "updatedAt": "2026-06-04T18:38:25.642Z",
   "runDate": "2026-06-04",
-  "runHour": "17",
+  "runHour": "18",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -108,7 +108,7 @@
       "registeredAttended": 72,
       "walkins": 35,
       "attendance_rate": 0.381,
-      "last_updated": "2026-06-04T17:44:52.006Z"
+      "last_updated": "2026-06-04T18:38:23.069Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -116,7 +116,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-04T17:44:52.006Z"
+      "last_updated": "2026-06-04T18:38:23.069Z"
     }
   },
   "lounge_visits": {
@@ -132,7 +132,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-04T17:44:52.784Z",
+    "fetchedAt": "2026-06-04T18:38:24.161Z",
     "dataWindow": {
       "start": "2026-05-22",
       "end": "2026-06-04"
@@ -240,27 +240,27 @@
       },
       {
         "date": "20260603",
-        "homepage": 444,
-        "agenticNetOps": 126,
-        "gartner": 16,
-        "ciscoLive": 38,
-        "requestDemo": 49
+        "homepage": 506,
+        "agenticNetOps": 146,
+        "gartner": 21,
+        "ciscoLive": 44,
+        "requestDemo": 52
       },
       {
         "date": "20260604",
-        "homepage": 229,
-        "agenticNetOps": 39,
-        "gartner": 2,
-        "ciscoLive": 19,
+        "homepage": 245,
+        "agenticNetOps": 42,
+        "gartner": 3,
+        "ciscoLive": 20,
         "requestDemo": 15
       }
     ],
     "totals": {
-      "homepage": 2361,
-      "agenticNetOps": 1629,
-      "gartner": 79,
-      "ciscoLive": 128,
-      "requestDemo": 146
+      "homepage": 2439,
+      "agenticNetOps": 1652,
+      "gartner": 85,
+      "ciscoLive": 135,
+      "requestDemo": 149
     }
   },
   "search": {
@@ -462,20 +462,65 @@
   "oktopost": {
     "dateRange": {
       "start": "2026-05-29",
-      "end": "2026-06-03"
+      "end": "2026-06-04"
     },
     "totals": {
-      "impressions": 0,
-      "engagements": 0,
-      "engagementRate": 0,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
+      "impressions": 9030,
+      "engagements": 1775,
+      "engagementRate": 0.19656699889258028,
+      "likes": 319,
+      "comments": 4,
+      "shares": 113,
+      "clicks": 1330,
       "linkClicks": 0
     },
-    "channel": "linkedin",
-    "fetchedAt": "2026-06-04T17:44:54.112Z"
+    "channels": {
+      "linkedin": {
+        "network": "LinkedIn",
+        "impressions": 8746,
+        "engagements": 1719,
+        "engagementRate": 0.19654699291104505,
+        "likes": 309,
+        "comments": 4,
+        "shares": 109,
+        "clicks": 1288,
+        "linkClicks": 0
+      },
+      "youtube": {
+        "network": "Youtube",
+        "impressions": 145,
+        "engagements": 29,
+        "engagementRate": 0.2,
+        "likes": 5,
+        "comments": 0,
+        "shares": 2,
+        "clicks": 21,
+        "linkClicks": 0
+      },
+      "facebook": {
+        "network": "Facebook",
+        "impressions": 90,
+        "engagements": 18,
+        "engagementRate": 0.2,
+        "likes": 3,
+        "comments": 0,
+        "shares": 1,
+        "clicks": 13,
+        "linkClicks": 0
+      },
+      "twitter": {
+        "network": "Twitter",
+        "impressions": 50,
+        "engagements": 10,
+        "engagementRate": 0.2,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "clicks": 7,
+        "linkClicks": 0
+      }
+    },
+    "fetchedAt": "2026-06-04T18:38:25.571Z"
   },
   "social": {
     "fetchedAt": "2026-06-04T16:25:09.401Z",
@@ -4946,7 +4991,7 @@
             "campaign": "jtano_q2fy26_integrated",
             "source": "geofencing",
             "medium": "cpm",
-            "sessions": 40
+            "sessions": 44
           },
           {
             "campaign": "jtano_q2fy26_integrated",
@@ -4961,6 +5006,12 @@
             "sessions": 2
           },
           {
+            "campaign": "gartner_market_guide_q2fy26_analyst_report",
+            "source": "email",
+            "medium": "cta_button",
+            "sessions": 1
+          },
+          {
             "campaign": "tradeshow:q2fy26_zol_cisco-live-vegas",
             "source": "email",
             "medium": "cta_button",
@@ -4970,20 +5021,20 @@
       }
     ],
     "bySource": {
-      "email": 624,
+      "email": 625,
       "newsletter": 317,
       "businesswire": 15,
       "PR": 15,
-      "geofencing": 141
+      "geofencing": 145
     },
     "byCampaignGroup": {
-      "jtano": 1087,
-      "gartner": 17,
+      "jtano": 1091,
+      "gartner": 18,
       "zol": 8,
       "other": 0
     },
     "totals": {
-      "sessions": 1112
+      "sessions": 1117
     }
   }
 }
