@@ -602,6 +602,7 @@ body {
       <a href="#" class="active" data-tab="main">Campaign Dashboard</a>
       <a href="#" data-tab="events">Events</a>
       <a href="#" data-tab="media">Media Mentions</a>
+      <a href="#" data-tab="social">Social</a>
       <a href="#" data-tab="utm">UTM Tracking</a>
     </nav>
   </div>
@@ -1244,6 +1245,128 @@ body {
 </div><!-- /tab-media -->
 
 <!-- ══════════════════════════════════════════════════════════════════════════
+     SOCIAL TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-social" class="tab-panel">
+<div class="main">
+
+  <div class="section-label">Owned Social Performance <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Oktopost &bull; <span id="social-tab-window">May 18 – Jun 3, 2026</span></span></div>
+
+  <!-- CHANNEL SUMMARY KPIS (populated when oktopost data arrives) -->
+  <div id="social-tab-summary" style="display:none;">
+    <div class="kpi-grid" style="margin-bottom:20px;">
+      <div class="kpi-card">
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-value" id="st-impressions">—</div>
+        <div class="kpi-target">All tracked channels</div>
+      </div>
+      <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+        <div class="kpi-label">Engagement Rate</div>
+        <div class="kpi-value" id="st-eng-rate">—</div>
+        <div class="kpi-target">Target &gt;5% &bull; boost if above</div>
+      </div>
+      <div class="kpi-card lav">
+        <div class="kpi-label">Engagements</div>
+        <div class="kpi-value" id="st-engagements">—</div>
+        <div class="kpi-target">Likes + comments + shares</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-label">Link Clicks</div>
+        <div class="kpi-value" id="st-link-clicks">—</div>
+        <div class="kpi-target">Direct LP traffic from social</div>
+      </div>
+    </div>
+
+    <!-- LINKEDIN CHANNEL CARD -->
+    <div class="section-label">LinkedIn</div>
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-head">
+        <span style="display:flex;align-items:center;gap:8px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+            <path d="M6.5 9.5H4V18H6.5V9.5ZM5.25 8.25C4.56 8.25 4 7.69 4 7C4 6.31 4.56 5.75 5.25 5.75C5.94 5.75 6.5 6.31 6.5 7C6.5 7.69 5.94 8.25 5.25 8.25ZM20 18H17.5V13.75C17.5 12.65 17.48 11.25 16 11.25C14.5 11.25 14.25 12.45 14.25 13.67V18H11.75V9.5H14.15V10.75H14.19C14.52 10.13 15.32 9.47 16.5 9.47C19.04 9.47 20 11.08 20 13.24V18Z" fill="white"/>
+          </svg>
+          LinkedIn Organic
+        </span>
+        <span id="st-li-fetched" style="font-size:10px;font-weight:400;opacity:0.6;"></span>
+      </div>
+      <div class="card-body">
+        <!-- Primary metrics -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Impressions</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;" id="st-li-impressions">—</div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Engagement Rate</div>
+            <div style="font-size:28px;font-weight:700;line-height:1;" id="st-li-eng-rate">—</div>
+            <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">
+              <span id="st-li-eng-badge"></span>
+            </div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Engagements</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="st-li-engagements">—</div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Link Clicks</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-blue);line-height:1;" id="st-li-link-clicks">—</div>
+          </div>
+        </div>
+        <!-- Secondary metrics -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Likes</span>
+            <span style="font-weight:700;color:var(--nb-purple);" id="st-li-likes">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Comments</span>
+            <span style="font-weight:700;color:var(--nb-purple);" id="st-li-comments">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Shares</span>
+            <span style="font-weight:700;color:var(--nb-purple);" id="st-li-shares">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Total Clicks</span>
+            <span style="font-weight:700;color:var(--nb-purple);" id="st-li-clicks">—</span>
+          </div>
+        </div>
+        <!-- Engagement rate bar -->
+        <div style="margin-top:4px;">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--nb-muted);margin-bottom:5px;">
+            <span>Engagement rate vs 5% boost threshold</span>
+            <span id="st-li-eng-rate-pct-label">0.00%</span>
+          </div>
+          <div style="height:8px;background:var(--nb-light-bg);border-radius:4px;overflow:hidden;">
+            <div id="st-li-eng-bar" style="height:100%;border-radius:4px;background:var(--nb-lavender);width:0%;transition:width 0.6s;"></div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;font-size:10px;color:var(--nb-muted);margin-top:3px;">Threshold: 5%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL CHANNELS PLACEHOLDER -->
+    <div class="section-label">Additional Channels</div>
+    <div style="background:#fff;border-radius:var(--radius-lg);border:1px dashed var(--nb-border);padding:28px 24px;text-align:center;margin-bottom:20px;">
+      <div style="font-size:13px;font-weight:600;color:var(--nb-purple);margin-bottom:6px;">X (Twitter) &bull; Facebook &bull; Other channels</div>
+      <div style="font-size:12px;color:var(--nb-muted);">Add additional Oktopost dashboard IDs to the Pipedream step to track more channels here.</div>
+    </div>
+
+    <!-- LAST UPDATED -->
+    <div style="font-size:11px;color:var(--nb-muted);padding:10px 0;" id="st-last-updated"></div>
+  </div>
+
+  <!-- EMPTY STATE (shown when oktopost data not yet in data.json) -->
+  <div id="social-tab-empty" style="background:#fff;border-radius:var(--radius-lg);border:1px dashed var(--nb-border);padding:48px 24px;text-align:center;">
+    <div style="font-size:15px;font-weight:600;color:var(--nb-purple);margin-bottom:8px;">Social data pending</div>
+    <div style="font-size:13px;color:var(--nb-muted);max-width:420px;margin:0 auto;">Add <code style="background:var(--nb-light-bg);padding:2px 6px;border-radius:4px;font-size:11px;">oktopost: steps.fetch_oktopost?.$return_value ?? null</code> to normalize_data in Pipedream, then push to GitHub.</div>
+  </div>
+
+</div><!-- /main social -->
+</div><!-- /tab-social -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
      UTM TRACKING TAB
 ════════════════════════════════════════════════════════════════════════════ -->
 <div id="tab-utm" class="tab-panel">
@@ -1589,6 +1712,7 @@ async function loadKPIs() {
     // ── Oktopost (LinkedIn organic) ──
     if (d.oktopost) {
       renderOktopostSection(d.oktopost);
+      renderSocialTab(d.oktopost);
     }
 
     // ── Branded Search (GSC) ──
@@ -1715,6 +1839,82 @@ function renderOktopostSection(okto) {
     el('okto-fetched-note').textContent = 'Updated '
       + ft.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
       + ' ' + ft.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  }
+}
+
+// ── SOCIAL TAB RENDERER ───────────────────────────────────────────────────────
+function renderSocialTab(okto) {
+  const emptyEl   = document.getElementById('social-tab-empty');
+  const summaryEl = document.getElementById('social-tab-summary');
+  if (!okto) return;
+
+  // Flip visibility
+  if (emptyEl)   emptyEl.style.display   = 'none';
+  if (summaryEl) summaryEl.style.display = '';
+
+  const t   = okto.totals || {};
+  const fmt = n => (n || 0).toLocaleString();
+  const el  = id => document.getElementById(id);
+
+  // Engagement rate calculation (Oktopost returns decimal OR already-pct float)
+  const rawRate  = parseFloat(t.engagementRate) || 0;
+  const ratePct  = rawRate > 1 ? rawRate : rawRate * 100;
+  const rateStr  = ratePct.toFixed(2) + '%';
+  const rateColor = ratePct >= 5 ? '#1E8B3A' : ratePct > 0 ? 'var(--nb-tangerine)' : 'var(--nb-purple)';
+
+  // Summary KPI strip (top of tab)
+  if (el('st-impressions'))  el('st-impressions').textContent  = fmt(t.impressions);
+  if (el('st-eng-rate'))   { el('st-eng-rate').textContent     = rateStr; el('st-eng-rate').style.color = rateColor; }
+  if (el('st-engagements'))  el('st-engagements').textContent  = fmt(t.engagements);
+  if (el('st-link-clicks'))  el('st-link-clicks').textContent  = fmt(t.linkClicks);
+
+  // LinkedIn channel card
+  if (el('st-li-impressions'))  el('st-li-impressions').textContent  = fmt(t.impressions);
+  if (el('st-li-engagements'))  el('st-li-engagements').textContent  = fmt(t.engagements);
+  if (el('st-li-link-clicks'))  el('st-li-link-clicks').textContent  = fmt(t.linkClicks);
+  if (el('st-li-likes'))        el('st-li-likes').textContent        = fmt(t.likes);
+  if (el('st-li-comments'))     el('st-li-comments').textContent     = fmt(t.comments);
+  if (el('st-li-shares'))       el('st-li-shares').textContent       = fmt(t.shares);
+  if (el('st-li-clicks'))       el('st-li-clicks').textContent       = fmt(t.clicks);
+
+  if (el('st-li-eng-rate')) {
+    el('st-li-eng-rate').textContent  = rateStr;
+    el('st-li-eng-rate').style.color  = rateColor;
+  }
+  // Engagement badge
+  if (el('st-li-eng-badge')) {
+    if (ratePct >= 5) {
+      el('st-li-eng-badge').innerHTML = '<span class="badge b-grn">Boost eligible</span>';
+    } else if (ratePct > 0) {
+      el('st-li-eng-badge').innerHTML = '<span class="badge b-amb">Below threshold</span>';
+    } else {
+      el('st-li-eng-badge').innerHTML = '<span class="badge b-info">Pending</span>';
+    }
+  }
+  // Engagement rate bar (cap at 10% for visual, threshold at 5%)
+  if (el('st-li-eng-bar')) {
+    const barPct = Math.min(ratePct / 10 * 100, 100);
+    el('st-li-eng-bar').style.width      = barPct + '%';
+    el('st-li-eng-bar').style.background = rateColor;
+  }
+  if (el('st-li-eng-rate-pct-label')) el('st-li-eng-rate-pct-label').textContent = rateStr;
+
+  // Date range header
+  if (okto.dateRange && el('social-tab-window')) {
+    const fmtD = s => {
+      const d = new Date(s + 'T00:00:00');
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    };
+    el('social-tab-window').textContent = fmtD(okto.dateRange.start) + ' – ' + fmtD(okto.dateRange.end);
+  }
+
+  // Last fetched
+  if (okto.fetchedAt) {
+    const ft = new Date(okto.fetchedAt);
+    const ts = ft.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      + ' at ' + ft.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    if (el('st-li-fetched'))    el('st-li-fetched').textContent    = 'Updated ' + ts;
+    if (el('st-last-updated'))  el('st-last-updated').textContent  = 'Data last refreshed: ' + ts + ' via Oktopost API';
   }
 }
 
