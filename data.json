@@ -638,498 +638,28 @@
     "fetchedAt": "2026-06-04T09:44:54.037Z"
   },
   "social": {
-    "fetchedAt": "2026-06-03T22:01:03.085Z",
+    "fetchedAt": "2026-06-04T12:00:27.874Z",
     "campaignWindow": {
       "start": "2026-05-29T00:00:00Z",
-      "end": "2026-06-03T23:59:59Z"
+      "end": "2026-06-04T23:59:59Z"
     },
     "combined": {
-      "total": 393,
+      "total": 394,
       "byDate": {
-        "2026-05-30": 31,
-        "2026-05-29": 250,
         "2026-06-01": 97,
-        "2026-06-02": 14,
-        "2026-05-31": 1
+        "2026-05-31": 1,
+        "2026-05-29": 250,
+        "2026-05-30": 31,
+        "2026-06-02": 15
       }
     },
     "articles": [
-      {
-        "id": "mw_qJyNHX8O1pVlgD5hcNt5aQbRbto",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "Dubai News Today",
-        "publishDate": "2026-05-30T02:02:58.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yt-Q-ReAU6nl50",
-        "title": "How To Manifest Abundance Every Morning 🌅✨ | Day 3 Manifestation Challenge #shorts",
-        "url": "https://www.youtube.com/watch?v=Q-ReAU6nl50",
-        "source": "Youtube",
-        "publishDate": "2026-05-29T18:54:24.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yt-xU2H3O1aqq8",
-        "title": "Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
-        "url": "https://www.youtube.com/watch?v=xU2H3O1aqq8",
-        "source": "Youtube",
-        "publishDate": "2026-06-01T17:36:54.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yt-yoZwkOKXltU",
-        "title": "Chart Your Path to Agentic NetOps | NetBrain",
-        "url": "https://www.youtube.com/watch?v=yoZwkOKXltU",
-        "source": "Youtube",
-        "publishDate": "2026-06-01T20:03:31.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_fa0ukuE4DkF2uQjAAJIJ25Jcbg8",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://vmblog.com/news/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "VMblog.com",
-        "publishDate": "2026-06-02T19:34:27.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_WUM22rI4o5ql819U0HOetW8OpWs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://gulfreport.co/en/ai-innovation/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Gulf Report",
-        "publishDate": "2026-06-02T11:29:22.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_0mg0uCT1WpKGoOvh96jE1o570RY",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://media.newswire.ca/forefrontmedianews.html?rkey=20260601NE72078&filter=20509",
-        "source": "Forefront Media News - PR Newswire",
-        "publishDate": "2026-06-02T03:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_FzEQCR-9YQxJtb8sKFegOmhrG6E",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
-        "source": "Dubai News Today",
-        "publishDate": "2026-06-02T05:28:32.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_hOTDLhD-h0znzhsbZsD3c37fpFk",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://uae-blogger.jigsy.com/entries/general/%D9%85%D9%86-%D8%A3%D8%AA%D9%85%D8%AA%D8%A9-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A5%D9%84%D9%89-%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%88%D9%83%D9%8A%D9%84%D8%A9-%D8%AA%D8%B6%D8%B9-%D8%B4%D8%B1%D9%83%D8%A9-netbrain-%D9%85%D8%B9%D9%8A%D8%A7%D8%B1-%D8%A7-%D8%AC%D8%AF%D9%8A%D8%AF-%D8%A7-%D9%84%D9%86%D8%B4%D8%B1-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%81%D9%8A-%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A9",
-        "source": "UAE Blogger",
-        "publishDate": "2026-06-02T04:56:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_kAijlmAjus3-bXj4qg8tv0CZiMI",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://aetoswire.blogspot.com/2026/06/netbrain.html",
-        "source": "Aetoswire",
-        "publishDate": "2026-06-02T05:09:46.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ulyI8lslGmrST_BynpsZwKkqTq8",
-        "title": "NB577: Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
-        "url": "https://packetpushers.net/podcasts/network-break/nb577-cisco-brings-sonic-to-n9000-switches-broadcom-debuts-wi-fi-8-socs-for-consumer-routers/",
-        "source": "Packet Pushers",
-        "publishDate": "2026-06-02T01:04:42.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_fyndDNmFqp518VwRzXERnsyaegU",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://khaleejdailies.blogspot.com/2026/06/netbrain.html",
-        "source": "Khaleej Dailies",
-        "publishDate": "2026-06-02T07:31:02.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_AjxNKImDCCLQT33BEVWh_vD8bhY",
-        "title": "Wi-Fi 8: Industrie setzt auf Zuverlässigkeit statt Höchstgeschwindigkeit",
-        "url": "https://borncity.com/news/wi-fi-8-industrie-setzt-auf-zuverlaessigkeit-statt-hoechstgeschwindigkeit/",
-        "source": "Borns IT- und Windows-Blog",
-        "publishDate": "2026-06-02T10:31:10.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_gwsMPDKq_fu9byqywEzcG7cJ_04",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://brandsreviewmagazine.com/news/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Brands Review Magazine",
-        "publishDate": "2026-06-02T10:54:54.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_6mU1uPpHdr6_8JXhSgkOkt4kdJE",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://tiie.com.mx/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
-        "source": "TIIE",
-        "publishDate": "2026-05-30T03:00:03.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_lU-ah52ZZjBPwT1VuBR2qP3MuMU",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://uaereview.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "UAE Business Review",
-        "publishDate": "2026-05-30T04:01:07.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_-4FK2rsCiU7Bs4Ef1apGdKcrDQU",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://uaetrendnews.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "UAETrendNews",
-        "publishDate": "2026-05-30T04:13:11.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_UCg_5c6PbjBn6nE9_kfu2aGAVq4",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://brandspaceonline.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "Brandspace",
-        "publishDate": "2026-05-30T00:18:14.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_rm-iQ6LUR2D5rYh5aXnqyoBv5tc",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://arabicon.jigsy.com/entries/general/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Arab Icon",
-        "publishDate": "2026-05-30T02:01:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_RU0OQ_orSyCYMyHV4LIscWs1zQM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://theuaedaily.com/2026/05/30/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "The UAE Daily - Get Daily News Update for United Arab Emirates.",
-        "publishDate": "2026-05-30T00:10:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_lNoIX3R_ng85hOv4v2rQRcwFdA8",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://www.aetoswire.com/ar/news/3005202655339",
-        "source": "AETOSWire",
-        "publishDate": "2026-05-30T07:10:08.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_0cCMnwXnhfz_KUf1xyxKuz2mr3M",
-        "title": "尽管盈利为负，Spire Global仍因人工智能热潮股价飙升32%",
-        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-05-30/doc-inhzsnkp6866735.shtml",
-        "source": "news.sina.com.cn / 新浪新闻",
-        "publishDate": "2026-05-30T08:39:54.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_maxVSbTXBA_qnfX1NimHVVQQu5E",
-        "title": "Snowflake技术指标与分析师乐观共识相悖",
-        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-05-30/doc-inhzsnkp6866688.shtml",
-        "source": "news.sina.com.cn / 新浪新闻",
-        "publishDate": "2026-05-30T08:39:52.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_kLs0yYyHXyuXCXH7hsrzYyCqcyU",
-        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
-        "url": "https://www.impresacity.it/news-biz/38382/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
-        "source": "ImpresaCity",
-        "publishDate": "2026-05-30T07:16:02.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_WXlt1onZ8qqRlW-d1knQ9GRH2b8",
-        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
-        "url": "https://www.securityopenlab.it/news-biz/6515/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
-        "source": "SecurityOpen Lab",
-        "publishDate": "2026-05-30T04:54:13.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_q_QmW3JnQSFKvVPUKxpQdpLp_0M",
-        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
-        "url": "https://www.channelcity.it/news-biz/30859/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
-        "source": "ChannelCity",
-        "publishDate": "2026-05-30T05:45:30.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_IUDCg11N9Ap6fgMCHVeX1T3gDww",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "Dubai News Today",
-        "publishDate": "2026-05-30T02:09:52.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_jEf7povTIUlqlHXjvuDSIotW8iI",
-        "title": "Ethos Technologies Plunges 13% Amid Conflicting Signals",
-        "url": "https://www.ainvest.com/news/ethos-technologies-plunges-13-conflicting-signals-2605/",
-        "source": "AInvest",
-        "publishDate": "2026-05-30T01:56:32.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_D8DBu-LjGcCtDKci6mayZRULLH0",
-        "title": "Why Smart Money Exits Braiin Despite AI Hype",
-        "url": "https://www.ainvest.com/news/smart-money-exits-braiin-ai-hype-2605/",
-        "source": "AInvest",
-        "publishDate": "2026-05-30T03:03:19.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yrJEjJAuCt_P2iTT63r4vq_shjY",
-        "title": "Snowflake’s Technicals Clash With Bullish Analyst Consensus",
-        "url": "https://www.ainvest.com/news/snowflake-technicals-clash-bullish-analyst-consensus-2605/",
-        "source": "AInvest",
-        "publishDate": "2026-05-30T00:35:55.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_dSZm6kN5ZbDNOab87EJubuSkbEo",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://egyptcmnews.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Egypt Commercial News",
-        "publishDate": "2026-05-30T04:07:26.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Z226l8tCeRCUeExUdE_8xXNjPAg",
-        "title": "Spire Global Surges 32% on AI Hype, Despite Negative Profitability",
-        "url": "https://www.ainvest.com/news/spire-global-surges-32-ai-hype-negative-profitability-2605/",
-        "source": "AInvest",
-        "publishDate": "2026-05-30T00:43:19.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Dy3P7p2qWTchr0cYWQcMgLY-RPk",
-        "title": "ChronoScale Rises 2% on Weak Fundamentals",
-        "url": "https://www.ainvest.com/news/chronoscale-rises-2-weak-fundamentals-2605/",
-        "source": "AInvest",
-        "publishDate": "2026-05-30T03:37:46.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_6DQVQNQJXJ_prSfio5Oq2iFpiqg",
-        "title": "Autonome KI-Agenten: EU-Verordnung eIDAS 2.0 regelt digitale Identitäten",
-        "url": "https://www.ad-hoc-news.de/wirtschaft/autonome-ki-agenten-eu-verordnung-eidas-2-0-regelt-digitale-identitaeten/69449377",
-        "source": "Ad Hoc News",
-        "publishDate": "2026-05-30T15:21:23.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_khW9f9DanBzzeRK_xhpZHF3IkBg",
-        "title": "Resumen: De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://lanotta.com/resumen-de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red/",
-        "source": "La Notta",
-        "publishDate": "2026-05-30T12:34:28.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ssqVz5FZWvln2OFlDzRNvSPgOXk",
-        "title": "Campus Israel launched as alternative for Jewish students facing antisemitism",
-        "url": "https://www.ynetnews.com/jewish-world/article/sjvysvuggl",
-        "source": "Ynetnews",
-        "publishDate": "2026-05-30T10:05:23.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Y7qdSmwKZbpx7yZ16OyQ_jNJCwQ",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://khaleejdailies.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "Khaleej Dailies",
-        "publishDate": "2026-05-30T02:10:55.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_TxB3JCRN1Nx9cNgsBHTvmAN-HCs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://aetoswire.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "Aetoswire",
-        "publishDate": "2026-05-30T06:35:17.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_YZlBy-pSIQiCsxPmcL5WaH-08KQ",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://beirutbizreport.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Beirut Business Report",
-        "publishDate": "2026-05-30T04:03:52.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_PNLP7iFgWzqSOpREP5yL3rtaFLg",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://uae-blogger.jigsy.com/entries/general/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "UAE Blogger",
-        "publishDate": "2026-05-30T02:01:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_RQO95zJeGV4XFAC5nJAZS87XIDc",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://thetimesofuae.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "Dubai News, UAE News, Gulf, News, Latest news, Arab news, Gulf News, Dubai Labour News",
-        "publishDate": "2026-05-30T00:11:35.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_1foULgSRPpy9KepEdFOIfPiNN_Y",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://saudidailyrecord.net/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Saudi Daily Report",
-        "publishDate": "2026-05-30T04:32:08.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_QCSQCx9J_QJbfWDiYyBZjmnvtfs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://aetoswire.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "Aetoswire",
-        "publishDate": "2026-05-30T19:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ai3YB5B55wtwsYMraxdwcZr9EeM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://algeriatimes.info/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Algeria Times",
-        "publishDate": "2026-05-31T13:30:24.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_BLgsuOVIs0dtqnkgXN5y92G-AN8",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
-        "source": "Dubai News Today",
-        "publishDate": "2026-06-02T05:02:45.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yt-6ZvLecaCxmQ",
-        "title": "Agentic NetOps Is Here: NetBrain Takes Over the Las Vegas Sphere",
-        "url": "https://www.youtube.com/watch?v=6ZvLecaCxmQ",
-        "source": "Youtube",
-        "publishDate": "2026-06-02T14:40:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
       {
         "id": "mw_201B60hhv747wI57NIIE-PfVGh0",
         "title": "杰里·马瑟尔升任麦格纳5公司首席销售官",
         "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-06-01/doc-inhzxewn3888517.shtml",
         "source": "news.sina.com.cn / 新浪新闻",
         "publishDate": "2026-06-01T12:07:43.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_4Nl9QzOT5GFSVRfiO3-1LZJyurw",
-        "title": "Magna5 Announces Executive Leadership Changes",
-        "url": "https://channelvisionmag.com/magna5-announces-executive-leadership-changes/",
-        "source": "ChannelVision Magazine",
-        "publishDate": "2026-06-01T14:12:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1155,41 +685,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_suaRUDFxHa1jysuxXhbX29340IA",
+        "id": "mw_f6d14x_fP9EcEQLm0j0FtYBnJUE",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://cw7az.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "CW7 Arizona",
-        "publishDate": "2026-06-01T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_k36TISEsIzyD3B8H5UE8TvepCo0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.benzinga.com/pressreleases/26/06/n52900870/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
-        "source": "Benzinga",
+        "url": "https://www.wfmz.com/news/pr_newswire/pr_newswire_pennsylvania/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/article_b8a78235-2570-5899-b5d2-632134794ccb.html",
+        "source": "WFMZ-TV",
         "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Fgj98sX-08vz_bYuJIt8kUkC-eo",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.agree.net/story/165974/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Agree Lifestyle",
-        "publishDate": "2026-06-01T12:12:39.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_EIX31_Fdn3niBs63kwv3fpENWbQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.blackberryempire.com/story/157189/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "BlackBerry Empire",
-        "publishDate": "2026-06-01T12:23:34.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1205,101 +705,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_vCZyQl7n-Skj7mc5tz0Rh8RT_Mo",
-        "title": "Magna5 Promotes Jerry Masseur to Chief Sales Officer as Growth Strategy Expands",
-        "url": "https://www.citybiz.co/article/853323/magna5-promotes-jerry-masseur-to-chief-sales-officer-as-growth-strategy-expands/",
-        "source": "citybiz",
-        "publishDate": "2026-06-01T13:20:50.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_wgtsKPG0ysxnSDKNNwvG93KeCrQ",
+        "id": "mw_Fgj98sX-08vz_bYuJIt8kUkC-eo",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://ktla.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KTLA-TV",
-        "publishDate": "2026-06-01T12:24:45.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_1lb7woJzyIXq0s_WzoNHyNF4bdY",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://vbngtv.com/latest-finance-news/?rkey=20260601NE72078&filter=26049",
-        "source": "VYRE Business News Global",
-        "publishDate": "2026-06-01T18:02:04.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Sq-yLv0F1t_Ga55j2Jn2VPcwioM",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.capecorallivingmagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Cape Coral Living Magazine (PR Newswire)",
-        "publishDate": "2026-06-01T12:45:32.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ZHApIXyxu8zHgjjpzRjeKNzsvhc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.midvalejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Midvale Journal",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_kR357z_PGfF8OCM7AYZPQJTb8Do",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.brewtonstandard.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Brewton Standard",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_-Hyk5KPMcw7JVS_7SkSPr8t8Dd0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.godofsound.com/story/157375/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "God Of Sound - Lifestyle",
-        "publishDate": "2026-06-01T12:10:36.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_D--9MfLbK5BcRhuM4If_BB-b4lE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.wirednewsengine.com/story/158115/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Wired News Engine",
-        "publishDate": "2026-06-01T12:15:05.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_VHALW8FAPSV4DcHXkHDIShvKAkQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://sanantonio.newsnetmedia.com/story/250547/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "NewsNet",
-        "publishDate": "2026-06-01T12:19:24.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_f6d14x_fP9EcEQLm0j0FtYBnJUE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.wfmz.com/news/pr_newswire/pr_newswire_pennsylvania/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/article_b8a78235-2570-5899-b5d2-632134794ccb.html",
-        "source": "WFMZ-TV",
-        "publishDate": "2026-06-01T12:00:00.000Z",
+        "url": "https://lifestyle.agree.net/story/165974/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Agree Lifestyle",
+        "publishDate": "2026-06-01T12:12:39.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1365,6 +775,126 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_ZHApIXyxu8zHgjjpzRjeKNzsvhc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.midvalejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Midvale Journal",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_kR357z_PGfF8OCM7AYZPQJTb8Do",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.brewtonstandard.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Brewton Standard",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Sq-yLv0F1t_Ga55j2Jn2VPcwioM",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.capecorallivingmagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Cape Coral Living Magazine (PR Newswire)",
+        "publishDate": "2026-06-01T12:45:32.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_4Nl9QzOT5GFSVRfiO3-1LZJyurw",
+        "title": "Magna5 Announces Executive Leadership Changes",
+        "url": "https://channelvisionmag.com/magna5-announces-executive-leadership-changes/",
+        "source": "ChannelVision Magazine",
+        "publishDate": "2026-06-01T14:12:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_EIX31_Fdn3niBs63kwv3fpENWbQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.blackberryempire.com/story/157189/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "BlackBerry Empire",
+        "publishDate": "2026-06-01T12:23:34.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_k36TISEsIzyD3B8H5UE8TvepCo0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.benzinga.com/pressreleases/26/06/n52900870/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
+        "source": "Benzinga",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_suaRUDFxHa1jysuxXhbX29340IA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://cw7az.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "CW7 Arizona",
+        "publishDate": "2026-06-01T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_vCZyQl7n-Skj7mc5tz0Rh8RT_Mo",
+        "title": "Magna5 Promotes Jerry Masseur to Chief Sales Officer as Growth Strategy Expands",
+        "url": "https://www.citybiz.co/article/853323/magna5-promotes-jerry-masseur-to-chief-sales-officer-as-growth-strategy-expands/",
+        "source": "citybiz",
+        "publishDate": "2026-06-01T13:20:50.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_-Hyk5KPMcw7JVS_7SkSPr8t8Dd0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.godofsound.com/story/157375/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "God Of Sound - Lifestyle",
+        "publishDate": "2026-06-01T12:10:36.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_D--9MfLbK5BcRhuM4If_BB-b4lE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.wirednewsengine.com/story/158115/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Wired News Engine",
+        "publishDate": "2026-06-01T12:15:05.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_wgtsKPG0ysxnSDKNNwvG93KeCrQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://ktla.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KTLA-TV",
+        "publishDate": "2026-06-01T12:24:45.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_VHALW8FAPSV4DcHXkHDIShvKAkQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://sanantonio.newsnetmedia.com/story/250547/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "NewsNet",
+        "publishDate": "2026-06-01T12:19:24.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_26SrvBsgCHdSTQW1LkRPxcu4JQM",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
         "url": "https://businesschief.com/pr_newswire?rkey=20260601NE72078&filter=22716",
@@ -1375,11 +905,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_6NdzO6cOB-fg2EZRsQPtqzqpHGk",
+        "id": "mw_1lb7woJzyIXq0s_WzoNHyNF4bdY",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.blerrp.com/story/161800/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "blerrp",
-        "publishDate": "2026-06-01T12:10:17.000Z",
+        "url": "https://vbngtv.com/latest-finance-news/?rkey=20260601NE72078&filter=26049",
+        "source": "VYRE Business News Global",
+        "publishDate": "2026-06-01T18:02:04.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1390,6 +920,16 @@
         "url": "https://lifestyle.pierrecountry.com/story/250580/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
         "source": "KLXS-FM",
         "publishDate": "2026-06-01T12:58:38.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_6NdzO6cOB-fg2EZRsQPtqzqpHGk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.blerrp.com/story/161800/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "blerrp",
+        "publishDate": "2026-06-01T12:10:17.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1755,6 +1295,56 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_RZpLIxqlcUzg2Cy990aHa3moLSc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.childcarepartnerships.org/story/300885/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T12:14:01.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_jaVveWAj4P4IS0AkY9sz260H9Hs",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.prentissheadlight.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Prentiss Headlight",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_uESbts19m3crJZQ_cFyHUaUYfac",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://jornalwebdigital.blogspot.com/p/prnewswirenews.html?rkey=20260601NE72078&filter=28399",
+        "source": "Jornalwebdigital - PR Newswire",
+        "publishDate": "2026-06-01T13:00:22.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_-BC9iO7cM7GucgaqBKXln7iy4_A",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.chestercounty.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Chester County Press |  | Press Releases",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_xr6HY8NDQYNIDK80zO1XQsaYPRE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.current943.com/story/251208/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Current 94.3",
+        "publishDate": "2026-06-01T12:17:12.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_sqBELoTBct2N6Fifk_rSN5TW7wA",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
         "url": "https://lifestyle.paraskevas.net/story/691970/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
@@ -1785,56 +1375,6 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_ZBIzFRqLfzryqecMeYjFO-GsX3I",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.amnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Advocate-Messenger",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Jw4X-ZQDNWgfzTr9cOXH9q9e7w0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.southjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "South Jordan Journal",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Ijs7TKb7ZAXCMht0PHEecKUOuGE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.southwestdailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "SouthWest Daily News",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_RZpLIxqlcUzg2Cy990aHa3moLSc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.childcarepartnerships.org/story/300885/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T12:14:01.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_jaVveWAj4P4IS0AkY9sz260H9Hs",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.prentissheadlight.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Prentiss Headlight",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
         "id": "mw_MhC4Wnf09gkFYuw5SePowCcqdPA",
         "title": "NetBrain ushers in ‘operational reality' for agentic NetOps with AI updates",
         "url": "https://www.sdxcentral.com/news/netbrain-ushers-in-operational-reality-for-agentic-netops-with-ai-updates/",
@@ -1855,41 +1395,21 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_-BC9iO7cM7GucgaqBKXln7iy4_A",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.chestercounty.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Chester County Press |  | Press Releases",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_uESbts19m3crJZQ_cFyHUaUYfac",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://jornalwebdigital.blogspot.com/p/prnewswirenews.html?rkey=20260601NE72078&filter=28399",
-        "source": "Jornalwebdigital - PR Newswire",
-        "publishDate": "2026-06-01T13:00:22.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_xr6HY8NDQYNIDK80zO1XQsaYPRE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.current943.com/story/251208/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Current 94.3",
-        "publishDate": "2026-06-01T12:17:12.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
         "id": "mw_LsC82SIDiyZMODCxCThMllTvDhY",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
         "url": "https://lifestyle.brightsfuture.com/story/690378/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
         "source": "BrightsFuture",
         "publishDate": "2026-06-01T12:15:05.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_VtYyxQsE3FJtpLdFUrzL17MS_d4",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.hollistontownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Holliston - Local Town Pages",
+        "publishDate": "2026-06-01T12:10:17.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1920,16 +1440,6 @@
         "url": "https://smb.kenbridgevictoriadispatch.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
         "source": "The Kenbridge Victoria Dispatch",
         "publishDate": "2026-06-01T13:05:19.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_VtYyxQsE3FJtpLdFUrzL17MS_d4",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.hollistontownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Holliston - Local Town Pages",
-        "publishDate": "2026-06-01T12:10:17.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -1975,20 +1485,30 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_y7HurH_HYTHSeoghySq6ebfWPQs",
+        "id": "mw_ZBIzFRqLfzryqecMeYjFO-GsX3I",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.andalusiastarnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Andalusia Star-News",
+        "url": "https://smb.amnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Advocate-Messenger",
         "publishDate": "2026-06-01T12:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_sra2sRxdFN6F48kJw3IgwpCwlnI",
+        "id": "mw_Jw4X-ZQDNWgfzTr9cOXH9q9e7w0",
         "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.hattiesburg.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Hattiesburg.com Press Releases",
+        "url": "https://pr.southjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "South Jordan Journal",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Ijs7TKb7ZAXCMht0PHEecKUOuGE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.southwestdailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "SouthWest Daily News",
         "publishDate": "2026-06-01T12:00:00.000Z",
         "reach": null,
         "sentiment": null,
@@ -2010,6 +1530,26 @@
         "url": "https://lifestyle.successxl.com/story/680589/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
         "source": "XPR Lifestyle",
         "publishDate": "2026-06-01T12:16:25.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_y7HurH_HYTHSeoghySq6ebfWPQs",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.andalusiastarnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Andalusia Star-News",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_sra2sRxdFN6F48kJw3IgwpCwlnI",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.hattiesburg.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Hattiesburg.com Press Releases",
+        "publishDate": "2026-06-01T12:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -2040,6 +1580,346 @@
         "url": "https://www.techdogs.com/tech-news/business-wire/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
         "source": "Techdogs",
         "publishDate": "2026-06-01T23:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_ai3YB5B55wtwsYMraxdwcZr9EeM",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://algeriatimes.info/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Algeria Times",
+        "publishDate": "2026-05-31T13:30:24.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yt-yoZwkOKXltU",
+        "title": "Chart Your Path to Agentic NetOps | NetBrain",
+        "url": "https://www.youtube.com/watch?v=yoZwkOKXltU",
+        "source": "Youtube",
+        "publishDate": "2026-06-01T20:03:31.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yt-xU2H3O1aqq8",
+        "title": "Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
+        "url": "https://www.youtube.com/watch?v=xU2H3O1aqq8",
+        "source": "Youtube",
+        "publishDate": "2026-06-01T17:36:54.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yt-Q-ReAU6nl50",
+        "title": "How To Manifest Abundance Every Morning 🌅✨ | Day 3 Manifestation Challenge #shorts",
+        "url": "https://www.youtube.com/watch?v=Q-ReAU6nl50",
+        "source": "Youtube",
+        "publishDate": "2026-05-29T18:54:24.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_lU-ah52ZZjBPwT1VuBR2qP3MuMU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://uaereview.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "UAE Business Review",
+        "publishDate": "2026-05-30T04:01:07.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_kLs0yYyHXyuXCXH7hsrzYyCqcyU",
+        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
+        "url": "https://www.impresacity.it/news-biz/38382/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
+        "source": "ImpresaCity",
+        "publishDate": "2026-05-30T07:16:02.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_WXlt1onZ8qqRlW-d1knQ9GRH2b8",
+        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
+        "url": "https://www.securityopenlab.it/news-biz/6515/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
+        "source": "SecurityOpen Lab",
+        "publishDate": "2026-05-30T04:54:13.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_q_QmW3JnQSFKvVPUKxpQdpLp_0M",
+        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
+        "url": "https://www.channelcity.it/news-biz/30859/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-implementare-lia-nelle-operazioni-di-rete.html",
+        "source": "ChannelCity",
+        "publishDate": "2026-05-30T05:45:30.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_lNoIX3R_ng85hOv4v2rQRcwFdA8",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://www.aetoswire.com/ar/news/3005202655339",
+        "source": "AETOSWire",
+        "publishDate": "2026-05-30T07:10:08.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_maxVSbTXBA_qnfX1NimHVVQQu5E",
+        "title": "Snowflake技术指标与分析师乐观共识相悖",
+        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-05-30/doc-inhzsnkp6866688.shtml",
+        "source": "news.sina.com.cn / 新浪新闻",
+        "publishDate": "2026-05-30T08:39:52.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_0cCMnwXnhfz_KUf1xyxKuz2mr3M",
+        "title": "尽管盈利为负，Spire Global仍因人工智能热潮股价飙升32%",
+        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-05-30/doc-inhzsnkp6866735.shtml",
+        "source": "news.sina.com.cn / 新浪新闻",
+        "publishDate": "2026-05-30T08:39:54.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_6mU1uPpHdr6_8JXhSgkOkt4kdJE",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://tiie.com.mx/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
+        "source": "TIIE",
+        "publishDate": "2026-05-30T03:00:03.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_IUDCg11N9Ap6fgMCHVeX1T3gDww",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "Dubai News Today",
+        "publishDate": "2026-05-30T02:09:52.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_-4FK2rsCiU7Bs4Ef1apGdKcrDQU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://uaetrendnews.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "UAETrendNews",
+        "publishDate": "2026-05-30T04:13:11.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_UCg_5c6PbjBn6nE9_kfu2aGAVq4",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://brandspaceonline.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "Brandspace",
+        "publishDate": "2026-05-30T00:18:14.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_rm-iQ6LUR2D5rYh5aXnqyoBv5tc",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://arabicon.jigsy.com/entries/general/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Arab Icon",
+        "publishDate": "2026-05-30T02:01:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_RU0OQ_orSyCYMyHV4LIscWs1zQM",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://theuaedaily.com/2026/05/30/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "The UAE Daily - Get Daily News Update for United Arab Emirates.",
+        "publishDate": "2026-05-30T00:10:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_jEf7povTIUlqlHXjvuDSIotW8iI",
+        "title": "Ethos Technologies Plunges 13% Amid Conflicting Signals",
+        "url": "https://www.ainvest.com/news/ethos-technologies-plunges-13-conflicting-signals-2605/",
+        "source": "AInvest",
+        "publishDate": "2026-05-30T01:56:32.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_D8DBu-LjGcCtDKci6mayZRULLH0",
+        "title": "Why Smart Money Exits Braiin Despite AI Hype",
+        "url": "https://www.ainvest.com/news/smart-money-exits-braiin-ai-hype-2605/",
+        "source": "AInvest",
+        "publishDate": "2026-05-30T03:03:19.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yrJEjJAuCt_P2iTT63r4vq_shjY",
+        "title": "Snowflake’s Technicals Clash With Bullish Analyst Consensus",
+        "url": "https://www.ainvest.com/news/snowflake-technicals-clash-bullish-analyst-consensus-2605/",
+        "source": "AInvest",
+        "publishDate": "2026-05-30T00:35:55.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_dSZm6kN5ZbDNOab87EJubuSkbEo",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://egyptcmnews.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Egypt Commercial News",
+        "publishDate": "2026-05-30T04:07:26.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Z226l8tCeRCUeExUdE_8xXNjPAg",
+        "title": "Spire Global Surges 32% on AI Hype, Despite Negative Profitability",
+        "url": "https://www.ainvest.com/news/spire-global-surges-32-ai-hype-negative-profitability-2605/",
+        "source": "AInvest",
+        "publishDate": "2026-05-30T00:43:19.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Dy3P7p2qWTchr0cYWQcMgLY-RPk",
+        "title": "ChronoScale Rises 2% on Weak Fundamentals",
+        "url": "https://www.ainvest.com/news/chronoscale-rises-2-weak-fundamentals-2605/",
+        "source": "AInvest",
+        "publishDate": "2026-05-30T03:37:46.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_6DQVQNQJXJ_prSfio5Oq2iFpiqg",
+        "title": "Autonome KI-Agenten: EU-Verordnung eIDAS 2.0 regelt digitale Identitäten",
+        "url": "https://www.ad-hoc-news.de/wirtschaft/autonome-ki-agenten-eu-verordnung-eidas-2-0-regelt-digitale-identitaeten/69449377",
+        "source": "Ad Hoc News",
+        "publishDate": "2026-05-30T15:21:23.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_khW9f9DanBzzeRK_xhpZHF3IkBg",
+        "title": "Resumen: De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://lanotta.com/resumen-de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red/",
+        "source": "La Notta",
+        "publishDate": "2026-05-30T12:34:28.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_ssqVz5FZWvln2OFlDzRNvSPgOXk",
+        "title": "Campus Israel launched as alternative for Jewish students facing antisemitism",
+        "url": "https://www.ynetnews.com/jewish-world/article/sjvysvuggl",
+        "source": "Ynetnews",
+        "publishDate": "2026-05-30T10:05:23.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Y7qdSmwKZbpx7yZ16OyQ_jNJCwQ",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://khaleejdailies.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "Khaleej Dailies",
+        "publishDate": "2026-05-30T02:10:55.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_TxB3JCRN1Nx9cNgsBHTvmAN-HCs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://aetoswire.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "Aetoswire",
+        "publishDate": "2026-05-30T06:35:17.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_YZlBy-pSIQiCsxPmcL5WaH-08KQ",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://beirutbizreport.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Beirut Business Report",
+        "publishDate": "2026-05-30T04:03:52.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_PNLP7iFgWzqSOpREP5yL3rtaFLg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://uae-blogger.jigsy.com/entries/general/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "UAE Blogger",
+        "publishDate": "2026-05-30T02:01:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_RQO95zJeGV4XFAC5nJAZS87XIDc",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://thetimesofuae.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "Dubai News, UAE News, Gulf, News, Latest news, Arab news, Gulf News, Dubai Labour News",
+        "publishDate": "2026-05-30T00:11:35.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_1foULgSRPpy9KepEdFOIfPiNN_Y",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://saudidailyrecord.net/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Saudi Daily Report",
+        "publishDate": "2026-05-30T04:32:08.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_QCSQCx9J_QJbfWDiYyBZjmnvtfs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://aetoswire.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "Aetoswire",
+        "publishDate": "2026-05-30T19:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_qJyNHX8O1pVlgD5hcNt5aQbRbto",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "Dubai News Today",
+        "publishDate": "2026-05-30T02:02:58.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -2645,36 +2525,6 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_JAbzEY6MmBE8Ak9nSmqlnDqEXoE",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.woodstocksentinelreview.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Woodstock Sentinel Review",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_FvkPoBuFaL2FvfvRH1C1uA2FRq4",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.elliotlakestandard.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Elliot Lake Standard",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_4_tOxD_uwAKHgklHAgllFbct3Fs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.norfolkandtillsonburgnews.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Norfolk & Tillsonburg News",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
         "id": "mw_qBRjnFdKJfFFzVEZRo-7HKgq7Y8",
         "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
         "url": "https://www.apuestasfutbol10.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
@@ -2835,71 +2685,31 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_aBTLtG74GIJkjyHiG8UTexZltbc",
+        "id": "mw_JAbzEY6MmBE8Ak9nSmqlnDqEXoE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.airdrieecho.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Airdrie Echo",
+        "url": "https://www.woodstocksentinelreview.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Woodstock Sentinel Review",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_EfSd947bZTVVJSk2-eiMGdFnELo",
-        "title": "Die neueste Erweiterung der NetBrain-Plattform umfasst Agent Skills, AI Path Doctor, MCP Server sowie erweiterte domänenübergreifende Integrationen und erweitert damit die Agent-Funktionen, die bereits in Hunderten von Unternehmen im Einsatz sind.",
-        "url": "https://www.moneyspecial.de/298/news_news.htn?id=48304824",
-        "source": "Moneyspecial",
-        "publishDate": "2026-05-29T19:05:57.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_V384NHf71GFo1H1ontfhZyYwJIY",
-        "title": "NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb",
-        "url": "https://www.wallstreet-online.de/nachricht/20943018-netzwerkautomatisierung-agentenbasierten-netops-netbrain-massstaebe-einsatz-ki-netzwerkbetrieb",
-        "source": "wallstreet:online",
-        "publishDate": "2026-05-29T18:40:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_5ZtDv8V5J8PjTAD8ffKoO_9z1-U",
-        "title": "NetBrain Technologies, Inc.: Von der Netzwerkautomatisierung bis hin zu agentenbasierten NetOps: NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb",
-        "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68634007-netbrain-technologies-inc-von-der-netzwerkautomatisierung-bis-hin-zu-agentenbasierten-netops-netbrain-setzt-massstaebe-beim-einsatz-von-ki-im-netzwe-004.htm",
-        "source": "FinanzNachrichten.de",
-        "publishDate": "2026-05-29T18:42:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ySBAG64qITx3PNWA9y9yd4r2xfI",
+        "id": "mw_FvkPoBuFaL2FvfvRH1C1uA2FRq4",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://libyabizinfo.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Libya Business Info",
-        "publishDate": "2026-05-29T21:59:59.000Z",
+        "url": "https://www.elliotlakestandard.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Elliot Lake Standard",
+        "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_yLwC9gOocOXMKLKrLK0RVn3N1TA",
+        "id": "mw_4_tOxD_uwAKHgklHAgllFbct3Fs",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://egyptbusinessnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Egypt Business News",
-        "publishDate": "2026-05-29T20:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_4GYj4vSiE6te46ZwtRBkrbGaZBM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://kuwaitinfopulse.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "kuwaitINFOPULSE",
-        "publishDate": "2026-05-29T20:59:59.000Z",
+        "url": "https://www.norfolkandtillsonburgnews.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Norfolk & Tillsonburg News",
+        "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -2915,6 +2725,16 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_HOTyxSfM276SnWnuI0HKCxCLFBU",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://www.loswarrants.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
+        "source": "Los Warrants",
+        "publishDate": "2026-05-29T21:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_gNa71pQAIUzAyXJb7NKCDti3_i8",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://www.thepost.on.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
@@ -2925,11 +2745,171 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_6fVHOOxXUd9VHFoC8eH4r8IqCJA",
+        "id": "mw_Dyqadk-e1Td0rOt3nla-DkAdpyo",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.mitchelladvocate.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Mitchell Advocate",
+        "url": "https://www.thewhig.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Kingston Whig-Standard",
         "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_DhJcdfDa9f4WjViEVthu618GO9E",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.chathamdailynews.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Chatham Daily News",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_94ATxHyCbu8C9tmFO7jqtJxVFCM",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.stratfordbeaconherald.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Stratford Beacon Herald",
+        "publishDate": "2026-05-29T13:19:13.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_7dy9GSo0Gyz3x43zsNUj9leawhY",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.morningstar.com/news/business-wire/20260529011510/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Morningstar",
+        "publishDate": "2026-05-29T08:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_iegA5Mg2Jj6v7_jhl-_TGYj6q7g",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://torontosun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Toronto Sun",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_esGkNVr_kOkhlQ3D32eMKQulihA",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.peacecountrysun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Peace Country Sun",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_2r8p4oooCtfsh-TDClpDSgnYL9g",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.whitecourtstar.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Whitecourt Star",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw__OixEUElLeEzCJoqZL0crEUN7l8",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.napaneeguide.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Napanee Guide",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_nq_AreA1H4RVfOJ9mzbukhqHbAQ",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.coldlakesun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Cold Lake Sun",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_okqnYwmuttWrqpQdl4Flz3yP414",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.pembrokeobserver.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Pembroke Observer and News",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_gpwyzRuMLh9CbspUiBsxhVwPb0M",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/postgazette/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Pittsburgh Post-Gazette - Financial Content",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_AojeLZhAvpriWxeHxe5G0MyV33c",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://edmontonsun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Edmonton Sun",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_5ydGOfTE5mowwM-_rAD01qMb6cg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.vermilionstandard.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Vermilion Standard",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_b7nUW1j8bqsHBNvqZqBF1U2DWMU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.thechronicle-online.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "The West Elgin Chronicle",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_0r4Pr8Gal7mI875MrGhVwq2l8Gg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.stthomastimesjournal.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "St. Thomas Times-Journal",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_gSh8nWNbvMkYLKbr_rH6FhnftVk",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.vulcanadvocate.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Vulcan Advocate",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_07JtNoqO_CTpdh3YtFojJEAPLbg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/streetinsider/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "StreetInsider - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -2955,6 +2935,16 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_WSxUBvKh2vQwCQB4p9jiTdmWjxA",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/wss/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "WSS - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_qkm7wPnmybZvo6mixp_LUJNX7eE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://lifestyle.paraskevas.net/story/689802/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
@@ -2965,11 +2955,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_gSh8nWNbvMkYLKbr_rH6FhnftVk",
+        "id": "mw_ru6VeDPstTUzjD7K9Asiuf8M70o",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.vulcanadvocate.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Vulcan Advocate",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://markets.financialcontent.com/clarkebroadcasting.mymotherlode/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "myMotherLode.com - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3020,36 +3010,6 @@
         "url": "http://finance.minyanville.com/minyanville/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
         "source": "Minyanville",
         "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_ENL4677CoNV2mcbBLXBa0es7Sfw",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.innovationopenlab.com/news-biz/67804/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations.html",
-        "source": "InnovationOpenLab",
-        "publishDate": "2026-05-29T14:18:19.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_8Fvwzss1gc__FWLhrNP2pZ4DRvo",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.melfortjournal.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Melfort Journal",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_GY8VwbZjVqSAZzxiJNgtrMZd1ew",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.countymarket.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "County Market",
-        "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3115,11 +3075,51 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_ru6VeDPstTUzjD7K9Asiuf8M70o",
+        "id": "mw_0AxN6AhjCzZtoIfp-i892BSClNA",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/clarkebroadcasting.mymotherlode/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "myMotherLode.com - FinancialContent",
+        "url": "https://pressreleasehub.pa.media/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-75053.html",
+        "source": "PA Media Group",
+        "publishDate": "2026-05-29T06:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_IV289DvqTUaJGJDefr9jUmbXBmo",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "http://money.mymotherlode.com/clarkebroadcasting.mymotherlode/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "MyMotherLode.com- FinancialContent",
         "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_t5CXcFKj5xONLSbjqjigFEsi7fs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/pentictonherald/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Penticton herald - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_8Fvwzss1gc__FWLhrNP2pZ4DRvo",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.melfortjournal.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Melfort Journal",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_GY8VwbZjVqSAZzxiJNgtrMZd1ew",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.countymarket.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "County Market",
+        "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3135,10 +3135,20 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_5ydGOfTE5mowwM-_rAD01qMb6cg",
+        "id": "mw_ENL4677CoNV2mcbBLXBa0es7Sfw",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.vermilionstandard.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Vermilion Standard",
+        "url": "https://www.innovationopenlab.com/news-biz/67804/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations.html",
+        "source": "InnovationOpenLab",
+        "publishDate": "2026-05-29T14:18:19.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_r6WE0g1V6zvOCBA-xInYPCpm0Hw",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.northernnews.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Northern News",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
@@ -3155,161 +3165,41 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_r6WE0g1V6zvOCBA-xInYPCpm0Hw",
+        "id": "mw_6fVHOOxXUd9VHFoC8eH4r8IqCJA",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.northernnews.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Northern News",
+        "url": "https://www.mitchelladvocate.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Mitchell Advocate",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_xQzoFSRSIdYUYXSB3SkebwlP-RQ",
+        "id": "mw_2gokwjuQfmMtqwvlAiCrFt6pDnQ",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://weeklyvoice.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "The Weekly Voice",
-        "publishDate": "2026-05-29T13:03:24.000Z",
+        "url": "https://markets.financialcontent.com/minstercommunitypost/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Financial Content",
+        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_AojeLZhAvpriWxeHxe5G0MyV33c",
+        "id": "mw_GKwX9p-BB3bhaDWerXeKJe8xjiM",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://edmontonsun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Edmonton Sun",
+        "url": "https://www.goderichsignalstar.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Goderich Signal Star",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_Dem_3IknV555ufmwCJzkxobc5oE",
+        "id": "mw_aBTLtG74GIJkjyHiG8UTexZltbc",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/newsok/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "NewsOK - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_xsQBxg7WrS3_KB1WDQn8uaTpA7A",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lasvegas.newsnetmedia.com/story/253791/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "NewsNet",
-        "publishDate": "2026-05-29T14:41:50.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_t5CXcFKj5xONLSbjqjigFEsi7fs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/pentictonherald/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Penticton herald - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_WSxUBvKh2vQwCQB4p9jiTdmWjxA",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/wss/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "WSS - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_gpwyzRuMLh9CbspUiBsxhVwPb0M",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/postgazette/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Pittsburgh Post-Gazette - Financial Content",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_07JtNoqO_CTpdh3YtFojJEAPLbg",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/streetinsider/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "StreetInsider - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Dyqadk-e1Td0rOt3nla-DkAdpyo",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.thewhig.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Kingston Whig-Standard",
+        "url": "https://www.airdrieecho.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Airdrie Echo",
         "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_DhJcdfDa9f4WjViEVthu618GO9E",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.chathamdailynews.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Chatham Daily News",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_94ATxHyCbu8C9tmFO7jqtJxVFCM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.stratfordbeaconherald.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Stratford Beacon Herald",
-        "publishDate": "2026-05-29T13:19:13.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_7dy9GSo0Gyz3x43zsNUj9leawhY",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.morningstar.com/news/business-wire/20260529011510/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Morningstar",
-        "publishDate": "2026-05-29T08:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_iegA5Mg2Jj6v7_jhl-_TGYj6q7g",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://torontosun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Toronto Sun",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_HOTyxSfM276SnWnuI0HKCxCLFBU",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://www.loswarrants.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
-        "source": "Los Warrants",
-        "publishDate": "2026-05-29T21:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_KWK4AcgwWFUsdwdhPzIoqZyd3Ok",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://www.fondoscotizados.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507/",
-        "source": "Fondos Cotizados",
-        "publishDate": "2026-05-29T19:15:11.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3335,131 +3225,41 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_esGkNVr_kOkhlQ3D32eMKQulihA",
+        "id": "mw_xQzoFSRSIdYUYXSB3SkebwlP-RQ",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.peacecountrysun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Peace Country Sun",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://weeklyvoice.com/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "The Weekly Voice",
+        "publishDate": "2026-05-29T13:03:24.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_2r8p4oooCtfsh-TDClpDSgnYL9g",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.whitecourtstar.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Whitecourt Star",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "id": "mw_KWK4AcgwWFUsdwdhPzIoqZyd3Ok",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://www.fondoscotizados.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507/",
+        "source": "Fondos Cotizados",
+        "publishDate": "2026-05-29T19:15:11.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw__OixEUElLeEzCJoqZL0crEUN7l8",
+        "id": "mw_Dem_3IknV555ufmwCJzkxobc5oE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.napaneeguide.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Napanee Guide",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_0AxN6AhjCzZtoIfp-i892BSClNA",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://pressreleasehub.pa.media/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-75053.html",
-        "source": "PA Media Group",
-        "publishDate": "2026-05-29T06:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_IV289DvqTUaJGJDefr9jUmbXBmo",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://money.mymotherlode.com/clarkebroadcasting.mymotherlode/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "MyMotherLode.com- FinancialContent",
+        "url": "https://markets.financialcontent.com/newsok/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "NewsOK - FinancialContent",
         "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_b7nUW1j8bqsHBNvqZqBF1U2DWMU",
+        "id": "mw_xsQBxg7WrS3_KB1WDQn8uaTpA7A",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.thechronicle-online.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "The West Elgin Chronicle",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_0r4Pr8Gal7mI875MrGhVwq2l8Gg",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.stthomastimesjournal.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "St. Thomas Times-Journal",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_nq_AreA1H4RVfOJ9mzbukhqHbAQ",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.coldlakesun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Cold Lake Sun",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_okqnYwmuttWrqpQdl4Flz3yP414",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.pembrokeobserver.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Pembroke Observer and News",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_GKwX9p-BB3bhaDWerXeKJe8xjiM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.goderichsignalstar.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Goderich Signal Star",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_2gokwjuQfmMtqwvlAiCrFt6pDnQ",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/minstercommunitypost/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Financial Content",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_lcqv_82PTHDYN9xdKB3LU6gi1Tw",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.fortmcmurraytoday.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Fort McMurray Today",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_aMaVkr7R1SRQ3pgAUG66dN5JfF0",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.cochranetimespost.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "Cochrane Times-Post",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://lasvegas.newsnetmedia.com/story/253791/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "NewsNet",
+        "publishDate": "2026-05-29T14:41:50.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3515,30 +3315,50 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_o1sDSKhs-9UDqTW80izeGLkjjes",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://www.accionesdebolsa.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
-        "source": "FinancialRed",
-        "publishDate": "2026-05-29T18:00:03.000Z",
+        "id": "mw_EfSd947bZTVVJSk2-eiMGdFnELo",
+        "title": "Die neueste Erweiterung der NetBrain-Plattform umfasst Agent Skills, AI Path Doctor, MCP Server sowie erweiterte domänenübergreifende Integrationen und erweitert damit die Agent-Funktionen, die bereits in Hunderten von Unternehmen im Einsatz sind.",
+        "url": "https://www.moneyspecial.de/298/news_news.htn?id=48304824",
+        "source": "Moneyspecial",
+        "publishDate": "2026-05-29T19:05:57.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_17ywiidM6VNP7PWVsRsFoKNjTSU",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.californiaconsumerbanking.com/story/682647/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "California Consumer Banking",
-        "publishDate": "2026-05-29T23:59:59.000Z",
+        "id": "mw_V384NHf71GFo1H1ontfhZyYwJIY",
+        "title": "NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb",
+        "url": "https://www.wallstreet-online.de/nachricht/20943018-netzwerkautomatisierung-agentenbasierten-netops-netbrain-massstaebe-einsatz-ki-netzwerkbetrieb",
+        "source": "wallstreet:online",
+        "publishDate": "2026-05-29T18:40:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_Vl7jD4GH2K4QX-MQ-DpkB9aJXg0",
+        "id": "mw_5ZtDv8V5J8PjTAD8ffKoO_9z1-U",
+        "title": "NetBrain Technologies, Inc.: Von der Netzwerkautomatisierung bis hin zu agentenbasierten NetOps: NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68634007-netbrain-technologies-inc-von-der-netzwerkautomatisierung-bis-hin-zu-agentenbasierten-netops-netbrain-setzt-massstaebe-beim-einsatz-von-ki-im-netzwe-004.htm",
+        "source": "FinanzNachrichten.de",
+        "publishDate": "2026-05-29T18:42:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_kmjS1NIkMCm3Sax3OGS37W5EqEg",
+        "title": "Campus Israel emerges as resource for university students facing antisemitism",
+        "url": "https://www.europesays.com/iran/136173/",
+        "source": "EUROPE SAYS",
+        "publishDate": "2026-05-29T12:15:10.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_U8keqtdtbbWOZeS78TMqaxsIyTk",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://topnorthafricanews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "topnorthafricanews.com",
+        "url": "https://algeriabusinessinfo.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Algeria Business Info",
         "publishDate": "2026-05-29T22:59:59.000Z",
         "reach": null,
         "sentiment": null,
@@ -3575,11 +3395,81 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_U8keqtdtbbWOZeS78TMqaxsIyTk",
+        "id": "mw_lcqv_82PTHDYN9xdKB3LU6gi1Tw",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://algeriabusinessinfo.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Algeria Business Info",
+        "url": "https://www.fortmcmurraytoday.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Fort McMurray Today",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_aMaVkr7R1SRQ3pgAUG66dN5JfF0",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.cochranetimespost.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "Cochrane Times-Post",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Vl7jD4GH2K4QX-MQ-DpkB9aJXg0",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://topnorthafricanews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "topnorthafricanews.com",
         "publishDate": "2026-05-29T22:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_o1sDSKhs-9UDqTW80izeGLkjjes",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://www.accionesdebolsa.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
+        "source": "FinancialRed",
+        "publishDate": "2026-05-29T18:00:03.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_ySBAG64qITx3PNWA9y9yd4r2xfI",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://libyabizinfo.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Libya Business Info",
+        "publishDate": "2026-05-29T21:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yLwC9gOocOXMKLKrLK0RVn3N1TA",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://egyptbusinessnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Egypt Business News",
+        "publishDate": "2026-05-29T20:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_4GYj4vSiE6te46ZwtRBkrbGaZBM",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://kuwaitinfopulse.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "kuwaitINFOPULSE",
+        "publishDate": "2026-05-29T20:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_17ywiidM6VNP7PWVsRsFoKNjTSU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://lifestyle.californiaconsumerbanking.com/story/682647/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "California Consumer Banking",
+        "publishDate": "2026-05-29T23:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3605,31 +3495,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_kmjS1NIkMCm3Sax3OGS37W5EqEg",
-        "title": "Campus Israel emerges as resource for university students facing antisemitism",
-        "url": "https://www.europesays.com/iran/136173/",
-        "source": "EUROPE SAYS",
-        "publishDate": "2026-05-29T12:15:10.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
         "id": "mw_eyPXGnIF7pN9vbS3559M8Msqmm0",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://markets.financialcontent.com/mammothtimes/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
         "source": "Fat Pitch Financials - FinancialContent",
         "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yF0COeaAFZbvSDvpTG9aqFQZtIo",
-        "title": "NetBrain Technologies, Inc.: From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68631052-netbrain-technologies-inc-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-004.htm",
-        "source": "FinanzNachrichten.de",
-        "publishDate": "2026-05-29T13:06:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3655,130 +3525,100 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_UfeTgiRxkmJ7lr872Q6ygA5J8CU",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.rogueimc.org/story/693528/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-05-29T04:00:00.000Z",
+        "id": "mw_yF0COeaAFZbvSDvpTG9aqFQZtIo",
+        "title": "NetBrain Technologies, Inc.: From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68631052-netbrain-technologies-inc-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-004.htm",
+        "source": "FinanzNachrichten.de",
+        "publishDate": "2026-05-29T13:06:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_tAMh0esLtuH3X8yDpENB5pCp5YA",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.communitypress.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Belleville Community Press",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "id": "mw_FeMoK7CSNqtsxT14Fsy7KYN5J8U",
+        "title": "Von der Netzwerkautomatisierung bis hin zu agentenbasierten NetOps: NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb: Pressemeldung",
+        "url": "https://www.news.de/pressemeldungen/859660333/pressemeldung-von-der-netzwerkautomatisierung-bis-hin-zu-agentenbasierten-netops-netbrain-setzt-massstaebe-beim-einsatz-von-ki-im-netzwerkbetrieb/1/",
+        "source": "news.de",
+        "publishDate": "2026-05-29T18:42:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_hPcNS-FAnpjrh1OXg8OuTCgb0Sk",
+        "id": "mw_E76EDaNosnDienXiN2jN-Py-EHc",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Financial Post",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://www.hannaherald.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Hanna Herald",
+        "publishDate": "2026-05-29T13:35:24.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_MfduKjMaPDdY1Z_gJxXp8TMSu0s",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://www.estartap.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
-        "source": "estartap.com",
-        "publishDate": "2026-05-29T18:00:03.000Z",
+        "id": "mw_1BCjJr3cGxpYQvJHO11yqHNPEEk",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://turkeyedailies.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Turkeye Dailies",
+        "publishDate": "2026-05-29T20:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_z-5MPB_Iov0nAOTbBbjrbOlQi0c",
+        "id": "mw_zmgjiGXj2ix4mvmQbdQie_WVa4k",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.lucknowsentinel.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Lucknow Sentinel",
-        "publishDate": "2026-05-29T13:28:38.000Z",
+        "url": "https://westafricalocalnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "westafricalocalnews.com",
+        "publishDate": "2026-05-29T22:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_WbBo-IctiAoYO_AHoXkEuERC2UU",
+        "id": "mw_y64fZFJO3-zl2fW-hMmcZCEP7YE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.devondispatch.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Devon Dispatch News",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://turkeyetopinfo.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Turkeyetopinfo.com",
+        "publishDate": "2026-05-29T20:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_SrN6e8MGqZK9ZqMB2AmdrfFt_r8",
+        "id": "mw_63-VqA_pNaKZUo2lx9uEih-CoUc",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.simcoereformer.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Simcoe Reformer",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://manamatopnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "ManamaTopNews.com",
+        "publishDate": "2026-05-29T20:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_b1_e1pWBshw4GYv5rNsqgvyvbF0",
+        "id": "mw_-zT_6dpKoakuwPlucSox7f2dOEg",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.saultthisweek.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Sault This Week",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://muscatdailynews.net/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Muscat Daily News",
+        "publishDate": "2026-05-29T19:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_2CnU8jKjulc6OG-DtSCf-2yxiXg",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Wedbush",
-        "publishDate": "2026-05-29T13:00:00.000Z",
+        "id": "mw_C64HBpHyepwfmaKj4uxjlJNFvec",
+        "title": "De l'automatisation des réseaux à Agentic NetOps : NetBrain fixe la norme en matière de déploiement de l'IA dans les opérations réseau",
+        "url": "https://www.businesswire.com/news/home/20260529813390/fr",
+        "source": "Business Wire",
+        "publishDate": "2026-05-29T18:56:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_d3DevqqZvhXZcJeM6TEiDt4cnjQ",
+        "id": "mw_Qh4QAxyzWRFlL2W_K_y1ghCmWss",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/pennwell.renewableenergy/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Renewable Energy - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_yFyFtBMG_0gJfuJ3NPpupRzzqIE",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.seaforthhuronexpositor.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Seaforth Huron Expositor",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_IXD4ZzTCkgo3-5zKw2dOJFIrt9Q",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/lethbridgeherald/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Lethbridge Herald - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_LQLwh8mE6_sVq_Dh5Nu7gQD60Hs",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://business.times-online.com/times-online/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Valley City Times Record - FinancialContent",
+        "url": "http://business.wapakdailynews.com/wapakdailynews/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Wapakoneta Daily News - FinancialContent",
         "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
@@ -3835,6 +3675,16 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_LQLwh8mE6_sVq_Dh5Nu7gQD60Hs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "http://business.times-online.com/times-online/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Valley City Times Record - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_O_iBYBdC6vI7MeZrreGe5ZQHFpE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://www.midnorthmonitor.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
@@ -3855,6 +3705,76 @@
         "_type": "meltwater"
       },
       {
+        "id": "mw_fip20wirunhAFzcYpcwE6OkYN3k",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/workboat/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Workboat Indexes - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_TNduFgfl1b1Ml2bCXCGFgmg6F5I",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.nantonnews.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Nanton News",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_xOtVetND4gMANykOL9ox7REo8pc",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://calgarysun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Calgary Sun",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_g4zZx3TrBtuPBNFLU7OsW5jdccY",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://lifestyle.forkstofeet.com/story/704161/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "lifestyle.forkstofeet.com",
+        "publishDate": "2026-05-29T13:41:20.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_RBHPRkqtobemdHg_ZAYclZ-XCGI",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://lifestyle.thenyctimes.com/story/686907/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-05-29T04:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_otN5dsXIPmlHfxnOfIIsxmDFXlg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://lifestyle.kccrradio.com/story/248916/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "KCCR-AM (Pierre, South Dakota)",
+        "publishDate": "2026-05-29T13:46:31.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_2CnU8jKjulc6OG-DtSCf-2yxiXg",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Wedbush",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
         "id": "mw_hFuYUzJzyxKeodJFba3kY-rAAQw",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://markets.financialcontent.com/sandiego/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
@@ -3865,21 +3785,21 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_83ekLJU8AhD1nBWf9o2bJjPjSGk",
+        "id": "mw_JFj_kEYfYsr8YM5PN4b4t-i7WcQ",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.myeaglecountry.com/story/248941/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "KZZI-FM",
-        "publishDate": "2026-05-29T19:00:12.000Z",
+        "url": "https://markets.financialcontent.com/pennwell.industriallaser/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Fat Pitch Financials - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_LYOObABlwUFVSr6P-H81q-VxrvY",
+        "id": "mw_d3DevqqZvhXZcJeM6TEiDt4cnjQ",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.highrivertimes.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
-        "source": "The High River Times",
-        "publishDate": "2026-05-29T13:08:33.000Z",
+        "url": "https://markets.financialcontent.com/pennwell.renewableenergy/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Renewable Energy - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -3925,9 +3845,19 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_RBHPRkqtobemdHg_ZAYclZ-XCGI",
+        "id": "mw_83ekLJU8AhD1nBWf9o2bJjPjSGk",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.thenyctimes.com/story/686907/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "url": "https://lifestyle.myeaglecountry.com/story/248941/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "KZZI-FM",
+        "publishDate": "2026-05-29T19:00:12.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_UfeTgiRxkmJ7lr872Q6ygA5J8CU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://lifestyle.rogueimc.org/story/693528/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
         "source": "XPR Lifestyle",
         "publishDate": "2026-05-29T04:00:00.000Z",
         "reach": null,
@@ -3935,80 +3865,40 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_otN5dsXIPmlHfxnOfIIsxmDFXlg",
+        "id": "mw_yFyFtBMG_0gJfuJ3NPpupRzzqIE",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.kccrradio.com/story/248916/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "KCCR-AM (Pierre, South Dakota)",
-        "publishDate": "2026-05-29T13:46:31.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_q04PkuAVw_et2WSdOzQxxUhQfM0",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/winslow/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Fat Pitch Financials - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Mskmqa64NXwTAO1m7Qj5QVl0kIM",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/pennwell.hydroworld/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Pennwell.hydroworld - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_TNduFgfl1b1Ml2bCXCGFgmg6F5I",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.nantonnews.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Nanton News",
+        "url": "https://www.seaforthhuronexpositor.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Seaforth Huron Expositor",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_xOtVetND4gMANykOL9ox7REo8pc",
+        "id": "mw_IXD4ZzTCkgo3-5zKw2dOJFIrt9Q",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://calgarysun.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Calgary Sun",
-        "publishDate": "2026-05-29T13:08:33.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_g4zZx3TrBtuPBNFLU7OsW5jdccY",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://lifestyle.forkstofeet.com/story/704161/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "lifestyle.forkstofeet.com",
-        "publishDate": "2026-05-29T13:41:20.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_JFj_kEYfYsr8YM5PN4b4t-i7WcQ",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/pennwell.industriallaser/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Fat Pitch Financials - FinancialContent",
+        "url": "https://markets.financialcontent.com/lethbridgeherald/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Lethbridge Herald - FinancialContent",
         "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_56ndcCHsobkXqZEC5UcjjAu1wSk",
+        "id": "mw_SrN6e8MGqZK9ZqMB2AmdrfFt_r8",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.wallaceburgcourierpress.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Wallaceburg Courier Press",
+        "url": "https://www.simcoereformer.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Simcoe Reformer",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_b1_e1pWBshw4GYv5rNsqgvyvbF0",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.saultthisweek.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Sault This Week",
         "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
@@ -4035,41 +3925,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_jQ8cjJ8hUX5qTiUEFD2i_YmQ2Q4",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://theprovince.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Province",
-        "publishDate": "2026-05-29T13:45:18.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_5PHAnhegMFHwM6CUdaMTztfud9E",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.chroniclejournal.com/chroniclejournal/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Stock Market - Chroniclejournal.com",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Bo5-eZyEQl3v89t8Q-OLnse0Pos",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://iberonews.com/not_det.php?lang=es&notid=107270",
-        "source": "Ibero News",
-        "publishDate": "2026-05-29T13:17:18.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_Qh4QAxyzWRFlL2W_K_y1ghCmWss",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://business.wapakdailynews.com/wapakdailynews/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Wapakoneta Daily News - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
+        "id": "mw_MfduKjMaPDdY1Z_gJxXp8TMSu0s",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://www.estartap.com/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
+        "source": "estartap.com",
+        "publishDate": "2026-05-29T18:00:03.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4080,46 +3940,6 @@
         "url": "https://losimpuestos.com.mx/notas-de-prensa/de-la-automatizacion-de-la-red-a-las-netops-agenticas-netbrain-establece-el-estandar-para-la-implementacion-de-ia-en-las-operaciones-de-red-22579507",
         "source": "Los Impuestos",
         "publishDate": "2026-05-29T19:58:04.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_C64HBpHyepwfmaKj4uxjlJNFvec",
-        "title": "De l'automatisation des réseaux à Agentic NetOps : NetBrain fixe la norme en matière de déploiement de l'IA dans les opérations réseau",
-        "url": "https://www.businesswire.com/news/home/20260529813390/fr",
-        "source": "Business Wire",
-        "publishDate": "2026-05-29T18:56:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_lkOxaqsBveC_srZF7vr96dMF52I",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/dailypennyalerts/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Daily Penny Alerts - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_NC0oTKcyAHKDa5msoBv9EUGGIE4",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/fatpitch.valueinvestingnews/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Value Investing News - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_fip20wirunhAFzcYpcwE6OkYN3k",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://markets.financialcontent.com/workboat/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Workboat Indexes - FinancialContent",
-        "publishDate": "2026-05-29T13:00:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4165,11 +3985,131 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw__hnwH4O4Szh-yUM9SIOIUxD5yWg",
-        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
-        "url": "https://www.altoadige.it/business-wire/dall-automazione-di-rete-all-agentic-netops-netbrain-fissa-lo-standard-per-implementare-l-ia-nelle-operazioni-di-rete-1.4376395",
-        "source": "L' Alto Adige",
-        "publishDate": "2026-05-29T08:58:00.000Z",
+        "id": "mw_56ndcCHsobkXqZEC5UcjjAu1wSk",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.wallaceburgcourierpress.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Wallaceburg Courier Press",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_q04PkuAVw_et2WSdOzQxxUhQfM0",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/winslow/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Fat Pitch Financials - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Mskmqa64NXwTAO1m7Qj5QVl0kIM",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/pennwell.hydroworld/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Pennwell.hydroworld - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_jQ8cjJ8hUX5qTiUEFD2i_YmQ2Q4",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://theprovince.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Province",
+        "publishDate": "2026-05-29T13:45:18.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_tAMh0esLtuH3X8yDpENB5pCp5YA",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.communitypress.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Belleville Community Press",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_hPcNS-FAnpjrh1OXg8OuTCgb0Sk",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Financial Post",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_5PHAnhegMFHwM6CUdaMTztfud9E",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.chroniclejournal.com/chroniclejournal/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Stock Market - Chroniclejournal.com",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_Bo5-eZyEQl3v89t8Q-OLnse0Pos",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://iberonews.com/not_det.php?lang=es&notid=107270",
+        "source": "Ibero News",
+        "publishDate": "2026-05-29T13:17:18.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_lkOxaqsBveC_srZF7vr96dMF52I",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/dailypennyalerts/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Daily Penny Alerts - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_NC0oTKcyAHKDa5msoBv9EUGGIE4",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://markets.financialcontent.com/fatpitch.valueinvestingnews/article/bizwire-2026-5-29-from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Value Investing News - FinancialContent",
+        "publishDate": "2026-05-29T13:00:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_LYOObABlwUFVSr6P-H81q-VxrvY",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.highrivertimes.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations?20260529",
+        "source": "The High River Times",
+        "publishDate": "2026-05-29T13:08:33.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_z-5MPB_Iov0nAOTbBbjrbOlQi0c",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.lucknowsentinel.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "The Lucknow Sentinel",
+        "publishDate": "2026-05-29T13:28:38.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_WbBo-IctiAoYO_AHoXkEuERC2UU",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://www.devondispatch.ca/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Devon Dispatch News",
+        "publishDate": "2026-05-29T13:08:33.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4179,6 +4119,16 @@
         "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
         "url": "https://www.ladige.it/business-wire/2026/05/29/dall-automazione-di-rete-all-agentic-netops-netbrain-fissa-lo-standard-per-implementare-l-ia-nelle-operazioni-di-rete-1.4376394",
         "source": "L'Adige.it",
+        "publishDate": "2026-05-29T08:58:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw__hnwH4O4Szh-yUM9SIOIUxD5yWg",
+        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
+        "url": "https://www.altoadige.it/business-wire/dall-automazione-di-rete-all-agentic-netops-netbrain-fissa-lo-standard-per-implementare-l-ia-nelle-operazioni-di-rete-1.4376395",
+        "source": "L' Alto Adige",
         "publishDate": "2026-05-29T08:58:00.000Z",
         "reach": null,
         "sentiment": null,
@@ -4195,21 +4145,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_E76EDaNosnDienXiN2jN-Py-EHc",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://www.hannaherald.com/pmn/business-wire-news-releases-pmn/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "The Hanna Herald",
-        "publishDate": "2026-05-29T13:35:24.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_1BCjJr3cGxpYQvJHO11yqHNPEEk",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://turkeyedailies.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Turkeye Dailies",
-        "publishDate": "2026-05-29T20:59:59.000Z",
+        "id": "mw_tpJaU4-r2tlklUSB1QCWEqH7oko",
+        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
+        "url": "https://www.laprovinciaunicatv.it/stories/ansa-business/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-impl-o_3877435_11/",
+        "source": "La Provincia Unica Tv",
+        "publishDate": "2026-05-29T21:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4225,31 +4165,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_FeMoK7CSNqtsxT14Fsy7KYN5J8U",
-        "title": "Von der Netzwerkautomatisierung bis hin zu agentenbasierten NetOps: NetBrain setzt Maßstäbe beim Einsatz von KI im Netzwerkbetrieb: Pressemeldung",
-        "url": "https://www.news.de/pressemeldungen/859660333/pressemeldung-von-der-netzwerkautomatisierung-bis-hin-zu-agentenbasierten-netops-netbrain-setzt-massstaebe-beim-einsatz-von-ki-im-netzwerkbetrieb/1/",
-        "source": "news.de",
-        "publishDate": "2026-05-29T18:42:00.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_IrIGJ3O4hDdb-pt66oIphKR_gnU",
+        "id": "mw_-7vGQeUItVHlFk2MNUzV8hXWdHk",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://manama-tech.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Manama-Tech",
+        "url": "https://turk-news.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Turk-news",
         "publishDate": "2026-05-29T20:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_tpJaU4-r2tlklUSB1QCWEqH7oko",
-        "title": "Dall'automazione di rete all'Agentic NetOps: NetBrain fissa lo standard per implementare l'IA nelle operazioni di rete",
-        "url": "https://www.laprovinciaunicatv.it/stories/ansa-business/dallautomazione-di-rete-allagentic-netops-netbrain-fissa-lo-standard-per-impl-o_3877435_11/",
-        "source": "La Provincia Unica Tv",
-        "publishDate": "2026-05-29T21:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4305,21 +4225,21 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_OU3K3hlk3RQOImLf4JhBfL566C0",
+        "id": "mw_7_QbE9v3F8oEjVPLruMnIOK65Mo",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://iraqdailyjournal.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Iraq Daily Journal",
-        "publishDate": "2026-05-29T20:59:59.000Z",
+        "url": "https://tehrantelegram.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Tehran Telegram",
+        "publishDate": "2026-05-29T19:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_gJXbuc9tMLZfHTu2jORPf2_whvs",
+        "id": "mw_IrIGJ3O4hDdb-pt66oIphKR_gnU",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://marocgazette.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Morocco Gazette",
-        "publishDate": "2026-05-29T22:59:59.000Z",
+        "url": "https://manama-tech.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Manama-Tech",
+        "publishDate": "2026-05-29T20:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4365,31 +4285,21 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_7_QbE9v3F8oEjVPLruMnIOK65Mo",
+        "id": "mw_OU3K3hlk3RQOImLf4JhBfL566C0",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://tehrantelegram.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Tehran Telegram",
-        "publishDate": "2026-05-29T19:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_-7vGQeUItVHlFk2MNUzV8hXWdHk",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://turk-news.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Turk-news",
+        "url": "https://iraqdailyjournal.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Iraq Daily Journal",
         "publishDate": "2026-05-29T20:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
       },
       {
-        "id": "mw_vIdc3DMpKBJGCKu-EqlF7_DjOdc",
-        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
-        "url": "https://www.businesswire.com/news/home/20260529322479/es",
-        "source": "Business Wire",
-        "publishDate": "2026-05-29T18:41:00.000Z",
+        "id": "mw_gJXbuc9tMLZfHTu2jORPf2_whvs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://marocgazette.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
+        "source": "Morocco Gazette",
+        "publishDate": "2026-05-29T22:59:59.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4415,46 +4325,6 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_zmgjiGXj2ix4mvmQbdQie_WVa4k",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://westafricalocalnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "westafricalocalnews.com",
-        "publishDate": "2026-05-29T22:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_y64fZFJO3-zl2fW-hMmcZCEP7YE",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://turkeyetopinfo.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Turkeyetopinfo.com",
-        "publishDate": "2026-05-29T20:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_63-VqA_pNaKZUo2lx9uEih-CoUc",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://manamatopnews.com/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "ManamaTopNews.com",
-        "publishDate": "2026-05-29T20:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "mw_-zT_6dpKoakuwPlucSox7f2dOEg",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://muscatdailynews.net/post/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
-        "source": "Muscat Daily News",
-        "publishDate": "2026-05-29T19:59:59.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
         "id": "mw_fTHVGcgWUCXIdHJ3pP6MaAYz978",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://qatarwatchreview.com/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
@@ -4475,11 +4345,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "mw_DG7AglVjmuMLrBzF9oPUl2kv77g",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://cioinfluence.com/networking/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
-        "source": "CIO Influence",
-        "publishDate": "2026-05-29T13:47:04.000Z",
+        "id": "mw_vIdc3DMpKBJGCKu-EqlF7_DjOdc",
+        "title": "De la automatización de la red a las NetOps agénticas, NetBrain establece el estándar para la implementación de IA en las operaciones de red",
+        "url": "https://www.businesswire.com/news/home/20260529322479/es",
+        "source": "Business Wire",
+        "publishDate": "2026-05-29T18:41:00.000Z",
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
@@ -4493,45 +4363,162 @@
         "reach": null,
         "sentiment": null,
         "_type": "meltwater"
+      },
+      {
+        "id": "mw_DG7AglVjmuMLrBzF9oPUl2kv77g",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://cioinfluence.com/networking/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "CIO Influence",
+        "publishDate": "2026-05-29T13:47:04.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_BLgsuOVIs0dtqnkgXN5y92G-AN8",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
+        "source": "Dubai News Today",
+        "publishDate": "2026-06-02T05:02:45.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_yt-6ZvLecaCxmQ",
+        "title": "Agentic NetOps Is Here: NetBrain Takes Over the Las Vegas Sphere",
+        "url": "https://www.youtube.com/watch?v=6ZvLecaCxmQ",
+        "source": "Youtube",
+        "publishDate": "2026-06-02T14:40:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_0mg0uCT1WpKGoOvh96jE1o570RY",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://media.newswire.ca/forefrontmedianews.html?rkey=20260601NE72078&filter=20509",
+        "source": "Forefront Media News - PR Newswire",
+        "publishDate": "2026-06-02T03:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_fa0ukuE4DkF2uQjAAJIJ25Jcbg8",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://vmblog.com/news/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/",
+        "source": "VMblog.com",
+        "publishDate": "2026-06-02T19:34:27.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_WUM22rI4o5ql819U0HOetW8OpWs",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://gulfreport.co/en/ai-innovation/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Gulf Report",
+        "publishDate": "2026-06-02T11:29:22.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_FzEQCR-9YQxJtb8sKFegOmhrG6E",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
+        "source": "Dubai News Today",
+        "publishDate": "2026-06-02T05:28:32.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_hOTDLhD-h0znzhsbZsD3c37fpFk",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://uae-blogger.jigsy.com/entries/general/%D9%85%D9%86-%D8%A3%D8%AA%D9%85%D8%AA%D8%A9-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A5%D9%84%D9%89-%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%88%D9%83%D9%8A%D9%84%D8%A9-%D8%AA%D8%B6%D8%B9-%D8%B4%D8%B1%D9%83%D8%A9-netbrain-%D9%85%D8%B9%D9%8A%D8%A7%D8%B1-%D8%A7-%D8%AC%D8%AF%D9%8A%D8%AF-%D8%A7-%D9%84%D9%86%D8%B4%D8%B1-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%81%D9%8A-%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A9",
+        "source": "UAE Blogger",
+        "publishDate": "2026-06-02T04:56:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_kAijlmAjus3-bXj4qg8tv0CZiMI",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://aetoswire.blogspot.com/2026/06/netbrain.html",
+        "source": "Aetoswire",
+        "publishDate": "2026-06-02T05:09:46.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_ulyI8lslGmrST_BynpsZwKkqTq8",
+        "title": "NB577: Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
+        "url": "https://packetpushers.net/podcasts/network-break/nb577-cisco-brings-sonic-to-n9000-switches-broadcom-debuts-wi-fi-8-socs-for-consumer-routers/",
+        "source": "Packet Pushers",
+        "publishDate": "2026-06-02T01:04:42.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_fyndDNmFqp518VwRzXERnsyaegU",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://khaleejdailies.blogspot.com/2026/06/netbrain.html",
+        "source": "Khaleej Dailies",
+        "publishDate": "2026-06-02T07:31:02.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_AjxNKImDCCLQT33BEVWh_vD8bhY",
+        "title": "Wi-Fi 8: Industrie setzt auf Zuverlässigkeit statt Höchstgeschwindigkeit",
+        "url": "https://borncity.com/news/wi-fi-8-industrie-setzt-auf-zuverlaessigkeit-statt-hoechstgeschwindigkeit/",
+        "source": "Borns IT- und Windows-Blog",
+        "publishDate": "2026-06-02T10:31:10.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_gwsMPDKq_fu9byqywEzcG7cJ_04",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://brandsreviewmagazine.com/news/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Brands Review Magazine",
+        "publishDate": "2026-06-02T10:54:54.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "mw_go-F_3-zZR4VjYiUpZCbe0gpNG8",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://aetoswire.blogspot.com/2026/06/netbrain.html",
+        "source": "Aetoswire",
+        "publishDate": "2026-06-02T19:59:59.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
       }
     ],
     "searches": {
       "netbrain": {
         "name": "NetBrain Technologies",
         "searchId": 26737817,
-        "total": 393,
-        "fetchedCount": 393,
+        "total": 394,
+        "fetchedCount": 394,
         "byDate": {
-          "2026-05-30": 31,
-          "2026-05-29": 250,
           "2026-06-01": 97,
-          "2026-06-02": 14,
-          "2026-05-31": 1
+          "2026-05-31": 1,
+          "2026-05-29": 250,
+          "2026-05-30": 31,
+          "2026-06-02": 15
         }
       }
-    },
-    "manual_articles": [
-      {
-        "id": "manual_aHR0cHM6Ly93d3cu",
-        "url": "https://www.thefastmode.com/technology-solutions/48800-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
-        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
-        "source": "thefastmode.com",
-        "publishDate": "2026-06-03T22:18:27.062Z",
-        "description": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
-        "addedAt": "2026-06-03T22:18:27.063Z",
-        "_type": "manual"
-      },
-      {
-        "id": "manual_aHR0cHM6Ly93d3cu",
-        "url": "https://www.apmdigest.com/netbrain-introduces-ai-path-doctor-and-more-new-capabilities",
-        "title": "Netbrain Introduces AI Path Doctor and More New Capabilities | APMdigest",
-        "source": "apmdigest.com",
-        "publishDate": "2026-06-03T22:02:32.912Z",
-        "description": "NetBrain Technologies announced major new platform features that advance Agentic NetOps from an emerging category to operational reality. These new features further extend the platform with new agent ",
-        "addedAt": "2026-06-03T22:02:32.970Z",
-        "_type": "manual"
-      }
-    ],
-    "manual_articles_updatedAt": "2026-06-03T22:18:29.005Z"
+    }
   }
 }
