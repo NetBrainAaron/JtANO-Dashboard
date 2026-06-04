@@ -646,9 +646,10 @@ body {
   <!-- KPI SUMMARY -->
   <div class="section-label">Campaign summary</div>
   <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">Landing Page CVR</div>
-      <div class="kpi-value" id="kpi-cvr">—</div>
+    <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+      <div class="kpi-label">Tracked UTM Sessions</div>
+      <div class="kpi-value" id="kpi-utm-sessions">—</div>
+      <div class="kpi-target">All campaign UTM links</div>
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">MQLs / Form Fills</div>
@@ -656,8 +657,9 @@ body {
       <div class="kpi-target" id="kpi-mqls-lift" style="margin-top:4px;"></div>
     </div>
     <div class="kpi-card lav">
-      <div class="kpi-label">Branded Search Lift</div>
-      <div class="kpi-value" id="kpi-search">—</div>
+      <div class="kpi-label">Earned Media Mentions</div>
+      <div class="kpi-value" id="kpi-media-mentions">—</div>
+      <div class="kpi-target">Meltwater · campaign window</div>
     </div>
     <div class="kpi-card grn">
       <div class="kpi-label">Event Attendance</div>
@@ -1517,10 +1519,8 @@ async function loadKPIs() {
           return Math.round(((camp - pre) / pre) * 100);
         };
         const liftItems = [
-          { label: 'Agentic NetOps LP', key: 'agenticNetOps', color: T },
-          { label: 'Homepage',          key: 'homepage',      color: P },
-          { label: 'Request a Demo',    key: 'requestDemo',   color: '#2EAE5A' },
-          { label: 'Gartner',           key: 'gartner',       color: L },
+          { label: 'Homepage',      key: 'homepage',    color: P },
+          { label: 'Request a Demo', key: 'requestDemo', color: '#2EAE5A' },
         ];
         liftEl.innerHTML = liftItems.map(item => {
           const pct = liftPct(item.key);
@@ -1596,11 +1596,6 @@ async function loadKPIs() {
           const ctorPct   = (e.ctor      * 100).toFixed(1) + '%';
           const clickPct  = (e.clickRate * 100).toFixed(1) + '%';
           const bouncePct = (e.bounceRate* 100).toFixed(1) + '%';
-          const openVsBench = e.openRate >= 0.20
-            ? '<span class="badge b-grn">On target</span>'
-            : e.openRate > 0
-              ? '<span class="badge b-red">Below target</span>'
-              : '<span class="badge b-info">Pending</span>';
           const stateLabel = e.state === 'PROCESSING'
             ? '<span class="badge b-amb">Sending</span>'
             : e.state === 'PUBLISHED'
@@ -1613,7 +1608,7 @@ async function loadKPIs() {
             </td>
             <td style="text-align:right;">${e.sent.toLocaleString()}</td>
             <td style="text-align:right;">${e.delivered.toLocaleString()}</td>
-            <td style="text-align:right;font-weight:600;">${openPct} ${openVsBench}</td>
+            <td style="text-align:right;font-weight:600;">${openPct}</td>
             <td style="text-align:right;">${ctorPct}</td>
             <td style="text-align:right;">${clickPct}</td>
             <td style="text-align:right;">${bouncePct}</td>
@@ -1634,6 +1629,12 @@ async function loadKPIs() {
     if (d.social && (d.social.combined || d.social.searches)) {
       renderSocialChart(d.social);
       renderMediaTab(d.social);
+      // Home KPI card
+      const mediaMentionsEl = document.getElementById('kpi-media-mentions');
+      if (mediaMentionsEl) {
+        const total = d.social.combined?.total || 0;
+        mediaMentionsEl.textContent = total > 0 ? total.toLocaleString() : '—';
+      }
     }
 
     // ── Oktopost (LinkedIn organic) ──
@@ -1650,6 +1651,12 @@ async function loadKPIs() {
     // ── UTM Traffic (GA4 UTM dimensions -- populated by fetch_ga4_utm step) ──
     if (d.utm_traffic) {
       const ut = d.utm_traffic;
+      // Home KPI card
+      const utmSessionsEl = document.getElementById('kpi-utm-sessions');
+      if (utmSessionsEl) {
+        const total = ut.totals?.sessions || 0;
+        utmSessionsEl.textContent = total > 0 ? total.toLocaleString() : '—';
+      }
       utmSessionLookup = buildUtmSessionLookup(ut);
       renderUtmTable(currentUtmFilter);
       renderUtmSessionChart(ut);
