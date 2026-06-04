@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04T17:24:23.420Z",
+  "updatedAt": "2026-06-04T17:26:49.211Z",
   "runDate": "2026-06-04",
   "runHour": "17",
   "campaignUtm": "jtano_q2fy26_integrated",
@@ -108,7 +108,7 @@
       "registeredAttended": 72,
       "walkins": 35,
       "attendance_rate": 0.381,
-      "last_updated": "2026-06-04T17:24:20.631Z"
+      "last_updated": "2026-06-04T17:26:47.957Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -116,7 +116,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-04T17:24:20.631Z"
+      "last_updated": "2026-06-04T17:26:47.957Z"
     }
   },
   "lounge_visits": {
@@ -132,7 +132,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-04T17:24:21.344Z",
+    "fetchedAt": "2026-06-04T17:26:48.440Z",
     "dataWindow": {
       "start": "2026-05-22",
       "end": "2026-06-04"
@@ -465,17 +465,17 @@
       "end": "2026-06-03"
     },
     "totals": {
-      "impressions": 1868500,
-      "engagements": 202086,
-      "engagementRate": 0.10815413433235216,
-      "likes": 47441,
-      "comments": 1247,
-      "shares": 1955,
-      "clicks": 151443,
-      "linkClicks": 1491
+      "impressions": 0,
+      "engagements": 0,
+      "engagementRate": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "linkClicks": 0
     },
     "channel": "linkedin",
-    "fetchedAt": "2026-06-04T17:24:23.403Z"
+    "fetchedAt": "2026-06-04T17:26:49.199Z"
   },
   "social": {
     "fetchedAt": "2026-06-04T16:25:09.401Z",
