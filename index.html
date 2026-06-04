@@ -601,8 +601,6 @@ body {
     <nav class="topbar-nav">
       <a href="#" class="active" data-tab="main">Campaign Dashboard</a>
       <a href="#" data-tab="events">Events</a>
-      <a href="#" data-tab="pipeline">Pipeline</a>
-      <a href="#" data-tab="brandlift">Brand Lift</a>
       <a href="#" data-tab="media">Media Mentions</a>
       <a href="#" data-tab="utm">UTM Tracking</a>
     </nav>
@@ -1102,11 +1100,16 @@ body {
 
   <!-- KPI ROW -->
   <div class="section-label">Earned media summary <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Meltwater &bull; Campaign window May 29 – Jun 3</span></div>
-  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
+  <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
     <div class="kpi-card">
       <div class="kpi-label">Total Mentions</div>
       <div class="kpi-value" id="media-total">—</div>
-      <div class="kpi-target">Campaign window</div>
+      <div class="kpi-target">All pickups</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+      <div class="kpi-label">Unique Stories</div>
+      <div class="kpi-value" id="media-unique">—</div>
+      <div class="kpi-target">Deduplicated by title</div>
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label">Daily Average</div>
@@ -2100,21 +2103,34 @@ function renderMediaTab(social) {
   refreshArticleTable();
 }
 
+// ── ARTICLE EXCLUSIONS (persisted in localStorage) ───────────────────────────
+const EXCLUSIONS_KEY = 'jtano_excluded_titles';
+function loadExclusions() {
+  try { return new Set(JSON.parse(localStorage.getItem(EXCLUSIONS_KEY) || '[]')); }
+  catch(e) { return new Set(); }
+}
+function saveExclusions(set) {
+  try { localStorage.setItem(EXCLUSIONS_KEY, JSON.stringify([...set])); } catch(e) {}
+}
+let excludedTitles = loadExclusions();
+
+function excludeArticle(titleKey) {
+  excludedTitles.add(titleKey);
+  saveExclusions(excludedTitles);
+  refreshArticleTable();
+  showToast('Article excluded — refresh to confirm', 'warn');
+}
+
 function refreshArticleTable() {
   const tableWrap  = document.getElementById('media-article-table-wrap');
   const emptyState = document.getElementById('media-empty-state');
-  const countLbl   = document.getElementById('media-article-count-label');
 
   if (mediaArticlesAll.length === 0) {
     if (tableWrap)  tableWrap.style.display  = 'none';
     if (emptyState) emptyState.style.display = 'block';
-    if (countLbl)   countLbl.textContent     = '';
   } else {
     if (tableWrap)  tableWrap.style.display  = 'block';
     if (emptyState) emptyState.style.display = 'none';
-    const total   = mediaArticlesAll.length;
-    const unique  = new Set(mediaArticlesAll.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
-    if (countLbl) countLbl.textContent = unique + ' unique stor' + (unique !== 1 ? 'ies' : 'y') + ' · ' + total + ' total pickups';
     filterMediaArticles();
   }
 }
@@ -2123,7 +2139,7 @@ function groupArticlesByTitle(articles) {
   const groups = new Map();
   for (const a of articles) {
     const key = (a.title || a.url || '').toLowerCase().trim().replace(/\s+/g, ' ');
-    if (!groups.has(key)) groups.set(key, { rep: a, outlets: [], count: 0 });
+    if (!groups.has(key)) groups.set(key, { rep: a, outlets: [], count: 0, titleKey: key });
     const g = groups.get(key);
     g.count++;
     if (a.source && !g.outlets.includes(a.source)) g.outlets.push(a.source);
@@ -2135,7 +2151,7 @@ function renderArticleRows(articles) {
   const tbody = document.getElementById('media-article-tbody');
   if (!tbody) return;
   const groups = groupArticlesByTitle(articles);
-  tbody.innerHTML = groups.slice(0, 200).map(({ rep: a, outlets, count }) => {
+  tbody.innerHTML = groups.slice(0, 200).map(({ rep: a, outlets, count, titleKey }) => {
     const date  = a.publishDate
       ? new Date(a.publishDate).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })
       : '—';
@@ -2148,28 +2164,112 @@ function renderArticleRows(articles) {
     const typeBadge = a._type === 'manual'
       ? '<span class="badge b-amb">Manual</span>'
       : '<span class="badge b-info">Meltwater</span>';
-    const deleteBtn = a._type === 'manual' && a.id
+    const actionBtn = a._type === 'manual' && a.id
       ? `<button class="del-btn" onclick="deleteManualArticle('${a.id}')" title="Remove">&#x2715;</button>`
-      : '';
+      : `<button class="del-btn" data-exclude-key="${encodeURIComponent(titleKey)}" title="Exclude from feed" style="color:var(--nb-tangerine);">&#x25EF;</button>`;
     return `<tr>
       <td>${titleHtml}${pickupsBadge}</td>
       <td style="color:var(--nb-muted);white-space:nowrap;">${count > 1 ? count + ' outlets' : (a.source || '—')}</td>
       <td style="white-space:nowrap;">${date}</td>
       <td style="text-align:center;">${typeBadge}</td>
-      <td style="text-align:center;">${deleteBtn}</td>
+      <td style="text-align:center;">${actionBtn}</td>
     </tr>`;
   }).join('');
+
+  // Wire exclude buttons via event delegation
+  tbody.querySelectorAll('[data-exclude-key]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      excludeArticle(decodeURIComponent(btn.dataset.excludeKey));
+    });
+  });
 }
 
 function filterMediaArticles() {
   const q = (document.getElementById('media-search-input').value || '').toLowerCase();
+
+  // Non-excluded pool — used for all KPI recalculation
+  const nonExcluded = mediaArticlesAll.filter(a => {
+    const titleKey = (a.title || a.url || '').toLowerCase().trim().replace(/\s+/g, ' ');
+    return !excludedTitles.has(titleKey);
+  });
+
+  // Search filter on top of exclusions
   const filtered = q
-    ? mediaArticlesAll.filter(a =>
+    ? nonExcluded.filter(a =>
         (a.title  || '').toLowerCase().includes(q) ||
         (a.source || '').toLowerCase().includes(q) ||
         (a.url    || '').toLowerCase().includes(q))
-    : mediaArticlesAll;
+    : nonExcluded;
+
+  // Recompute byDate from individual article publishDates (respects exclusions)
+  const byDateFiltered = {};
+  for (const a of nonExcluded) {
+    const date = (a.publishDate || '').split('T')[0];
+    if (date) byDateFiltered[date] = (byDateFiltered[date] || 0) + 1;
+  }
+
+  // ── KPI cards ──
+  const campaignStart = new Date('2026-05-29');
+  const dayCount      = Math.max(1, Math.round((new Date() - campaignStart) / 86400000));
+  const total         = nonExcluded.length;
+  const unique        = new Set(nonExcluded.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
+
+  const totalEl   = document.getElementById('media-total');
+  const avgEl     = document.getElementById('media-daily-avg');
+  const uniqueEl  = document.getElementById('media-unique');
+  const peakVal   = document.getElementById('media-peak-val');
+  const peakDt    = document.getElementById('media-peak-date');
+
+  if (totalEl)  totalEl.textContent  = total.toLocaleString();
+  if (avgEl)    avgEl.textContent    = (total / dayCount).toFixed(1);
+  if (uniqueEl) uniqueEl.textContent = unique.toLocaleString();
+
+  // Peak day from filtered byDate
+  let maxVal = 0, maxDate = '';
+  Object.entries(byDateFiltered).forEach(([d, v]) => { if (v > maxVal) { maxVal = v; maxDate = d; } });
+  if (peakVal) peakVal.textContent = maxVal > 0 ? maxVal.toLocaleString() : '—';
+  if (peakDt) {
+    if (maxDate) {
+      const parts  = maxDate.split('-');
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      peakDt.textContent = parts.length === 3
+        ? months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10)
+        : maxDate;
+    } else {
+      peakDt.textContent = '—';
+    }
+  }
+
+  // ── Bar chart ──
+  const chart = getOrCreateMediaVolumeChart();
+  if (chart) {
+    const fmtLbl = str => {
+      const p = str.split('-');
+      if (p.length === 3) {
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m[parseInt(p[1],10)-1] + ' ' + parseInt(p[2],10);
+      }
+      return str;
+    };
+    const sortedDates = Object.keys(byDateFiltered).sort();
+    chart.data.labels           = sortedDates.map(fmtLbl);
+    chart.data.datasets[0].data = sortedDates.map(d => byDateFiltered[d] || 0);
+    chart.update();
+  }
+
+  // ── Count label ──
+  const countLbl  = document.getElementById('media-article-count-label');
+  const hiddenCt  = excludedTitles.size;
+  const hiddenStr = hiddenCt > 0 ? ` &nbsp;<a href="#" onclick="clearExclusions();return false;" style="color:var(--nb-muted);font-size:11px;">${hiddenCt} excluded &mdash; clear</a>` : '';
+  if (countLbl) countLbl.innerHTML = unique + ' unique stor' + (unique !== 1 ? 'ies' : 'y') + ' &middot; ' + total + ' total pickups' + hiddenStr;
+
   renderArticleRows(filtered);
+}
+
+function clearExclusions() {
+  excludedTitles = new Set();
+  saveExclusions(excludedTitles);
+  refreshArticleTable();
 }
 
 // ── TOAST ────────────────────────────────────────────────────────────────────
