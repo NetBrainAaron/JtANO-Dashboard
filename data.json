@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04T21:32:49.112Z",
+  "updatedAt": "2026-06-04T21:32:56.760Z",
   "runDate": "2026-06-04",
   "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
@@ -108,7 +108,7 @@
       "registeredAttended": 72,
       "walkins": 35,
       "attendance_rate": 0.381,
-      "last_updated": "2026-06-04T21:32:47.539Z"
+      "last_updated": "2026-06-04T21:32:55.259Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -116,7 +116,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-04T21:32:47.539Z"
+      "last_updated": "2026-06-04T21:32:55.259Z"
     }
   },
   "lounge_visits": {
@@ -132,7 +132,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-04T21:32:48.358Z",
+    "fetchedAt": "2026-06-04T21:32:55.787Z",
     "dataWindow": {
       "start": "2026-05-22",
       "end": "2026-06-04"
@@ -248,7 +248,7 @@
       },
       {
         "date": "20260604",
-        "homepage": 298,
+        "homepage": 297,
         "agenticNetOps": 50,
         "gartner": 6,
         "ciscoLive": 20,
@@ -256,7 +256,7 @@
       }
     ],
     "totals": {
-      "homepage": 2492,
+      "homepage": 2491,
       "agenticNetOps": 1660,
       "gartner": 88,
       "ciscoLive": 135,
@@ -525,7 +525,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-04T21:32:49.109Z"
+    "fetchedAt": "2026-06-04T21:32:56.705Z"
   },
   "social": {
     "fetchedAt": "2026-06-04T16:25:09.401Z",
