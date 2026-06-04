@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-03T21:44:55.557Z",
-  "runDate": "2026-06-03",
-  "runHour": "21",
+  "updatedAt": "2026-06-04T01:44:46.926Z",
+  "runDate": "2026-06-04",
+  "runHour": "01",
   "campaignUtm": "jtano_q2fy26_integrated",
   "mqls": {
     "mqlCount": 15,
@@ -83,19 +83,19 @@
   "events": {
     "agentic_netops": {
       "registered": 189,
-      "attended": 105,
+      "attended": 107,
       "registeredAttended": 72,
-      "walkins": 33,
+      "walkins": 35,
       "attendance_rate": 0.381,
-      "last_updated": "2026-06-03T21:44:53.334Z"
+      "last_updated": "2026-06-04T01:44:45.019Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
-      "attended": 53,
-      "registeredAttended": 26,
-      "walkins": 27,
-      "attendance_rate": 0.4407,
-      "last_updated": "2026-06-03T21:44:53.334Z"
+      "attended": 63,
+      "registeredAttended": 28,
+      "walkins": 35,
+      "attendance_rate": 0.4746,
+      "last_updated": "2026-06-04T01:44:45.019Z"
     }
   },
   "lounge_visits": {
@@ -109,10 +109,10 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-03T21:44:54.125Z",
+    "fetchedAt": "2026-06-04T01:44:45.792Z",
     "campaignWindow": {
       "start": "2026-05-29",
-      "end": "2026-06-03"
+      "end": "2026-06-04"
     },
     "daily": [
       {
@@ -157,26 +157,26 @@
       },
       {
         "date": "20260603",
-        "homepage": 322,
-        "agenticNetOps": 94,
-        "gartner": 12,
-        "ciscoLive": 34,
-        "requestDemo": 46
+        "homepage": 379,
+        "agenticNetOps": 110,
+        "gartner": 16,
+        "ciscoLive": 36,
+        "requestDemo": 49
       }
     ],
     "totals": {
-      "homepage": 2010,
-      "agenticNetOps": 1558,
-      "gartner": 73,
-      "ciscoLive": 105,
-      "requestDemo": 128
+      "homepage": 2067,
+      "agenticNetOps": 1574,
+      "gartner": 77,
+      "ciscoLive": 107,
+      "requestDemo": 131
     }
   },
   "search": {
     "search": {
       "dateRange": {
-        "start": "2026-05-04",
-        "end": "2026-06-03"
+        "start": "2026-05-05",
+        "end": "2026-06-04"
       },
       "baseline": {
         "start": "2026-05-01",
@@ -184,13 +184,6 @@
       },
       "netbrain": {
         "daily": [
-          {
-            "date": "2026-05-04",
-            "impressions": 379,
-            "clicks": 86,
-            "ctr": 0.22691292875989447,
-            "position": 6.464379947229552
-          },
           {
             "date": "2026-05-05",
             "impressions": 352,
@@ -389,27 +382,20 @@
           }
         ],
         "totals": {
-          "impressions": 8859,
-          "clicks": 2248
+          "impressions": 8480,
+          "clicks": 2162
         },
         "baselineDailyAvg": {
           "impressions": 305.25,
           "clicks": 76.17857142857143
         },
         "liftIndex": {
-          "impressions": 100,
-          "clicks": 102
+          "impressions": 99,
+          "clicks": 101
         }
       },
       "agenticNetOps": {
         "daily": [
-          {
-            "date": "2026-05-04",
-            "impressions": 4,
-            "clicks": 0,
-            "ctr": 0,
-            "position": 2.25
-          },
           {
             "date": "2026-05-05",
             "impressions": 1,
@@ -608,7 +594,7 @@
           }
         ],
         "totals": {
-          "impressions": 102,
+          "impressions": 98,
           "clicks": 7
         },
         "baselineDailyAvg": {
@@ -616,8 +602,8 @@
           "clicks": 0.17857142857142858
         },
         "liftIndex": {
-          "impressions": 106,
-          "clicks": 135
+          "impressions": 105,
+          "clicks": 140
         }
       }
     }
@@ -638,7 +624,7 @@
       "linkClicks": 1491
     },
     "channel": "linkedin",
-    "fetchedAt": "2026-06-03T21:44:55.548Z"
+    "fetchedAt": "2026-06-04T01:44:46.919Z"
   },
   "social": {
     "fetchedAt": "2026-06-03T22:01:03.085Z",
