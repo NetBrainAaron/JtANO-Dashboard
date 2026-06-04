@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JtANO Campaign KPI Dashboard — May 2026</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
 <style>
 :root {
   --nb-purple: #200B4E;
@@ -1407,27 +1406,46 @@ const PAGE_CONFIGS = [
   { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] }
 ];
 
-const LAUNCH_LINE_ANNOTATION = {
-  type: 'line',
-  xMin: 'May 29',
-  xMax: 'May 29',
-  borderColor: '#FF7347',
-  borderWidth: 2,
-  borderDash: [6, 4],
-  label: {
-    display: true,
-    content: '▲ Launch',
-    position: 'start',
-    backgroundColor: 'rgba(255,115,71,0.88)',
-    color: '#fff',
-    font: { size: 10, weight: 'bold' },
-    padding: { x: 6, y: 3 },
-    borderRadius: 4
+// Campaign-start divider — draws a dotted orange line at May 29 on every chart.
+// Matches both label formats used across charts: "May 29" and "05/29".
+const campaignLinePlugin = {
+  id: 'campaignLine',
+  afterDraw(chart) {
+    const labels = chart.data.labels;
+    if (!labels || labels.length === 0) return;
+    const idx = labels.findIndex(l => l === 'May 29' || l === '05/29');
+    if (idx === -1) return;
+    const xScale = chart.scales.x;
+    const x = xScale.getPixelForValue(labels[idx]);
+    const { top, bottom } = chart.chartArea;
+    const ctx = chart.ctx;
+    ctx.save();
+    // Dotted line
+    ctx.beginPath();
+    ctx.setLineDash([6, 4]);
+    ctx.strokeStyle = '#FF7347';
+    ctx.lineWidth = 2;
+    ctx.moveTo(x, top);
+    ctx.lineTo(x, bottom);
+    ctx.stroke();
+    // Badge
+    ctx.setLineDash([]);
+    const text = '▲ Launch';
+    ctx.font = 'bold 10px system-ui, sans-serif';
+    const tw = ctx.measureText(text).width;
+    const bw = tw + 12, bh = 16, bx = x + 3, by = top + 4;
+    ctx.fillStyle = 'rgba(255,115,71,0.88)';
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(bx, by, bw, bh, 4);
+    else ctx.rect(bx, by, bw, bh);
+    ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, bx + 6, by + bh / 2);
+    ctx.restore();
   }
 };
-
-// Same annotation for charts whose labels are formatted MM/DD (e.g. search chart)
-const LAUNCH_LINE_ANNOTATION_MMDD = Object.assign({}, LAUNCH_LINE_ANNOTATION, { xMin: '05/29', xMax: '05/29' });
+Chart.register(campaignLinePlugin);
 
 const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
   type: 'line',
@@ -1451,7 +1469,6 @@ const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
     maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
     },
     scales: {
       y: {
@@ -1501,7 +1518,6 @@ const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
           }
         }
       },
-      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
     },
     scales: {
       x: { stacked: true, ticks:{ font:{ size:10 } }, grid:{ display:false } },
@@ -1567,7 +1583,6 @@ const searchChartInstance = new Chart(document.getElementById('searchChart'), {
     maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION_MMDD } }
     },
     scales: {
       y: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
@@ -1602,7 +1617,6 @@ const socialChartInstance = new Chart(document.getElementById('socialChart'), {
     maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      annotation: { annotations: { launchLine: LAUNCH_LINE_ANNOTATION } }
     },
     scales: {
       y: { beginAtZero: true, ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.06)' } },
