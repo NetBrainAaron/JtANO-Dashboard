@@ -1367,8 +1367,15 @@ function renderSocialChart(social) {
   const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
   if (avgEl) avgEl.textContent = (total / dayCount).toFixed(1);
 
-  // Build daily chart from real byDate data
-  const dates = Object.keys(byDate).sort();
+  // Normalise byDate -- pipeline returns array [{date,count}] or legacy object {date:count}
+  const byDateRaw = combined.byDate || [];
+  const byDateObj = Array.isArray(byDateRaw)
+    ? Object.fromEntries(byDateRaw.map(({ date, count }) => [date, count]))
+    : byDateRaw;
+
+  // Build daily chart from real byDate data, starting May 22
+  const CHART_START = '2026-05-22';
+  const dates = Object.keys(byDateObj).filter(d => d >= CHART_START).sort();
   if (dates.length > 0) {
     const formatDate = str => {
       const s = String(str).replace(/-/g, '');
@@ -1379,7 +1386,7 @@ function renderSocialChart(social) {
       return str;
     };
     socialChartInstance.data.labels           = dates.map(formatDate);
-    socialChartInstance.data.datasets[0].data = dates.map(d => byDate[d] || 0);
+    socialChartInstance.data.datasets[0].data = dates.map(d => byDateObj[d] || 0);
     socialChartInstance.update();
   }
 
@@ -1652,7 +1659,7 @@ function renderSearchChart(search) {
   // Dual-line chart -- merge dates from both series
   const nbDaily  = nb.daily  || [];
   const anoDaily = ano.daily || [];
-  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])].sort();
+  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])].sort().filter(d => d >= '2026-05-22');
 
   if (allDates.length > 0) {
     const formatDate = str => {
