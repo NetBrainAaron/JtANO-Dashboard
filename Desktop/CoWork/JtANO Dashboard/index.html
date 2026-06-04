@@ -33,7 +33,10 @@ body {
 }
 
 /* ── TOPBAR ── */
-.nb-logo { display: none; }
+.nb-logo { display: none !important; }
+.topbar-left > a:first-child,
+.topbar-left > svg:first-child,
+.topbar-left > img:first-child { display: none !important; }
 .topbar {
   background: var(--nb-purple);
   display: flex;
