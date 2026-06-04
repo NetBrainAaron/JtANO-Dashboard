@@ -1,0 +1,22 @@
+name: Deploy to HubSpot CMS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy to HubSpot
+        uses: HubSpot/hubspot-cms-deploy-action@v1.6
+        with:
+          src_dir: "."
+          dest_dir: "jtano-dashboard"
+          portal_id: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          personal_access_key: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_KEY }}
