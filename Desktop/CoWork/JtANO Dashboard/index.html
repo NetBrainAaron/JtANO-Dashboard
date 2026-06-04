@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JtANO Campaign KPI Dashboard — May 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --nb-purple: #200B4E;
+  --nb-lavender: #876BCF;
+  --nb-tangerine: #FF7347;
+  --nb-citron: #E3E887;
+  --nb-blue: #007DE7;
+  --nb-light-blue: #78BDE3;
+  --nb-violet: #8A3584;
+  --nb-white: #FFFFFF;
+  --nb-light-bg: #F0F0F8;
+  --nb-border: #E2E0EE;
+  --nb-dark-text: #1A1A2E;
+  --nb-muted: #6B6880;
+  --nb-font: 'Segoe UI', -apple-system, system-ui, sans-serif;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: var(--nb-font);
+  font-size: 14px;
+  background: var(--nb-light-bg);
+  color: var(--nb-dark-text);
+  font-weight: 300;
+}
+
+/* ── TOPBAR ── */
+.nb-logo { display: none; }
+.topbar {
+  background: var(--nb-purple);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 58px;
+  box-shadow: 0 2px 12px rgba(32,11,78,0.35);
+}
+.topbar-left { display:flex; align-items:center; gap:28px; }
+.topbar-nav { display:flex; }
+.topbar-nav a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 14px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+.topbar-nav a.active { color:#fff; border-bottom-color: var(--nb-tangerine); }
+.topbar-nav a:hover { color:#fff; }
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.live-dot {
+  width: 7px; height: 7px;
+  background: var(--nb-citron);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50% { opacity:0.35; }
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--nb-purple) 0%, #3B1A7A 40%, var(--nb-light-blue) 100%);
+  padding: 28px 28px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 5px;
+}
+.hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+.hero-chips { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.chip-live { background: rgba(227,232,135,0.2); color: var(--nb-citron); border: 1px solid rgba(227,232,135,0.4); }
+.chip-utm { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); }
+.chip-int { background: rgba(0,125,231,0.25); color: #78BDE3; border: 1px solid rgba(0,125,231,0.4); }
+
+/* ── MAIN ── */
+.main { padding: 20px 28px 48px; }
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nb-muted);
+  margin-bottom: 10px;
+  margin-top: 22px;
+}
+
+/* ── KPI GRID ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.kpi-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px 18px 14px;
+  box-shadow: 0 1px 4px rgba(32,11,78,0.08);
+  border-left: 3px solid var(--nb-tangerine);
+  position: relative;
+}
+.kpi-card.blue { border-left-color: var(--nb-blue); }
+.kpi-card.lav  { border-left-color: var(--nb-lavender); }
+.kpi-card.grn  { border-left-color: #2EAE5A; }
+.kpi-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--nb-muted);
+  margin-bottom: 6px;
+}
+.kpi-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--nb-purple);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.kpi-target { font-size: 11px; color: var(--nb-muted); }
+.kpi-target strong { color: var(--nb-blue); font-weight: 600; }
+
+/* ── TWO/THREE COL ── */
+.row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.row-3 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+
+/* ── CARD ── */
+.card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 4px rgba(32,11,78,0.08);
+  overflow: hidden;
+}
+.card-head {
+  background: var(--nb-purple);
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-head span {
+  font-size: 11px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.card-body { padding: 16px; }
+
+/* ── CHART WRAPPER ── */
+.chart-wrap { position: relative; width: 100%; }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.b-red  { background: #FFF0EB; color: #D63030; }
+.b-grn  { background: #EAF7EE; color: #1E8B3A; }
+.b-amb  { background: #FFF4E5; color: #C07000; }
+.b-blue { background: #E6F3FE; color: var(--nb-blue); }
+.b-info { background: #EDE8F5; color: var(--nb-purple); }
+
+/* ── TABLE ── */
+.nb-table { width:100%; border-collapse:collapse; font-size:12px; }
+.nb-table thead tr { background: var(--nb-purple); color:#fff; }
+.nb-table th {
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.nb-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--nb-border);
+  vertical-align: middle;
+  color: var(--nb-dark-text);
+}
+.nb-table tr:last-child td { border-bottom: none; }
+.nb-table tr:hover td { background: #F7F5FC; }
+.chan { font-weight: 600; color: var(--nb-purple); }
+.bench { font-size: 11px; color: var(--nb-muted); }
+
+/* ── TOAST ── */
+#nb-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--nb-purple);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(32,11,78,0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 9999;
+  white-space: nowrap;
+}
+#nb-toast.toast-warn  { background: #C07000; }
+#nb-toast.toast-error { background: #D63030; }
+#nb-toast.toast-show  { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── MANUAL ARTICLE FORM ── */
+.manual-form-wrap {
+  background: var(--nb-light-bg);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.manual-form-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--nb-purple);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.manual-form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 8px;
+  align-items: end;
+}
+@media(max-width:800px){ .manual-form-grid { grid-template-columns: 1fr; } }
+.mf-field { display: flex; flex-direction: column; gap: 4px; }
+.mf-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--nb-muted); }
+.mf-input {
+  padding: 7px 10px;
+  border: 1px solid var(--nb-border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-family: var(--nb-font);
+  color: var(--nb-dark-text);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.mf-input:focus { border-color: var(--nb-lavender); }
+.mf-btn {
+  padding: 7px 16px;
+  background: var(--nb-purple);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  font-family: var(--nb-font);
+}
+.mf-btn:hover { background: #3B1A7A; }
+.b-manual { background: #FFF4E5; color: #C07000; }
+.del-btn {
+  background: none;
+  border: none;
+  color: var(--nb-muted);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.del-btn:hover { color: #D63030; }
+
+/* ── TRIGGER LIST ── */
+.trig-list { list-style:none; }
+.trig-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--nb-border);
+}
+.trig-item:last-child { border-bottom: none; }
+.trig-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:4px; }
+.d-red { background:#D63030; }
+.d-grn { background:#1E8B3A; }
+.d-amb { background:#C07000; }
+.d-blue { background: var(--nb-blue); }
+.trig-body { flex:1; }
+.trig-signal { font-size:12px; font-weight:600; color: var(--nb-dark-text); margin-bottom:2px; }
+.trig-action { font-size:11px; color: var(--nb-muted); }
+.trig-badge { margin-left:auto; flex-shrink:0; padding-top:1px; }
+
+/* ── SPHERE BARS ── */
+.bar-row { display:flex; align-items:center; gap:8px; margin-bottom:9px; }
+.bar-lbl { font-size:11px; color:var(--nb-muted); width:115px; flex-shrink:0; }
+.bar-bg { flex:1; height:6px; background:var(--nb-light-bg); border-radius:3px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:3px; transition: width 0.5s; }
+.bar-val { font-size:11px; font-weight:600; color:var(--nb-dark-text); min-width:50px; text-align:right; }
+
+/* ── SF ── */
+.sf-row { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid var(--nb-border); font-size:12px; }
+.sf-row:last-child { border-bottom:none; }
+.sf-key { color:var(--nb-muted); }
+.sf-val { font-weight:600; color:var(--nb-purple); }
+
+/* ── CHECKPOINT CHIPS ── */
+.cp-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.cp-chip {
+  font-size:11px; font-weight:500;
+  padding:4px 10px; border-radius:20px;
+  background:var(--nb-light-bg);
+  color:var(--nb-muted);
+  border:1px solid var(--nb-border);
+}
+
+/* ── CADENCE TABLE ── */
+.cad-table { width:100%; border-collapse:collapse; font-size:12px; }
+.cad-table th { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--nb-muted); text-align:left; padding:0 10px 8px 0; border-bottom:1px solid var(--nb-border); }
+.cad-table td { padding:8px 10px 8px 0; border-bottom:1px solid var(--nb-border); vertical-align:top; color:var(--nb-dark-text); }
+.cad-table tr:last-child td { border-bottom:none; }
+.cad-when { font-weight:700; color:var(--nb-purple); }
+.cad-date { font-size:11px; color:var(--nb-muted); font-weight:400; display:block; margin-top:2px; }
+
+/* ── EVENTS TAB ── */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media(max-width:800px){ .events-grid { grid-template-columns: 1fr; } }
+
+.event-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 4px rgba(32,11,78,0.08);
+  overflow: hidden;
+}
+.event-card-head {
+  background: var(--nb-purple);
+  color: #fff;
+  padding: 14px 18px 12px;
+}
+.event-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.event-card-meta {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  gap: 14px;
+}
+.event-card-body { padding: 18px; }
+
+.event-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.event-stat {
+  background: var(--nb-light-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.event-stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--nb-muted);
+  margin-bottom: 6px;
+}
+.event-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--nb-purple);
+  line-height: 1;
+}
+.event-stat-value.highlight { color: var(--nb-tangerine); }
+.event-stat-sub {
+  font-size: 11px;
+  color: var(--nb-muted);
+  margin-top: 4px;
+}
+.walkin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,115,71,0.12);
+  color: var(--nb-tangerine);
+  border: 1px solid rgba(255,115,71,0.35);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.event-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--nb-muted);
+  margin-bottom: 6px;
+}
+.event-progress-label strong { color: var(--nb-dark-text); }
+.event-progress-track {
+  position: relative;
+  height: 12px;
+  background: var(--nb-light-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.event-progress-reg {
+  position: absolute;
+  height: 100%;
+  background: var(--nb-lavender);
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+.event-progress-att {
+  position: absolute;
+  height: 100%;
+  background: var(--nb-purple);
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+.event-progress-legend {
+  display: flex;
+  gap: 14px;
+  font-size: 11px;
+  color: var(--nb-muted);
+  margin-top: 8px;
+}
+.event-progress-legend span { display: flex; align-items: center; gap: 5px; }
+.leg-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.event-updated {
+  font-size: 11px;
+  color: var(--nb-muted);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--nb-border);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pipedream-callout {
+  background: rgba(32,11,78,0.04);
+  border: 1px solid rgba(32,11,78,0.12);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.pipedream-callout-head {
+  font-weight: 700;
+  color: var(--nb-purple);
+  margin-bottom: 6px;
+}
+.list-id-row {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+.list-id-chip {
+  background: #fff;
+  border: 1px solid var(--nb-border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+}
+.list-id-chip .lid-label { color: var(--nb-muted); margin-bottom: 3px; font-size: 10px; }
+.list-id-chip .lid-val { font-weight: 700; color: var(--nb-purple); font-size: 13px; }
+.list-id-chip .lid-type { font-size: 10px; color: var(--nb-muted); margin-top: 1px; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--nb-purple);
+  color: rgba(255,255,255,0.45);
+  font-size:11px;
+  padding:12px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.footer a { color: rgba(255,255,255,0.6); text-decoration:none; }
+
+@media(max-width:700px){
+  .kpi-grid { grid-template-columns: repeat(2,1fr); }
+  .row-2, .row-3 { grid-template-columns:1fr; }
+}
+
+/* ── UTM TRACKING ── */
+.utm-filter-btn {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--nb-border);
+  background: #fff;
+  color: var(--nb-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--nb-font);
+}
+.utm-filter-btn.active { background: var(--nb-purple); color: #fff; border-color: var(--nb-purple); }
+.utm-filter-btn:hover:not(.active) { border-color: var(--nb-lavender); color: var(--nb-purple); }
+.utm-copy-btn {
+  background: none;
+  border: 1px solid var(--nb-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--nb-muted);
+  transition: all 0.15s;
+  font-family: var(--nb-font);
+  white-space: nowrap;
+}
+.utm-copy-btn:hover { background: var(--nb-purple); color: #fff; border-color: var(--nb-purple); }
+.utm-dest-cell {
+  font-size: 11px;
+  color: var(--nb-muted);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.utm-camp-cell {
+  font-size: 11px;
+  color: var(--nb-dark-text);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <img src="data:image/png;base64,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" alt="NetBrain" class="nb-logo" style="height: 32px; width: auto; display: block;">
+    <nav class="topbar-nav">
+      <a href="#" class="active" data-tab="main">Campaign Dashboard</a>
+      <a href="#" data-tab="events">Events</a>
+      <a href="#" data-tab="media">Media Mentions</a>
+      <a href="#" data-tab="social">Social</a>
+      <a href="#" data-tab="utm">UTM Tracking</a>
+    </nav>
+  </div>
+  <div class="topbar-right">
+    <span class="live-dot"></span>
+    <span id="last-updated-label">Loading...</span>
+    &nbsp;|&nbsp;
+    <span id="next-refresh-label">Next refresh in —</span>
+    &nbsp;|&nbsp;
+    <button id="force-refresh-btn" onclick="forceRefresh()" style="
+      background: rgba(227,232,135,0.15);
+      border: 1px solid rgba(227,232,135,0.4);
+      color: var(--nb-citron);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.15s;
+    ">&#8635; Refresh now</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-title">JtANO Campaign KPI Dashboard</div>
+    <div class="hero-sub">Agentic NetOps Launch &nbsp;·&nbsp; May 29 – June 3, 2026 &nbsp;·&nbsp; Marketing Intelligence</div>
+  </div>
+  <div class="hero-chips">
+    <span class="chip chip-live">&#9679; Live</span>
+    <span class="chip chip-utm">utm: jtano_q2fy26_integrated</span>
+  </div>
+</div>
+
+<!-- TAB PANELS WRAPPER -->
+<div id="tab-main" class="tab-panel active">
+<!-- MAIN -->
+<div class="main">
+
+  <!-- KPI SUMMARY -->
+  <div class="section-label">Campaign summary</div>
+  <div class="kpi-grid">
+    <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+      <div class="kpi-label">Tracked UTM Sessions</div>
+      <div class="kpi-value" id="kpi-utm-sessions">—</div>
+      <div class="kpi-target">All campaign UTM links</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">MQLs / Form Fills</div>
+      <div class="kpi-value" id="kpi-mqls">—</div>
+      <div class="kpi-target" id="kpi-mqls-lift" style="margin-top:4px;"></div>
+    </div>
+    <div class="kpi-card lav">
+      <div class="kpi-label">Earned Media Mentions</div>
+      <div class="kpi-value" id="kpi-media-mentions">—</div>
+      <div class="kpi-target">Meltwater · campaign window</div>
+    </div>
+    <div class="kpi-card grn">
+      <div class="kpi-label">Event Attendance</div>
+      <div class="kpi-value" id="kpi-event-attendance">—</div>
+      <div class="kpi-target" id="kpi-event-attendance-detail"></div>
+    </div>
+
+  </div>
+
+  <!-- CHARTS ROW -->
+  <div class="section-label" style="margin-top:24px;">Performance trends (illustrative baselines)</div>
+  <div class="row-2" style="margin-bottom:16px;">
+
+    <div class="card">
+      <div class="card-head">Website Page Views <span id="pages-card-subtitle">GA4 · May 29 – Jun 3</span></div>
+      <div class="card-body">
+        <div id="pages-lift-stats" style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:10px;font-size:11px;"></div>
+        <div class="chart-wrap" style="height:200px;">
+          <canvas id="cvrChart" role="img" aria-label="Line chart of page views by page over the campaign window.">Page views chart.</canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">MQL Form Fills <span id="fills-card-subtitle">GA4 · May 29 – Jun 3</span></div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:200px;">
+          <canvas id="fillsChart" role="img" aria-label="Bar chart of daily MQL form fills over the campaign window.">Form fills chart.</canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row-2" style="margin-bottom:16px;">
+
+    <div class="card">
+      <div class="card-head">Branded Search Impressions <span id="search-card-subtitle">Google Search Console &middot; NetBrain &amp; Agentic NetOps</span><span style="font-size:10px;font-weight:400;color:var(--nb-muted);margin-left:10px;">*GSC 2-day delay</span></div>
+      <div class="card-body">
+        <div style="display:flex;gap:24px;margin-bottom:12px;align-items:flex-end;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">NetBrain Lift Index</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;" id="search-nb-lift">—</div>
+            <div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">impressions vs baseline</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">Agentic NetOps Lift Index</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="search-ano-lift">—</div>
+            <div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">impressions vs baseline</div>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:150px;">
+          <canvas id="searchChart" role="img" aria-label="Dual-line chart of daily branded search impressions for NetBrain and Agentic NetOps.">Branded search impressions chart.</canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">Earned Media Mentions <span id="social-card-subtitle">Meltwater · CiscoLive Sphere + Agentic NetOps</span></div>
+      <div class="card-body">
+        <div style="display:flex;gap:24px;margin-bottom:12px;align-items:flex-end;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:4px;">Daily Average</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="social-daily-avg">—</div>
+          </div>
+          <div style="display:none;" id="social-total"></div>
+          <div style="margin-left:auto;font-size:11px;color:var(--nb-muted);text-align:right;" id="social-daily-note" style="display:none;">
+            &#9432; Refreshes daily<br>Last pull: <span id="social-fetched-at">—</span>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:150px;">
+          <canvas id="socialChart" role="img" aria-label="Area line chart showing daily earned media mentions over campaign window.">Social mentions chart.</canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LINKEDIN ORGANIC PERFORMANCE -->
+  <div class="section-label">LinkedIn Organic Performance</div>
+  <div id="oktopost-section" class="card" style="margin-bottom:16px;display:none;">
+    <div class="card-head">
+      LinkedIn (Oktopost)
+      <span id="okto-date-range"></span>
+      <span id="okto-fetched-note" style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.5);margin-left:10px;"></span>
+    </div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px;">
+        <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Impressions</div>
+          <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;" id="okto-impressions">—</div>
+        </div>
+        <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Engagement Rate</div>
+          <div style="font-size:28px;font-weight:700;line-height:1;" id="okto-eng-rate">—</div>
+          <div style="font-size:10px;color:var(--nb-muted);margin-top:3px;">target &gt;5%</div>
+        </div>
+        <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Engagements</div>
+          <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="okto-engagements">—</div>
+        </div>
+        <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Clicks</div>
+          <div style="font-size:28px;font-weight:700;color:var(--nb-blue);line-height:1;" id="okto-link-clicks">—</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:8px 12px;font-size:12px;">
+          <span style="color:var(--nb-muted);font-weight:600;">Likes</span>
+          <span style="font-weight:700;color:var(--nb-purple);" id="okto-likes">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:8px 12px;font-size:12px;">
+          <span style="color:var(--nb-muted);font-weight:600;">Comments</span>
+          <span style="font-weight:700;color:var(--nb-purple);" id="okto-comments">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:8px 12px;font-size:12px;">
+          <span style="color:var(--nb-muted);font-weight:600;">Shares</span>
+          <span style="font-weight:700;color:var(--nb-purple);" id="okto-shares">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:8px 12px;font-size:12px;">
+          <span style="color:var(--nb-muted);font-weight:600;">Total Clicks</span>
+          <span style="font-weight:700;color:var(--nb-purple);" id="okto-clicks">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMAIL BREAKDOWN TABLE -->
+  <div class="section-label">Email send breakdown</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-head">All JtANO sends <span id="email-table-updated">—</span></div>
+    <div class="card-body" style="padding:0;">
+      <table class="nb-table" id="email-breakdown-table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th style="text-align:right;">Sent</th>
+            <th style="text-align:right;">Delivered</th>
+            <th style="text-align:right;">Open Rate</th>
+            <th style="text-align:right;">CTOR</th>
+            <th style="text-align:right;">Click Rate</th>
+            <th style="text-align:right;">Bounce Rate</th>
+            <th style="text-align:center;">Status</th>
+          </tr>
+        </thead>
+        <tbody id="email-breakdown-body">
+          <tr><td colspan="8" style="text-align:center;color:var(--nb-muted);padding:20px;">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CHANNELS TABLE -->
+  <div class="section-label">Digital channel KPIs</div>
+  <div class="card" style="margin-bottom:16px;">
+    <table class="nb-table">
+      <thead>
+        <tr>
+          <th style="width:150px;">Channel</th>
+          <th>Primary KPIs</th>
+          <th style="width:180px;">Benchmark / Threshold</th>
+          <th style="width:100px;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="chan">Press Release</td>
+          <td>Syndication pickup count · Estimated media impressions · Referral traffic · Brand mentions</td>
+          <td class="bench">&ge;10 outlets; search spike within 48h</td>
+          <td><span class="badge b-amb">Watch</span></td>
+        </tr>
+        <tr>
+          <td class="chan">What's New Page</td>
+          <td>Unique views vs baseline · Avg time on page · Scroll depth · CTA clicks</td>
+          <td class="bench">75%+ scroll; CTA click-through &gt;0</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">JtANO Landing Page</td>
+          <td>Total + unique visits · Form CVR · Demo requests</td>
+          <td class="bench">CVR &ge;2% by Day 2 · Benchmark 2–5%</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">Homepage Banner</td>
+          <td>Impressions · Banner CTR · Downstream LP visits</td>
+          <td class="bench">CTR &ge;0.5%</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">Social (LinkedIn / X)</td>
+          <td>Impressions · Engagement rate · Link clicks · Follower growth</td>
+          <td class="bench">Eng. &gt;5% → boost with paid</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">Prospect Emails</td>
+          <td>Delivery rate · Open rate · CTOR · LP visits · MQLs</td>
+          <td class="bench">Open 20–25% · CTOR 10–15%</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">Customer Emails</td>
+          <td>Open rate · CTOR · Expansion page visits · Meeting requests</td>
+          <td class="bench">Open 30–40%+</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+        <tr>
+          <td class="chan">Geo-fenced Ads (LV)</td>
+          <td>Impressions · CTR · LP visits · CPC vs benchmark · View-through conversions</td>
+          <td class="bench">LV traffic up by Day 2</td>
+          <td><span class="badge b-amb">Watch</span></td>
+        </tr>
+        <tr>
+          <td class="chan">In-person LV Meetings</td>
+          <td>Meetings held vs target · New vs existing · Mtg-to-opp at 30/60/90d</td>
+          <td class="bench">Mtg-to-opp &gt;30%</td>
+          <td><span class="badge b-info">Tracking</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  </div>
+
+  <!-- ACTION TRIGGERS -->
+  <div class="section-label">Action trigger watch list</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-head">Real-time signal monitor <span>Red = intervene now · Green = amplify · Amber = watch daily</span></div>
+    <div class="card-body" style="padding:8px 16px;">
+      <ul class="trig-list">
+        <li class="trig-item">
+          <span class="trig-dot d-red"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Landing page CVR below 1.5% by Day 2</div>
+            <div class="trig-action">A/B test CTA copy or reduce form fields immediately</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-red">Red flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-red"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Email CTOR below 8% (prospects)</div>
+            <div class="trig-action">Resend revised version with cleaner CTA to non-converters</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-red">Red flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-red"></span>
+          <div class="trig-body">
+            <div class="trig-signal">MQLs behind daily target by Day 3</div>
+            <div class="trig-action">Activate BDR follow-up on all form fills; tighten retargeting</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-red">Red flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-grn"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Branded search volume up 20%+ in first 48 hrs</div>
+            <div class="trig-action">Increase branded search ad budget to capture demand</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-grn">Green flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-grn"></span>
+          <div class="trig-body">
+            <div class="trig-signal">High UGC volume from Sphere attendees</div>
+            <div class="trig-action">Engage and repost UGC immediately to amplify reach</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-grn">Green flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-grn"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Social engagement rate above 5%</div>
+            <div class="trig-action">Boost best-performing posts with paid spend</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-grn">Green flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-grn"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Meeting-to-opp conversion above 30%</div>
+            <div class="trig-action">Schedule additional follow-up while attendees are warm</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-grn">Green flag</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-amb"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Las Vegas geo traffic flat by Day 2</div>
+            <div class="trig-action">Check geo-fence delivery report; expand radius if needed</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-amb">Watch</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-amb"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Press release pickup below 10 outlets</div>
+            <div class="trig-action">Personally pitch 5–10 trade journalists directly</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-amb">Watch</span></div>
+        </li>
+        <li class="trig-item">
+          <span class="trig-dot d-blue"></span>
+          <div class="trig-body">
+            <div class="trig-signal">Organic traffic spike in non-LV geographies</div>
+            <div class="trig-action">Capitalize with retargeting audiences in those new geos</div>
+          </div>
+          <div class="trig-badge"><span class="badge b-blue">Opportunity</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div><!-- /main -->
+</div><!-- /tab-main -->
+
+<!-- EVENTS TAB -->
+<div id="tab-events" class="tab-panel">
+<div class="main">
+
+  <div class="section-label">In-person events &mdash; Las Vegas</div>
+
+  <!-- Event cards -->
+  <div class="events-grid">
+
+    <!-- Agentic NetOps card -->
+    <div class="event-card">
+      <div class="event-card-head">
+        <div class="event-card-title">A Race to Agentic NetOps</div>
+        <div class="event-card-meta">
+          <span>&#128197; June 2, 2026</span>
+          <span>&#128205; Las Vegas</span>
+        </div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-stat-row">
+          <div class="event-stat">
+            <div class="event-stat-label">Registered</div>
+            <div class="event-stat-value" id="an-registered">&#8212;</div>
+            <div class="event-stat-sub">List 3389</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Attended</div>
+            <div class="event-stat-value" id="an-attended">&#8212;</div>
+            <div class="event-stat-sub">List 3388</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Attendance Rate</div>
+            <div class="event-stat-value" id="an-rate">&#8212;</div>
+            <div class="event-stat-sub">attended / registered</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Walk-ins</div>
+            <div class="event-stat-value highlight" id="an-walkins">&#8212;</div>
+            <div class="event-stat-sub">on-site interest</div>
+          </div>
+        </div>
+
+        <div id="an-walkin-badge" style="display:none;">
+          <span class="walkin-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5.5" stroke="#FF7347"/><path d="M6 3.5V6.5L7.5 8" stroke="#FF7347" stroke-linecap="round"/></svg>
+            <span id="an-walkin-badge-text"></span> walk-in guests beyond pre-registration
+          </span>
+        </div>
+
+        <div class="event-progress-label">
+          <span>Registration vs Attendance</span>
+          <span><strong id="an-att-pct-label">&#8212;</strong> attendance rate</span>
+        </div>
+        <div class="event-progress-track">
+          <div class="event-progress-reg" id="an-bar-reg" style="width:0%;"></div>
+          <div class="event-progress-att" id="an-bar-att" style="width:0%;"></div>
+        </div>
+        <div class="event-progress-legend">
+          <span><span class="leg-dot" style="background:var(--nb-lavender);"></span>Registered</span>
+          <span><span class="leg-dot" style="background:var(--nb-purple);"></span>Attended</span>
+          <span><span class="leg-dot" style="background:var(--nb-tangerine);"></span>Walk-ins (above reg. baseline)</span>
+        </div>
+
+        <div class="event-updated">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#6B6880" stroke-width="1.2"/><path d="M6 3.5V6.5L7.5 8" stroke="#6B6880" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Last updated: <span id="an-updated">&#8212;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zero Outage Lounge card -->
+    <div class="event-card">
+      <div class="event-card-head" style="background: linear-gradient(135deg, #200B4E 0%, #3B1A7A 100%);">
+        <div class="event-card-title">Zero Outage Lounge</div>
+        <div class="event-card-meta">
+          <span>&#128197; May 31 &ndash; June 4, 2026</span>
+          <span>&#128205; Mandalay Bay Suite</span>
+        </div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-stat-row">
+          <div class="event-stat">
+            <div class="event-stat-label">Registered</div>
+            <div class="event-stat-value" id="zol-registered">&#8212;</div>
+            <div class="event-stat-sub">List 3481</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Attended</div>
+            <div class="event-stat-value" id="zol-attended">&#8212;</div>
+            <div class="event-stat-sub">List 3482</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Attendance Rate</div>
+            <div class="event-stat-value" id="zol-rate">&#8212;</div>
+            <div class="event-stat-sub">attended / registered</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Walk-ins</div>
+            <div class="event-stat-value highlight" id="zol-walkins">&#8212;</div>
+            <div class="event-stat-sub">on-site interest</div>
+          </div>
+        </div>
+
+        <div id="zol-walkin-badge" style="display:none;">
+          <span class="walkin-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5.5" stroke="#FF7347"/><path d="M6 3.5V6.5L7.5 8" stroke="#FF7347" stroke-linecap="round"/></svg>
+            <span id="zol-walkin-badge-text"></span> walk-in guests beyond pre-registration
+          </span>
+        </div>
+
+        <div class="event-progress-label">
+          <span>Registration vs Attendance</span>
+          <span><strong id="zol-att-pct-label">&#8212;</strong> attendance rate</span>
+        </div>
+        <div class="event-progress-track">
+          <div class="event-progress-reg" id="zol-bar-reg" style="width:0%;"></div>
+          <div class="event-progress-att" id="zol-bar-att" style="width:0%;"></div>
+        </div>
+        <div class="event-progress-legend">
+          <span><span class="leg-dot" style="background:var(--nb-lavender);"></span>Registered</span>
+          <span><span class="leg-dot" style="background:var(--nb-purple);"></span>Attended</span>
+          <span><span class="leg-dot" style="background:var(--nb-tangerine);"></span>Walk-ins (above reg. baseline)</span>
+        </div>
+
+        <div class="event-updated">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#6B6880" stroke-width="1.2"/><path d="M6 3.5V6.5L7.5 8" stroke="#6B6880" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Last updated: <span id="zol-updated">&#8212;</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /events-grid -->
+
+  <!-- Combined summary row -->
+  <div class="section-label">Combined events summary</div>
+  <div class="card" style="margin-bottom: 20px;">
+    <div class="card-head">Both events &mdash; total headcount <span>Stub data &mdash; pending Pipedream Data Store</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div style="text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Total Registered</div>
+          <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-registered">&#8212;</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Total Attended</div>
+          <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-attended">&#8212;</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Combined Walk-ins</div>
+          <div style="font-size:32px;font-weight:700;color:var(--nb-tangerine);" id="combined-walkins">&#8212;</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Blended Rate</div>
+          <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-rate">&#8212;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main events -->
+</div><!-- /tab-events -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MEDIA MENTIONS TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-media" class="tab-panel">
+<div class="main">
+
+  <!-- KPI ROW -->
+  <div class="section-label">Earned media summary <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Meltwater &bull; Campaign window May 29 – Jun 3</span></div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Mentions</div>
+      <div class="kpi-value" id="media-total">—</div>
+      <div class="kpi-target">All pickups</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+      <div class="kpi-label">Unique Stories</div>
+      <div class="kpi-value" id="media-unique">—</div>
+      <div class="kpi-target">Deduplicated by title</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Daily Average</div>
+      <div class="kpi-value" id="media-daily-avg">—</div>
+      <div class="kpi-target">Mentions / day</div>
+    </div>
+    <div class="kpi-card lav">
+      <div class="kpi-label">Peak Day</div>
+      <div class="kpi-value" id="media-peak-val">—</div>
+      <div class="kpi-target" id="media-peak-date">—</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#2EAE5A;">
+      <div class="kpi-label">Last Fetched</div>
+      <div style="font-size:14px;font-weight:600;color:var(--nb-purple);line-height:1.4;margin-top:4px;" id="media-fetched-at">—</div>
+      <div class="kpi-target">Meltwater pull</div>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="row-2" style="margin-bottom:20px;">
+    <div class="card" style="grid-column:1/-1;">
+      <div class="card-head">Daily Mention Volume <span>Meltwater · NetBrain Technologies search</span></div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:180px;">
+          <canvas id="mediaVolumeChart" role="img" aria-label="Bar chart showing daily media mention volume over campaign window."></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD ARTICLE -->
+  <div class="section-label">Add article manually</div>
+  <div class="manual-form-wrap">
+    <div class="manual-form-title">&#43; Paste a URL — we'll pull the title, source, and date automatically</div>
+    <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;">
+      <input id="mf-url" class="mf-input" type="url" placeholder="https://www.example.com/article..." />
+      <button class="mf-btn" onclick="submitManualArticle()">Add Article</button>
+      <span id="mf-status" style="font-size:12px;color:var(--nb-muted);white-space:nowrap;"></span>
+    </div>
+    <div id="mf-error" style="display:none;font-size:12px;color:#D63030;margin-top:8px;"></div>
+  </div>
+
+  <!-- ARTICLE FEED -->
+  <div class="section-label" style="display:flex;justify-content:space-between;align-items:center;">
+    <span>Article feed</span>
+    <input id="media-search-input" type="text" placeholder="Filter by keyword or source..."
+      style="width:260px;padding:5px 10px;border:1px solid var(--nb-border);border-radius:var(--radius);font-size:12px;font-family:var(--nb-font);color:var(--nb-dark-text);outline:none;"
+      oninput="filterMediaArticles()" />
+  </div>
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-head">
+      Article Feed
+      <span id="media-article-count-label"></span>
+    </div>
+    <div class="card-body" style="padding:0;">
+
+      <!-- Empty state -->
+      <div id="media-empty-state" style="padding:24px 20px;text-align:center;color:var(--nb-muted);font-size:13px;">
+        No articles yet. Paste a URL above to add the first one, or wait for Meltwater data.
+      </div>
+
+      <!-- Article table -->
+      <div id="media-article-table-wrap" style="display:none;overflow-x:auto;">
+        <table class="nb-table">
+          <thead>
+            <tr>
+              <th style="min-width:280px;">Article</th>
+              <th>Source</th>
+              <th>Date</th>
+              <th style="text-align:center;">Type</th>
+              <th style="text-align:center;"></th>
+            </tr>
+          </thead>
+          <tbody id="media-article-tbody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /main media -->
+</div><!-- /tab-media -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     SOCIAL TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-social" class="tab-panel">
+<div class="main">
+
+  <div class="section-label">Owned Social Performance <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Oktopost &bull; <span id="social-tab-window">May 18 – Jun 3, 2026</span></span></div>
+
+  <!-- CHANNEL SUMMARY KPIS (populated when oktopost data arrives) -->
+  <div id="social-tab-summary" style="display:none;">
+    <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
+      <div class="kpi-card" style="border-left-color:var(--nb-purple);">
+        <div class="kpi-label">Posts</div>
+        <div class="kpi-value" id="st-posts">—</div>
+        <div class="kpi-target">All tracked channels</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-value" id="st-impressions">—</div>
+        <div class="kpi-target">All tracked channels</div>
+      </div>
+      <div class="kpi-card" style="border-left-color:var(--nb-tangerine);">
+        <div class="kpi-label">Engagement Rate</div>
+        <div class="kpi-value" id="st-eng-rate">—</div>
+        <div class="kpi-target">Target &gt;5% &bull; boost if above</div>
+      </div>
+      <div class="kpi-card lav">
+        <div class="kpi-label">Engagements</div>
+        <div class="kpi-value" id="st-engagements">—</div>
+        <div class="kpi-target">Likes + comments + shares</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-label">Total Clicks</div>
+        <div class="kpi-value" id="st-link-clicks">—</div>
+        <div class="kpi-target">All click types · all channels</div>
+      </div>
+    </div>
+
+    <!-- CHANNEL CARDS (dynamically generated by renderSocialTab) -->
+    <div id="social-channels-container"></div>
+
+    <!-- LAST UPDATED -->
+    <div style="font-size:11px;color:var(--nb-muted);padding:10px 0;" id="st-last-updated"></div>
+  </div>
+
+  <!-- EMPTY STATE (shown when oktopost data not yet in data.json) -->
+  <div id="social-tab-empty" style="background:#fff;border-radius:var(--radius-lg);border:1px dashed var(--nb-border);padding:48px 24px;text-align:center;">
+    <div style="font-size:15px;font-weight:600;color:var(--nb-purple);margin-bottom:8px;">Social data pending</div>
+    <div style="font-size:13px;color:var(--nb-muted);max-width:420px;margin:0 auto;">Add <code style="background:var(--nb-light-bg);padding:2px 6px;border-radius:4px;font-size:11px;">oktopost: steps.fetch_oktopost?.$return_value ?? null</code> to normalize_data in Pipedream, then push to GitHub.</div>
+  </div>
+
+</div><!-- /main social -->
+</div><!-- /tab-social -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     UTM TRACKING TAB
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="tab-utm" class="tab-panel">
+<div class="main">
+
+  <div class="section-label">UTM Link Registry <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; All active campaign links &bull; Campaign window May 29 - Jun 3</span></div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Sessions</div>
+      <div class="kpi-value" id="utm-kpi-total">—</div>
+      <div class="kpi-target">All UTM campaigns combined</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#200B4E;">
+      <div class="kpi-label">JtANO Sessions</div>
+      <div class="kpi-value" id="utm-kpi-jtano">—</div>
+      <div class="kpi-target">jtano_q2fy26_*</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Gartner Sessions</div>
+      <div class="kpi-value" id="utm-kpi-gartner">—</div>
+      <div class="kpi-target">gartner_market_guide_*</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:#FF7347;">
+      <div class="kpi-label">ZOL Sessions</div>
+      <div class="kpi-value" id="utm-kpi-zol">—</div>
+      <div class="kpi-target">Tradeshow:Q2FY26_ZOL_*</div>
+    </div>
+  </div>
+
+  <!-- SESSIONS CHART -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-head">Sessions by Source by Day <span>GA4 &bull; jtano / gartner / zol campaigns &bull; May 29 - Jun 3</span></div>
+    <div class="card-body">
+      <div id="utm-chart-wrap" class="chart-wrap" style="height:200px;">
+        <canvas id="utmSessionChart" role="img" aria-label="Stacked bar chart of sessions by UTM source per day."></canvas>
+      </div>
+      <div id="utm-chart-empty" style="display:none;text-align:center;padding:36px 0;color:var(--nb-muted);font-size:12px;">
+        Session data pending. Add the <strong>fetch_ga4_utm</strong> Pipedream step to populate this chart.
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;">
+    <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-right:4px;">Filter:</span>
+    <button class="utm-filter-btn active" onclick="filterUtm('all',this)">All (11)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('jtano',this)">JtANO (6)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('gartner',this)">Gartner (2)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('zol',this)">ZOL (3)</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <div class="card-head">UTM Links <span>Click Copy to copy full URL to clipboard</span></div>
+    <div class="card-body" style="padding:0;overflow-x:auto;">
+      <table class="nb-table" id="utm-table">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Source</th>
+            <th>Medium</th>
+            <th>Destination</th>
+            <th>Campaign</th>
+            <th style="text-align:right;">Sessions</th>
+            <th style="width:60px;"></th>
+          </tr>
+        </thead>
+        <tbody id="utm-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-top:12px;font-size:11px;color:var(--nb-muted);line-height:1.6;">
+    <strong style="color:#C07000;">Note:</strong> GA4 UTM data has a 2-3 day reporting lag, so the most recent days of the campaign window will appear incomplete until Google processes them. Sessions populate once the <strong>fetch_ga4_utm</strong> Pipedream step is added to the workflow. BDR row destination URL is pending. All links from Sandra's confirmed UTM list.
+  </div>
+
+</div><!-- /main utm -->
+</div><!-- /tab-utm -->
+
+<!-- TOAST -->
+<div id="nb-toast"></div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>Copyright &copy; 2026 NetBrain Technologies, Inc. All trademarks referenced herein belong to NetBrain Technologies, Inc.</span>
+  <span>Internal use only &nbsp;|&nbsp; <a href="#">brand@netbraintech.com</a></span>
+</div>
+
+<script>
+const P = '#200B4E', T = '#FF7347', L = '#876BCF', B = '#007DE7', LB = '#78BDE3', C = '#E3E887';
+
+const DATA_URL = 'https://raw.githubusercontent.com/NetBrainAaron/JtANO-Dashboard/main/data.json';
+
+// ── REFRESH TIMER ─────────────────────────────────────────────────────────────
+const REFRESH_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes (dashboard auto-refresh)
+let nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+
+function updateCountdown() {
+  const el = document.getElementById('next-refresh-label');
+  if (!el) return;
+  const remaining = Math.max(0, nextRefreshAt - Date.now());
+  const mins = Math.floor(remaining / 60000);
+  const secs = Math.floor((remaining % 60000) / 1000);
+  el.textContent = `Next refresh in ${mins}:${String(secs).padStart(2,'0')}`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ── FORCE REFRESH ─────────────────────────────────────────────────────────────
+const PIPEDREAM_TRIGGER_URL = 'https://eomw3p2yiqf58p5.m.pipedream.net';
+
+async function forceRefresh() {
+  const btn = document.getElementById('force-refresh-btn');
+  if (btn) {
+    btn.textContent = '⏳ Triggering...';
+    btn.disabled = true;
+  }
+  try {
+    // Fire the Pipedream workflow
+    await fetch(PIPEDREAM_TRIGGER_URL, { method: 'POST', mode: 'no-cors' });
+    // Wait 8 seconds for the workflow to run and push to GitHub
+    await new Promise(r => setTimeout(r, 8000));
+    // Then reload the dashboard data
+    await loadKPIs();
+    nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+    if (btn) { btn.textContent = '✓ Done'; btn.disabled = false; }
+    setTimeout(() => { if (btn) btn.textContent = '⟳ Refresh now'; }, 2000);
+  } catch(e) {
+    console.warn('Force refresh failed:', e);
+    if (btn) { btn.textContent = '⟳ Refresh now'; btn.disabled = false; }
+  }
+}
+
+// ── LIVE DATA LOADER ──────────────────────────────────────────────────────────
+async function loadKPIs() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const d   = await res.json();
+
+    // ── Last updated label ──
+    const ts    = new Date(d.updatedAt);
+    const lastUpdatedEl = document.getElementById('last-updated-label');
+    if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${fmtTimestamp(ts)}`;
+
+    // ── MQL card — campaign window only (May 29+) ──
+    const CAMP_START = '2026-05-29';
+    const mqlEl = document.getElementById('kpi-mqls');
+    const campaignMqls = Object.entries(d.mqls?.byDate || {})
+      .filter(([date]) => date >= CAMP_START)
+      .reduce((sum, [, v]) => sum + v, 0);
+    if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
+
+    // ── MQL lift: campaign avg (May 29+) vs pre-launch avg (May 22-28) ──
+    const mqlLiftEl = document.getElementById('kpi-mqls-lift');
+    if (mqlLiftEl) {
+      const allMqlByDate = d.mqls?.byDate || {};
+      const preTotal  = Object.entries(allMqlByDate)
+        .filter(([dt]) => dt >= '2026-05-22' && dt < '2026-05-29')
+        .reduce((s, [, v]) => s + v, 0);
+      const preAvg    = preTotal / 7;
+      const campDays  = Object.keys(allMqlByDate).filter(dt => dt >= CAMP_START).length || 1;
+      const campAvg   = campaignMqls / campDays;
+      if (preAvg > 0) {
+        const lift = Math.round(((campAvg - preAvg) / preAvg) * 100);
+        const sign = lift >= 0 ? '+' : '';
+        const color = lift >= 0 ? '#2EAE5A' : '#D63030';
+        mqlLiftEl.innerHTML = `<span style="color:${color};font-weight:700;">${sign}${lift}%</span> vs pre-launch avg`;
+      } else {
+        mqlLiftEl.textContent = `${campAvg.toFixed(1)}/day campaign avg`;
+      }
+    }
+
+    // ── CVR card (calculated from GA4 pages + MQL form fills, May 29+) ──
+    const cvrEl = document.getElementById('kpi-cvr');
+    if (cvrEl) {
+      const lpViews   = (d.pages?.daily || [])
+        .filter(row => String(row.date).replace(/-/g,'') >= '20260529')
+        .reduce((sum, row) => sum + (row.agenticNetOps || 0), 0);
+      const formFills = campaignMqls;
+      const cvr       = lpViews > 0 ? (formFills / lpViews) * 100 : null;
+      cvrEl.textContent = cvr != null ? cvr.toFixed(2) + '%' : '—';
+      const card = cvrEl.closest('.kpi-card');
+      if (card && cvr != null) {
+        card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
+      }
+    }
+
+    // ── Page views chart (GA4 -- 5 lines) ──
+    const pagesDaily = d.pages?.daily || [];
+    if (pagesDaily.length > 0 && cvrChartInstance) {
+      const formatDate = str => {
+        const s = String(str).replace(/-/g, '');
+        if (s.length === 8) {
+          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+        }
+        return str;
+      };
+      cvrChartInstance.data.labels = pagesDaily.map(row => formatDate(row.date));
+      PAGE_CONFIGS.forEach((p, i) => {
+        cvrChartInstance.data.datasets[i].data = pagesDaily.map(row =>
+          p.key === 'total'
+            ? PAGE_KEYS.reduce((sum, k) => sum + (row[k] ?? 0), 0)
+            : (row[p.key] ?? 0)
+        );
+      });
+      cvrChartInstance.update();
+
+      // ── Page views lift: May 22-28 avg vs May 29+ avg ──
+      const preRows  = pagesDaily.filter(r => { const d = String(r.date).replace(/-/g,''); return d >= '20260522' && d <= '20260528'; });
+      const campRows = pagesDaily.filter(r => String(r.date).replace(/-/g,'') >= '20260529');
+      const liftEl   = document.getElementById('pages-lift-stats');
+      if (liftEl && preRows.length > 0 && campRows.length > 0) {
+        const avg = (rows, key) => rows.reduce((s, r) => s + (r[key] || 0), 0) / rows.length;
+        const liftPct = (key) => {
+          const pre  = avg(preRows,  key);
+          const camp = avg(campRows, key);
+          if (pre === 0) return null;
+          return Math.round(((camp - pre) / pre) * 100);
+        };
+        const liftItems = [
+          { label: 'Homepage',      key: 'homepage',    color: P },
+          { label: 'Request a Demo', key: 'requestDemo', color: '#2EAE5A' },
+        ];
+        liftEl.innerHTML = liftItems.map(item => {
+          const pct = liftPct(item.key);
+          if (pct === null) return '';
+          const sign  = pct >= 0 ? '+' : '';
+          const color = pct >= 0 ? '#2EAE5A' : '#D63030';
+          return `<span style="display:flex;align-items:center;gap:4px;">
+            <span style="width:8px;height:8px;border-radius:50%;background:${item.color};display:inline-block;flex-shrink:0;"></span>
+            <span style="color:var(--nb-muted);">${item.label}</span>
+            <span style="font-weight:700;color:${color};">${sign}${pct}%</span>
+            <span style="color:var(--nb-muted);font-size:10px;">vs pre-launch</span>
+          </span>`;
+        }).join('');
+      }
+
+      // Update card subtitle with totals
+      const totals = d.pages.totals || {};
+      const subtitle = document.getElementById('pages-card-subtitle');
+      if (subtitle) {
+        const parts = PAGE_CONFIGS
+          .filter(p => (totals[p.key] || 0) > 0)
+          .map(p => `${p.label}: ${totals[p.key].toLocaleString()}`);
+        subtitle.textContent = parts.length > 0 ? parts.join(' · ') : 'GA4 · live';
+      }
+    }
+
+    // ── Form fills chart (stacked bar by form) ──
+    const mqlByDate      = d.mqls?.byDate        || {};
+    const jtanoByDate    = d.mqls?.jtano?.byDate  || {};
+    const gartnerByDate  = d.mqls?.gartner?.byDate || {};
+    const demoByDate     = d.mqls?.requestDemo?.byDate || {};
+
+    // Full date range May 22 → today (no gaps, zero-fill days included)
+    const fillDates = [];
+    const fillEnd = new Date(Math.min(Date.now(), new Date('2026-06-04')));
+    for (let fd = new Date('2026-05-22'); fd <= fillEnd; fd.setDate(fd.getDate() + 1)) {
+      fillDates.push(fd.toISOString().split('T')[0]);
+    }
+
+    if (fillDates.length > 0 && fillsChartInstance) {
+      const formatDate = str => {
+        const s = String(str).replace(/-/g, '');
+        if (s.length === 8) {
+          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+        }
+        return str;
+      };
+      fillsChartInstance.data.labels                  = fillDates.map(formatDate);
+      fillsChartInstance.data.datasets[0].data        = fillDates.map(d => jtanoByDate[d]   || 0);
+      fillsChartInstance.data.datasets[1].data        = fillDates.map(d => gartnerByDate[d] || 0);
+      fillsChartInstance.data.datasets[2].data        = fillDates.map(d => demoByDate[d]    || 0);
+      fillsChartInstance.update();
+
+      const fillsSubtitle = document.getElementById('fills-card-subtitle');
+      const totalFills = d.mqls?.formFills || 0;
+      if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total · 3 forms`;
+    }
+
+    // ── Email table (dynamic emails array) ──
+    // Normalise: pipeline may return emails as a flat array OR {emails:[...]}
+    const emailsRaw = d.emails || [];
+    const emails = Array.isArray(emailsRaw) ? emailsRaw : (emailsRaw.emails || []);
+
+    if (emails.length > 0) {
+      // Render email breakdown table
+      const tbody = document.getElementById('email-breakdown-body');
+      const tableUpdated = document.getElementById('email-table-updated');
+      if (tableUpdated) tableUpdated.textContent = fmtTimestamp(ts);
+      if (tbody) {
+        tbody.innerHTML = emails.map(e => {
+          const openPct   = (e.openRate  * 100).toFixed(1) + '%';
+          const ctorPct   = (e.ctor      * 100).toFixed(1) + '%';
+          const clickPct  = (e.clickRate * 100).toFixed(1) + '%';
+          const bouncePct = (e.bounceRate* 100).toFixed(1) + '%';
+          const stateLabel = e.state === 'PROCESSING'
+            ? '<span class="badge b-amb">Sending</span>'
+            : e.state === 'PUBLISHED'
+              ? '<span class="badge b-grn">Sent</span>'
+              : `<span class="badge b-info">${e.state}</span>`;
+          return `<tr>
+            <td>
+              <div style="font-weight:600;color:var(--nb-purple);">${e.name}</div>
+              <div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${e.subject || ''}</div>
+            </td>
+            <td style="text-align:right;">${e.sent.toLocaleString()}</td>
+            <td style="text-align:right;">${e.delivered.toLocaleString()}</td>
+            <td style="text-align:right;font-weight:600;">${openPct}</td>
+            <td style="text-align:right;">${ctorPct}</td>
+            <td style="text-align:right;">${clickPct}</td>
+            <td style="text-align:right;">${bouncePct}</td>
+            <td style="text-align:center;">${stateLabel}</td>
+          </tr>`;
+        }).join('');
+      }
+    }
+
+    // ── Events tab ──
+    if (d.events) {
+      renderEventCard('an',  d.events.agentic_netops);
+      renderEventCard('zol', d.events.zero_outage_lounge);
+      renderCombined(d.events.agentic_netops, d.events.zero_outage_lounge);
+    }
+
+    // ── Social (Meltwater earned media) ──
+    if (d.social && (d.social.combined || d.social.searches)) {
+      renderSocialChart(d.social);
+      renderMediaTab(d.social);
+    }
+
+    // ── Oktopost (LinkedIn organic) ──
+    if (d.oktopost) {
+      renderOktopostSection(d.oktopost);
+      renderSocialTab(d.oktopost);
+    }
+
+    // ── Branded Search (GSC) ──
+    if (d.search) {
+      renderSearchChart(d.search?.search || d.search);
+    }
+
+    // ── UTM Traffic (GA4 UTM dimensions -- populated by fetch_ga4_utm step) ──
+    if (d.utm_traffic) {
+      const ut = d.utm_traffic;
+      // Home KPI card
+      const utmSessionsEl = document.getElementById('kpi-utm-sessions');
+      if (utmSessionsEl) {
+        const total = ut.totals?.sessions || 0;
+        utmSessionsEl.textContent = total > 0 ? total.toLocaleString() : '—';
+      }
+      utmSessionLookup = buildUtmSessionLookup(ut);
+      renderUtmTable(currentUtmFilter);
+      renderUtmSessionChart(ut);
+      const grp = ut.byCampaignGroup || {};
+      const tot = ut.totals?.sessions || 0;
+      const totEl = document.getElementById('utm-kpi-total');
+      if (totEl) totEl.textContent = tot > 0 ? tot.toLocaleString() : '—';
+      const jtEl = document.getElementById('utm-kpi-jtano');
+      if (jtEl) jtEl.textContent = grp.jtano != null ? Number(grp.jtano).toLocaleString() : '—';
+      const gaEl = document.getElementById('utm-kpi-gartner');
+      if (gaEl) gaEl.textContent = grp.gartner != null ? Number(grp.gartner).toLocaleString() : '—';
+      const zoEl = document.getElementById('utm-kpi-zol');
+      if (zoEl) zoEl.textContent = grp.zol != null ? Number(grp.zol).toLocaleString() : '—';
+    }
+
+  } catch(e) {
+    console.warn('KPI fetch failed:', e);
+  }
+}
+
+// ── SOCIAL CHART RENDERER ─────────────────────────────────────────────────────
+function renderSocialChart(social) {
+  const combined = social.combined || {};
+  const total    = combined.total  || 0;
+  const byDate   = combined.byDate || {};
+
+  // Update headline stats
+  const totalEl = document.getElementById('social-total');
+  const avgEl   = document.getElementById('social-daily-avg');
+  if (totalEl) totalEl.textContent = total.toLocaleString();
+
+  const campaignStart = new Date('2026-05-29');
+  const today         = new Date();
+  const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
+  if (avgEl) avgEl.textContent = (total / dayCount).toFixed(1);
+
+  // Normalise byDate -- pipeline returns array [{date,count}] or legacy object {date:count}
+  const byDateRaw = combined.byDate || [];
+  const byDateObj = Array.isArray(byDateRaw)
+    ? Object.fromEntries(byDateRaw.map(({ date, count }) => [date, count]))
+    : byDateRaw;
+
+  // Build daily chart from real byDate data, starting May 22
+  const CHART_START = '2026-05-22';
+  const dates = Object.keys(byDateObj).filter(d => d >= CHART_START).sort();
+  if (dates.length > 0) {
+    const formatDate = str => {
+      const s = String(str).replace(/-/g, '');
+      if (s.length === 8) {
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+      }
+      return str;
+    };
+    socialChartInstance.data.labels           = dates.map(formatDate);
+    socialChartInstance.data.datasets[0].data = dates.map(d => byDateObj[d] || 0);
+    socialChartInstance.update();
+  }
+
+  // Show last-fetched note
+  const noteEl    = document.getElementById('social-daily-note');
+  const fetchedEl = document.getElementById('social-fetched-at');
+  if (noteEl && fetchedEl && social.fetchedAt) {
+    const ft = new Date(social.fetchedAt);
+    fetchedEl.textContent = ft.toLocaleDateString('en-US', { month:'short', day:'numeric' })
+      + ' ' + ft.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
+    noteEl.style.display = 'block';
+  }
+}
+
+
+
+// ── OKTOPOST (LinkedIn organic) RENDERER ──────────────────────────────────────
+function renderOktopostSection(okto) {
+  const section = document.getElementById('oktopost-section');
+  if (!section) return;
+  section.style.display = '';
+
+  const t   = okto.totals || {};
+  const fmt = n => (n || 0).toLocaleString();
+
+  const el = id => document.getElementById(id);
+
+  if (el('okto-impressions')) el('okto-impressions').textContent = fmt(t.impressions);
+  if (el('okto-engagements')) el('okto-engagements').textContent = fmt(t.engagements);
+  if (el('okto-link-clicks')) el('okto-link-clicks').textContent = fmt(t.clicks);
+  if (el('okto-likes'))       el('okto-likes').textContent       = fmt(t.likes);
+  if (el('okto-comments'))    el('okto-comments').textContent    = fmt(t.comments);
+  if (el('okto-shares'))      el('okto-shares').textContent      = fmt(t.shares);
+  if (el('okto-clicks'))      el('okto-clicks').textContent      = fmt(t.clicks);
+
+  // Engagement rate: Oktopost returns this as a decimal (e.g. 0.062) or a percent float
+  const rateEl  = el('okto-eng-rate');
+  if (rateEl) {
+    const raw      = parseFloat(t.engagementRate) || 0;
+    // If value > 1 it was already a percentage; otherwise multiply by 100
+    const ratePct  = raw > 1 ? raw : raw * 100;
+    rateEl.textContent = ratePct.toFixed(2) + '%';
+    rateEl.style.color = ratePct >= 5 ? '#1E8B3A' : ratePct > 0 ? 'var(--nb-tangerine)' : 'var(--nb-purple)';
+  }
+
+  // Date range header label
+  if (okto.dateRange && el('okto-date-range')) {
+    const fmtDate = s => {
+      const d = new Date(s + 'T00:00:00');
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    };
+    el('okto-date-range').textContent = fmtDate(okto.dateRange.start) + ' – ' + fmtDate(okto.dateRange.end);
+  }
+
+  // Last fetched note
+  if (okto.fetchedAt && el('okto-fetched-note')) {
+    const ft = new Date(okto.fetchedAt);
+    el('okto-fetched-note').textContent = 'Updated '
+      + ft.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      + ' ' + ft.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  }
+}
+
+// ── SOCIAL TAB RENDERER ───────────────────────────────────────────────────────
+const SOCIAL_NETWORK_META = {
+  linkedin: {
+    label: 'LinkedIn',
+    icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path d="M6.5 9.5H4V18H6.5V9.5ZM5.25 8.25C4.56 8.25 4 7.69 4 7C4 6.31 4.56 5.75 5.25 5.75C5.94 5.75 6.5 6.31 6.5 7C6.5 7.69 5.94 8.25 5.25 8.25ZM20 18H17.5V13.75C17.5 12.65 17.48 11.25 16 11.25C14.5 11.25 14.25 12.45 14.25 13.67V18H11.75V9.5H14.15V10.75H14.19C14.52 10.13 15.32 9.47 16.5 9.47C19.04 9.47 20 11.08 20 13.24V18Z" fill="white"/></svg>`,
+  },
+  youtube: {
+    label: 'YouTube',
+    icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#FF0000"/><path d="M19.6 8.2c-.2-.7-.8-1.3-1.5-1.5C16.8 6.4 12 6.4 12 6.4s-4.8 0-6.1.3c-.7.2-1.3.8-1.5 1.5C4.1 9.5 4.1 12 4.1 12s0 2.5.3 3.8c.2.7.8 1.3 1.5 1.5C7.2 17.6 12 17.6 12 17.6s4.8 0 6.1-.3c.7-.2 1.3-.8 1.5-1.5.3-1.3.3-3.8.3-3.8s0-2.5-.3-3.8zM10.2 14.6V9.4l4.1 2.6-4.1 2.6z" fill="white"/></svg>`,
+  },
+  facebook: {
+    label: 'Facebook',
+    icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#1877F2"/><path d="M16 8h-2c-.6 0-1 .4-1 1v2h3l-.5 3H13v7h-3v-7H8v-3h2V9c0-2.2 1.8-4 4-4h2v3z" fill="white"/></svg>`,
+  },
+  twitter: {
+    label: 'X (Twitter)',
+    icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#000"/><path d="M17.75 4h-2.6l-3.2 4.4L8.6 4H4l5.8 7.9L4.2 20H6.8l3.5-4.8 3.5 4.8H18l-6-8.2L17.75 4z" fill="white"/></svg>`,
+  },
+};
+
+function renderSocialTab(okto) {
+  const emptyEl     = document.getElementById('social-tab-empty');
+  const summaryEl   = document.getElementById('social-tab-summary');
+  const containerEl = document.getElementById('social-channels-container');
+  if (!okto) return;
+
+  if (emptyEl)   emptyEl.style.display   = 'none';
+  if (summaryEl) summaryEl.style.display = '';
+
+  const t    = okto.totals   || {};
+  const chs  = okto.channels || {};
+  const fmt  = n => (n || 0).toLocaleString();
+  const el   = id => document.getElementById(id);
+
+  // Engagement rate (decimal from API)
+  const toRatePct  = raw => { const r = parseFloat(raw) || 0; return r > 1 ? r : r * 100; };
+  const rateColor  = pct => pct >= 5 ? '#1E8B3A' : pct > 0 ? 'var(--nb-tangerine)' : 'var(--nb-purple)';
+
+  // Summary KPI strip
+  const tPct = toRatePct(t.engagementRate);
+  if (el('st-posts'))        el('st-posts').textContent        = fmt(t.posts);
+  if (el('st-impressions'))  el('st-impressions').textContent  = fmt(t.impressions);
+  if (el('st-engagements'))  el('st-engagements').textContent  = fmt(t.engagements);
+  if (el('st-link-clicks'))  el('st-link-clicks').textContent  = fmt(t.clicks);
+  if (el('st-eng-rate')) {
+    el('st-eng-rate').textContent = tPct.toFixed(2) + '%';
+    el('st-eng-rate').style.color = rateColor(tPct);
+  }
+
+  // Date range label
+  if (okto.dateRange && el('social-tab-window')) {
+    const fmtD = s => new Date(s + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    el('social-tab-window').textContent = fmtD(okto.dateRange.start) + ' – ' + fmtD(okto.dateRange.end);
+  }
+
+  // Last fetched
+  if (okto.fetchedAt && el('st-last-updated')) {
+    const ft = new Date(okto.fetchedAt);
+    el('st-last-updated').textContent = 'Data last refreshed: '
+      + ft.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      + ' at ' + ft.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+      + ' via Oktopost API';
+  }
+
+  // Generate one card per channel
+  if (!containerEl) return;
+  const channelKeys = Object.keys(chs);
+  if (channelKeys.length === 0) return;
+
+  containerEl.innerHTML = channelKeys.map(key => {
+    const ch      = chs[key];
+    const meta    = SOCIAL_NETWORK_META[key.toLowerCase()] || { label: ch.network || key, icon: '' };
+    const chPct   = toRatePct(ch.engagementRate);
+    const chColor = rateColor(chPct);
+    const barW    = Math.min(chPct / 10 * 100, 100).toFixed(1);
+    const badge   = '';
+
+    return `
+    <div class="section-label">${meta.label}</div>
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-head">
+        <span style="display:flex;align-items:center;gap:8px;">${meta.icon}${meta.label}</span>
+      </div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Impressions</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-purple);line-height:1;">${fmt(ch.impressions)}</div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Engagement Rate</div>
+            <div style="font-size:28px;font-weight:700;line-height:1;color:${chColor};">${chPct.toFixed(2)}%</div>
+            <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">${badge}</div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Engagements</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;">${fmt(ch.engagements)}</div>
+          </div>
+          <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
+            <div class="kpi-label" style="margin-bottom:6px;">Clicks</div>
+            <div style="font-size:28px;font-weight:700;color:var(--nb-blue);line-height:1;">${fmt(ch.clicks)}</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Posts</span>
+            <span style="font-weight:700;color:var(--nb-purple);">${fmt(ch.posts)}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Likes</span>
+            <span style="font-weight:700;color:var(--nb-purple);">${fmt(ch.likes)}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Comments</span>
+            <span style="font-weight:700;color:var(--nb-purple);">${fmt(ch.comments)}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--nb-border);border-radius:6px;padding:10px 14px;font-size:13px;">
+            <span style="color:var(--nb-muted);font-weight:600;font-size:12px;">Shares</span>
+            <span style="font-weight:700;color:var(--nb-purple);">${fmt(ch.shares)}</span>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--nb-muted);margin-bottom:5px;">
+            <span>Engagement rate vs 5% boost threshold</span>
+            <span>${chPct.toFixed(2)}%</span>
+          </div>
+          <div style="height:8px;background:var(--nb-light-bg);border-radius:4px;overflow:hidden;">
+            <div style="height:100%;border-radius:4px;background:${chColor};width:${barW}%;transition:width 0.6s;"></div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;font-size:10px;color:var(--nb-muted);margin-top:3px;">Threshold: 5%</div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── PAGE VIEWS (GA4 -- 5 lines) ──
+// Page configs: key matches data.pages.daily field names
+const PAGE_CONFIGS = [
+  { key: 'homepage',      label: 'Homepage',         color: P,    dash: [] },
+  { key: 'agenticNetOps', label: 'Agentic NetOps LP', color: T,    dash: [] },
+  { key: 'gartner',       label: 'Gartner',           color: L,    dash: [5,3] },
+  { key: 'ciscoLive',     label: 'Cisco Live',        color: B,    dash: [5,3] },
+  { key: 'requestDemo',   label: 'Request a Demo',    color: '#2EAE5A', dash: [3,2] },
+  { key: 'total',         label: 'Total (all pages)', color: '#888888', dash: [] },
+];
+const PAGE_KEYS = ['homepage','agenticNetOps','gartner','ciscoLive','requestDemo'];
+
+// Campaign-start divider — draws a dotted orange line at May 29 on every chart.
+// Matches both label formats used across charts: "May 29" and "05/29".
+const campaignLinePlugin = {
+  id: 'campaignLine',
+  afterDraw(chart) {
+    const labels = chart.data.labels;
+    if (!labels || labels.length === 0) return;
+    const idx = labels.findIndex(l => l === 'May 29' || l === '05/29');
+    if (idx === -1) return;
+    const xScale = chart.scales.x;
+    const x = xScale.getPixelForValue(labels[idx]);
+    const { top, bottom } = chart.chartArea;
+    const ctx = chart.ctx;
+    ctx.save();
+    // Dotted line
+    ctx.beginPath();
+    ctx.setLineDash([6, 4]);
+    ctx.strokeStyle = '#FF7347';
+    ctx.lineWidth = 2;
+    ctx.moveTo(x, top);
+    ctx.lineTo(x, bottom);
+    ctx.stroke();
+    // Badge
+    ctx.setLineDash([]);
+    const text = '▲ Launch';
+    ctx.font = 'bold 10px system-ui, sans-serif';
+    const tw = ctx.measureText(text).width;
+    const bw = tw + 12, bh = 16, bx = x + 3, by = top + 4;
+    ctx.fillStyle = 'rgba(255,115,71,0.88)';
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(bx, by, bw, bh, 4);
+    else ctx.rect(bx, by, bw, bh);
+    ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, bx + 6, by + bh / 2);
+    ctx.restore();
+  }
+};
+Chart.register(campaignLinePlugin);
+
+const cvrChartInstance = new Chart(document.getElementById('cvrChart'), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: PAGE_CONFIGS.map(p => ({
+      label:              p.label,
+      data:               [],
+      borderColor:        p.color,
+      backgroundColor:    'transparent',
+      fill:               false,
+      tension:            0.4,
+      pointRadius:        p.key === 'total' ? 3 : 4,
+      pointBackgroundColor: p.color,
+      borderDash:         p.dash,
+      borderWidth:        p.key === 'total' ? 2.5 : 2,
+    }))
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+    },
+    scales: {
+      y: {
+        ticks: { font:{ size:10 }, callback: v => v.toLocaleString() },
+        grid:  { color:'rgba(0,0,0,0.06)' },
+        title: { display:true, text:'Page Views', font:{ size:10 }, color:'#6B6880' },
+        beginAtZero: true
+      },
+      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
+    }
+  }
+});
+
+// Legend -- built once, stays static
+const cvrCtx = document.getElementById('cvrChart').parentElement;
+const cvrLeg = document.createElement('div');
+cvrLeg.style = 'display:flex;gap:12px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
+cvrLeg.innerHTML = PAGE_CONFIGS.map(p =>
+  `<span style="display:flex;align-items:center;gap:4px;">
+    <span style="width:14px;height:2px;background:${p.color};display:inline-block;"></span>
+    ${p.label}
+  </span>`
+).join('');
+cvrCtx.insertBefore(cvrLeg, cvrCtx.firstChild);
+
+// ── FORM FILLS (stacked bar by form) ──
+const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
+  type: 'bar',
+  data: {
+    labels: [],
+    datasets: [
+      { label: 'JtANO LP',        data: [], backgroundColor: P,          borderRadius: 0, borderSkipped: false },
+      { label: 'Gartner',         data: [], backgroundColor: L,          borderRadius: 0, borderSkipped: false },
+      { label: 'Request a Demo',  data: [], backgroundColor: T,          borderRadius: 4, borderSkipped: false },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        mode: 'index',
+        callbacks: {
+          footer: items => {
+            const total = items.reduce((s, i) => s + i.parsed.y, 0);
+            return `Total: ${total}`;
+          }
+        }
+      },
+    },
+    scales: {
+      x: { stacked: true, ticks:{ font:{ size:10 } }, grid:{ display:false } },
+      y: {
+        stacked: true,
+        ticks: { font:{ size:10 }, stepSize: 1, callback: v => Math.round(v) },
+        grid:  { color:'rgba(0,0,0,0.06)' },
+        title: { display:true, text:'Form Fills', font:{ size:10 }, color:'#6B6880' },
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+// Legend for fills chart
+const fillsCtx = document.getElementById('fillsChart').parentElement;
+const fillsLeg = document.createElement('div');
+fillsLeg.style = 'display:flex;gap:12px;font-size:11px;color:#6B6880;margin-bottom:6px;flex-wrap:wrap;';
+fillsLeg.innerHTML = [
+  { label: 'JtANO LP',       color: P },
+  { label: 'Gartner',        color: L },
+  { label: 'Request a Demo', color: T },
+].map(p =>
+  `<span style="display:flex;align-items:center;gap:4px;">
+    <span style="width:10px;height:10px;background:${p.color};border-radius:2px;display:inline-block;"></span>
+    ${p.label}
+  </span>`
+).join('');
+fillsCtx.insertBefore(fillsLeg, fillsCtx.firstChild);
+
+// ── BRANDED SEARCH (GSC) ──
+const searchChartInstance = new Chart(document.getElementById('searchChart'), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: [
+      {
+        label: 'NetBrain',
+        data: [],
+        borderColor: P,
+        backgroundColor: 'rgba(32,11,78,0.08)',
+        fill: false,
+        tension: 0.4,
+        pointRadius: 3,
+        pointBackgroundColor: P,
+        borderWidth: 2,
+      },
+      {
+        label: 'Agentic NetOps',
+        data: [],
+        borderColor: L,
+        backgroundColor: 'rgba(135,107,207,0.08)',
+        fill: false,
+        tension: 0.4,
+        pointRadius: 3,
+        pointBackgroundColor: L,
+        borderWidth: 2,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+    },
+    scales: {
+      y: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
+      x: { ticks:{ font:{size:10} }, grid:{ color:'rgba(0,0,0,0.04)' } }
+    }
+  }
+});
+const searchLeg = document.createElement('div');
+searchLeg.style = 'display:flex;gap:14px;font-size:11px;color:#6B6880;margin-bottom:6px;';
+searchLeg.innerHTML = `<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#200B4E;display:inline-block;"></span>NetBrain</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:3px;background:#876BCF;display:inline-block;"></span>Agentic NetOps</span>`;
+document.getElementById('searchChart').parentElement.insertBefore(searchLeg, document.getElementById('searchChart').parentElement.firstChild);
+
+// ── EARNED MEDIA (Meltwater -- area line, daily mentions) ──
+const socialChartInstance = new Chart(document.getElementById('socialChart'), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'Daily Mentions',
+      data: [],
+      borderColor: L,
+      backgroundColor: 'rgba(135,107,207,0.12)',
+      fill: true,
+      tension: 0.4,
+      pointRadius: 4,
+      pointBackgroundColor: L,
+      borderWidth: 2,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+    },
+    scales: {
+      y: { beginAtZero: true, ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.06)' } },
+      x: { ticks:{ font:{ size:10 } }, grid:{ color:'rgba(0,0,0,0.04)' } }
+    }
+  }
+});
+const socialLegEl = document.createElement('div');
+socialLegEl.id = 'social-legend';
+document.getElementById('socialChart').parentElement.insertBefore(socialLegEl, document.getElementById('socialChart').parentElement.firstChild);
+
+// ── SEARCH CHART RENDERER ─────────────────────────────────────────────────────
+function renderSearchChart(search) {
+  if (!search) return;
+  const nb  = search.netbrain      || {};
+  const ano = search.agenticNetOps || {};
+
+  // Lift index stat cards
+  const nbLift  = nb.liftIndex  && nb.liftIndex.impressions  != null ? nb.liftIndex.impressions  : null;
+  const anoLift = ano.liftIndex && ano.liftIndex.impressions != null ? ano.liftIndex.impressions : null;
+  const nbLiftEl  = document.getElementById('search-nb-lift');
+  const anoLiftEl = document.getElementById('search-ano-lift');
+  if (nbLiftEl  && nbLift  != null) nbLiftEl.textContent  = nbLift;
+  if (anoLiftEl && anoLift != null) anoLiftEl.textContent = anoLift;
+
+  // Top KPI card (NetBrain lift expressed as +/- % vs baseline)
+  const kpiSearchEl = document.getElementById('kpi-search');
+  if (kpiSearchEl && nbLift != null) {
+    const pct = nbLift - 100;
+    kpiSearchEl.textContent = (pct >= 0 ? '+' : '') + pct + '%';
+  }
+
+  // Dual-line chart -- merge dates from both series
+  const nbDaily  = nb.daily  || [];
+  const anoDaily = ano.daily || [];
+  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])].sort().filter(d => d >= '2026-05-22');
+
+  if (allDates.length > 0) {
+    const formatDate = str => {
+      const parts = str.split('-');
+      return parts.length === 3 ? parts[1] + '/' + parts[2] : str;
+    };
+    const nbByDate  = Object.fromEntries(nbDaily.map(d  => [d.date,  d.impressions]));
+    const anoByDate = Object.fromEntries(anoDaily.map(d => [d.date, d.impressions]));
+    searchChartInstance.data.labels                  = allDates.map(formatDate);
+    searchChartInstance.data.datasets[0].data        = allDates.map(d => nbByDate[d]  ?? null);
+    searchChartInstance.data.datasets[1].data        = allDates.map(d => anoByDate[d] ?? null);
+    searchChartInstance.update();
+  }
+}
+
+// ── TAB SWITCHING ──
+document.querySelectorAll('.topbar-nav a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var tabId = this.getAttribute('data-tab');
+    if (!tabId) return;
+    // Update nav
+    document.querySelectorAll('.topbar-nav a').forEach(function(a){ a.classList.remove('active'); });
+    this.classList.add('active');
+    // Show panel
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    var panel = document.getElementById('tab-' + tabId);
+    if (panel) panel.classList.add('active');
+    // Resize any Chart.js charts that were initialized while hidden
+    if (tabId === 'media' && mediaVolumeChart) mediaVolumeChart.resize();
+  });
+});
+
+// ── TIMESTAMP FORMATTER ──
+function fmtTimestamp(date) {
+  var d = date.toLocaleDateString('en-US', { month:'numeric', day:'numeric', year:'numeric', timeZone:'America/New_York' });
+  var t = date.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true, timeZone:'America/New_York' });
+  return d + ' @ ' + t + ' ET';
+}
+
+// ── EVENTS DATA RENDERER ──
+// Stub data — replace with fetch() from Pipedream Data Store once live
+// Shape mirrors the canonical schema in the Data Store under key jtano:hubspot:latest
+var eventsStub = {
+  agentic_netops: {
+    registered: 0,
+    attended: 0,
+    registeredAttended: 0,
+    walkins: 0,
+    attendance_rate: 0,
+    last_updated: ''
+  },
+  zero_outage_lounge: {
+    registered: 0,
+    attended: 0,
+    registeredAttended: 0,
+    walkins: 0,
+    attendance_rate: 0,
+    last_updated: ''
+  }
+};
+
+function renderEventCard(prefix, data) {
+  var reg     = data.registered;
+  var att     = data.attended;
+  // Use server-computed set intersection if available, fall back to math
+  var regAtt  = (data.registeredAttended != null) ? data.registeredAttended : Math.min(att, reg);
+  var walkins = (data.walkins != null) ? data.walkins : Math.max(att - reg, 0);
+  // Attendance rate = registered who showed up / total registered
+  var rate    = reg > 0 ? Math.round((regAtt / reg) * 100) : 0;
+
+  // Stats
+  document.getElementById(prefix + '-registered').textContent = reg > 0 ? reg : '\u2014';
+  document.getElementById(prefix + '-attended').textContent   = att > 0 ? att : '\u2014';
+  document.getElementById(prefix + '-rate').textContent       = reg > 0 ? rate + '%' : '\u2014';
+  document.getElementById(prefix + '-walkins').textContent    = reg > 0 ? walkins : (att > 0 ? walkins : '\u2014');
+
+  // Walk-in badge
+  var badgeWrap = document.getElementById(prefix + '-walkin-badge');
+  if (walkins > 0) {
+    badgeWrap.style.display = 'block';
+    document.getElementById(prefix + '-walkin-badge-text').textContent = walkins;
+  } else {
+    badgeWrap.style.display = 'none';
+  }
+
+  // Progress bars — registered as full baseline, registeredAttended as overlay
+  var regPct = 100;
+  var attPct = reg > 0 ? Math.min((regAtt / reg) * 100, 100) : 0;
+  document.getElementById(prefix + '-bar-reg').style.width = regPct + '%';
+  document.getElementById(prefix + '-bar-att').style.width = attPct + '%';
+  document.getElementById(prefix + '-att-pct-label').textContent = reg > 0 ? rate + '%' : '\u2014';
+
+  // Timestamp
+  var ts = data.last_updated;
+  document.getElementById(prefix + '-updated').textContent = ts ? fmtTimestamp(new Date(ts)) : 'Pending live data';
+}
+
+function renderCombined(an, zol) {
+  var totalReg    = an.registered + zol.registered;
+  var totalAtt    = an.attended + zol.attended;
+  var totalWalk   = (an.walkins || 0) + (zol.walkins || 0);
+  var totalRegAtt = (an.registeredAttended || 0) + (zol.registeredAttended || 0);
+  var blended     = totalReg > 0 ? Math.round((totalRegAtt / totalReg) * 100) : 0;
+  document.getElementById('combined-registered').textContent = totalReg > 0 ? totalReg : '\u2014';
+  document.getElementById('combined-attended').textContent   = totalAtt > 0 ? totalAtt : '\u2014';
+  document.getElementById('combined-walkins').textContent    = totalWalk > 0 ? totalWalk : (totalReg > 0 ? '0' : '\u2014');
+  document.getElementById('combined-rate').textContent       = totalReg > 0 ? blended + '%' : '\u2014';
+
+  // Home tab KPI card
+  var kpiAtt    = document.getElementById('kpi-event-attendance');
+  var kpiDetail = document.getElementById('kpi-event-attendance-detail');
+  if (kpiAtt) kpiAtt.textContent = totalAtt > 0 ? totalAtt.toLocaleString() : '\u2014';
+  if (kpiDetail && totalAtt > 0) {
+    var anAtt  = an.attended  || 0;
+    var zolAtt = zol.attended || 0;
+    kpiDetail.innerHTML = 'AN&nbsp;' + anAtt + '&nbsp;&bull;&nbsp;ZOL&nbsp;' + zolAtt;
+  }
+}
+
+// To wire live data once the Data Store is ready, replace eventsStub with:
+// async function loadEventsKPIs() {
+//   const r = await fetch('https://api.pipedream.com/v1/data/stores/YOUR_DATA_STORE_ID/records/jtano:hubspot:latest', {
+//     headers: { Authorization: 'Bearer YOUR_PIPEDREAM_API_KEY' }
+//   });
+//   const json = await r.json();
+//   const data = JSON.parse(json.data?.value || '{}');
+//   if (data.events) {
+//     renderEventCard('an',  data.events.agentic_netops);
+//     renderEventCard('zol', data.events.zero_outage_lounge);
+//     renderCombined(data.events.agentic_netops, data.events.zero_outage_lounge);
+//   }
+// }
+// loadEventsKPIs();
+
+renderEventCard('an',  eventsStub.agentic_netops);
+renderEventCard('zol', eventsStub.zero_outage_lounge);
+renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge);
+
+// ── MEDIA MENTIONS TAB ──────────────────────────────────────────────────────
+
+// Webhook URL for the manual articles Pipedream workflow
+// Replace with the real URL once the workflow is created in Pipedream
+const MANUAL_ARTICLE_WEBHOOK = 'https://eopkva5nw5feokv.m.pipedream.net';
+
+let mediaArticlesAll = []; // combined: meltwater + manual
+let mediaVolumeChart  = null; // initialized lazily on first render
+
+function getOrCreateMediaVolumeChart() {
+  if (mediaVolumeChart) return mediaVolumeChart;
+  const canvas = document.getElementById('mediaVolumeChart');
+  if (!canvas) return null;
+  try {
+    mediaVolumeChart = new Chart(canvas, {
+      type: 'bar',
+      data: { labels: [], datasets: [{
+        label: 'Mentions',
+        data: [],
+        backgroundColor: 'rgba(135,107,207,0.75)',
+        borderColor: '#876BCF',
+        borderWidth: 1,
+        borderRadius: 4,
+        hoverBackgroundColor: '#FF7347'
+      }]},
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: ctx => ctx[0].label,
+              label: ctx => ctx.parsed.y + ' mention' + (ctx.parsed.y !== 1 ? 's' : '')
+            }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+          y: { beginAtZero: true, ticks: { stepSize: 50, font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } }
+        }
+      }
+    });
+  } catch(e) {
+    console.warn('mediaVolumeChart init failed:', e);
+  }
+  return mediaVolumeChart;
+}
+
+function renderMediaTab(social) {
+  if (!social) return;
+  const combined = social.combined || {};
+  const total    = combined.total || 0;
+  // Normalise byDate -- pipeline may return array [{date,count}] or object {date:count}
+  const byDateRaw = combined.byDate || {};
+  const byDate = Array.isArray(byDateRaw)
+    ? Object.fromEntries(byDateRaw.map(({ date, count }) => [date, count]))
+    : byDateRaw;
+  const campaignStart = new Date('2026-05-29');
+  const today         = new Date();
+  const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
+
+  // KPI cards
+  const totalEl = document.getElementById('media-total');
+  const avgEl   = document.getElementById('media-daily-avg');
+  const peakVal = document.getElementById('media-peak-val');
+  const peakDt  = document.getElementById('media-peak-date');
+  const fetchEl = document.getElementById('media-fetched-at');
+
+  if (totalEl) totalEl.textContent = total.toLocaleString();
+  if (avgEl)   avgEl.textContent   = dayCount > 0 ? (total / dayCount).toFixed(1) : '—';
+
+  // Peak day
+  let maxVal = 0, maxDate = '';
+  Object.entries(byDate).forEach(([d, v]) => { if (v > maxVal) { maxVal = v; maxDate = d; } });
+  if (peakVal) peakVal.textContent = maxVal > 0 ? maxVal.toLocaleString() : '—';
+  if (peakDt && maxDate) {
+    const parts = maxDate.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    peakDt.textContent = parts.length === 3
+      ? months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10)
+      : maxDate;
+  }
+
+  // Last fetched
+  if (fetchEl && social.fetchedAt) {
+    const ft = new Date(social.fetchedAt);
+    fetchEl.textContent = ft.toLocaleDateString('en-US', { month:'short', day:'numeric' })
+      + ' ' + ft.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
+  }
+
+  // Bar chart
+  const sortedDates = Object.keys(byDate).sort();
+  const fmtLbl = str => {
+    const p = str.split('-');
+    if (p.length === 3) {
+      const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return m[parseInt(p[1],10)-1] + ' ' + parseInt(p[2],10);
+    }
+    return str;
+  };
+  const chart = getOrCreateMediaVolumeChart();
+  if (chart) {
+    chart.data.labels           = sortedDates.map(fmtLbl);
+    chart.data.datasets[0].data = sortedDates.map(d => byDate[d] || 0);
+    chart.update();
+  }
+
+  // Merge meltwater articles + manual articles, deduplicate by URL
+  // Titles containing any of these keywords are excluded from the feed
+  const BLOCKED_TITLE_KEYWORDS = [
+    'jerry masseur',
+  ];
+
+  const meltwater = (social.articles || [])
+    .filter(a => {
+      const url   = (a.url   || '').toLowerCase();
+      const src   = (a.source || '').toLowerCase();
+      const title = (a.title  || '').toLowerCase();
+      // Exclude Twitter/X
+      if (url.includes('twitter.com') || url.includes('x.com') || src.includes('twitter')) return false;
+      // Exclude blocked titles
+      if (BLOCKED_TITLE_KEYWORDS.some(kw => title.includes(kw))) return false;
+      return true;
+    })
+    .map(a => ({ ...a, _type: 'meltwater' }));
+  const manual    = (social.manual_articles || []).map(a => ({ ...a, _type: 'manual' }));
+  // Manual entries take precedence — if same URL exists in both, keep the manual version
+  const seenUrls  = new Set();
+  const merged    = [];
+  for (const a of [...manual, ...meltwater]) {
+    const key = (a.url || '').toLowerCase().replace(/\/$/, ''); // normalize trailing slash
+    if (key && seenUrls.has(key)) continue;
+    if (key) seenUrls.add(key);
+    merged.push(a);
+  }
+  mediaArticlesAll = merged;
+
+  refreshArticleTable();
+}
+
+// ── ARTICLE EXCLUSIONS (persisted in localStorage) ───────────────────────────
+const EXCLUSIONS_KEY = 'jtano_excluded_titles';
+function loadExclusions() {
+  try { return new Set(JSON.parse(localStorage.getItem(EXCLUSIONS_KEY) || '[]')); }
+  catch(e) { return new Set(); }
+}
+function saveExclusions(set) {
+  try { localStorage.setItem(EXCLUSIONS_KEY, JSON.stringify([...set])); } catch(e) {}
+}
+let excludedTitles = loadExclusions();
+
+function excludeArticle(titleKey) {
+  excludedTitles.add(titleKey);
+  saveExclusions(excludedTitles);
+  refreshArticleTable();
+  showToast('Article excluded — refresh to confirm', 'warn');
+}
+
+function refreshArticleTable() {
+  const tableWrap  = document.getElementById('media-article-table-wrap');
+  const emptyState = document.getElementById('media-empty-state');
+
+  if (mediaArticlesAll.length === 0) {
+    if (tableWrap)  tableWrap.style.display  = 'none';
+    if (emptyState) emptyState.style.display = 'block';
+  } else {
+    if (tableWrap)  tableWrap.style.display  = 'block';
+    if (emptyState) emptyState.style.display = 'none';
+    filterMediaArticles();
+  }
+}
+
+function groupArticlesByTitle(articles) {
+  const groups = new Map();
+  for (const a of articles) {
+    const key = (a.title || a.url || '').toLowerCase().trim().replace(/\s+/g, ' ');
+    if (!groups.has(key)) groups.set(key, { rep: a, outlets: [], count: 0, titleKey: key });
+    const g = groups.get(key);
+    g.count++;
+    if (a.source && !g.outlets.includes(a.source)) g.outlets.push(a.source);
+  }
+  return [...groups.values()];
+}
+
+function renderArticleRows(articles) {
+  const tbody = document.getElementById('media-article-tbody');
+  if (!tbody) return;
+  const groups = groupArticlesByTitle(articles);
+  tbody.innerHTML = groups.slice(0, 200).map(({ rep: a, outlets, count, titleKey }) => {
+    const date  = a.publishDate
+      ? new Date(a.publishDate).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })
+      : '—';
+    const titleHtml = a.url
+      ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--nb-blue);text-decoration:none;font-weight:600;">${a.title || a.url}</a>`
+      : (a.title || '—');
+    const pickupsBadge = count > 1
+      ? `<div style="font-size:11px;color:var(--nb-muted);margin-top:4px;">${count} pickups &mdash; ${outlets.slice(0, 3).join(', ')}${outlets.length > 3 ? ' +' + (outlets.length - 3) + ' more' : ''}</div>`
+      : '';
+    const typeBadge = a._type === 'manual'
+      ? '<span class="badge b-amb">Manual</span>'
+      : '<span class="badge b-info">Meltwater</span>';
+    const actionBtn = a._type === 'manual' && a.id
+      ? `<button class="del-btn" onclick="deleteManualArticle('${a.id}')" title="Remove">&#x2715;</button>`
+      : `<button class="del-btn" data-exclude-key="${encodeURIComponent(titleKey)}" title="Exclude from feed" style="color:var(--nb-tangerine);">&#x25EF;</button>`;
+    return `<tr>
+      <td>${titleHtml}${pickupsBadge}</td>
+      <td style="color:var(--nb-muted);white-space:nowrap;">${count > 1 ? count + ' outlets' : (a.source || '—')}</td>
+      <td style="white-space:nowrap;">${date}</td>
+      <td style="text-align:center;">${typeBadge}</td>
+      <td style="text-align:center;">${actionBtn}</td>
+    </tr>`;
+  }).join('');
+
+  // Wire exclude buttons via event delegation
+  tbody.querySelectorAll('[data-exclude-key]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      excludeArticle(decodeURIComponent(btn.dataset.excludeKey));
+    });
+  });
+}
+
+function filterMediaArticles() {
+  const q = (document.getElementById('media-search-input').value || '').toLowerCase();
+
+  // Non-excluded pool — used for all KPI recalculation
+  const nonExcluded = mediaArticlesAll.filter(a => {
+    const titleKey = (a.title || a.url || '').toLowerCase().trim().replace(/\s+/g, ' ');
+    return !excludedTitles.has(titleKey);
+  });
+
+  // Search filter on top of exclusions
+  const filtered = q
+    ? nonExcluded.filter(a =>
+        (a.title  || '').toLowerCase().includes(q) ||
+        (a.source || '').toLowerCase().includes(q) ||
+        (a.url    || '').toLowerCase().includes(q))
+    : nonExcluded;
+
+  // Recompute byDate from individual article publishDates (respects exclusions)
+  const byDateFiltered = {};
+  for (const a of nonExcluded) {
+    const date = (a.publishDate || '').split('T')[0];
+    if (date) byDateFiltered[date] = (byDateFiltered[date] || 0) + 1;
+  }
+
+  // ── KPI cards ──
+  const campaignStart = new Date('2026-05-29');
+  const dayCount      = Math.max(1, Math.round((new Date() - campaignStart) / 86400000));
+  const total         = nonExcluded.length;
+  const unique        = new Set(nonExcluded.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
+
+  const totalEl   = document.getElementById('media-total');
+  const avgEl     = document.getElementById('media-daily-avg');
+  const uniqueEl  = document.getElementById('media-unique');
+  const peakVal   = document.getElementById('media-peak-val');
+  const peakDt    = document.getElementById('media-peak-date');
+
+  if (totalEl)  totalEl.textContent  = total.toLocaleString();
+  if (avgEl)    avgEl.textContent    = (total / dayCount).toFixed(1);
+  if (uniqueEl) uniqueEl.textContent = unique.toLocaleString();
+
+  // Peak day from filtered byDate
+  let maxVal = 0, maxDate = '';
+  Object.entries(byDateFiltered).forEach(([d, v]) => { if (v > maxVal) { maxVal = v; maxDate = d; } });
+  if (peakVal) peakVal.textContent = maxVal > 0 ? maxVal.toLocaleString() : '—';
+  if (peakDt) {
+    if (maxDate) {
+      const parts  = maxDate.split('-');
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      peakDt.textContent = parts.length === 3
+        ? months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10)
+        : maxDate;
+    } else {
+      peakDt.textContent = '—';
+    }
+  }
+
+  // ── Bar chart ──
+  const chart = getOrCreateMediaVolumeChart();
+  if (chart) {
+    const fmtLbl = str => {
+      const p = str.split('-');
+      if (p.length === 3) {
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m[parseInt(p[1],10)-1] + ' ' + parseInt(p[2],10);
+      }
+      return str;
+    };
+    const sortedDates = Object.keys(byDateFiltered).sort();
+    chart.data.labels           = sortedDates.map(fmtLbl);
+    chart.data.datasets[0].data = sortedDates.map(d => byDateFiltered[d] || 0);
+    chart.update();
+  }
+
+  // ── Sync main dashboard social card + home KPI card ──
+  const socialTotalEl    = document.getElementById('social-total');
+  const socialAvgEl      = document.getElementById('social-daily-avg');
+  const mediaMentionsEl  = document.getElementById('kpi-media-mentions');
+  if (socialTotalEl)   socialTotalEl.textContent   = total.toLocaleString();
+  if (socialAvgEl)     socialAvgEl.textContent     = (total / dayCount).toFixed(1);
+  if (mediaMentionsEl) mediaMentionsEl.textContent = total > 0 ? total.toLocaleString() : '—';
+
+  // ── Count label ──
+  const countLbl  = document.getElementById('media-article-count-label');
+  const hiddenCt  = excludedTitles.size;
+  const hiddenStr = hiddenCt > 0 ? ` &nbsp;<a href="#" onclick="clearExclusions();return false;" style="color:var(--nb-muted);font-size:11px;">${hiddenCt} excluded &mdash; clear</a>` : '';
+  if (countLbl) countLbl.innerHTML = unique + ' unique stor' + (unique !== 1 ? 'ies' : 'y') + ' &middot; ' + total + ' total pickups' + hiddenStr;
+
+  renderArticleRows(filtered);
+}
+
+function clearExclusions() {
+  excludedTitles = new Set();
+  saveExclusions(excludedTitles);
+  refreshArticleTable();
+}
+
+// ── TOAST ────────────────────────────────────────────────────────────────────
+let toastTimer = null;
+function showToast(msg, type) {
+  const el = document.getElementById('nb-toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.className = 'toast-show' + (type ? ' toast-' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = ''; }, 3200);
+}
+
+// ── MANUAL ARTICLE SUBMISSION ────────────────────────────────────────────────
+async function submitManualArticle() {
+  const urlInput = document.getElementById('mf-url');
+  const statusEl = document.getElementById('mf-status');
+  const errorEl  = document.getElementById('mf-error');
+  const url = (urlInput.value || '').trim();
+
+  errorEl.style.display = 'none';
+
+  if (!url || !url.startsWith('http')) {
+    errorEl.textContent = 'Please enter a valid URL starting with http:// or https://';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  // Duplicate check against current article feed
+  const normalizedInput = url.toLowerCase().replace(/\/$/, '');
+  const duplicate = mediaArticlesAll.find(a =>
+    (a.url || '').toLowerCase().replace(/\/$/, '') === normalizedInput
+  );
+  if (duplicate) {
+    const source = duplicate._type === 'manual' ? 'manually added' : 'already captured by Meltwater';
+    showToast(`Already in the feed — ${source}`, 'warn');
+    urlInput.value = '';
+    return;
+  }
+
+  if (MANUAL_ARTICLE_WEBHOOK === 'PASTE_PIPEDREAM_WEBHOOK_URL_HERE') {
+    errorEl.textContent = 'Pipedream webhook URL not configured yet — paste the URL into MANUAL_ARTICLE_WEBHOOK in the dashboard script.';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  statusEl.textContent = '⏳ Fetching metadata...';
+  urlInput.disabled = true;
+
+  try {
+    await fetch(MANUAL_ARTICLE_WEBHOOK, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'add', url })
+    });
+
+    urlInput.value = '';
+    statusEl.textContent = '✓ Submitted — refreshing in 10s...';
+    showToast('Article submitted — fetching metadata...');
+
+    // Give Pipedream ~10s to fetch, enrich, and push to GitHub
+    setTimeout(async () => {
+      await loadKPIs();
+      statusEl.textContent = '✓ Done';
+      setTimeout(() => { statusEl.textContent = ''; }, 3000);
+    }, 10000);
+
+  } catch(e) {
+    errorEl.textContent = 'Submission failed: ' + e.message;
+    errorEl.style.display = 'block';
+    statusEl.textContent = '';
+  } finally {
+    urlInput.disabled = false;
+  }
+}
+
+// ── MANUAL ARTICLE DELETE ────────────────────────────────────────────────────
+async function deleteManualArticle(id) {
+  if (!confirm('Remove this article?')) return;
+  try {
+    await fetch(MANUAL_ARTICLE_WEBHOOK, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'remove', id })
+    });
+    setTimeout(() => loadKPIs(), 10000);
+  } catch(e) {
+    console.warn('Delete failed:', e);
+  }
+}
+
+// ── LOAD LIVE DATA ──
+loadKPIs();
+// Refresh every 10 minutes while the tab is open
+setInterval(() => {
+  loadKPIs();
+  nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS;
+}, REFRESH_INTERVAL_MS);
+
+
+// ── UTM TRACKING ──────────────────────────────────────────────────────────────
+var UTM_LINKS = [
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'signature_banner', dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=signature_banner' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'businesswire', medium:'text_link',        dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=businesswire&utm_medium=text_link' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'cta_button',       dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=cta_button' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'newsletter',   medium:'text_link',        dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=newsletter&utm_medium=text_link' },
+  { group:'jtano',   campaign:'jtano_q2fy26_integrated',                   source:'email',        medium:'cta_button',       dest:'/news/from-network-automation-to-agentic-netops/',url:'https://www.netbrain.com/news/from-network-automation-to-agentic-netops/?utm_campaign=jtano_q2fy26_integrated&utm_source=email&utm_medium=cta_button' },
+  { group:'jtano',   campaign:'jtano_q2fy26_bdr_outbound',                 source:'email',        medium:'n/a',              dest:'TBD',                                             url:'' },
+  { group:'gartner', campaign:'gartner_market_guide_q2fy26_analyst_report',source:'email',        medium:'header_graphic',   dest:'/ (homepage)',                                    url:'https://www.netbrain.com/?utm_campaign=gartner_market_guide_q2fy26_analyst_report&utm_source=email&utm_medium=header_graphic' },
+  { group:'gartner', campaign:'gartner_market_guide_q2fy26_analyst_report',source:'email',        medium:'text_link',        dest:'/resources/gartner-research/',                    url:'https://www.netbrain.com/resources/gartner-research/?utm_campaign=gartner_market_guide_q2fy26_analyst_report&utm_source=email&utm_medium=text_link' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'cta_button',       dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=cta_button' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'header_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=header_graphic' },
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'footer_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=footer_graphic' }
+];
+
+var UTM_GROUP_STYLES = {
+  jtano:   { bg:'#EDE8F5', color:'#200B4E', label:'JtANO' },
+  gartner: { bg:'#E6F3FE', color:'#007DE7', label:'Gartner' },
+  zol:     { bg:'rgba(255,115,71,0.12)', color:'#FF7347', label:'ZOL' }
+};
+
+var currentUtmFilter  = 'all';
+var utmSessionLookup  = {};   // "campaign|source|medium" -> sessions total
+var utmChartInst      = null;
+
+function buildUtmSessionLookup(utmTraffic) {
+  var lookup = {};
+  if (!utmTraffic || !utmTraffic.daily) return lookup;
+  utmTraffic.daily.forEach(function(day) {
+    (day.rows || []).forEach(function(r) {
+      var key = r.campaign + '|' + r.source + '|' + r.medium;
+      lookup[key] = (lookup[key] || 0) + r.sessions;
+    });
+  });
+  return lookup;
+}
+
+function renderUtmTable(filter) {
+  var tbody = document.getElementById('utm-tbody');
+  if (!tbody) return;
+  currentUtmFilter = filter;
+  var rows = filter === 'all' ? UTM_LINKS : UTM_LINKS.filter(function(r){ return r.group === filter; });
+  var hasData = Object.keys(utmSessionLookup).length > 0;
+  tbody.innerHTML = rows.map(function(r) {
+    var origIdx = UTM_LINKS.indexOf(r);
+    var gs = UTM_GROUP_STYLES[r.group] || { bg:'#f0f0f8', color:'#6B6880', label:r.group };
+    var badge   = '<span class="badge" style="background:'+gs.bg+';color:'+gs.color+';">'+gs.label+'</span>';
+    var copyBtn = r.url
+      ? '<button class="utm-copy-btn" onclick="copyUtmByIdx('+origIdx+',this)">Copy</button>'
+      : '<span style="font-size:11px;color:var(--nb-muted);">TBD</span>';
+    var destCell = r.dest === 'TBD'
+      ? '<span style="color:var(--nb-muted);">TBD</span>'
+      : '<span title="'+r.dest+'">'+r.dest+'</span>';
+    var sessKey = r.campaign + '|' + r.source + '|' + r.medium;
+    var sessVal = utmSessionLookup[sessKey];
+    var sessCell = !hasData
+      ? '<span style="color:var(--nb-muted);font-size:11px;">pending</span>'
+      : (sessVal != null
+          ? '<span style="font-weight:600;color:var(--nb-purple);">'+sessVal.toLocaleString()+'</span>'
+          : '<span style="color:var(--nb-muted);">0</span>');
+    return '<tr>'
+      + '<td>'+badge+'</td>'
+      + '<td><span class="chan">'+r.source+'</span></td>'
+      + '<td>'+r.medium+'</td>'
+      + '<td class="utm-dest-cell">'+destCell+'</td>'
+      + '<td class="utm-camp-cell" title="'+r.campaign+'">'+r.campaign+'</td>'
+      + '<td style="text-align:right;">'+sessCell+'</td>'
+      + '<td style="text-align:right;">'+copyBtn+'</td>'
+      + '</tr>';
+  }).join('');
+}
+
+function renderUtmSessionChart(utmTraffic) {
+  var canvas  = document.getElementById('utmSessionChart');
+  var emptyEl = document.getElementById('utm-chart-empty');
+  if (!canvas) return;
+  var days = (utmTraffic && utmTraffic.daily) ? utmTraffic.daily : [];
+  if (!days.length) {
+    canvas.style.display = 'none';
+    if (emptyEl) emptyEl.style.display = 'block';
+    return;
+  }
+  canvas.style.display = '';
+  if (emptyEl) emptyEl.style.display = 'none';
+
+  // GA4 returns dates as YYYYMMDD; normalise to readable label
+  var labels = days.map(function(d) {
+    var s = String(d.date).replace(/-/g,'');
+    var iso = s.replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3');
+    return new Date(iso + 'T12:00:00').toLocaleDateString('en-US',{ month:'short', day:'numeric' });
+  });
+
+  var sourceOrder  = ['email','businesswire','newsletter'];
+  var sourceSet    = {};
+  days.forEach(function(day){ (day.rows||[]).forEach(function(r){ sourceSet[r.source]=true; }); });
+  var sources = sourceOrder.filter(function(s){ return sourceSet[s]; });
+  Object.keys(sourceSet).forEach(function(s){ if (sources.indexOf(s)<0) sources.push(s); });
+
+  var srcColors = { email:P, businesswire:T, newsletter:B };
+  var datasets  = sources.map(function(src) {
+    return {
+      label: src,
+      backgroundColor: srcColors[src] || L,
+      borderRadius: 3,
+      data: days.map(function(day) {
+        return (day.rows||[]).filter(function(r){ return r.source===src; })
+          .reduce(function(sum,r){ return sum + r.sessions; }, 0);
+      })
+    };
+  });
+
+  if (utmChartInst) { utmChartInst.destroy(); utmChartInst = null; }
+  utmChartInst = new Chart(canvas, {
+    type: 'bar',
+    data: { labels: labels, datasets: datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position:'bottom', labels:{ font:{size:11}, boxWidth:12 } } },
+      scales: {
+        x: { stacked:true, grid:{display:false}, ticks:{font:{size:11}} },
+        y: { stacked:true, beginAtZero:true, ticks:{ font:{size:11}, precision:0 } }
+      }
+    }
+  });
+}
+
+function copyUtmByIdx(idx, btn) {
+  var link = UTM_LINKS[idx];
+  if (!link || !link.url) return;
+  navigator.clipboard.writeText(link.url).then(function() {
+    var orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.style.background = '#2EAE5A'; btn.style.color = '#fff'; btn.style.borderColor = '#2EAE5A';
+    setTimeout(function(){ btn.textContent = orig; btn.style.background=''; btn.style.color=''; btn.style.borderColor=''; }, 1500);
+  });
+}
+
+function filterUtm(group, btn) {
+  document.querySelectorAll('.utm-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderUtmTable(group);
+}
+
+renderUtmTable('all');
+</script>
+
+</body>
+</html>
