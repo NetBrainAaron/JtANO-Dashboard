@@ -694,7 +694,7 @@ body {
   <div class="row-2" style="margin-bottom:16px;">
 
     <div class="card">
-      <div class="card-head">Branded Search Impressions <span id="search-card-subtitle">Google Search Console &middot; NetBrain &amp; Agentic NetOps</span></div>
+      <div class="card-head">Branded Search Impressions <span id="search-card-subtitle">Google Search Console &middot; NetBrain &amp; Agentic NetOps</span><span style="font-size:10px;font-weight:400;color:var(--nb-muted);margin-left:10px;">*GSC 2-day delay</span></div>
       <div class="card-body">
         <div style="display:flex;gap:24px;margin-bottom:12px;align-items:flex-end;">
           <div>
@@ -1322,15 +1322,21 @@ async function loadKPIs() {
     const lastUpdatedEl = document.getElementById('last-updated-label');
     if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${fmtTimestamp(ts)}`;
 
-    // ── MQL card ──
+    // ── MQL card — campaign window only (May 29+) ──
+    const CAMP_START = '2026-05-29';
     const mqlEl = document.getElementById('kpi-mqls');
-    if (mqlEl) mqlEl.textContent = d.mqls?.mqlCount > 0 ? d.mqls.mqlCount : '—';
+    const campaignMqls = Object.entries(d.mqls?.byDate || {})
+      .filter(([date]) => date >= CAMP_START)
+      .reduce((sum, [, v]) => sum + v, 0);
+    if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
 
-    // ── CVR card (calculated from GA4 pages + MQL form fills) ──
+    // ── CVR card (calculated from GA4 pages + MQL form fills, May 29+) ──
     const cvrEl = document.getElementById('kpi-cvr');
     if (cvrEl) {
-      const lpViews   = d.pages?.totals?.agenticNetOps || 0;
-      const formFills = d.mqls?.formFills || 0;
+      const lpViews   = (d.pages?.daily || [])
+        .filter(row => String(row.date).replace(/-/g,'') >= '20260529')
+        .reduce((sum, row) => sum + (row.agenticNetOps || 0), 0);
+      const formFills = campaignMqls;
       const cvr       = lpViews > 0 ? (formFills / lpViews) * 100 : null;
       cvrEl.textContent = cvr != null ? cvr.toFixed(2) + '%' : '—';
       const card = cvrEl.closest('.kpi-card');
@@ -1638,6 +1644,7 @@ const fillsChartInstance = new Chart(document.getElementById('fillsChart'), {
     plugins: {
       legend: { display: false },
       tooltip: {
+        mode: 'index',
         callbacks: {
           footer: items => {
             const total = items.reduce((s, i) => s + i.parsed.y, 0);
