@@ -762,7 +762,7 @@ body {
           <div style="font-size:28px;font-weight:700;color:var(--nb-lavender);line-height:1;" id="okto-engagements">—</div>
         </div>
         <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Link Clicks</div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Clicks</div>
           <div style="font-size:28px;font-weight:700;color:var(--nb-blue);line-height:1;" id="okto-link-clicks">—</div>
         </div>
       </div>
@@ -1270,9 +1270,9 @@ body {
         <div class="kpi-target">Likes + comments + shares</div>
       </div>
       <div class="kpi-card blue">
-        <div class="kpi-label">Link Clicks</div>
+        <div class="kpi-label">Total Clicks</div>
         <div class="kpi-value" id="st-link-clicks">—</div>
-        <div class="kpi-target">Direct LP traffic from social</div>
+        <div class="kpi-target">All click types · all channels</div>
       </div>
     </div>
 
@@ -1733,7 +1733,7 @@ function renderOktopostSection(okto) {
 
   if (el('okto-impressions')) el('okto-impressions').textContent = fmt(t.impressions);
   if (el('okto-engagements')) el('okto-engagements').textContent = fmt(t.engagements);
-  if (el('okto-link-clicks')) el('okto-link-clicks').textContent = fmt(t.linkClicks);
+  if (el('okto-link-clicks')) el('okto-link-clicks').textContent = fmt(t.clicks);
   if (el('okto-likes'))       el('okto-likes').textContent       = fmt(t.likes);
   if (el('okto-comments'))    el('okto-comments').textContent    = fmt(t.comments);
   if (el('okto-shares'))      el('okto-shares').textContent      = fmt(t.shares);
@@ -1809,7 +1809,7 @@ function renderSocialTab(okto) {
   const tPct = toRatePct(t.engagementRate);
   if (el('st-impressions'))  el('st-impressions').textContent  = fmt(t.impressions);
   if (el('st-engagements'))  el('st-engagements').textContent  = fmt(t.engagements);
-  if (el('st-link-clicks'))  el('st-link-clicks').textContent  = fmt(t.linkClicks);
+  if (el('st-link-clicks'))  el('st-link-clicks').textContent  = fmt(t.clicks);
   if (el('st-eng-rate')) {
     el('st-eng-rate').textContent = tPct.toFixed(2) + '%';
     el('st-eng-rate').style.color = rateColor(tPct);
