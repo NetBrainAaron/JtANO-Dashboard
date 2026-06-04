@@ -698,5 +698,12 @@
         "clicks": 140
       }
     }
+  },
+  "social": {
+    "combined": {
+      "total": 0,
+      "byDate": []
+    },
+    "byType": {}
   }
 }
