@@ -1847,11 +1847,7 @@ function renderSocialTab(okto) {
     const chPct   = toRatePct(ch.engagementRate);
     const chColor = rateColor(chPct);
     const barW    = Math.min(chPct / 10 * 100, 100).toFixed(1);
-    const badge   = chPct >= 5
-      ? '<span class="badge b-grn">Boost eligible</span>'
-      : chPct > 0
-        ? '<span class="badge b-amb">Below threshold</span>'
-        : '<span class="badge b-info">Pending</span>';
+    const badge   = '';
 
     return `
     <div class="section-label">${meta.label}</div>
