@@ -1456,8 +1456,7 @@ async function loadKPIs() {
     // ── MQL card — campaign window only (May 29+) ──
     const CAMP_START = '2026-05-29';
     const mqlEl = document.getElementById('kpi-mqls');
-    const campaignMqls = ['jtano', 'gartner', 'requestDemo']
-      .flatMap(k => Object.entries(d.mqls?.[k]?.byDate || {}))
+    const campaignMqls = Object.entries(d.mqls?.byDate || {})
       .filter(([date]) => date >= CAMP_START)
       .reduce((sum, [, v]) => sum + (typeof v === 'number' ? v : 0), 0);
     if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
