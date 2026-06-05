@@ -1257,7 +1257,7 @@ body {
 
   <!-- CHANNEL SUMMARY KPIS (populated when oktopost data arrives) -->
   <div id="social-tab-summary" style="display:none;">
-    <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
+    <div class="kpi-grid" style="grid-template-columns:repeat(6,1fr);margin-bottom:20px;">
       <div class="kpi-card" style="border-left-color:var(--nb-purple);">
         <div class="kpi-label">Posts</div>
         <div class="kpi-value" id="st-posts">—</div>
@@ -1282,6 +1282,11 @@ body {
         <div class="kpi-label">Total Clicks</div>
         <div class="kpi-value" id="st-link-clicks">—</div>
         <div class="kpi-target">All click types · all channels</div>
+      </div>
+      <div class="kpi-card" style="border-left-color:#1E8B3A;">
+        <div class="kpi-label">Net New Followers</div>
+        <div class="kpi-value" id="st-followers">—</div>
+        <div class="kpi-target">All channels · campaign window</div>
       </div>
     </div>
 
@@ -1451,9 +1456,10 @@ async function loadKPIs() {
     // ── MQL card — campaign window only (May 29+) ──
     const CAMP_START = '2026-05-29';
     const mqlEl = document.getElementById('kpi-mqls');
-    const campaignMqls = Object.entries(d.mqls?.byDate || {})
+    const campaignMqls = ['jtano', 'gartner', 'requestDemo']
+      .flatMap(k => Object.entries(d.mqls?.[k]?.byDate || {}))
       .filter(([date]) => date >= CAMP_START)
-      .reduce((sum, [, v]) => sum + v, 0);
+      .reduce((sum, [, v]) => sum + (typeof v === 'number' ? v : 0), 0);
     if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
 
     // ── MQL lift: campaign avg (May 29+) vs pre-launch avg (May 22-28) ──
@@ -1582,7 +1588,7 @@ async function loadKPIs() {
       fillsChartInstance.update();
 
       const fillsSubtitle = document.getElementById('fills-card-subtitle');
-      const totalFills = d.mqls?.formFills || 0;
+      const totalFills = d.mqls?.mqlCount || 0;
       if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total · 3 forms`;
     }
 
@@ -1637,10 +1643,11 @@ async function loadKPIs() {
       renderMediaTab(d.social);
     }
 
-    // ── Oktopost (LinkedIn organic) ──
-    if (d.oktopost) {
-      renderOktopostSection(d.oktopost);
-      renderSocialTab(d.oktopost);
+    // ── Owned Social (Oktopost — all channels) ──
+    const ownedSocial = d.owned_social || d.oktopost || null;
+    if (ownedSocial) {
+      renderOktopostSection(ownedSocial);
+      renderSocialTab(ownedSocial);
     }
 
     // ── Branded Search (GSC) ──
@@ -1794,25 +1801,36 @@ const SOCIAL_NETWORK_META = {
     label: 'X (Twitter)',
     icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#000"/><path d="M17.75 4h-2.6l-3.2 4.4L8.6 4H4l5.8 7.9L4.2 20H6.8l3.5-4.8 3.5 4.8H18l-6-8.2L17.75 4z" fill="white"/></svg>`,
   },
+  instagram: {
+    label: 'Instagram',
+    icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><defs><linearGradient id="ig-grad" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F58529"/><stop offset="50%" stop-color="#DD2A7B"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-grad)"/><circle cx="12" cy="12" r="3.8" stroke="white" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/><rect x="4" y="4" width="16" height="16" rx="4" stroke="white" stroke-width="2" fill="none"/></svg>`,
+  },
 };
 
-function renderSocialTab(okto) {
+function renderSocialTab(data) {
   const emptyEl     = document.getElementById('social-tab-empty');
   const summaryEl   = document.getElementById('social-tab-summary');
   const containerEl = document.getElementById('social-channels-container');
-  if (!okto) return;
+  if (!data) return;
 
   if (emptyEl)   emptyEl.style.display   = 'none';
   if (summaryEl) summaryEl.style.display = '';
 
-  const t    = okto.totals   || {};
-  const chs  = okto.channels || {};
-  const fmt  = n => (n || 0).toLocaleString();
-  const el   = id => document.getElementById(id);
-
-  // Engagement rate (decimal from API)
+  const fmt        = n => (n || 0).toLocaleString();
+  const el         = id => document.getElementById(id);
   const toRatePct  = raw => { const r = parseFloat(raw) || 0; return r > 1 ? r : r * 100; };
   const rateColor  = pct => pct >= 5 ? '#1E8B3A' : pct > 0 ? 'var(--nb-tangerine)' : 'var(--nb-purple)';
+
+  // Normalize: handle multi-channel object OR legacy flat single-channel
+  let channels = {};
+  if (data.channels && Object.keys(data.channels).length > 0) {
+    channels = data.channels;
+  } else if (data.channel && data.totals) {
+    // Legacy flat format — wrap as single-channel
+    channels[data.channel] = Object.assign({}, data.totals);
+  }
+
+  const t = data.totals || {};
 
   // Summary KPI strip
   const tPct = toRatePct(t.engagementRate);
@@ -1825,36 +1843,90 @@ function renderSocialTab(okto) {
     el('st-eng-rate').style.color = rateColor(tPct);
   }
 
+  // Net new followers across all channels
+  let totalFollowerGrowth = 0;
+  let hasFollowerData = false;
+  Object.values(channels).forEach(ch => {
+    if (ch.followers && typeof ch.followers.growth === 'number') {
+      totalFollowerGrowth += ch.followers.growth;
+      hasFollowerData = true;
+    }
+  });
+  if (el('st-followers')) {
+    if (hasFollowerData) {
+      const sign = totalFollowerGrowth >= 0 ? '+' : '';
+      el('st-followers').textContent = sign + fmt(Math.abs(totalFollowerGrowth));
+      el('st-followers').style.color = totalFollowerGrowth >= 0 ? '#1E8B3A' : 'var(--nb-tangerine)';
+    } else {
+      el('st-followers').textContent = '—';
+    }
+  }
+
   // Date range label
-  if (okto.dateRange && el('social-tab-window')) {
+  if (data.dateRange && el('social-tab-window')) {
     const fmtD = s => new Date(s + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    el('social-tab-window').textContent = fmtD(okto.dateRange.start) + ' – ' + fmtD(okto.dateRange.end);
+    el('social-tab-window').textContent = fmtD(data.dateRange.start) + ' – ' + fmtD(data.dateRange.end);
   }
 
   // Last fetched
-  if (okto.fetchedAt && el('st-last-updated')) {
-    const ft = new Date(okto.fetchedAt);
+  if (data.fetchedAt && el('st-last-updated')) {
+    const ft = new Date(data.fetchedAt);
     el('st-last-updated').textContent = 'Data last refreshed: '
       + ft.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
       + ' at ' + ft.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
       + ' via Oktopost API';
   }
 
-  // Generate one card per channel
   if (!containerEl) return;
-  const channelKeys = Object.keys(chs);
+  const channelKeys = Object.keys(channels);
   if (channelKeys.length === 0) return;
 
   containerEl.innerHTML = channelKeys.map(key => {
-    const ch      = chs[key];
+    const ch      = channels[key];
     const meta    = SOCIAL_NETWORK_META[key.toLowerCase()] || { label: ch.network || key, icon: '' };
     const chPct   = toRatePct(ch.engagementRate);
     const chColor = rateColor(chPct);
     const barW    = Math.min(chPct / 10 * 100, 100).toFixed(1);
-    const badge   = '';
+
+    // Follower growth block
+    const fol = ch.followers || null;
+    let followerHtml = '';
+    if (fol && typeof fol.start === 'number' && typeof fol.end === 'number') {
+      const growth    = typeof fol.growth === 'number' ? fol.growth : fol.end - fol.start;
+      const growthPct = typeof fol.growthPct === 'number' ? fol.growthPct : (fol.start > 0 ? growth / fol.start : 0);
+      const gColor    = growth >= 0 ? '#1E8B3A' : 'var(--nb-tangerine)';
+      const sign      = growth >= 0 ? '+' : '';
+      followerHtml = `
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--nb-border);">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:10px;">Follower Growth &bull; Campaign Window (May 29 – Jun 3)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 14px;text-align:center;">
+              <div style="font-size:10px;color:var(--nb-muted);font-weight:600;margin-bottom:4px;">Followers at Start</div>
+              <div style="font-size:20px;font-weight:700;color:var(--nb-purple);">${fmt(fol.start)}</div>
+            </div>
+            <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 14px;text-align:center;">
+              <div style="font-size:10px;color:var(--nb-muted);font-weight:600;margin-bottom:4px;">Followers at End</div>
+              <div style="font-size:20px;font-weight:700;color:var(--nb-purple);">${fmt(fol.end)}</div>
+            </div>
+            <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 14px;text-align:center;">
+              <div style="font-size:10px;color:var(--nb-muted);font-weight:600;margin-bottom:4px;">Net New</div>
+              <div style="font-size:20px;font-weight:700;color:${gColor};">${sign}${fmt(Math.abs(growth))}</div>
+            </div>
+            <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 14px;text-align:center;">
+              <div style="font-size:10px;color:var(--nb-muted);font-weight:600;margin-bottom:4px;">Growth</div>
+              <div style="font-size:20px;font-weight:700;color:${gColor};">${sign}${(growthPct * 100).toFixed(2)}%</div>
+            </div>
+          </div>
+        </div>`;
+    } else {
+      followerHtml = `
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--nb-border);">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:6px;">Follower Growth &bull; Campaign Window</div>
+          <div style="font-size:12px;color:var(--nb-muted);font-style:italic;">Add a <code style="background:var(--nb-light-bg);padding:1px 5px;border-radius:3px;font-size:11px;">followers: { start, end, growth, growthPct }</code> object to each channel in the Pipedream normalize_data step to enable this section.</div>
+        </div>`;
+    }
 
     return `
-    <div class="section-label">${meta.label}</div>
     <div class="card" style="margin-bottom:20px;">
       <div class="card-head">
         <span style="display:flex;align-items:center;gap:8px;">${meta.icon}${meta.label}</span>
@@ -1868,7 +1940,6 @@ function renderSocialTab(okto) {
           <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
             <div class="kpi-label" style="margin-bottom:6px;">Engagement Rate</div>
             <div style="font-size:28px;font-weight:700;line-height:1;color:${chColor};">${chPct.toFixed(2)}%</div>
-            <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">${badge}</div>
           </div>
           <div style="background:var(--nb-light-bg);border-radius:8px;padding:14px 16px;text-align:center;">
             <div class="kpi-label" style="margin-bottom:6px;">Engagements</div>
@@ -1907,6 +1978,7 @@ function renderSocialTab(okto) {
           </div>
           <div style="display:flex;justify-content:flex-end;font-size:10px;color:var(--nb-muted);margin-top:3px;">Threshold: 5%</div>
         </div>
+        ${followerHtml}
       </div>
     </div>`;
   }).join('');
