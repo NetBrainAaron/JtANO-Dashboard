@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-06T13:44:47.640Z",
+  "updatedAt": "2026-06-06T17:44:47.987Z",
   "runDate": "2026-06-06",
-  "runHour": "13",
+  "runHour": "17",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -12,10 +12,11 @@
     "end": "2026-06-06"
   },
   "mqls": {
-    "mqlCount": 26,
-    "formFills": 26,
+    "mqlCount": 27,
+    "formFills": 27,
     "byDate": {
       "2026-06-02": 4,
+      "2026-06-06": 1,
       "2026-06-05": 2,
       "2026-06-03": 2,
       "2026-06-01": 3,
@@ -37,8 +38,9 @@
       }
     },
     "gartner": {
-      "formFills": 16,
+      "formFills": 17,
       "byDate": {
+        "2026-06-06": 1,
         "2026-06-05": 2,
         "2026-06-03": 1,
         "2026-06-02": 3,
@@ -108,7 +110,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-06T13:44:44.811Z"
+      "last_updated": "2026-06-06T17:44:45.269Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -116,7 +118,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-06T13:44:44.811Z"
+      "last_updated": "2026-06-06T17:44:45.269Z"
     }
   },
   "lounge_visits": {
@@ -132,7 +134,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-06T13:44:45.830Z",
+    "fetchedAt": "2026-06-06T17:44:46.493Z",
     "dataWindow": {
       "start": "2026-05-24",
       "end": "2026-06-06"
@@ -240,27 +242,27 @@
       },
       {
         "date": "20260605",
-        "homepage": 307,
-        "agenticNetOps": 62,
+        "homepage": 339,
+        "agenticNetOps": 70,
         "gartner": 10,
         "ciscoLive": 10,
-        "requestDemo": 9
+        "requestDemo": 11
       },
       {
         "date": "20260606",
-        "homepage": 57,
-        "agenticNetOps": 7,
+        "homepage": 86,
+        "agenticNetOps": 10,
         "gartner": 0,
         "ciscoLive": 0,
         "requestDemo": 2
       }
     ],
     "totals": {
-      "homepage": 3007,
-      "agenticNetOps": 1783,
+      "homepage": 3068,
+      "agenticNetOps": 1794,
       "gartner": 104,
       "ciscoLive": 148,
-      "requestDemo": 164
+      "requestDemo": 166
     }
   },
   "search": {
@@ -503,7 +505,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-06T13:44:47.538Z"
+    "fetchedAt": "2026-06-06T17:44:47.968Z"
   },
   "social": {
     "fetchedAt": "2026-06-06T12:00:35.590Z",
