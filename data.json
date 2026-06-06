@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-06T01:44:52.778Z",
+  "updatedAt": "2026-06-06T05:44:51.616Z",
   "runDate": "2026-06-06",
-  "runHour": "01",
+  "runHour": "05",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -82,8 +82,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0616,
-      "ctor": 0.0991,
+      "openRate": 0.0617,
+      "ctor": 0.099,
       "clickRate": 0.0061,
       "bounceRate": 0.0019
     },
@@ -108,7 +108,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-06T01:44:48.572Z"
+      "last_updated": "2026-06-06T05:44:49.089Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -116,7 +116,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-06T01:44:48.572Z"
+      "last_updated": "2026-06-06T05:44:49.089Z"
     }
   },
   "lounge_visits": {
@@ -132,7 +132,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-06T01:44:49.708Z",
+    "fetchedAt": "2026-06-06T05:44:49.973Z",
     "dataWindow": {
       "start": "2026-05-24",
       "end": "2026-06-06"
@@ -240,27 +240,27 @@
       },
       {
         "date": "20260605",
-        "homepage": 274,
-        "agenticNetOps": 60,
+        "homepage": 305,
+        "agenticNetOps": 62,
         "gartner": 10,
         "ciscoLive": 10,
         "requestDemo": 9
       },
       {
         "date": "20260606",
-        "homepage": 0,
+        "homepage": 3,
         "agenticNetOps": 0,
         "gartner": 0,
         "ciscoLive": 0,
-        "requestDemo": 0
+        "requestDemo": 1
       }
     ],
     "totals": {
-      "homepage": 2917,
-      "agenticNetOps": 1774,
+      "homepage": 2951,
+      "agenticNetOps": 1776,
       "gartner": 104,
       "ciscoLive": 148,
-      "requestDemo": 162
+      "requestDemo": 163
     }
   },
   "search": {
@@ -466,10 +466,10 @@
     },
     "totals": {
       "posts": 5,
-      "impressions": 8118,
-      "engagements": 1383,
-      "engagementRate": 0.1703621581670362,
-      "likes": 361,
+      "impressions": 8210,
+      "engagements": 1385,
+      "engagementRate": 0.1686967113276492,
+      "likes": 363,
       "comments": 4,
       "shares": 150,
       "clicks": 868,
@@ -479,17 +479,17 @@
       "linkedin": {
         "network": "LinkedIn",
         "posts": 5,
-        "impressions": 8118,
-        "engagements": 1383,
-        "engagementRate": 0.17036215816704,
-        "likes": 361,
+        "impressions": 8210,
+        "engagements": 1385,
+        "engagementRate": 0.16869671132765,
+        "likes": 363,
         "comments": 4,
         "shares": 150,
         "clicks": 868,
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-06T01:44:52.720Z"
+    "fetchedAt": "2026-06-06T05:44:51.570Z"
   },
   "social": {
     "fetchedAt": "2026-06-05T12:00:37.307Z",
