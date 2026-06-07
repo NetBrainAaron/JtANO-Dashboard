@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-06T21:44:50.526Z",
-  "runDate": "2026-06-06",
-  "runHour": "21",
+  "updatedAt": "2026-06-07T01:44:51.479Z",
+  "runDate": "2026-06-07",
+  "runHour": "01",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
-    "end": "2026-06-06"
+    "end": "2026-06-07"
   },
   "dataWindow": {
     "start": "2026-05-22",
-    "end": "2026-06-06"
+    "end": "2026-06-07"
   },
   "mqls": {
     "mqlCount": 27,
@@ -110,7 +110,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-06T21:44:47.209Z"
+      "last_updated": "2026-06-07T01:44:47.799Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -118,7 +118,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-06T21:44:47.209Z"
+      "last_updated": "2026-06-07T01:44:47.799Z"
     }
   },
   "lounge_visits": {
@@ -134,24 +134,16 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-06T21:44:48.264Z",
+    "fetchedAt": "2026-06-07T01:44:48.729Z",
     "dataWindow": {
-      "start": "2026-05-24",
-      "end": "2026-06-06"
+      "start": "2026-05-25",
+      "end": "2026-06-07"
     },
     "campaignWindow": {
       "start": "2026-05-29",
-      "end": "20260606"
+      "end": "20260607"
     },
     "daily": [
-      {
-        "date": "20260524",
-        "homepage": 134,
-        "agenticNetOps": 2,
-        "gartner": 12,
-        "ciscoLive": 0,
-        "requestDemo": 12
-      },
       {
         "date": "20260525",
         "homepage": 265,
@@ -250,16 +242,24 @@
       },
       {
         "date": "20260606",
-        "homepage": 125,
-        "agenticNetOps": 16,
+        "homepage": 163,
+        "agenticNetOps": 18,
         "gartner": 0,
         "ciscoLive": 0,
         "requestDemo": 5
+      },
+      {
+        "date": "20260607",
+        "homepage": 0,
+        "agenticNetOps": 0,
+        "gartner": 0,
+        "ciscoLive": 0,
+        "requestDemo": 0
       }
     ],
     "totals": {
-      "homepage": 3107,
-      "agenticNetOps": 1800,
+      "homepage": 3145,
+      "agenticNetOps": 1802,
       "gartner": 104,
       "ciscoLive": 148,
       "requestDemo": 169
@@ -268,7 +268,7 @@
   "search": {
     "dateRange": {
       "start": "2026-05-22",
-      "end": "2026-06-06"
+      "end": "2026-06-07"
     },
     "baseline": {
       "start": "2026-05-01",
@@ -359,19 +359,26 @@
           "clicks": 100,
           "ctr": 0.24271844660194175,
           "position": 2.2766990291262137
+        },
+        {
+          "date": "2026-06-03",
+          "impressions": 386,
+          "clicks": 145,
+          "ctr": 0.3756476683937824,
+          "position": 1.383419689119171
         }
       ],
       "totals": {
-        "impressions": 3217,
-        "clicks": 845
+        "impressions": 3603,
+        "clicks": 990
       },
       "baselineDailyAvg": {
         "impressions": 305.25,
         "clicks": 76.17857142857143
       },
       "liftIndex": {
-        "impressions": 87,
-        "clicks": 88
+        "impressions": 93,
+        "clicks": 105
       }
     },
     "agenticNetOps": {
@@ -459,10 +466,17 @@
           "clicks": 1,
           "ctr": 0.14285714285714285,
           "position": 4.714285714285714
+        },
+        {
+          "date": "2026-06-03",
+          "impressions": 9,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 12.444444444444445
         }
       ],
       "totals": {
-        "impressions": 56,
+        "impressions": 65,
         "clicks": 3
       },
       "baselineDailyAvg": {
@@ -470,8 +484,8 @@
         "clicks": 0.17857142857142858
       },
       "liftIndex": {
-        "impressions": 120,
-        "clicks": 336
+        "impressions": 146,
+        "clicks": 280
       }
     }
   },
@@ -505,7 +519,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-06T21:44:50.462Z"
+    "fetchedAt": "2026-06-07T01:44:51.454Z"
   },
   "social": {
     "fetchedAt": "2026-06-06T12:00:35.590Z",
