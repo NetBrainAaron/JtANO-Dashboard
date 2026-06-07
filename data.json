@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-07T05:44:51.416Z",
+  "updatedAt": "2026-06-07T09:44:55.092Z",
   "runDate": "2026-06-07",
-  "runHour": "05",
+  "runHour": "09",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -86,8 +86,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0617,
-      "ctor": 0.099,
+      "openRate": 0.0618,
+      "ctor": 0.0989,
       "clickRate": 0.0061,
       "bounceRate": 0.0019
     },
@@ -112,7 +112,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-07T05:44:48.538Z"
+      "last_updated": "2026-06-07T09:44:51.780Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -120,7 +120,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-07T05:44:48.538Z"
+      "last_updated": "2026-06-07T09:44:51.780Z"
     }
   },
   "lounge_visits": {
@@ -136,7 +136,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-07T05:44:49.394Z",
+    "fetchedAt": "2026-06-07T09:44:52.929Z",
     "dataWindow": {
       "start": "2026-05-25",
       "end": "2026-06-07"
@@ -244,27 +244,27 @@
       },
       {
         "date": "20260606",
-        "homepage": 188,
-        "agenticNetOps": 19,
+        "homepage": 189,
+        "agenticNetOps": 20,
         "gartner": 3,
         "ciscoLive": 0,
         "requestDemo": 5
       },
       {
         "date": "20260607",
-        "homepage": 6,
-        "agenticNetOps": 1,
+        "homepage": 51,
+        "agenticNetOps": 4,
         "gartner": 0,
         "ciscoLive": 0,
-        "requestDemo": 0
+        "requestDemo": 1
       }
     ],
     "totals": {
-      "homepage": 3176,
-      "agenticNetOps": 1804,
+      "homepage": 3222,
+      "agenticNetOps": 1808,
       "gartner": 107,
       "ciscoLive": 148,
-      "requestDemo": 169
+      "requestDemo": 170
     }
   },
   "search": {
@@ -498,30 +498,30 @@
     },
     "totals": {
       "posts": 5,
-      "impressions": 8495,
-      "engagements": 1410,
-      "engagementRate": 0.16597998822836962,
-      "likes": 366,
+      "impressions": 8621,
+      "engagements": 1417,
+      "engagementRate": 0.16436608282101844,
+      "likes": 369,
       "comments": 4,
       "shares": 150,
-      "clicks": 890,
+      "clicks": 894,
       "linkClicks": 0
     },
     "channels": {
       "linkedin": {
         "network": "LinkedIn",
         "posts": 5,
-        "impressions": 8495,
-        "engagements": 1410,
-        "engagementRate": 0.16597998822837,
-        "likes": 366,
+        "impressions": 8621,
+        "engagements": 1417,
+        "engagementRate": 0.16436608282102,
+        "likes": 369,
         "comments": 4,
         "shares": 150,
-        "clicks": 890,
+        "clicks": 894,
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-07T05:44:51.394Z"
+    "fetchedAt": "2026-06-07T09:44:55.070Z"
   },
   "social": {
     "fetchedAt": "2026-06-06T12:00:35.590Z",
