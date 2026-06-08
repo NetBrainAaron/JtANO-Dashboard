@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-08T05:44:51.287Z",
+  "updatedAt": "2026-06-08T09:44:53.577Z",
   "runDate": "2026-06-08",
-  "runHour": "05",
+  "runHour": "09",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -89,8 +89,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.062,
-      "ctor": 0.0985,
+      "openRate": 0.0621,
+      "ctor": 0.0984,
       "clickRate": 0.0061,
       "bounceRate": 0.0019
     },
@@ -115,7 +115,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-08T05:44:48.691Z"
+      "last_updated": "2026-06-08T09:44:50.328Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -123,7 +123,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-08T05:44:48.691Z"
+      "last_updated": "2026-06-08T09:44:50.328Z"
     }
   },
   "lounge_visits": {
@@ -139,7 +139,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-08T05:44:49.689Z",
+    "fetchedAt": "2026-06-08T09:44:51.365Z",
     "dataWindow": {
       "start": "2026-05-26",
       "end": "2026-06-08"
@@ -247,7 +247,7 @@
       },
       {
         "date": "20260607",
-        "homepage": 203,
+        "homepage": 206,
         "agenticNetOps": 23,
         "gartner": 2,
         "ciscoLive": 4,
@@ -255,19 +255,19 @@
       },
       {
         "date": "20260608",
-        "homepage": 5,
-        "agenticNetOps": 2,
+        "homepage": 62,
+        "agenticNetOps": 5,
         "gartner": 0,
         "ciscoLive": 0,
-        "requestDemo": 1
+        "requestDemo": 3
       }
     ],
     "totals": {
-      "homepage": 3396,
-      "agenticNetOps": 1833,
+      "homepage": 3456,
+      "agenticNetOps": 1836,
       "gartner": 109,
       "ciscoLive": 153,
-      "requestDemo": 196
+      "requestDemo": 198
     }
   },
   "search": {
@@ -385,19 +385,26 @@
           "clicks": 81,
           "ctr": 0.2903225806451613,
           "position": 1.7275985663082438
+        },
+        {
+          "date": "2026-06-06",
+          "impressions": 163,
+          "clicks": 32,
+          "ctr": 0.19631901840490798,
+          "position": 2.8650306748466257
         }
       ],
       "totals": {
-        "impressions": 4298,
-        "clicks": 1164
+        "impressions": 4461,
+        "clicks": 1196
       },
       "baselineDailyAvg": {
         "impressions": 305.25,
         "clicks": 76.17857142857143
       },
       "liftIndex": {
-        "impressions": 98,
-        "clicks": 107
+        "impressions": 93,
+        "clicks": 100
       }
     },
     "agenticNetOps": {
@@ -506,10 +513,17 @@
           "clicks": 0,
           "ctr": 0,
           "position": 1
+        },
+        {
+          "date": "2026-06-06",
+          "impressions": 3,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.333333333333333
         }
       ],
       "totals": {
-        "impressions": 74,
+        "impressions": 77,
         "clicks": 3
       },
       "baselineDailyAvg": {
@@ -517,8 +531,8 @@
         "clicks": 0.17857142857142858
       },
       "liftIndex": {
-        "impressions": 143,
-        "clicks": 210
+        "impressions": 137,
+        "clicks": 187
       }
     }
   },
@@ -529,30 +543,30 @@
     },
     "totals": {
       "posts": 5,
-      "impressions": 8664,
-      "engagements": 1422,
-      "engagementRate": 0.16412742382271467,
-      "likes": 369,
+      "impressions": 8733,
+      "engagements": 1430,
+      "engagementRate": 0.1637467078896141,
+      "likes": 371,
       "comments": 4,
       "shares": 150,
-      "clicks": 899,
+      "clicks": 905,
       "linkClicks": 0
     },
     "channels": {
       "linkedin": {
         "network": "LinkedIn",
         "posts": 5,
-        "impressions": 8664,
-        "engagements": 1422,
-        "engagementRate": 0.16412742382271,
-        "likes": 369,
+        "impressions": 8733,
+        "engagements": 1430,
+        "engagementRate": 0.16374670788961,
+        "likes": 371,
         "comments": 4,
         "shares": 150,
-        "clicks": 899,
+        "clicks": 905,
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-08T05:44:51.257Z"
+    "fetchedAt": "2026-06-08T09:44:53.555Z"
   },
   "social": {
     "fetchedAt": "2026-06-07T12:00:37.447Z",
