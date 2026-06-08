@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-07T21:44:54.485Z",
-  "runDate": "2026-06-07",
-  "runHour": "21",
+  "updatedAt": "2026-06-08T01:44:50.896Z",
+  "runDate": "2026-06-08",
+  "runHour": "01",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
-    "end": "2026-06-07"
+    "end": "2026-06-08"
   },
   "dataWindow": {
     "start": "2026-05-22",
-    "end": "2026-06-07"
+    "end": "2026-06-08"
   },
   "mqls": {
     "mqlCount": 28,
@@ -112,7 +112,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-07T21:44:51.500Z"
+      "last_updated": "2026-06-08T01:44:47.241Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -120,7 +120,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-07T21:44:51.500Z"
+      "last_updated": "2026-06-08T01:44:47.241Z"
     }
   },
   "lounge_visits": {
@@ -136,24 +136,16 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-07T21:44:52.548Z",
+    "fetchedAt": "2026-06-08T01:44:48.932Z",
     "dataWindow": {
-      "start": "2026-05-25",
-      "end": "2026-06-07"
+      "start": "2026-05-26",
+      "end": "2026-06-08"
     },
     "campaignWindow": {
       "start": "2026-05-29",
-      "end": "20260607"
+      "end": "20260608"
     },
     "daily": [
-      {
-        "date": "20260525",
-        "homepage": 265,
-        "agenticNetOps": 0,
-        "gartner": 10,
-        "ciscoLive": 0,
-        "requestDemo": 16
-      },
       {
         "date": "20260526",
         "homepage": 448,
@@ -252,25 +244,33 @@
       },
       {
         "date": "20260607",
-        "homepage": 151,
-        "agenticNetOps": 14,
+        "homepage": 178,
+        "agenticNetOps": 19,
         "gartner": 1,
         "ciscoLive": 3,
-        "requestDemo": 16
+        "requestDemo": 22
+      },
+      {
+        "date": "20260608",
+        "homepage": 0,
+        "agenticNetOps": 0,
+        "gartner": 0,
+        "ciscoLive": 0,
+        "requestDemo": 0
       }
     ],
     "totals": {
-      "homepage": 3339,
-      "agenticNetOps": 1822,
+      "homepage": 3366,
+      "agenticNetOps": 1827,
       "gartner": 108,
       "ciscoLive": 152,
-      "requestDemo": 186
+      "requestDemo": 192
     }
   },
   "search": {
     "dateRange": {
       "start": "2026-05-22",
-      "end": "2026-06-07"
+      "end": "2026-06-08"
     },
     "baseline": {
       "start": "2026-05-01",
@@ -375,18 +375,25 @@
           "clicks": 93,
           "ctr": 0.22355769230769232,
           "position": 7.778846153846154
+        },
+        {
+          "date": "2026-06-05",
+          "impressions": 279,
+          "clicks": 81,
+          "ctr": 0.2903225806451613,
+          "position": 1.7275985663082438
         }
       ],
       "totals": {
-        "impressions": 4019,
-        "clicks": 1083
+        "impressions": 4298,
+        "clicks": 1164
       },
       "baselineDailyAvg": {
         "impressions": 305.25,
         "clicks": 76.17857142857143
       },
       "liftIndex": {
-        "impressions": 99,
+        "impressions": 98,
         "clicks": 107
       }
     },
@@ -489,10 +496,17 @@
           "clicks": 0,
           "ctr": 0,
           "position": 15.875
+        },
+        {
+          "date": "2026-06-05",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
         }
       ],
       "totals": {
-        "impressions": 73,
+        "impressions": 74,
         "clicks": 3
       },
       "baselineDailyAvg": {
@@ -500,8 +514,8 @@
         "clicks": 0.17857142857142858
       },
       "liftIndex": {
-        "impressions": 159,
-        "clicks": 240
+        "impressions": 143,
+        "clicks": 210
       }
     }
   },
@@ -535,7 +549,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-07T21:44:54.452Z"
+    "fetchedAt": "2026-06-08T01:44:50.872Z"
   },
   "social": {
     "fetchedAt": "2026-06-07T12:00:37.447Z",
