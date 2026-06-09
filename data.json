@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-09T01:44:48.878Z",
+  "updatedAt": "2026-06-09T05:44:51.253Z",
   "runDate": "2026-06-09",
-  "runHour": "01",
+  "runHour": "05",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -116,7 +116,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-09T01:44:46.237Z"
+      "last_updated": "2026-06-09T05:44:48.649Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -124,7 +124,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-09T01:44:46.237Z"
+      "last_updated": "2026-06-09T05:44:48.649Z"
     }
   },
   "lounge_visits": {
@@ -140,7 +140,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-09T01:44:47.304Z",
+    "fetchedAt": "2026-06-09T05:44:49.569Z",
     "dataWindow": {
       "start": "2026-05-27",
       "end": "2026-06-09"
@@ -248,27 +248,27 @@
       },
       {
         "date": "20260608",
-        "homepage": 354,
-        "agenticNetOps": 49,
+        "homepage": 409,
+        "agenticNetOps": 131,
         "gartner": 5,
         "ciscoLive": 8,
-        "requestDemo": 12
+        "requestDemo": 15
       },
       {
         "date": "20260609",
-        "homepage": 0,
-        "agenticNetOps": 0,
+        "homepage": 18,
+        "agenticNetOps": 16,
         "gartner": 0,
         "ciscoLive": 0,
         "requestDemo": 0
       }
     ],
     "totals": {
-      "homepage": 3764,
-      "agenticNetOps": 1883,
+      "homepage": 3837,
+      "agenticNetOps": 1981,
       "gartner": 114,
       "ciscoLive": 162,
-      "requestDemo": 207
+      "requestDemo": 210
     }
   },
   "search": {
@@ -393,19 +393,26 @@
           "clicks": 32,
           "ctr": 0.19631901840490798,
           "position": 2.8650306748466257
+        },
+        {
+          "date": "2026-06-07",
+          "impressions": 213,
+          "clicks": 32,
+          "ctr": 0.15023474178403756,
+          "position": 3.924882629107981
         }
       ],
       "totals": {
-        "impressions": 4461,
-        "clicks": 1196
+        "impressions": 4674,
+        "clicks": 1228
       },
       "baselineDailyAvg": {
         "impressions": 305.25,
         "clicks": 76.17857142857143
       },
       "liftIndex": {
-        "impressions": 93,
-        "clicks": 100
+        "impressions": 91,
+        "clicks": 94
       }
     },
     "agenticNetOps": {
@@ -521,10 +528,17 @@
           "clicks": 0,
           "ctr": 0,
           "position": 5.333333333333333
+        },
+        {
+          "date": "2026-06-07",
+          "impressions": 4,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.75
         }
       ],
       "totals": {
-        "impressions": 77,
+        "impressions": 81,
         "clicks": 3
       },
       "baselineDailyAvg": {
@@ -532,8 +546,8 @@
         "clicks": 0.17857142857142858
       },
       "liftIndex": {
-        "impressions": 137,
-        "clicks": 187
+        "impressions": 135,
+        "clicks": 168
       }
     }
   },
@@ -544,30 +558,30 @@
     },
     "totals": {
       "posts": 5,
-      "impressions": 8757,
-      "engagements": 1431,
-      "engagementRate": 0.16341212744090441,
+      "impressions": 8844,
+      "engagements": 1435,
+      "engagementRate": 0.1622568973315242,
       "likes": 372,
       "comments": 4,
-      "shares": 150,
-      "clicks": 905,
+      "shares": 151,
+      "clicks": 908,
       "linkClicks": 0
     },
     "channels": {
       "linkedin": {
         "network": "LinkedIn",
         "posts": 5,
-        "impressions": 8757,
-        "engagements": 1431,
-        "engagementRate": 0.1634121274409,
+        "impressions": 8844,
+        "engagements": 1435,
+        "engagementRate": 0.16225689733152,
         "likes": 372,
         "comments": 4,
-        "shares": 150,
-        "clicks": 905,
+        "shares": 151,
+        "clicks": 908,
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-09T01:44:48.838Z"
+    "fetchedAt": "2026-06-09T05:44:51.229Z"
   },
   "social": {
     "fetchedAt": "2026-06-08T12:01:02.581Z",
