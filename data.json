@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-10T17:44:48.616Z",
+  "updatedAt": "2026-06-10T21:44:49.849Z",
   "runDate": "2026-06-10",
-  "runHour": "17",
+  "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -12,12 +12,12 @@
     "end": "2026-06-10"
   },
   "mqls": {
-    "mqlCount": 39,
-    "formFills": 39,
+    "mqlCount": 41,
+    "formFills": 41,
     "byDate": {
+      "2026-06-10": 7,
       "2026-06-08": 4,
       "2026-06-02": 4,
-      "2026-06-10": 5,
       "2026-06-07": 1,
       "2026-06-06": 1,
       "2026-06-05": 2,
@@ -36,16 +36,17 @@
       "start": "2026-05-22"
     },
     "jtano": {
-      "formFills": 2,
+      "formFills": 3,
       "byDate": {
+        "2026-06-10": 1,
         "2026-06-08": 1,
         "2026-06-02": 1
       }
     },
     "gartner": {
-      "formFills": 22,
+      "formFills": 23,
       "byDate": {
-        "2026-06-10": 3,
+        "2026-06-10": 4,
         "2026-06-08": 1,
         "2026-06-07": 1,
         "2026-06-06": 1,
@@ -95,8 +96,8 @@
       "state": "PUBLISHED",
       "sent": 14960,
       "delivered": 14893,
-      "openRate": 0.0627,
-      "ctor": 0.1017,
+      "openRate": 0.0628,
+      "ctor": 0.1016,
       "clickRate": 0.0064,
       "bounceRate": 0.0019
     },
@@ -121,7 +122,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-10T17:44:46.138Z"
+      "last_updated": "2026-06-10T21:44:47.292Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -129,7 +130,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-10T17:44:46.138Z"
+      "last_updated": "2026-06-10T21:44:47.292Z"
     }
   },
   "lounge_visits": {
@@ -145,7 +146,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-10T17:44:47.160Z",
+    "fetchedAt": "2026-06-10T21:44:48.275Z",
     "dataWindow": {
       "start": "2026-05-28",
       "end": "2026-06-10"
@@ -261,18 +262,18 @@
       },
       {
         "date": "20260610",
-        "homepage": 272,
-        "agenticNetOps": 85,
-        "gartner": 17,
-        "ciscoLive": 6,
+        "homepage": 344,
+        "agenticNetOps": 112,
+        "gartner": 19,
+        "ciscoLive": 8,
         "requestDemo": 14
       }
     ],
     "totals": {
-      "homepage": 4773,
-      "agenticNetOps": 2587,
-      "gartner": 144,
-      "ciscoLive": 179,
+      "homepage": 4845,
+      "agenticNetOps": 2614,
+      "gartner": 146,
+      "ciscoLive": 181,
       "requestDemo": 251
     }
   },
@@ -600,7 +601,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-10T17:44:48.587Z"
+    "fetchedAt": "2026-06-10T21:44:49.825Z"
   },
   "social": {
     "fetchedAt": "2026-06-10T12:00:44.135Z",
