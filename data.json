@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-06-11T13:44:49.890Z",
+  "updatedAt": "2026-06-11T17:44:49.030Z",
   "runDate": "2026-06-11",
-  "runHour": "13",
+  "runHour": "17",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -83,8 +83,8 @@
       "state": "PUBLISHED",
       "sent": 10578,
       "delivered": 10347,
-      "openRate": 0.0648,
-      "ctor": 0.1028,
+      "openRate": 0.0649,
+      "ctor": 0.1027,
       "clickRate": 0.0067,
       "bounceRate": 0.021
     },
@@ -97,7 +97,7 @@
       "sent": 14960,
       "delivered": 14893,
       "openRate": 0.0628,
-      "ctor": 0.1016,
+      "ctor": 0.1015,
       "clickRate": 0.0064,
       "bounceRate": 0.0019
     },
@@ -122,7 +122,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3862,
-      "last_updated": "2026-06-11T13:44:47.154Z"
+      "last_updated": "2026-06-11T17:44:46.448Z"
     },
     "zero_outage_lounge": {
       "registered": 59,
@@ -130,7 +130,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4746,
-      "last_updated": "2026-06-11T13:44:47.154Z"
+      "last_updated": "2026-06-11T17:44:46.448Z"
     }
   },
   "lounge_visits": {
@@ -146,7 +146,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-06-11T13:44:48.377Z",
+    "fetchedAt": "2026-06-11T17:44:47.468Z",
     "dataWindow": {
       "start": "2026-05-29",
       "end": "2026-06-11"
@@ -262,19 +262,19 @@
       },
       {
         "date": "20260611",
-        "homepage": 100,
-        "agenticNetOps": 23,
-        "gartner": 1,
+        "homepage": 190,
+        "agenticNetOps": 44,
+        "gartner": 2,
         "ciscoLive": 0,
-        "requestDemo": 6
+        "requestDemo": 14
       }
     ],
     "totals": {
-      "homepage": 5035,
-      "agenticNetOps": 2668,
-      "gartner": 151,
+      "homepage": 5125,
+      "agenticNetOps": 2689,
+      "gartner": 152,
       "ciscoLive": 181,
-      "requestDemo": 265
+      "requestDemo": 273
     }
   },
   "search": {
@@ -615,7 +615,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-06-11T13:44:49.856Z"
+    "fetchedAt": "2026-06-11T17:44:49.008Z"
   },
   "social": {
     "fetchedAt": "2026-06-11T12:00:32.617Z",
