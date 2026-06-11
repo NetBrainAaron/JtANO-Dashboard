@@ -604,39 +604,62 @@
     "fetchedAt": "2026-06-11T09:44:49.681Z"
   },
   "social": {
-    "fetchedAt": "2026-06-10T12:00:44.135Z",
+    "fetchedAt": "2026-06-11T12:00:32.617Z",
     "combined": {
-      "total": 515,
+      "total": 543,
       "byDate": {
-        "2026-06-08": 2,
+        "2026-05-29": 250,
         "2026-06-02": 14,
         "2026-05-30": 30,
-        "2026-06-03": 11,
-        "2026-05-29": 250,
+        "2026-06-07": 40,
         "2026-06-04": 6,
-        "2026-06-09": 13,
+        "2026-06-05": 12,
+        "2026-06-03": 11,
+        "2026-05-31": 1,
         "2026-05-28": 4,
-        "2026-05-23": 1,
+        "2026-06-06": 4,
+        "2026-06-09": 13,
+        "2026-06-11": 20,
+        "2026-05-24": 2,
+        "2026-06-08": 2,
+        "2026-06-01": 97,
+        "2026-06-10": 28,
         "2026-05-26": 4,
         "2026-05-22": 4,
-        "2026-06-01": 97,
-        "2026-05-24": 2,
-        "2026-06-07": 40,
-        "2026-06-05": 12,
-        "2026-05-31": 1,
-        "2026-06-06": 4,
-        "2026-06-10": 20
+        "2026-05-23": 1
       }
     },
     "articles": [
       {
-        "id": "yt-jngwyeSRxRM",
-        "title": "Top 10 Countries with the Lowest Brain Drain (Highest Net Brain Gain) 🌍 2026",
-        "url": "https://www.youtube.com/watch?v=jngwyeSRxRM",
-        "source": "youtube",
-        "publishDate": "2026-06-08T05:46:58.000Z",
-        "reach": null,
-        "sentiment": null,
+        "id": "1780083003000__aRQrvcgPzuTw06SyKy9yo_4zcMA",
+        "source": "twitter",
+        "publishDate": "2026-05-29T19:30:03.000Z",
+        "reach": 8008,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780066770000_r8sx0PbLzW20NyIatS3lZyx-EjoA",
+        "source": "twitter",
+        "publishDate": "2026-05-29T14:59:30.000Z",
+        "reach": 406,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780072206000_qLSED0x6Ic6IcKAti2fnREJowfUA",
+        "source": "twitter",
+        "publishDate": "2026-05-29T16:30:06.000Z",
+        "reach": 1126,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780060501000_2HKPrh7d5YkQOcZF952XV4vy6-sA",
+        "source": "twitter",
+        "publishDate": "2026-05-29T13:15:01.000Z",
+        "reach": 8008,
+        "sentiment": "positive",
         "_type": "meltwater"
       },
       {
@@ -690,16 +713,6 @@
         "_type": "meltwater"
       },
       {
-        "id": "fyndDNmFqp518VwRzXERnsyaegU",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://khaleejdailies.blogspot.com/2026/06/netbrain.html",
-        "source": "Khaleej Dailies",
-        "publishDate": "2026-06-02T07:31:02.308Z",
-        "reach": null,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
         "id": "ulyI8lslGmrST_BynpsZwKkqTq8",
         "title": "NB577: Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
         "url": "https://packetpushers.net/podcasts/network-break/nb577-cisco-brings-sonic-to-n9000-switches-broadcom-debuts-wi-fi-8-socs-for-consumer-routers/",
@@ -707,6 +720,16 @@
         "publishDate": "2026-06-02T01:04:42.091Z",
         "reach": 27666,
         "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "fyndDNmFqp518VwRzXERnsyaegU",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://khaleejdailies.blogspot.com/2026/06/netbrain.html",
+        "source": "Khaleej Dailies",
+        "publishDate": "2026-06-02T07:31:02.308Z",
+        "reach": null,
+        "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
@@ -737,64 +760,6 @@
         "publishDate": "2026-06-02T19:59:59.000Z",
         "reach": null,
         "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780137008000_SNcytQaOxD3JPeKqLSmx1Meq3NIA",
-        "source": "twitter",
-        "publishDate": "2026-05-30T10:30:08.000Z",
-        "reach": 1126,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "fuKNFBr8isUsr4jUS-OkkbFhV9I",
-        "title": "Netbrain Introduces AI Path Doctor and More New Capabilities",
-        "url": "https://www.apmdigest.com/netbrain-introduces-ai-path-doctor-and-more-new-capabilities",
-        "source": "APMdigest",
-        "publishDate": "2026-06-03T00:35:54.108Z",
-        "reach": 5993,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "ZoKGstznhBXf5HKHPtFhbMmiL9w",
-        "title": "Cisco: AI driving a 'network supercycle'",
-        "url": "https://www.lightreading.com/ai-machine-learning/cisco-ai-driving-a-network-supercycle-",
-        "source": "Light Reading",
-        "publishDate": "2026-06-03T15:58:36.212Z",
-        "reach": 149187,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "q4RgcSlqHUkYwEGGLcpq-j4tsbc",
-        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
-        "url": "https://www.newsbreak.com/news/4687350775651-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
-        "source": "NewsBreak",
-        "publishDate": "2026-06-03T01:42:08.000Z",
-        "reach": 13350906,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "eMztqPM0FWbJM1PGw1rC-dGZWDA",
-        "title": "Cisco: AI Driving a 'Network Supercycle'",
-        "url": "https://www.pulse.bot/ai/news/cisco-ai-driving-a-network-supercycle-37387baf-9865-45c1-a91c-a332ae539a41/",
-        "source": "Pulse ",
-        "publishDate": "2026-06-03T13:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "qW8h7EZ-yBqcQWYHPYIuzMJwmNM",
-        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
-        "url": "https://www.thefastmode.com/technology-solutions/48800-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
-        "source": "The Fast Mode",
-        "publishDate": "2026-06-03T01:42:08.000Z",
-        "reach": 33737,
-        "sentiment": "positive",
         "_type": "meltwater"
       },
       {
@@ -1078,297 +1043,12 @@
         "_type": "meltwater"
       },
       {
-        "id": "1780083003000__aRQrvcgPzuTw06SyKy9yo_4zcMA",
-        "source": "twitter",
-        "publishDate": "2026-05-29T19:30:03.000Z",
-        "reach": 8008,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780066770000_r8sx0PbLzW20NyIatS3lZyx-EjoA",
-        "source": "twitter",
-        "publishDate": "2026-05-29T14:59:30.000Z",
-        "reach": 406,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780072206000_qLSED0x6Ic6IcKAti2fnREJowfUA",
-        "source": "twitter",
-        "publishDate": "2026-05-29T16:30:06.000Z",
-        "reach": 1126,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780060501000_2HKPrh7d5YkQOcZF952XV4vy6-sA",
-        "source": "twitter",
-        "publishDate": "2026-05-29T13:15:01.000Z",
-        "reach": 8008,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780587023000_wcKSSpGzcRJHnNIOrNK0YMIm3R4A",
-        "source": "twitter",
-        "publishDate": "2026-06-04T15:30:23.000Z",
-        "reach": 8004,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1781000100000_-hwezDet-aw-WKD6qvl4E2eBT1UA",
-        "url": "https://www.reddit.com/r/NoCommute/comments/1u10w6k/remote_jobs_with_listed_salary_09062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-09T10:15:14.159Z",
-        "reach": 2207,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1781019360000_UO8WPZiqaIQ77qxrtdm92Ki_JMs",
-        "title": "ACTIVEPORT GROUP LTD (ASX:ATV) - Activeport 2026 - Breakout Year, 84245800, page-49 - HotCopper | ASX Share Prices, Stock Market & Share Trading Forum",
-        "url": "https://hotcopper.com.au/threads/activeport-2026-breakout-year.8991455/?post_id=84245800",
-        "source": "social_message_boards",
-        "publishDate": "2026-06-09T15:36:00.000Z",
-        "reach": 563257,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "yt-wB1vjGqlDxE",
-        "title": "How To Stop Blocking Your Abundance Energy 💰✨ | Day 2 Manifestation Challenge #shorts",
-        "url": "https://www.youtube.com/watch?v=wB1vjGqlDxE",
-        "source": "youtube",
-        "publishDate": "2026-05-28T18:45:03.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779540360000_zy9kwBPKRwa-liwbW2SR6kxMMz0A",
-        "url": "https://www.reddit.com/r/AskTheWorld/comments/1tldxqw/comment/onf5dc7/",
-        "source": "reddit",
-        "publishDate": "2026-05-23T12:46:30.504Z",
-        "reach": 483177,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779831420000_CRpoUTek061aCLLFcgDj8RFXIRsA",
-        "url": "https://www.reddit.com/r/lietuva/comments/1togoaz/comment/oo1wrbp/",
-        "source": "reddit",
-        "publishDate": "2026-05-26T21:37:41.305Z",
-        "reach": 63575,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779832560000_YYrddQot48r-0Xx-mQIaK7t83RIA",
-        "url": "https://www.reddit.com/r/networking/comments/1tolggm/comment/oo20pt6/",
-        "source": "reddit",
-        "publishDate": "2026-05-26T21:56:58.144Z",
-        "reach": 436127,
-        "sentiment": "negative",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779834960000_XVEOHnrfSpu_V3OGfQSrQ3RKB4wA",
-        "url": "https://www.reddit.com/r/networking/comments/1tolggm/comment/oo288wa/",
-        "source": "reddit",
-        "publishDate": "2026-05-26T22:36:19.593Z",
-        "reach": 436135,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "9Lk3-ATwXI52agpwtGjOqSo877c",
-        "title": "Brain‑Side Asymmetry in Anxiety and Depression Offers New Target for Meditation‑Based Prevention",
-        "url": "https://www.pulse.bot/meditation/news/brainside-asymmetry-in-anxiety-and-depression-offers-new-target-for-meditationbased-prevention-c265fae6-6a3e-461d-a5fa-0155468df400/",
-        "source": "Pulse ",
-        "publishDate": "2026-05-22T00:38:55.000Z",
-        "reach": null,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780329202000_kgcNcn5YGTirfzATETnATIgmtKUA",
-        "source": "twitter",
-        "publishDate": "2026-06-01T15:53:22.000Z",
-        "reach": 44449,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780351497000_YW9MtwBcCspJn9odn1lf8fvtVRwA",
-        "source": "twitter",
-        "publishDate": "2026-06-01T22:04:57.000Z",
-        "reach": 31,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "bGQIIpoinAAR9y_dd2kmGqK0z3k",
-        "title": "Campus Israel Launched as Alternative for Jewish Students Facing Antisemitism",
-        "url": "https://themedialine.org/by-region/campus-israel-launched-as-alternative-for-jewish-students-facing-antisemitism/",
-        "source": "The Media Line",
-        "publishDate": "2026-05-28T19:18:44.000Z",
-        "reach": 153816,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "yQ2lS9cYsl-DAIlIrVeg96RfFHI",
-        "title": "Rockefeller Lab Pinpoints Ventral Premotor Cortex as Hub for Abstract Thought",
-        "url": "https://www.pulse.bot/human-potential/news/rockefeller-lab-pinpoints-ventral-premotor-cortex-as-hub-for-abstract-thought-e7f3eeba-0114-41b3-b83a-2c7a428dee7b/",
-        "source": "Pulse ",
-        "publishDate": "2026-05-24T10:45:11.000Z",
-        "reach": null,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780841280000_7J27QZe2xGuQwKAaIk8INYB0hsoA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzd4v0/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:08:40.927Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780841700000_PpYsnfPV56WocbDQYBVgNkIFj9IA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdbf6/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:15:59.566Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780840800000_YywbyFkl34_d5-zIKaFJGosV-ToA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzcxxy/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:00:59.627Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780841700000_tQrmmkXGwfuJkUJ2-T104KEvIpQA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdb8z/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:15:47.641Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780842600000_zr7v6U_Tb25RjBB9yw__1ZBG3IkA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdp0p/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:30:59.574Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780843500000_x-n6GU-0lxomazESg_VG61dnSvUA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tze2dk/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T14:45:59.564Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780844400000_N86vtNUCMToKPUV8Ur4Jn8HKhmcA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzeg0n/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T15:00:59.603Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780839900000_IyXv9s2f71igT3XJFkZz_foopcQA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzcl1q/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T13:45:59.644Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780848000000_K198M0Vm_NJxMErhaU_P3-yj4nsA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzfzpl/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T16:00:59.567Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780848000000_zNwY5-ZDG4j9MHyPVDwfhcynplYA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzfzhg/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T16:00:47.957Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780846200000_ZBZotYU-JvqxbZZ1-ETYHXpvOYYA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzf7u8/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T15:30:59.570Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780845300000_HrGlCoGHFAfMP_Feu3d3DJZCUxIA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzettv/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T15:15:47.651Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780846200000_nPhEuZY05rqxJxMWq17GVX-1OnAA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzf7nu/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T15:30:47.626Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780848900000_VlslKYcjMHQJ47j-y-mHIs0JvOAA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzgdwg/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T16:15:47.622Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780848900000_Cd-JGVuKqGfLBCurDs80qJt-zYEA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzge46/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T16:15:59.618Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780849800000_MKuO4R509m7d17Tk6FBqg_eHMNcA",
-        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzgsfd/remote_jobs_with_listed_salary_06062026_usa/",
-        "source": "reddit",
-        "publishDate": "2026-06-07T16:30:59.559Z",
-        "reach": 2,
+        "id": "qJyNHX8O1pVlgD5hcNt5aQbRbto",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
+        "source": "social_blogs",
+        "publishDate": "2026-05-30T02:02:58.000Z",
+        "reach": 421,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -1409,10 +1089,154 @@
         "_type": "meltwater"
       },
       {
+        "id": "1780841280000_7J27QZe2xGuQwKAaIk8INYB0hsoA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzd4v0/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:08:40.927Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780840800000_YywbyFkl34_d5-zIKaFJGosV-ToA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzcxxy/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:00:59.627Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780839900000_IyXv9s2f71igT3XJFkZz_foopcQA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzcl1q/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T13:45:59.644Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780846200000_ZBZotYU-JvqxbZZ1-ETYHXpvOYYA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzf7u8/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T15:30:59.570Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780845300000_HrGlCoGHFAfMP_Feu3d3DJZCUxIA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzettv/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T15:15:47.651Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780844400000_N86vtNUCMToKPUV8Ur4Jn8HKhmcA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzeg0n/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T15:00:59.603Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780846200000_nPhEuZY05rqxJxMWq17GVX-1OnAA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzf7nu/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T15:30:47.626Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780843500000_x-n6GU-0lxomazESg_VG61dnSvUA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tze2dk/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:45:59.564Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780841700000_tQrmmkXGwfuJkUJ2-T104KEvIpQA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdb8z/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:15:47.641Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780841700000_PpYsnfPV56WocbDQYBVgNkIFj9IA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdbf6/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:15:59.566Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780842600000_zr7v6U_Tb25RjBB9yw__1ZBG3IkA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzdp0p/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T14:30:59.574Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780848000000_K198M0Vm_NJxMErhaU_P3-yj4nsA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzfzpl/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T16:00:59.567Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780848000000_zNwY5-ZDG4j9MHyPVDwfhcynplYA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzfzhg/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T16:00:47.957Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
         "id": "1780863300000_FiuE-MA5rOHNKxLKE-7fWe7x5bcA",
         "url": "https://www.reddit.com/r/u_miralyon/comments/1tzmrqr/remote_jobs_with_listed_salary_06062026_usa/",
         "source": "reddit",
         "publishDate": "2026-06-07T20:15:32.585Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780849800000_MKuO4R509m7d17Tk6FBqg_eHMNcA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzgsfd/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T16:30:59.559Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780848900000_VlslKYcjMHQJ47j-y-mHIs0JvOAA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzgdwg/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T16:15:47.622Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780848900000_Cd-JGVuKqGfLBCurDs80qJt-zYEA",
+        "url": "https://www.reddit.com/r/u_miralyon/comments/1tzge46/remote_jobs_with_listed_salary_06062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-07T16:15:59.618Z",
         "reach": 2,
         "sentiment": "neutral",
         "_type": "meltwater"
@@ -1580,158 +1404,53 @@
         "_type": "meltwater"
       },
       {
-        "id": "1779477281000_b_xsIg_M6LD_fUQDIdtCSYuu8OMA",
-        "source": "twitter",
-        "publishDate": "2026-05-22T19:14:41.000Z",
-        "reach": 467,
-        "sentiment": "negative",
+        "id": "-bAw6-Ue32GZF6IunT-ruaNOAKg",
+        "title": "Agent Builder: IA e Governança no Cisco Cloud Control",
+        "url": "https://metodoviral.com/noticias/agent-builder-ia-e-governanca-no-cisco-cloud-control/",
+        "source": "Método Viral",
+        "publishDate": "2026-06-04T04:50:45.000Z",
+        "reach": 7508,
+        "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1779411725000_8h82XHbAdvvjW4IvUf2YeZ6rZDsA",
-        "source": "twitter",
-        "publishDate": "2026-05-22T01:02:05.000Z",
+        "id": "kLdMgafG9LO8ySPle0t33FcL8-8",
+        "title": "Blackstone Acquisitions: How the Alternative Investment Giant Builds Global Platforms",
+        "url": "https://www.nyongesasande.com/blackstone-acquisitions-full-ma-timeline/",
+        "source": "Nyongesa Sande",
+        "publishDate": "2026-06-04T13:25:56.000Z",
+        "reach": 9658,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "MeKBX-dpIcQFZlIgb5daq_qbJV0",
+        "title": "Creador de agentes: IA y gobernanza en el control de la nube de Cisco",
+        "url": "https://metodoviral.com/es/noticias/creador-de-agentes-ia-y-gobernanza-en-el-control-de-la-nube-de-cisco/",
+        "source": "Método Viral",
+        "publishDate": "2026-06-04T04:53:35.000Z",
+        "reach": 7508,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "j-TZiDs2t-UhLcH2AHniCg0CvCA",
+        "title": "Study Finds Habits Can Form in Just Three Trials, Upending Classic Theory",
+        "url": "https://www.pulse.bot/motivation/news/study-finds-habits-can-form-in-just-three-trials-upending-classic-theory-3f717494-3c1e-49bd-ab1a-11c1dbb7e058/",
+        "source": "Pulse ",
+        "publishDate": "2026-06-04T13:20:30.000Z",
         "reach": null,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1779477195000_aHyQhn6dhSi057qlXc8zmcxXaWMA",
-        "source": "twitter",
-        "publishDate": "2026-05-22T19:13:15.000Z",
-        "reach": 1248,
-        "sentiment": "negative",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779643380000_SsVPXuKf5XJ4V3MunJRNOagZYyEA",
-        "url": "https://www.reddit.com/r/askSouthAfrica/comments/1tlwtlt/comment/onmyi5t/",
-        "source": "reddit",
-        "publishDate": "2026-05-24T17:23:38.875Z",
-        "reach": 82640,
-        "sentiment": "negative",
-        "_type": "meltwater"
-      },
-      {
-        "id": "yt-xU2H3O1aqq8",
-        "title": "Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
-        "url": "https://www.youtube.com/watch?v=xU2H3O1aqq8",
-        "source": "youtube",
-        "publishDate": "2026-06-01T17:36:54.000Z",
+        "id": "8zGiNFMW7w33Xj80iSBa3PYJi20",
+        "title": "Georgetown Study Shows Brain Rewires to Bypass Prefrontal Bottleneck, Automating Complex Skills",
+        "url": "https://www.pulse.bot/human-potential/news/georgetown-study-shows-brain-rewires-to-bypass-prefrontal-bottleneck-automating-complex-skills-13546d5a-b547-4905-b4ed-b834c3ed07e2/",
+        "source": "Pulse ",
+        "publishDate": "2026-06-04T10:51:20.000Z",
         "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "yt-yoZwkOKXltU",
-        "title": "Chart Your Path to Agentic NetOps | NetBrain",
-        "url": "https://www.youtube.com/watch?v=yoZwkOKXltU",
-        "source": "youtube",
-        "publishDate": "2026-06-01T20:03:31.000Z",
-        "reach": null,
-        "sentiment": null,
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779813007000_NUY2wYRiqdQ1zhdNS4V6lKz9aP0A",
-        "source": "twitter",
-        "publishDate": "2026-05-26T16:30:07.000Z",
-        "reach": 8006,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780407534000_MW1l_pdTFnpHLvj18TRT1sxvPSUA",
-        "source": "twitter",
-        "publishDate": "2026-06-02T13:38:54.000Z",
-        "reach": 2,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780424105000_sFoUE2Kz1-s3_EeOuAZ5xVfcZXMA",
-        "source": "twitter",
-        "publishDate": "2026-06-02T18:15:05.000Z",
-        "reach": 8004,
         "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780670522000_WS8s82bqd9Dq5KuZcnxbCZfuiRcA",
-        "source": "twitter",
-        "publishDate": "2026-06-05T14:42:02.000Z",
-        "reach": 855,
-        "sentiment": "negative",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780630909000_WnNeNZfbeMFH8PruTONtd04I85gA",
-        "source": "twitter",
-        "publishDate": "2026-06-05T03:41:49.000Z",
-        "reach": 4999,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780630799000_cufzMaW3D0DNDFI5vEdpSFPUu80A",
-        "source": "twitter",
-        "publishDate": "2026-06-05T03:39:59.000Z",
-        "reach": 8787730,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780630924000_wMLGIOy_xP7lcAMd30URzJSjZggA",
-        "source": "twitter",
-        "publishDate": "2026-06-05T03:42:04.000Z",
-        "reach": 4999,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780683390000_9r1IQlthSzZAs1q3ZD-Gy0JqHdIA",
-        "source": "twitter",
-        "publishDate": "2026-06-05T18:16:30.000Z",
-        "reach": 389,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780844172000_sIWG80Y6YOdqUrSbLG7CF1sXVzIA",
-        "source": "twitter",
-        "publishDate": "2026-06-07T14:56:12.000Z",
-        "reach": 215,
-        "sentiment": "negative",
-        "_type": "meltwater"
-      },
-      {
-        "id": "U88JmE0iH8V6UoYlZXArX9JMsXw",
-        "title": "NetBrain achieves Infoblox certification to advance real-time netops",
-        "url": "https://www.weirdware.com/2026/06/08/integration-certification-advances-real-time-netops/",
-        "source": "Weirdware.com",
-        "publishDate": "2026-06-08T08:35:56.000Z",
-        "reach": null,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "BLgsuOVIs0dtqnkgXN5y92G-AN8",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
-        "source": "social_blogs",
-        "publishDate": "2026-06-02T05:02:45.000Z",
-        "reach": 421,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "yt-6ZvLecaCxmQ",
-        "title": "Agentic NetOps Is Here: NetBrain Takes Over the Las Vegas Sphere",
-        "url": "https://www.youtube.com/watch?v=6ZvLecaCxmQ",
-        "source": "youtube",
-        "publishDate": "2026-06-02T14:40:00.000Z",
-        "reach": null,
-        "sentiment": null,
         "_type": "meltwater"
       },
       {
@@ -1785,933 +1504,11 @@
         "_type": "meltwater"
       },
       {
-        "id": "201B60hhv747wI57NIIE-PfVGh0",
-        "title": "杰里·马瑟尔升任麦格纳5公司首席销售官",
-        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-06-01/doc-inhzxewn3888517.shtml",
-        "source": "news.sina.com.cn / 新浪新闻",
-        "publishDate": "2026-06-01T12:07:43.000Z",
-        "reach": 13765985,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "RtcsHaydq68myqfe0kajB5a2cmE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://ittech-pulse.com/latest-it-tech-news/?rkey=20260601NE72078&filter=26842",
-        "source": "IT Tech Pulse",
-        "publishDate": "2026-06-01T12:43:56.147Z",
-        "reach": 5062,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "SH61NEpzFG-muupKbmW2dWa9bN8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.millismedwaynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Medway & Millis Town News",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 1317,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "suaRUDFxHa1jysuxXhbX29340IA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://cw7az.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "CW7 Arizona",
-        "publishDate": "2026-06-01T13:00:00.000Z",
-        "reach": 6329,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "k36TISEsIzyD3B8H5UE8TvepCo0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.benzinga.com/pressreleases/26/06/n52900870/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
-        "source": "Benzinga",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 2196950,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Fgj98sX-08vz_bYuJIt8kUkC-eo",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.agree.net/story/165974/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Agree Lifestyle",
-        "publishDate": "2026-06-01T12:12:39.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "EIX31_Fdn3niBs63kwv3fpENWbQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.blackberryempire.com/story/157189/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "BlackBerry Empire",
-        "publishDate": "2026-06-01T12:23:34.824Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "LzvNFBuk6--aR18AUt5AhHBJa9c",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.thenyctimes.com/story/689079/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T04:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "vCZyQl7n-Skj7mc5tz0Rh8RT_Mo",
-        "title": "Magna5 Promotes Jerry Masseur to Chief Sales Officer as Growth Strategy Expands",
-        "url": "https://www.citybiz.co/article/853323/magna5-promotes-jerry-masseur-to-chief-sales-officer-as-growth-strategy-expands/",
-        "source": "citybiz",
-        "publishDate": "2026-06-01T13:20:50.000Z",
-        "reach": 98189,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "wgtsKPG0ysxnSDKNNwvG93KeCrQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://ktla.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KTLA-TV",
-        "publishDate": "2026-06-01T12:24:45.396Z",
-        "reach": 4225987,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Sq-yLv0F1t_Ga55j2Jn2VPcwioM",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.capecorallivingmagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Cape Coral Living Magazine (PR Newswire)",
-        "publishDate": "2026-06-01T12:45:32.459Z",
-        "reach": 1445,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "ZHApIXyxu8zHgjjpzRjeKNzsvhc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.midvalejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Midvale Journal",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 1555,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "kR357z_PGfF8OCM7AYZPQJTb8Do",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.brewtonstandard.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Brewton Standard",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 6342,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "-Hyk5KPMcw7JVS_7SkSPr8t8Dd0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.godofsound.com/story/157375/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "God Of Sound - Lifestyle",
-        "publishDate": "2026-06-01T12:10:36.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "D--9MfLbK5BcRhuM4If_BB-b4lE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.wirednewsengine.com/story/158115/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Wired News Engine",
-        "publishDate": "2026-06-01T12:15:05.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "VHALW8FAPSV4DcHXkHDIShvKAkQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://sanantonio.newsnetmedia.com/story/250547/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "NewsNet",
-        "publishDate": "2026-06-01T12:19:24.424Z",
-        "reach": 4057,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "f6d14x_fP9EcEQLm0j0FtYBnJUE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.wfmz.com/news/pr_newswire/pr_newswire_pennsylvania/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/article_b8a78235-2570-5899-b5d2-632134794ccb.html",
-        "source": "WFMZ-TV",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 1030706,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "sd7QvAx_JVsr2A0kbQPstUWAS4o",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://businessclassnews.com/culture-latest-news/?rkey=20260601NE72078&filter=16305&Jerry_Masseur_is_Promoted_to_Chief_Sales_Officer_at_Magna5",
-        "source": "BCN News",
-        "publishDate": "2026-06-01T12:36:29.398Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Gpu9mt7Nuwpvdtio2q4aOzjW1Ow",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.dailyleader.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Daily Leader",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 39267,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "SAyvrlO3dCr03tqo1Ky9bZhGf34",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.demopolistimes.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Demopolis Times",
-        "publishDate": "2026-06-01T12:28:44.572Z",
-        "reach": 345,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "xdYSDw6mNPs1NUDCo2yBz9e-1K0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.myparishnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Parish News | Louisiana News and Information | Press Releases",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "O5VBiPE6XNoHyvbddzZaWq_xqnk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.middlesboronews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Middlesboro News",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "rn4E8U0hksWO56OQCYgJLk-YhZc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.irontontribune.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Ironton Tribune",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 22762,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "26SrvBsgCHdSTQW1LkRPxcu4JQM",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://businesschief.com/pr_newswire?rkey=20260601NE72078&filter=22716",
-        "source": "Business Chief USA",
-        "publishDate": "2026-06-01T13:36:15.904Z",
-        "reach": 54781,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "6NdzO6cOB-fg2EZRsQPtqzqpHGk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.blerrp.com/story/161800/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "blerrp",
-        "publishDate": "2026-06-01T12:10:17.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "aG4Ea0xkpmfvYdcpuGu5hHVxKSU",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.pierrecountry.com/story/250580/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KLXS-FM",
-        "publishDate": "2026-06-01T12:58:38.265Z",
-        "reach": 448,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1lb7woJzyIXq0s_WzoNHyNF4bdY",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://vbngtv.com/latest-finance-news/?rkey=20260601NE72078&filter=26049",
-        "source": "VYRE Business News Global",
-        "publishDate": "2026-06-01T18:02:04.876Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "4Nl9QzOT5GFSVRfiO3-1LZJyurw",
-        "title": "Magna5 Announces Executive Leadership Changes",
-        "url": "https://channelvisionmag.com/magna5-announces-executive-leadership-changes/",
-        "source": "ChannelVision Magazine",
-        "publishDate": "2026-06-01T14:12:59.000Z",
-        "reach": 3360,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "GkLPaGlzCSu32xFRc3t_1r_SHbc",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "https://meatechwatch.com/2026/06/01/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/#comments",
-        "source": "MEA Tech Watch",
-        "publishDate": "2026-06-01T11:05:44.270Z",
-        "reach": 2510,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "A_rCoAUthtFPboN06nGLMiqtM78",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.panews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Port Arthur News",
-        "publishDate": "2026-06-01T12:26:43.820Z",
-        "reach": 14734,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "l33XLQuNSTQ1Imnpu5QDF7JKW4U",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.poplarvilledemocrat.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Poplarville Democrat",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "JyRl1kCPz-tEM1LQ78fH7RAU4v8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.westjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "West Jordan Journal",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 2614,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "iDiNgIHaADrPCRYQ7ZTXhkFXFIE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.kcau9.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KCAU-TV",
-        "publishDate": "2026-06-01T12:29:30.383Z",
-        "reach": 19077,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "_cqj3zj2ULqvpenoMQZ7RIgAmqQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.bonitaesteromagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Bonitaestero Magazine",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "mSj-m3vHV5LwsUThFCYKe1EEy5c",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://alltechmagazine.com/press-releases/?rkey=20260601NE72078&filter=25603",
-        "source": "Alltech Magazine",
-        "publishDate": "2026-06-01T14:47:10.760Z",
-        "reach": 7739,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "jPI3_Z_VOOypKXvU2ydlkT1s1qg",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.southarkdaily.com/story/240616/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "South Ark Daily",
-        "publishDate": "2026-06-01T12:18:11.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "dVEtvFzp2rvCInMrO3zGy1AuRdc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.naticktownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Natick Town News",
-        "publishDate": "2026-06-01T12:09:29.461Z",
-        "reach": 899,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "GbK6yQY842ekwvcp9egAaM-WCwk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.all80sz1063.com/story/250392/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "ALL 80'S Z 106.3 (KZLK-FM)",
-        "publishDate": "2026-06-01T12:59:16.510Z",
-        "reach": 502,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "4u88S9K4jb7cALgHPfxUaGwjSY8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.kynt1450.com/story/250589/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KYNT-AM",
-        "publishDate": "2026-06-01T12:40:14.474Z",
-        "reach": 2937,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "XGOc8p74YD1WTeL09XqWNiIAA_I",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.mmminimal.com/story/693435/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": " lifestyle.mmminimal.com",
-        "publishDate": "2026-06-01T12:15:27.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "XQcfBgW0zpCiDj1WKC2ULjc-CoA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.careersavvy.co.uk/story/706192/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T12:28:54.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "ED1_Bgwu3N2l5zrh7x4AYB108rc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.q923radio.com/story/250373/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KQRQ-FM",
-        "publishDate": "2026-06-01T12:20:07.000Z",
-        "reach": 558,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "2_aqXe9szh16584ycxXY6Xv5b0Y",
-        "title": "Magna5 Elevates Jerry Masseur to Chief Sales Officer to Drive Growth and Strategy",
-        "url": "https://third-news.com/article/0e1675d8-5db5-11f1-9439-9ca3ba08e13f",
-        "source": "Third News",
-        "publishDate": "2026-06-01T12:26:03.000Z",
-        "reach": 2522,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "OCxFZsPF4Puv9rG1k-9F7gIqwNk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.filmtelevisionauditions.com/story/158285/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Film Television Auditions - Lifestyle",
-        "publishDate": "2026-06-01T12:14:59.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "fpATtocf9KD9nUxrKBu1r-0CZEw",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.digitaladblog.com/story/697837/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "DigitalAdBlog",
-        "publishDate": "2026-06-01T12:29:06.712Z",
-        "reach": 1290,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "78r4i_GOJARhAsQYJLXozWiSClE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.oxfordeagle.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Oxford Eagle Small Business",
-        "publishDate": "2026-06-01T12:42:59.387Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "PgImyU0Z3KLJPgmjseB1rm0ZmrM",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.washingtonguardian.com/story/696990/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Washington Guardian",
-        "publishDate": "2026-06-01T12:13:26.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "e826U14cuxEJ0Wa3DvlVxuZTMLQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.kccrradio.com/story/251054/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KCCR-AM (Pierre, South Dakota)",
-        "publishDate": "2026-06-01T12:19:11.000Z",
-        "reach": 3266,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "TN9oN15ZFySiC2hpLSREo2mKlYI",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.elizabethton.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Elizabethton Star",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 22073,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "nDQGhZMWgWEdA_xmQuZGeOIVsp8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.connectiredell.net/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Connect Iredell (PR Newswire)",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "6bfNRdQbVPmmmdYeNsH1K4lHzfc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.murrayjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Murray Journal",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "sKeuafrT9KCV2ksnljtgZkRrFGA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.kbew98country.com/story/251259/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "KBEW-FM",
-        "publishDate": "2026-06-01T12:17:41.000Z",
-        "reach": 1595,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Xef-JlaJthagObswg5E4KseyXyk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://bestpracticecanada.com/latest-news/?rkey=20260601NE72078&filter=28388",
-        "source": "Best Practice Canada",
-        "publishDate": "2026-06-01T13:23:02.670Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "7FU9wBz39Qz3MoVxu1Sb3-M6158",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.magnoliastatelive.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Magnolia State Live",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 1843,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "-7m9N5qK9eMdj-Wy1Weeub6fkdM",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://bambuup.com/news-by-prnewswire?rkey=20260601NE72078&filter=23620",
-        "source": "BambuUP - Prnewswire",
-        "publishDate": "2026-06-01T13:29:26.043Z",
-        "reach": 2966,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "eXXLUBaKFSnShMl_YPTIfhXkwnw",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.tmcnet.com/usubmit/-jerry-masseur-promoted-chief-sales-officer-magna5-/2026/06/01/10391570.htm",
-        "source": "TMCnet.com",
-        "publishDate": "2026-06-01T12:28:09.961Z",
-        "reach": 46101,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "oc0nbqvc0HbslALw-g-VXrtu-NU",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.jessaminejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Jessamine Journal",
-        "publishDate": "2026-06-01T12:24:38.398Z",
-        "reach": 2618,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "y2Njx7MaMSk-qWqWYzKGKlzGV3o",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.sourcefed.com/story/684769/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T04:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "roZZGy7qWCY3aCcA8WSWFEU9UWE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.faceacadiana.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "FACE Magazine",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 958,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "zbbnNEedbMluEyPlPV4iAQioLV8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.humane.net/story/691771/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T12:12:31.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "qxiZ62z8-vYzpgJVd_IU3eB39G8",
-        "title": "Autonome KI-Agenten unter eIDAS 2.0: Digitale Identität wird zur Compliance-Frage",
-        "url": "https://www.it-boltwise.de/autonome-ki-agenten-unter-eidas-2-0-digitale-identitaet-wird-zur-compliance-frage.html",
-        "source": "IT Boltwise",
-        "publishDate": "2026-06-01T16:58:39.462Z",
-        "reach": 1395068,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "PLFtsMaKxySxk5nRwoSHdrWRZAI",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.mediatrainingforceos.com/story/694446/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T04:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "P2jbtNloEpyBL0jdPeNUmfSOxyM",
-        "title": "Cosmos 3: NVIDIA stellt Weltmodell für autonome Roboter vor",
-        "url": "https://borncity.com/news/cosmos-3-nvidia-stellt-weltmodell-fuer-autonome-roboter-vor/",
-        "source": "Borns IT- und Windows-Blog",
-        "publishDate": "2026-06-01T16:00:14.000Z",
-        "reach": 260037,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "i9Z5M_nR-qjwlYnH-KACFtZDyKk",
-        "title": "NetBrain impulsa la era de Agentic NetOps con nuevas capacidades de IA para operaciones de red | IT/USERS®",
-        "url": "https://itusers.today/netbrain-impulsa-la-era-de-agentic-netops-con-nuevas-capacidades-de-ia-para-operaciones-de-red-it-users/",
-        "source": "IT/USERS",
-        "publishDate": "2026-06-01T12:07:05.000Z",
-        "reach": 1995,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "RZpLIxqlcUzg2Cy990aHa3moLSc",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.childcarepartnerships.org/story/300885/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T12:14:01.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "jaVveWAj4P4IS0AkY9sz260H9Hs",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.prentissheadlight.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Prentiss Headlight",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 4011,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "uESbts19m3crJZQ_cFyHUaUYfac",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://jornalwebdigital.blogspot.com/p/prnewswirenews.html?rkey=20260601NE72078&filter=28399",
-        "source": "Jornalwebdigital - PR Newswire",
-        "publishDate": "2026-06-01T13:00:22.742Z",
-        "reach": 664,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "-BC9iO7cM7GucgaqBKXln7iy4_A",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.chestercounty.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Chester County Press |  | Press Releases",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "xr6HY8NDQYNIDK80zO1XQsaYPRE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.current943.com/story/251208/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Current 94.3",
-        "publishDate": "2026-06-01T12:17:12.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "sqBELoTBct2N6Fifk_rSN5TW7wA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.paraskevas.net/story/691970/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T04:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "IbQSKtzEAbHJ-PeEtxmQv5SJbQI",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.rogueimc.org/story/695699/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T04:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "YwtYwviPb47l7O-ycoFN5ZxeJP8",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.californiaconsumerbanking.com/story/684687/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "California Consumer Banking",
-        "publishDate": "2026-06-01T12:19:35.204Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "MhC4Wnf09gkFYuw5SePowCcqdPA",
-        "title": "NetBrain ushers in ‘operational reality' for agentic NetOps with AI updates",
-        "url": "https://www.sdxcentral.com/news/netbrain-ushers-in-operational-reality-for-agentic-netops-with-ai-updates/",
-        "source": "SDxCentral",
-        "publishDate": "2026-06-01T16:35:28.970Z",
-        "reach": 49479,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "uqB6ghrI-qpP0DTuTAfFFOMwla4",
-        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
-        "url": "https://alertekaa.com/?p=50948",
-        "source": "صحيفة الإرتقاء",
-        "publishDate": "2026-06-01T19:43:07.000Z",
-        "reach": 359,
-        "sentiment": "neutral",
-        "_type": "meltwater"
-      },
-      {
-        "id": "LsC82SIDiyZMODCxCThMllTvDhY",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.brightsfuture.com/story/690378/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "BrightsFuture",
-        "publishDate": "2026-06-01T12:15:05.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "VtYyxQsE3FJtpLdFUrzL17MS_d4",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.hollistontownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Holliston - Local Town Pages",
-        "publishDate": "2026-06-01T12:10:17.338Z",
-        "reach": 1275,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "VedWl3xc4Z1UPYsQtPEphZeXqAA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.cordeledispatch.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Cordele Dispatch",
-        "publishDate": "2026-06-01T12:20:29.718Z",
-        "reach": 2534,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "mLPmsjPrmmCJbhPjrRg67svi42o",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.bogalusadailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Bogalusa Daily News",
-        "publishDate": "2026-06-01T12:29:20.137Z",
-        "reach": 7287,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "-WJn-_nbdeSNQPJEabnF8StM00M",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.kenbridgevictoriadispatch.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Kenbridge Victoria Dispatch",
-        "publishDate": "2026-06-01T13:05:19.839Z",
-        "reach": 3834,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "kZybkCkfq0d03_Wev5zzVsguomQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.holladayjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Holladay Journal",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 1496,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "dlosYz_puNkDPq6PN_n_YR8_o1o",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.harlandaily.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Harlan Enterprise",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "btbObSx-l9wiSpZgHb3KAi2W9Lk",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.clemmonscourier.net/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Clemmons Courier",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 970,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "kpKTovtkApKgduTUg6ryAlo6e4A",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.wvcjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "West Valley Utah News",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 1076,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "ZBIzFRqLfzryqecMeYjFO-GsX3I",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.amnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "The Advocate-Messenger",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 14108,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Jw4X-ZQDNWgfzTr9cOXH9q9e7w0",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.southjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "South Jordan Journal",
-        "publishDate": "2026-06-01T12:03:40.000Z",
-        "reach": 1320,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "Ijs7TKb7ZAXCMht0PHEecKUOuGE",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.southwestdailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "SouthWest Daily News",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "4qD58yUejT-hbOe7yThChfwpnaQ",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.thedam.fm/story/250339/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "Thedam FM",
-        "publishDate": "2026-06-01T12:54:12.397Z",
-        "reach": 1108,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1fjd7kOOt9c4a0zx6fMa5DC8ykA",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.successxl.com/story/680589/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "XPR Lifestyle",
-        "publishDate": "2026-06-01T12:16:25.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "y7HurH_HYTHSeoghySq6ebfWPQs",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://smb.andalusiastarnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Andalusia Star-News",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": 10563,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "sra2sRxdFN6F48kJw3IgwpCwlnI",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://pr.hattiesburg.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
-        "source": "Hattiesburg.com Press Releases",
-        "publishDate": "2026-06-01T12:00:00.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "AUh12AZMvddGCQHefE2qS9Y5C0M",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://lifestyle.newsblaze.com/story/692181/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
-        "source": "NewsBlaze",
-        "publishDate": "2026-06-01T12:14:18.000Z",
-        "reach": 6195,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "W14kmJyiVHfCr-B5YjCg2gJHbR4",
-        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
-        "url": "https://www.morningstar.com/news/pr-newswire/20260601ne72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
-        "source": "Morningstar",
-        "publishDate": "2026-06-01T07:00:00.000Z",
-        "reach": 4066847,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "NTigrZo-HXRNlvzjsg3W23DJIeU",
-        "title": "From Network Automation To Agentic Netops: Netbrain Sets The Standard For Deploying AI In Network Operations",
-        "url": "https://www.techdogs.com/tech-news/business-wire/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
-        "source": "Techdogs",
-        "publishDate": "2026-06-01T23:59:59.000Z",
-        "reach": 43582,
-        "sentiment": "positive",
+        "id": "1780844172000_sIWG80Y6YOdqUrSbLG7CF1sXVzIA",
+        "source": "twitter",
+        "publishDate": "2026-06-07T14:56:12.000Z",
+        "reach": 215,
+        "sentiment": "negative",
         "_type": "meltwater"
       },
       {
@@ -2725,6 +1522,82 @@
         "_type": "meltwater"
       },
       {
+        "id": "1780587023000_wcKSSpGzcRJHnNIOrNK0YMIm3R4A",
+        "source": "twitter",
+        "publishDate": "2026-06-04T15:30:23.000Z",
+        "reach": 8004,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "BLgsuOVIs0dtqnkgXN5y92G-AN8",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "http://dubainewstoday.blogspot.com/2026/06/netbrain.html",
+        "source": "social_blogs",
+        "publishDate": "2026-06-02T05:02:45.000Z",
+        "reach": 421,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-6ZvLecaCxmQ",
+        "title": "Agentic NetOps Is Here: NetBrain Takes Over the Las Vegas Sphere",
+        "url": "https://www.youtube.com/watch?v=6ZvLecaCxmQ",
+        "source": "youtube",
+        "publishDate": "2026-06-02T14:40:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780526039000_VfZguOzXcRSSdHDrdjYAZEDz5qUA",
+        "source": "twitter",
+        "publishDate": "2026-06-03T22:33:59.000Z",
+        "reach": 2048,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780459140000_hS_cUb82DP3fWqueejuanIO3ZwgA",
+        "source": "twitter",
+        "publishDate": "2026-06-03T03:59:00.000Z",
+        "reach": 1389,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780526095000_rsk0nxT7swfQVj499qCgIjIAWZAA",
+        "source": "twitter",
+        "publishDate": "2026-06-03T22:34:55.000Z",
+        "reach": 2048,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780454447000_lyxOljh5p_QQK0X7tRaylghdrC4A",
+        "source": "twitter",
+        "publishDate": "2026-06-03T02:40:47.000Z",
+        "reach": 13561,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780456501000_dU-28oBnYnFBCU1RxTmSTadNtGsA",
+        "source": "twitter",
+        "publishDate": "2026-06-03T03:15:01.000Z",
+        "reach": 1977,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780526046000_8VK5RBuoP0PoYXxk_D3DKWE8SWQA",
+        "source": "twitter",
+        "publishDate": "2026-06-03T22:34:06.000Z",
+        "reach": 2048,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
         "id": "ai3YB5B55wtwsYMraxdwcZr9EeM",
         "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
         "url": "https://algeriatimes.info/article/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations-1",
@@ -2732,6 +1605,48 @@
         "publishDate": "2026-05-31T13:30:24.050Z",
         "reach": 649,
         "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780137008000_SNcytQaOxD3JPeKqLSmx1Meq3NIA",
+        "source": "twitter",
+        "publishDate": "2026-05-30T10:30:08.000Z",
+        "reach": 1126,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-wB1vjGqlDxE",
+        "title": "How To Stop Blocking Your Abundance Energy 💰✨ | Day 2 Manifestation Challenge #shorts",
+        "url": "https://www.youtube.com/watch?v=wB1vjGqlDxE",
+        "source": "youtube",
+        "publishDate": "2026-05-28T18:45:03.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780787052000_Lbm__Vltc91dmPJgqjBJ2GLJPL4A",
+        "source": "twitter",
+        "publishDate": "2026-06-06T23:04:12.000Z",
+        "reach": 471948,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780787049000_Obhld6QHDkSwyTjkzdw8BsM6GHYA",
+        "source": "twitter",
+        "publishDate": "2026-06-06T23:04:09.000Z",
+        "reach": 471948,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780788652000_l76g4-7ACurR8ask7C01S0YOwW0A",
+        "source": "twitter",
+        "publishDate": "2026-06-06T23:30:52.000Z",
+        "reach": null,
+        "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
@@ -2819,6 +1734,14 @@
         "source": "twitter",
         "publishDate": "2026-06-09T23:16:37.000Z",
         "reach": 713,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781165584000_N4Q6Y_wI7ueYFc3mxJpY8bpWVAgA",
+        "source": "twitter",
+        "publishDate": "2026-06-11T08:13:04.000Z",
+        "reach": 76,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -5272,6 +4195,1022 @@
         "_type": "meltwater"
       },
       {
+        "id": "yQ2lS9cYsl-DAIlIrVeg96RfFHI",
+        "title": "Rockefeller Lab Pinpoints Ventral Premotor Cortex as Hub for Abstract Thought",
+        "url": "https://www.pulse.bot/human-potential/news/rockefeller-lab-pinpoints-ventral-premotor-cortex-as-hub-for-abstract-thought-e7f3eeba-0114-41b3-b83a-2c7a428dee7b/",
+        "source": "Pulse ",
+        "publishDate": "2026-05-24T10:45:11.000Z",
+        "reach": null,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-jngwyeSRxRM",
+        "title": "Top 10 Countries with the Lowest Brain Drain (Highest Net Brain Gain) 🌍 2026",
+        "url": "https://www.youtube.com/watch?v=jngwyeSRxRM",
+        "source": "youtube",
+        "publishDate": "2026-06-08T05:46:58.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "201B60hhv747wI57NIIE-PfVGh0",
+        "title": "杰里·马瑟尔升任麦格纳5公司首席销售官",
+        "url": "https://finance.sina.com.cn/stock/usstock/summary/2026-06-01/doc-inhzxewn3888517.shtml",
+        "source": "news.sina.com.cn / 新浪新闻",
+        "publishDate": "2026-06-01T12:07:43.000Z",
+        "reach": 13765985,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "RtcsHaydq68myqfe0kajB5a2cmE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://ittech-pulse.com/latest-it-tech-news/?rkey=20260601NE72078&filter=26842",
+        "source": "IT Tech Pulse",
+        "publishDate": "2026-06-01T12:43:56.147Z",
+        "reach": 5062,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "SH61NEpzFG-muupKbmW2dWa9bN8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.millismedwaynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Medway & Millis Town News",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 1317,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "suaRUDFxHa1jysuxXhbX29340IA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://cw7az.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "CW7 Arizona",
+        "publishDate": "2026-06-01T13:00:00.000Z",
+        "reach": 6329,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "k36TISEsIzyD3B8H5UE8TvepCo0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.benzinga.com/pressreleases/26/06/n52900870/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
+        "source": "Benzinga",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 2196950,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Fgj98sX-08vz_bYuJIt8kUkC-eo",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.agree.net/story/165974/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Agree Lifestyle",
+        "publishDate": "2026-06-01T12:12:39.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "EIX31_Fdn3niBs63kwv3fpENWbQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.blackberryempire.com/story/157189/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "BlackBerry Empire",
+        "publishDate": "2026-06-01T12:23:34.824Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "LzvNFBuk6--aR18AUt5AhHBJa9c",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.thenyctimes.com/story/689079/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T04:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "vCZyQl7n-Skj7mc5tz0Rh8RT_Mo",
+        "title": "Magna5 Promotes Jerry Masseur to Chief Sales Officer as Growth Strategy Expands",
+        "url": "https://www.citybiz.co/article/853323/magna5-promotes-jerry-masseur-to-chief-sales-officer-as-growth-strategy-expands/",
+        "source": "citybiz",
+        "publishDate": "2026-06-01T13:20:50.000Z",
+        "reach": 98189,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "wgtsKPG0ysxnSDKNNwvG93KeCrQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://ktla.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KTLA-TV",
+        "publishDate": "2026-06-01T12:24:45.396Z",
+        "reach": 4225987,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Sq-yLv0F1t_Ga55j2Jn2VPcwioM",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.capecorallivingmagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Cape Coral Living Magazine (PR Newswire)",
+        "publishDate": "2026-06-01T12:45:32.459Z",
+        "reach": 1445,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "ZHApIXyxu8zHgjjpzRjeKNzsvhc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.midvalejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Midvale Journal",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 1555,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "kR357z_PGfF8OCM7AYZPQJTb8Do",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.brewtonstandard.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Brewton Standard",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 6342,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "-Hyk5KPMcw7JVS_7SkSPr8t8Dd0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.godofsound.com/story/157375/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "God Of Sound - Lifestyle",
+        "publishDate": "2026-06-01T12:10:36.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "D--9MfLbK5BcRhuM4If_BB-b4lE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.wirednewsengine.com/story/158115/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Wired News Engine",
+        "publishDate": "2026-06-01T12:15:05.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "VHALW8FAPSV4DcHXkHDIShvKAkQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://sanantonio.newsnetmedia.com/story/250547/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "NewsNet",
+        "publishDate": "2026-06-01T12:19:24.424Z",
+        "reach": 4057,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "f6d14x_fP9EcEQLm0j0FtYBnJUE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.wfmz.com/news/pr_newswire/pr_newswire_pennsylvania/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/article_b8a78235-2570-5899-b5d2-632134794ccb.html",
+        "source": "WFMZ-TV",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 1030706,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "sd7QvAx_JVsr2A0kbQPstUWAS4o",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://businessclassnews.com/culture-latest-news/?rkey=20260601NE72078&filter=16305&Jerry_Masseur_is_Promoted_to_Chief_Sales_Officer_at_Magna5",
+        "source": "BCN News",
+        "publishDate": "2026-06-01T12:36:29.398Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Gpu9mt7Nuwpvdtio2q4aOzjW1Ow",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.dailyleader.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Daily Leader",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 39267,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "SAyvrlO3dCr03tqo1Ky9bZhGf34",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.demopolistimes.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Demopolis Times",
+        "publishDate": "2026-06-01T12:28:44.572Z",
+        "reach": 345,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "xdYSDw6mNPs1NUDCo2yBz9e-1K0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.myparishnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Parish News | Louisiana News and Information | Press Releases",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "O5VBiPE6XNoHyvbddzZaWq_xqnk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.middlesboronews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Middlesboro News",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "rn4E8U0hksWO56OQCYgJLk-YhZc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.irontontribune.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Ironton Tribune",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 22762,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "26SrvBsgCHdSTQW1LkRPxcu4JQM",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://businesschief.com/pr_newswire?rkey=20260601NE72078&filter=22716",
+        "source": "Business Chief USA",
+        "publishDate": "2026-06-01T13:36:15.904Z",
+        "reach": 54781,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "6NdzO6cOB-fg2EZRsQPtqzqpHGk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.blerrp.com/story/161800/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "blerrp",
+        "publishDate": "2026-06-01T12:10:17.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "aG4Ea0xkpmfvYdcpuGu5hHVxKSU",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.pierrecountry.com/story/250580/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KLXS-FM",
+        "publishDate": "2026-06-01T12:58:38.265Z",
+        "reach": 448,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1lb7woJzyIXq0s_WzoNHyNF4bdY",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://vbngtv.com/latest-finance-news/?rkey=20260601NE72078&filter=26049",
+        "source": "VYRE Business News Global",
+        "publishDate": "2026-06-01T18:02:04.876Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "4Nl9QzOT5GFSVRfiO3-1LZJyurw",
+        "title": "Magna5 Announces Executive Leadership Changes",
+        "url": "https://channelvisionmag.com/magna5-announces-executive-leadership-changes/",
+        "source": "ChannelVision Magazine",
+        "publishDate": "2026-06-01T14:12:59.000Z",
+        "reach": 3360,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "GkLPaGlzCSu32xFRc3t_1r_SHbc",
+        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
+        "url": "https://meatechwatch.com/2026/06/01/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations/#comments",
+        "source": "MEA Tech Watch",
+        "publishDate": "2026-06-01T11:05:44.270Z",
+        "reach": 2510,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "A_rCoAUthtFPboN06nGLMiqtM78",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.panews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Port Arthur News",
+        "publishDate": "2026-06-01T12:26:43.820Z",
+        "reach": 14734,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "l33XLQuNSTQ1Imnpu5QDF7JKW4U",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.poplarvilledemocrat.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Poplarville Democrat",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "JyRl1kCPz-tEM1LQ78fH7RAU4v8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.westjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "West Jordan Journal",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 2614,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "iDiNgIHaADrPCRYQ7ZTXhkFXFIE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.kcau9.com/business/press-releases/cision/20260601NE72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KCAU-TV",
+        "publishDate": "2026-06-01T12:29:30.383Z",
+        "reach": 19077,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "_cqj3zj2ULqvpenoMQZ7RIgAmqQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.bonitaesteromagazine.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Bonitaestero Magazine",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "mSj-m3vHV5LwsUThFCYKe1EEy5c",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://alltechmagazine.com/press-releases/?rkey=20260601NE72078&filter=25603",
+        "source": "Alltech Magazine",
+        "publishDate": "2026-06-01T14:47:10.760Z",
+        "reach": 7739,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "jPI3_Z_VOOypKXvU2ydlkT1s1qg",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.southarkdaily.com/story/240616/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "South Ark Daily",
+        "publishDate": "2026-06-01T12:18:11.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "dVEtvFzp2rvCInMrO3zGy1AuRdc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.naticktownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Natick Town News",
+        "publishDate": "2026-06-01T12:09:29.461Z",
+        "reach": 899,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "GbK6yQY842ekwvcp9egAaM-WCwk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.all80sz1063.com/story/250392/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "ALL 80'S Z 106.3 (KZLK-FM)",
+        "publishDate": "2026-06-01T12:59:16.510Z",
+        "reach": 502,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "4u88S9K4jb7cALgHPfxUaGwjSY8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.kynt1450.com/story/250589/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KYNT-AM",
+        "publishDate": "2026-06-01T12:40:14.474Z",
+        "reach": 2937,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "XGOc8p74YD1WTeL09XqWNiIAA_I",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.mmminimal.com/story/693435/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": " lifestyle.mmminimal.com",
+        "publishDate": "2026-06-01T12:15:27.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "XQcfBgW0zpCiDj1WKC2ULjc-CoA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.careersavvy.co.uk/story/706192/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T12:28:54.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "ED1_Bgwu3N2l5zrh7x4AYB108rc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.q923radio.com/story/250373/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KQRQ-FM",
+        "publishDate": "2026-06-01T12:20:07.000Z",
+        "reach": 558,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "2_aqXe9szh16584ycxXY6Xv5b0Y",
+        "title": "Magna5 Elevates Jerry Masseur to Chief Sales Officer to Drive Growth and Strategy",
+        "url": "https://third-news.com/article/0e1675d8-5db5-11f1-9439-9ca3ba08e13f",
+        "source": "Third News",
+        "publishDate": "2026-06-01T12:26:03.000Z",
+        "reach": 2522,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "OCxFZsPF4Puv9rG1k-9F7gIqwNk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.filmtelevisionauditions.com/story/158285/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Film Television Auditions - Lifestyle",
+        "publishDate": "2026-06-01T12:14:59.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "fpATtocf9KD9nUxrKBu1r-0CZEw",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.digitaladblog.com/story/697837/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "DigitalAdBlog",
+        "publishDate": "2026-06-01T12:29:06.712Z",
+        "reach": 1290,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "78r4i_GOJARhAsQYJLXozWiSClE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.oxfordeagle.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Oxford Eagle Small Business",
+        "publishDate": "2026-06-01T12:42:59.387Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "PgImyU0Z3KLJPgmjseB1rm0ZmrM",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.washingtonguardian.com/story/696990/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Washington Guardian",
+        "publishDate": "2026-06-01T12:13:26.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "e826U14cuxEJ0Wa3DvlVxuZTMLQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.kccrradio.com/story/251054/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KCCR-AM (Pierre, South Dakota)",
+        "publishDate": "2026-06-01T12:19:11.000Z",
+        "reach": 3266,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "TN9oN15ZFySiC2hpLSREo2mKlYI",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.elizabethton.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Elizabethton Star",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 22073,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "nDQGhZMWgWEdA_xmQuZGeOIVsp8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.connectiredell.net/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Connect Iredell (PR Newswire)",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "6bfNRdQbVPmmmdYeNsH1K4lHzfc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.murrayjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Murray Journal",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "sKeuafrT9KCV2ksnljtgZkRrFGA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.kbew98country.com/story/251259/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "KBEW-FM",
+        "publishDate": "2026-06-01T12:17:41.000Z",
+        "reach": 1595,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Xef-JlaJthagObswg5E4KseyXyk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://bestpracticecanada.com/latest-news/?rkey=20260601NE72078&filter=28388",
+        "source": "Best Practice Canada",
+        "publishDate": "2026-06-01T13:23:02.670Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "7FU9wBz39Qz3MoVxu1Sb3-M6158",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.magnoliastatelive.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Magnolia State Live",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 1843,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "-7m9N5qK9eMdj-Wy1Weeub6fkdM",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://bambuup.com/news-by-prnewswire?rkey=20260601NE72078&filter=23620",
+        "source": "BambuUP - Prnewswire",
+        "publishDate": "2026-06-01T13:29:26.043Z",
+        "reach": 2966,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "eXXLUBaKFSnShMl_YPTIfhXkwnw",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.tmcnet.com/usubmit/-jerry-masseur-promoted-chief-sales-officer-magna5-/2026/06/01/10391570.htm",
+        "source": "TMCnet.com",
+        "publishDate": "2026-06-01T12:28:09.961Z",
+        "reach": 46101,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "oc0nbqvc0HbslALw-g-VXrtu-NU",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.jessaminejournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Jessamine Journal",
+        "publishDate": "2026-06-01T12:24:38.398Z",
+        "reach": 2618,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "y2Njx7MaMSk-qWqWYzKGKlzGV3o",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.sourcefed.com/story/684769/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T04:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "roZZGy7qWCY3aCcA8WSWFEU9UWE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.faceacadiana.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "FACE Magazine",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 958,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "zbbnNEedbMluEyPlPV4iAQioLV8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.humane.net/story/691771/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T12:12:31.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "qxiZ62z8-vYzpgJVd_IU3eB39G8",
+        "title": "Autonome KI-Agenten unter eIDAS 2.0: Digitale Identität wird zur Compliance-Frage",
+        "url": "https://www.it-boltwise.de/autonome-ki-agenten-unter-eidas-2-0-digitale-identitaet-wird-zur-compliance-frage.html",
+        "source": "IT Boltwise",
+        "publishDate": "2026-06-01T16:58:39.462Z",
+        "reach": 1395068,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "PLFtsMaKxySxk5nRwoSHdrWRZAI",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.mediatrainingforceos.com/story/694446/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T04:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "P2jbtNloEpyBL0jdPeNUmfSOxyM",
+        "title": "Cosmos 3: NVIDIA stellt Weltmodell für autonome Roboter vor",
+        "url": "https://borncity.com/news/cosmos-3-nvidia-stellt-weltmodell-fuer-autonome-roboter-vor/",
+        "source": "Borns IT- und Windows-Blog",
+        "publishDate": "2026-06-01T16:00:14.000Z",
+        "reach": 260037,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "i9Z5M_nR-qjwlYnH-KACFtZDyKk",
+        "title": "NetBrain impulsa la era de Agentic NetOps con nuevas capacidades de IA para operaciones de red | IT/USERS®",
+        "url": "https://itusers.today/netbrain-impulsa-la-era-de-agentic-netops-con-nuevas-capacidades-de-ia-para-operaciones-de-red-it-users/",
+        "source": "IT/USERS",
+        "publishDate": "2026-06-01T12:07:05.000Z",
+        "reach": 1995,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "RZpLIxqlcUzg2Cy990aHa3moLSc",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.childcarepartnerships.org/story/300885/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T12:14:01.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "jaVveWAj4P4IS0AkY9sz260H9Hs",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.prentissheadlight.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Prentiss Headlight",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 4011,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "uESbts19m3crJZQ_cFyHUaUYfac",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://jornalwebdigital.blogspot.com/p/prnewswirenews.html?rkey=20260601NE72078&filter=28399",
+        "source": "Jornalwebdigital - PR Newswire",
+        "publishDate": "2026-06-01T13:00:22.742Z",
+        "reach": 664,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "-BC9iO7cM7GucgaqBKXln7iy4_A",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.chestercounty.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Chester County Press |  | Press Releases",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "xr6HY8NDQYNIDK80zO1XQsaYPRE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.current943.com/story/251208/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Current 94.3",
+        "publishDate": "2026-06-01T12:17:12.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "sqBELoTBct2N6Fifk_rSN5TW7wA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.paraskevas.net/story/691970/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T04:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "IbQSKtzEAbHJ-PeEtxmQv5SJbQI",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.rogueimc.org/story/695699/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T04:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "YwtYwviPb47l7O-ycoFN5ZxeJP8",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.californiaconsumerbanking.com/story/684687/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "California Consumer Banking",
+        "publishDate": "2026-06-01T12:19:35.204Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "MhC4Wnf09gkFYuw5SePowCcqdPA",
+        "title": "NetBrain ushers in ‘operational reality' for agentic NetOps with AI updates",
+        "url": "https://www.sdxcentral.com/news/netbrain-ushers-in-operational-reality-for-agentic-netops-with-ai-updates/",
+        "source": "SDxCentral",
+        "publishDate": "2026-06-01T16:35:28.970Z",
+        "reach": 49479,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "uqB6ghrI-qpP0DTuTAfFFOMwla4",
+        "title": "من أتمتة الشبكات إلى عمليات الشبكات الوكيلة: تضع شركة NetBrain معيارًا جديدًا لنشر الذكاء الاصطناعي في عمليات الشبكة",
+        "url": "https://alertekaa.com/?p=50948",
+        "source": "صحيفة الإرتقاء",
+        "publishDate": "2026-06-01T19:43:07.000Z",
+        "reach": 359,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "LsC82SIDiyZMODCxCThMllTvDhY",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.brightsfuture.com/story/690378/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "BrightsFuture",
+        "publishDate": "2026-06-01T12:15:05.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "VtYyxQsE3FJtpLdFUrzL17MS_d4",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.hollistontownnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Holliston - Local Town Pages",
+        "publishDate": "2026-06-01T12:10:17.338Z",
+        "reach": 1275,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "VedWl3xc4Z1UPYsQtPEphZeXqAA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.cordeledispatch.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Cordele Dispatch",
+        "publishDate": "2026-06-01T12:20:29.718Z",
+        "reach": 2534,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "mLPmsjPrmmCJbhPjrRg67svi42o",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.bogalusadailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Bogalusa Daily News",
+        "publishDate": "2026-06-01T12:29:20.137Z",
+        "reach": 7287,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "-WJn-_nbdeSNQPJEabnF8StM00M",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.kenbridgevictoriadispatch.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Kenbridge Victoria Dispatch",
+        "publishDate": "2026-06-01T13:05:19.839Z",
+        "reach": 3834,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "kZybkCkfq0d03_Wev5zzVsguomQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.holladayjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Holladay Journal",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 1496,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "dlosYz_puNkDPq6PN_n_YR8_o1o",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.harlandaily.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Harlan Enterprise",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "btbObSx-l9wiSpZgHb3KAi2W9Lk",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.clemmonscourier.net/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Clemmons Courier",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 970,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "kpKTovtkApKgduTUg6ryAlo6e4A",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.wvcjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "West Valley Utah News",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 1076,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "ZBIzFRqLfzryqecMeYjFO-GsX3I",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.amnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "The Advocate-Messenger",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 14108,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Jw4X-ZQDNWgfzTr9cOXH9q9e7w0",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.southjordanjournal.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "South Jordan Journal",
+        "publishDate": "2026-06-01T12:03:40.000Z",
+        "reach": 1320,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "Ijs7TKb7ZAXCMht0PHEecKUOuGE",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.southwestdailynews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "SouthWest Daily News",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "4qD58yUejT-hbOe7yThChfwpnaQ",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.thedam.fm/story/250339/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "Thedam FM",
+        "publishDate": "2026-06-01T12:54:12.397Z",
+        "reach": 1108,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1fjd7kOOt9c4a0zx6fMa5DC8ykA",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.successxl.com/story/680589/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "XPR Lifestyle",
+        "publishDate": "2026-06-01T12:16:25.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "y7HurH_HYTHSeoghySq6ebfWPQs",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://smb.andalusiastarnews.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Andalusia Star-News",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": 10563,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "sra2sRxdFN6F48kJw3IgwpCwlnI",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://pr.hattiesburg.com/article/Jerry-Masseur-is-Promoted-to-Chief-Sales-Officer-at-Magna5/6a1d751c004597ee6ba13f54",
+        "source": "Hattiesburg.com Press Releases",
+        "publishDate": "2026-06-01T12:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "AUh12AZMvddGCQHefE2qS9Y5C0M",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://lifestyle.newsblaze.com/story/692181/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5/",
+        "source": "NewsBlaze",
+        "publishDate": "2026-06-01T12:14:18.000Z",
+        "reach": 6195,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "W14kmJyiVHfCr-B5YjCg2gJHbR4",
+        "title": "Jerry Masseur is Promoted to Chief Sales Officer at Magna5",
+        "url": "https://www.morningstar.com/news/pr-newswire/20260601ne72078/jerry-masseur-is-promoted-to-chief-sales-officer-at-magna5",
+        "source": "Morningstar",
+        "publishDate": "2026-06-01T07:00:00.000Z",
+        "reach": 4066847,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "NTigrZo-HXRNlvzjsg3W23DJIeU",
+        "title": "From Network Automation To Agentic Netops: Netbrain Sets The Standard For Deploying AI In Network Operations",
+        "url": "https://www.techdogs.com/tech-news/business-wire/from-network-automation-to-agentic-netops-netbrain-sets-the-standard-for-deploying-ai-in-network-operations",
+        "source": "Techdogs",
+        "publishDate": "2026-06-01T23:59:59.000Z",
+        "reach": 43582,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780407534000_MW1l_pdTFnpHLvj18TRT1sxvPSUA",
+        "source": "twitter",
+        "publishDate": "2026-06-02T13:38:54.000Z",
+        "reach": 2,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780424105000_sFoUE2Kz1-s3_EeOuAZ5xVfcZXMA",
+        "source": "twitter",
+        "publishDate": "2026-06-02T18:15:05.000Z",
+        "reach": 8004,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "fuKNFBr8isUsr4jUS-OkkbFhV9I",
+        "title": "Netbrain Introduces AI Path Doctor and More New Capabilities",
+        "url": "https://www.apmdigest.com/netbrain-introduces-ai-path-doctor-and-more-new-capabilities",
+        "source": "APMdigest",
+        "publishDate": "2026-06-03T00:35:54.108Z",
+        "reach": 5993,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "ZoKGstznhBXf5HKHPtFhbMmiL9w",
+        "title": "Cisco: AI driving a 'network supercycle'",
+        "url": "https://www.lightreading.com/ai-machine-learning/cisco-ai-driving-a-network-supercycle-",
+        "source": "Light Reading",
+        "publishDate": "2026-06-03T15:58:36.212Z",
+        "reach": 149187,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "q4RgcSlqHUkYwEGGLcpq-j4tsbc",
+        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
+        "url": "https://www.newsbreak.com/news/4687350775651-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
+        "source": "NewsBreak",
+        "publishDate": "2026-06-03T01:42:08.000Z",
+        "reach": 13350906,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "qW8h7EZ-yBqcQWYHPYIuzMJwmNM",
+        "title": "NetBrain Advances Agentic NetOps with New AI-Powered Network Automation Features",
+        "url": "https://www.thefastmode.com/technology-solutions/48800-netbrain-advances-agentic-netops-with-new-ai-powered-network-automation-features",
+        "source": "The Fast Mode",
+        "publishDate": "2026-06-03T01:42:08.000Z",
+        "reach": 33737,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "eMztqPM0FWbJM1PGw1rC-dGZWDA",
+        "title": "Cisco: AI Driving a 'Network Supercycle'",
+        "url": "https://www.pulse.bot/ai/news/cisco-ai-driving-a-network-supercycle-37387baf-9865-45c1-a91c-a332ae539a41/",
+        "source": "Pulse ",
+        "publishDate": "2026-06-03T13:00:00.000Z",
+        "reach": null,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
         "id": "lHTgsK4fvHVDENqi83rJmsvC8aY",
         "title": "Dopamine Menu Habit Offers Simple Tool to Beat Motivation Slumps",
         "url": "https://www.pulse.bot/motivation/news/dopamine-menu-habit-offers-simple-tool-to-beat-motivation-slumps-596b30c7-5884-47b5-97f7-fb75e3a4a89e/",
@@ -5282,168 +5221,248 @@
         "_type": "meltwater"
       },
       {
-        "id": "-bAw6-Ue32GZF6IunT-ruaNOAKg",
-        "title": "Agent Builder: IA e Governança no Cisco Cloud Control",
-        "url": "https://metodoviral.com/noticias/agent-builder-ia-e-governanca-no-cisco-cloud-control/",
-        "source": "Método Viral",
-        "publishDate": "2026-06-04T04:50:45.000Z",
-        "reach": 7508,
+        "id": "JC4pXbm_HhINOBN_qRFrn-25gJA",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://news.jorudan.co.jp/docs/news/detail.cgi?newsid=PT000379A000023654",
+        "source": "ジョルダンニュース!",
+        "publishDate": "2026-06-11T04:27:00.000Z",
+        "reach": 21297,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "kLdMgafG9LO8ySPle0t33FcL8-8",
-        "title": "Blackstone Acquisitions: How the Alternative Investment Giant Builds Global Platforms",
-        "url": "https://www.nyongesasande.com/blackstone-acquisitions-full-ma-timeline/",
-        "source": "Nyongesa Sande",
-        "publishDate": "2026-06-04T13:25:56.000Z",
-        "reach": 9658,
+        "id": "68K2qeXxkQdLKIs-9kLBeC-lzwE",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.zaikei.co.jp/releases/3473649/",
+        "source": "財経新聞",
+        "publishDate": "2026-06-11T04:46:00.940Z",
+        "reach": 227331,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "MeKBX-dpIcQFZlIgb5daq_qbJV0",
-        "title": "Creador de agentes: IA y gobernanza en el control de la nube de Cisco",
-        "url": "https://metodoviral.com/es/noticias/creador-de-agentes-ia-y-gobernanza-en-el-control-de-la-nube-de-cisco/",
-        "source": "Método Viral",
-        "publishDate": "2026-06-04T04:53:35.000Z",
-        "reach": 7508,
+        "id": "u8M6-Km566nq0x44QObVibwBbgM",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.jiji.com/jc/article?k=000000379.000023654&g=prt",
+        "source": "時事ドットコム",
+        "publishDate": "2026-06-11T04:35:29.408Z",
+        "reach": 10532994,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "j-TZiDs2t-UhLcH2AHniCg0CvCA",
-        "title": "Study Finds Habits Can Form in Just Three Trials, Upending Classic Theory",
-        "url": "https://www.pulse.bot/motivation/news/study-finds-habits-can-form-in-just-three-trials-upending-classic-theory-3f717494-3c1e-49bd-ab1a-11c1dbb7e058/",
-        "source": "Pulse ",
-        "publishDate": "2026-06-04T13:20:30.000Z",
-        "reach": null,
+        "id": "vPOm3tfwUDDycvGa-j2nlkYLYp4",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://newsdig.tbs.co.jp/articles/prtimes/2724687?display=1",
+        "source": "TBS NEWS DIG",
+        "publishDate": "2026-06-11T02:00:00.000Z",
+        "reach": 33969236,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "8zGiNFMW7w33Xj80iSBa3PYJi20",
-        "title": "Georgetown Study Shows Brain Rewires to Bypass Prefrontal Bottleneck, Automating Complex Skills",
-        "url": "https://www.pulse.bot/human-potential/news/georgetown-study-shows-brain-rewires-to-bypass-prefrontal-bottleneck-automating-complex-skills-13546d5a-b547-4905-b4ed-b834c3ed07e2/",
-        "source": "Pulse ",
-        "publishDate": "2026-06-04T10:51:20.000Z",
-        "reach": null,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780526039000_VfZguOzXcRSSdHDrdjYAZEDz5qUA",
-        "source": "twitter",
-        "publishDate": "2026-06-03T22:33:59.000Z",
-        "reach": 2048,
+        "id": "_JzkLsr20zifR7yjZkMrVWMh12Q",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://news.infoseek.co.jp/article/prtimes_000000379_000023654/",
+        "source": "Infoseekニュース",
+        "publishDate": "2026-06-11T02:00:00.000Z",
+        "reach": 3039067,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1780459140000_hS_cUb82DP3fWqueejuanIO3ZwgA",
-        "source": "twitter",
-        "publishDate": "2026-06-03T03:59:00.000Z",
-        "reach": 1389,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780526095000_rsk0nxT7swfQVj499qCgIjIAWZAA",
-        "source": "twitter",
-        "publishDate": "2026-06-03T22:34:55.000Z",
-        "reach": 2048,
+        "id": "FmFOZ2-NI3qeowOmYFzdY-I15gY",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://straightpress.jp/company_news/detail?pr=000000379.000023654",
+        "source": "Straight Press",
+        "publishDate": "2026-06-11T04:26:01.434Z",
+        "reach": 121259,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1780454447000_lyxOljh5p_QQK0X7tRaylghdrC4A",
-        "source": "twitter",
-        "publishDate": "2026-06-03T02:40:47.000Z",
-        "reach": 13561,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780456501000_dU-28oBnYnFBCU1RxTmSTadNtGsA",
-        "source": "twitter",
-        "publishDate": "2026-06-03T03:15:01.000Z",
-        "reach": 1977,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780526046000_8VK5RBuoP0PoYXxk_D3DKWE8SWQA",
-        "source": "twitter",
-        "publishDate": "2026-06-03T22:34:06.000Z",
-        "reach": 2048,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1780787052000_Lbm__Vltc91dmPJgqjBJ2GLJPL4A",
-        "source": "twitter",
-        "publishDate": "2026-06-06T23:04:12.000Z",
-        "reach": 471948,
+        "id": "0s10fuoLX1IlViCfwvfGBzxvesA",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://dime.jp/company_news/detail/?pr=2595418",
+        "source": "@DIME",
+        "publishDate": "2026-06-11T04:56:11.637Z",
+        "reach": 2661659,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1780787049000_Obhld6QHDkSwyTjkzdw8BsM6GHYA",
-        "source": "twitter",
-        "publishDate": "2026-06-06T23:04:09.000Z",
-        "reach": 471948,
+        "id": "dN9AJ2EO3EMGuYx9JRgatCjracs",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.seotools.jp/news/id_000000379.000023654.html",
+        "source": "SEOTOOLSニュース",
+        "publishDate": "2026-06-11T05:13:52.350Z",
+        "reach": 2761,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1780788652000_l76g4-7ACurR8ask7C01S0YOwW0A",
-        "source": "twitter",
-        "publishDate": "2026-06-06T23:30:52.000Z",
-        "reach": null,
+        "id": "7SPXKgYnja1XyzzPAe1lqdIf1ow",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.mapion.co.jp/news/release/000000379.000023654-all/",
+        "source": "Mapion",
+        "publishDate": "2026-06-11T04:46:03.374Z",
+        "reach": 4789295,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "1779988374000_MtRCQSUoaR0k2uLQgUHqYJZPajAA",
-        "source": "twitter",
-        "publishDate": "2026-05-28T17:12:54.000Z",
-        "reach": 8777982,
-        "sentiment": "positive",
-        "_type": "meltwater"
-      },
-      {
-        "id": "1779973825000_skplKeSOp72UscZcx_pp8bky6-gA",
-        "source": "twitter",
-        "publishDate": "2026-05-28T13:10:25.000Z",
-        "reach": 501,
+        "id": "FTnTn2VShVk9C_aqWGf-eKloIuo",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://president.jp/ud/pressrelease/6a2a44927079c85ed5000028",
+        "source": "President Online",
+        "publishDate": "2026-06-11T05:43:13.066Z",
+        "reach": 15271738,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "yt-UgzBJ9uNY174jkgQ89h4AaABAg",
-        "url": "https://www.youtube.com/watch?v=llDWOAK7blI&lc=UgzBJ9uNY174jkgQ89h4AaABAg",
-        "source": "youtube",
-        "publishDate": "2026-06-05T07:37:25.000Z",
-        "reach": null,
-        "sentiment": null,
+        "id": "FeNr-sMCifszEMpHSP6OPygo7sU",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://jbpress.ismedia.jp/ud/pressrelease/6a2a3698126217e7020000a7",
+        "source": "日本ビジネスプレス",
+        "publishDate": "2026-06-11T05:54:58.055Z",
+        "reach": 2345114,
+        "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "yt-UgzyWH-evV6x6t9eUpx4AaABAg",
-        "url": "https://www.youtube.com/watch?v=skEi4iC6vTQ&lc=UgzyWH-evV6x6t9eUpx4AaABAg",
-        "source": "youtube",
-        "publishDate": "2026-06-05T03:22:00.000Z",
-        "reach": null,
-        "sentiment": null,
+        "id": "lNcE0vOGJ5Y6d5hBXgNzH45YSxk",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.iza.ne.jp/pressrelease/prtimes/QXSESSLJ3BOBDNWLVVKALN5HCA/",
+        "source": "iza：イザ！",
+        "publishDate": "2026-06-11T02:00:00.000Z",
+        "reach": 4229301,
+        "sentiment": "neutral",
         "_type": "meltwater"
       },
       {
-        "id": "qJyNHX8O1pVlgD5hcNt5aQbRbto",
-        "title": "From Network Automation to Agentic NetOps: NetBrain Sets the Standard for Deploying AI in Network Operations",
-        "url": "http://dubainewstoday.blogspot.com/2026/05/from-network-automation-to-agentic.html",
-        "source": "social_blogs",
-        "publishDate": "2026-05-30T02:02:58.000Z",
-        "reach": 421,
+        "id": "L0ib2WJ8fixrBTAhHcN7T3Rgzq0",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.tv-tokyo.co.jp/plus/external-pr/entry/139819.html",
+        "source": "テレビ東京",
+        "publishDate": "2026-06-11T04:49:17.294Z",
+        "reach": 7339991,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "4AbZ6yjDbVTNsYne33bSL82G8kE",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://news.toremaga.com/release/others/4131691.html",
+        "source": "とれまがニュース",
+        "publishDate": "2026-06-11T10:52:45.128Z",
+        "reach": 2700,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "cFMm5hqW1IeJrS4Qzcfau4vkn98",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://ascii.jp/elem/000/004/409/4409848/",
+        "source": "ASCII.jp",
+        "publishDate": "2026-06-11T05:37:36.434Z",
+        "reach": 3672399,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "oT-yjYhzaac1NMa1IoMYQlrOU9s",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://prtimes.jp/main/html/rd/p/000000379.000023654.html",
+        "source": "PR TIMES",
+        "publishDate": "2026-06-11T02:00:02.000Z",
+        "reach": 32039482,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "JAl3nPPooJy3efZxodWCXYw1_GM",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://news.livedoor.com/pr_article/detail/31519231/",
+        "source": "ライブドアニュース",
+        "publishDate": "2026-06-11T02:00:00.000Z",
+        "reach": 13658021,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "473Ns760AGx95JJ9JRDOttovE7o",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://www.sankei.com/pressrelease/prtimes/QXSESSLJ3BOBDNWLVVKALN5HCA/",
+        "source": "産経ニュース",
+        "publishDate": "2026-06-11T02:00:00.000Z",
+        "reach": 12441523,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "HXXYOaiKBda_dmTF1ppP6Zgj89w",
+        "title": "ネットワーク可視化／自動化＆マップベースマネジメント「NetworkBrain」の新バージョンを提供開始",
+        "url": "https://gendai.media/ud/pressrelease/cmq9150dc00113x1a2qcg2r14",
+        "source": "現代ビジネス",
+        "publishDate": "2026-06-11T08:13:21.720Z",
+        "reach": 14996763,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780670522000_WS8s82bqd9Dq5KuZcnxbCZfuiRcA",
+        "source": "twitter",
+        "publishDate": "2026-06-05T14:42:02.000Z",
+        "reach": 855,
+        "sentiment": "negative",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780630909000_WnNeNZfbeMFH8PruTONtd04I85gA",
+        "source": "twitter",
+        "publishDate": "2026-06-05T03:41:49.000Z",
+        "reach": 4999,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780630799000_cufzMaW3D0DNDFI5vEdpSFPUu80A",
+        "source": "twitter",
+        "publishDate": "2026-06-05T03:39:59.000Z",
+        "reach": 8787730,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780630924000_wMLGIOy_xP7lcAMd30URzJSjZggA",
+        "source": "twitter",
+        "publishDate": "2026-06-05T03:42:04.000Z",
+        "reach": 4999,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780683390000_9r1IQlthSzZAs1q3ZD-Gy0JqHdIA",
+        "source": "twitter",
+        "publishDate": "2026-06-05T18:16:30.000Z",
+        "reach": 389,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780329202000_kgcNcn5YGTirfzATETnATIgmtKUA",
+        "source": "twitter",
+        "publishDate": "2026-06-01T15:53:22.000Z",
+        "reach": 44449,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1780351497000_YW9MtwBcCspJn9odn1lf8fvtVRwA",
+        "source": "twitter",
+        "publishDate": "2026-06-01T22:04:57.000Z",
+        "reach": 31,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -5468,6 +5487,14 @@
         "source": "twitter",
         "publishDate": "2026-06-10T06:47:38.000Z",
         "reach": 6,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781123721000_sP0xASRB85CeFM_Ltk7Evyk90nsA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T20:35:21.000Z",
+        "reach": 198,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -5504,6 +5531,22 @@
         "_type": "meltwater"
       },
       {
+        "id": "1781093207000_hmxkrivsOAaNkWuM8TOuluJhxWwA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T12:06:47.000Z",
+        "reach": 7254,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781094665000_WatKdNL5USa-4ZySb_bYlImgD7wA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T12:31:05.000Z",
+        "reach": 403,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
         "id": "1781057843000_Umgcez-mNa_1uMdlvnEIjF_ieowA",
         "source": "twitter",
         "publishDate": "2026-06-10T02:17:23.000Z",
@@ -5516,6 +5559,30 @@
         "source": "twitter",
         "publishDate": "2026-06-10T10:46:03.000Z",
         "reach": 332,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781094817000_Wk57rIuVGqHE2dkluInCJRRZQN8A",
+        "source": "twitter",
+        "publishDate": "2026-06-10T12:33:37.000Z",
+        "reach": 6,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781095621000_Df4HOZB4zQvkfRzi3NLIzWNarroA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T12:47:01.000Z",
+        "reach": 69,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781103136000_VdXwPdbs-I5b4y42tcAwOXcChegA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T14:52:16.000Z",
+        "reach": 333,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -5552,6 +5619,14 @@
         "_type": "meltwater"
       },
       {
+        "id": "1781120793000_3nYH9Anrp9h_FjXD2I_EfTJ-JOwA",
+        "source": "twitter",
+        "publishDate": "2026-06-10T19:46:33.000Z",
+        "reach": 7999,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
         "id": "1781092317000_k9f1wsIYYNvqRCC7XvaB-ZUN-sIA",
         "source": "twitter",
         "publishDate": "2026-06-10T11:51:57.000Z",
@@ -5564,6 +5639,14 @@
         "source": "twitter",
         "publishDate": "2026-06-10T11:56:17.000Z",
         "reach": 5,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781120524000_-bsD4KwJpt1b31SuIQ6k-Dgl1c8A",
+        "source": "twitter",
+        "publishDate": "2026-06-10T19:42:04.000Z",
+        "reach": 7999,
         "sentiment": "neutral",
         "_type": "meltwater"
       },
@@ -5605,6 +5688,186 @@
         "publishDate": "2026-06-10T11:28:55.000Z",
         "reach": 86,
         "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-UgzBJ9uNY174jkgQ89h4AaABAg",
+        "url": "https://www.youtube.com/watch?v=llDWOAK7blI&lc=UgzBJ9uNY174jkgQ89h4AaABAg",
+        "source": "youtube",
+        "publishDate": "2026-06-05T07:37:25.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-UgzyWH-evV6x6t9eUpx4AaABAg",
+        "url": "https://www.youtube.com/watch?v=skEi4iC6vTQ&lc=UgzyWH-evV6x6t9eUpx4AaABAg",
+        "source": "youtube",
+        "publishDate": "2026-06-05T03:22:00.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779813007000_NUY2wYRiqdQ1zhdNS4V6lKz9aP0A",
+        "source": "twitter",
+        "publishDate": "2026-05-26T16:30:07.000Z",
+        "reach": 8006,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779988374000_MtRCQSUoaR0k2uLQgUHqYJZPajAA",
+        "source": "twitter",
+        "publishDate": "2026-05-28T17:12:54.000Z",
+        "reach": 8777982,
+        "sentiment": "positive",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779973825000_skplKeSOp72UscZcx_pp8bky6-gA",
+        "source": "twitter",
+        "publishDate": "2026-05-28T13:10:25.000Z",
+        "reach": 501,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "bGQIIpoinAAR9y_dd2kmGqK0z3k",
+        "title": "Campus Israel Launched as Alternative for Jewish Students Facing Antisemitism",
+        "url": "https://themedialine.org/by-region/campus-israel-launched-as-alternative-for-jewish-students-facing-antisemitism/",
+        "source": "The Media Line",
+        "publishDate": "2026-05-28T19:18:44.000Z",
+        "reach": 153816,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "U88JmE0iH8V6UoYlZXArX9JMsXw",
+        "title": "NetBrain achieves Infoblox certification to advance real-time netops",
+        "url": "https://www.weirdware.com/2026/06/08/integration-certification-advances-real-time-netops/",
+        "source": "Weirdware.com",
+        "publishDate": "2026-06-08T08:35:56.000Z",
+        "reach": null,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "9Lk3-ATwXI52agpwtGjOqSo877c",
+        "title": "Brain‑Side Asymmetry in Anxiety and Depression Offers New Target for Meditation‑Based Prevention",
+        "url": "https://www.pulse.bot/meditation/news/brainside-asymmetry-in-anxiety-and-depression-offers-new-target-for-meditationbased-prevention-c265fae6-6a3e-461d-a5fa-0155468df400/",
+        "source": "Pulse ",
+        "publishDate": "2026-05-22T00:38:55.000Z",
+        "reach": null,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779540360000_zy9kwBPKRwa-liwbW2SR6kxMMz0A",
+        "url": "https://www.reddit.com/r/AskTheWorld/comments/1tldxqw/comment/onf5dc7/",
+        "source": "reddit",
+        "publishDate": "2026-05-23T12:46:30.504Z",
+        "reach": 483177,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-yoZwkOKXltU",
+        "title": "Chart Your Path to Agentic NetOps | NetBrain",
+        "url": "https://www.youtube.com/watch?v=yoZwkOKXltU",
+        "source": "youtube",
+        "publishDate": "2026-06-01T20:03:31.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "yt-xU2H3O1aqq8",
+        "title": "Cisco Brings SONiC to N9000 Switches; Broadcom Debuts Wi-Fi 8 SoCs for Consumer Routers",
+        "url": "https://www.youtube.com/watch?v=xU2H3O1aqq8",
+        "source": "youtube",
+        "publishDate": "2026-06-01T17:36:54.000Z",
+        "reach": null,
+        "sentiment": null,
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781000100000_-hwezDet-aw-WKD6qvl4E2eBT1UA",
+        "url": "https://www.reddit.com/r/NoCommute/comments/1u10w6k/remote_jobs_with_listed_salary_09062026_usa/",
+        "source": "reddit",
+        "publishDate": "2026-06-09T10:15:14.159Z",
+        "reach": 2207,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1781019360000_UO8WPZiqaIQ77qxrtdm92Ki_JMs",
+        "title": "ACTIVEPORT GROUP LTD (ASX:ATV) - Activeport 2026 - Breakout Year, 84245800, page-49 - HotCopper | ASX Share Prices, Stock Market & Share Trading Forum",
+        "url": "https://hotcopper.com.au/threads/activeport-2026-breakout-year.8991455/?post_id=84245800",
+        "source": "social_message_boards",
+        "publishDate": "2026-06-09T15:36:00.000Z",
+        "reach": 563257,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779477281000_b_xsIg_M6LD_fUQDIdtCSYuu8OMA",
+        "source": "twitter",
+        "publishDate": "2026-05-22T19:14:41.000Z",
+        "reach": 467,
+        "sentiment": "negative",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779411725000_8h82XHbAdvvjW4IvUf2YeZ6rZDsA",
+        "source": "twitter",
+        "publishDate": "2026-05-22T01:02:05.000Z",
+        "reach": null,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779477195000_aHyQhn6dhSi057qlXc8zmcxXaWMA",
+        "source": "twitter",
+        "publishDate": "2026-05-22T19:13:15.000Z",
+        "reach": 1248,
+        "sentiment": "negative",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779643380000_SsVPXuKf5XJ4V3MunJRNOagZYyEA",
+        "url": "https://www.reddit.com/r/askSouthAfrica/comments/1tlwtlt/comment/onmyi5t/",
+        "source": "reddit",
+        "publishDate": "2026-05-24T17:23:38.875Z",
+        "reach": 82640,
+        "sentiment": "negative",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779831420000_CRpoUTek061aCLLFcgDj8RFXIRsA",
+        "url": "https://www.reddit.com/r/lietuva/comments/1togoaz/comment/oo1wrbp/",
+        "source": "reddit",
+        "publishDate": "2026-05-26T21:37:41.305Z",
+        "reach": 63575,
+        "sentiment": "neutral",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779832560000_YYrddQot48r-0Xx-mQIaK7t83RIA",
+        "url": "https://www.reddit.com/r/networking/comments/1tolggm/comment/oo20pt6/",
+        "source": "reddit",
+        "publishDate": "2026-05-26T21:56:58.144Z",
+        "reach": 436127,
+        "sentiment": "negative",
+        "_type": "meltwater"
+      },
+      {
+        "id": "1779834960000_XVEOHnrfSpu_V3OGfQSrQ3RKB4wA",
+        "url": "https://www.reddit.com/r/networking/comments/1tolggm/comment/oo288wa/",
+        "source": "reddit",
+        "publishDate": "2026-05-26T22:36:19.593Z",
+        "reach": 436135,
+        "sentiment": "positive",
         "_type": "meltwater"
       }
     ],
