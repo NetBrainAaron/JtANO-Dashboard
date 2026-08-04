@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-04T14:57:32.313Z",
+  "updatedAt": "2026-08-04T17:44:57.074Z",
   "runDate": "2026-08-04",
-  "runHour": "14",
+  "runHour": "17",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -227,7 +227,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3883,
-      "last_updated": "2026-08-04T14:57:30.434Z"
+      "last_updated": "2026-08-04T17:44:55.479Z"
     },
     "zero_outage_lounge": {
       "registered": 58,
@@ -235,8 +235,9 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4828,
-      "last_updated": "2026-08-04T14:57:30.434Z"
-    }
+      "last_updated": "2026-08-04T17:44:55.479Z"
+    },
+    "netbrain_live": null
   },
   "lounge_visits": {
     "lounge_visits": {
@@ -251,7 +252,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-08-04T14:57:31.369Z",
+    "fetchedAt": "2026-08-04T17:44:56.143Z",
     "dataWindow": {
       "start": "2026-07-22",
       "end": "2026-08-04"
@@ -359,27 +360,27 @@
       },
       {
         "date": "20260803",
-        "homepage": 313,
+        "homepage": 352,
         "agenticNetOps": 12,
         "gartner": 9,
         "ciscoLive": 3,
-        "requestDemo": 12
+        "requestDemo": 16
       },
       {
         "date": "20260804",
-        "homepage": 84,
-        "agenticNetOps": 5,
+        "homepage": 157,
+        "agenticNetOps": 6,
         "gartner": 2,
-        "ciscoLive": 0,
-        "requestDemo": 4
+        "ciscoLive": 1,
+        "requestDemo": 5
       }
     ],
     "totals": {
-      "homepage": 3419,
-      "agenticNetOps": 241,
+      "homepage": 3531,
+      "agenticNetOps": 242,
       "gartner": 101,
-      "ciscoLive": 41,
-      "requestDemo": 277
+      "ciscoLive": 42,
+      "requestDemo": 282
     }
   },
   "search": {
@@ -1512,7 +1513,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-08-04T14:57:32.272Z"
+    "fetchedAt": "2026-08-04T17:44:57.070Z"
   },
   "social": {
     "fetchedAt": "2026-08-04T14:41:42.783Z",
