@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T14:38:52.292Z",
+  "updatedAt": "2026-08-04T14:39:43.376Z",
   "runDate": "2026-08-04",
   "runHour": "14",
   "campaignUtm": "jtano_q2fy26_integrated",
@@ -225,7 +225,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3883,
-      "last_updated": "2026-08-04T14:37:54.243Z"
+      "last_updated": "2026-08-04T14:39:41.303Z"
     },
     "zero_outage_lounge": {
       "registered": 58,
@@ -233,7 +233,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4828,
-      "last_updated": "2026-08-04T14:37:54.243Z"
+      "last_updated": "2026-08-04T14:39:41.303Z"
     }
   },
   "lounge_visits": {
@@ -249,7 +249,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-08-04T14:38:21.161Z",
+    "fetchedAt": "2026-08-04T14:39:41.752Z",
     "dataWindow": {
       "start": "2026-07-22",
       "end": "2026-08-04"
@@ -1510,7 +1510,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-08-04T14:38:47.771Z"
+    "fetchedAt": "2026-08-04T14:39:43.369Z"
   },
   "social": {
     "fetchedAt": "2026-06-12T12:00:57.540Z",
