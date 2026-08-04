@@ -112,6 +112,26 @@ body {
 .chip-utm { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); }
 .chip-int { background: rgba(0,125,231,0.25); color: #78BDE3; border: 1px solid rgba(0,125,231,0.4); }
 
+/* ── RANGE PICKER ── */
+.range-bar {
+  background: #fff;
+  border-bottom: 1px solid var(--nb-border);
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.range-bar-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--nb-muted);
+}
+.range-preset-btn.active { background: var(--nb-purple); color:#fff; border-color: var(--nb-purple); }
+.range-divider { width:1px; height:20px; background: var(--nb-border); }
+
 /* ── MAIN ── */
 .main { padding: 20px 28px 48px; }
 
@@ -634,12 +654,27 @@ body {
 <div class="hero">
   <div>
     <div class="hero-title">JtANO Campaign KPI Dashboard</div>
-    <div class="hero-sub">Agentic NetOps Launch &nbsp;·&nbsp; May 29 – June 3, 2026 &nbsp;·&nbsp; Marketing Intelligence</div>
+    <div class="hero-sub">Agentic NetOps Launch &nbsp;·&nbsp; Live since May 29, 2026 &nbsp;·&nbsp; Marketing Intelligence</div>
   </div>
   <div class="hero-chips">
     <span class="chip chip-live">&#9679; Live</span>
     <span class="chip chip-utm">utm: jtano_q2fy26_integrated</span>
   </div>
+</div>
+
+<!-- DATE RANGE PICKER -->
+<div class="range-bar" id="range-bar">
+  <span class="range-bar-label">Date range</span>
+  <button class="utm-filter-btn range-preset-btn" data-days="7" onclick="setPresetRange(7)">Last 7 days</button>
+  <button class="utm-filter-btn range-preset-btn" data-days="30" onclick="setPresetRange(30)">Last 30 days</button>
+  <button class="utm-filter-btn range-preset-btn" data-days="90" onclick="setPresetRange(90)">Last 90 days</button>
+  <button class="utm-filter-btn range-preset-btn" data-days="all" onclick="setPresetRange(null)">All time</button>
+  <span class="range-divider"></span>
+  <input type="date" id="range-start-input" class="mf-input" style="padding:5px 8px;width:auto;">
+  <span style="color:var(--nb-muted);font-size:12px;">to</span>
+  <input type="date" id="range-end-input" class="mf-input" style="padding:5px 8px;width:auto;">
+  <button class="mf-btn" onclick="applyRangeFromInputs()">Apply</button>
+  <span id="range-bar-note" style="margin-left:auto;color:var(--nb-muted);font-size:11px;"></span>
 </div>
 
 <!-- TAB PANELS WRAPPER -->
@@ -663,7 +698,7 @@ body {
     <div class="kpi-card lav">
       <div class="kpi-label">Earned Media Mentions</div>
       <div class="kpi-value" id="kpi-media-mentions">—</div>
-      <div class="kpi-target">Meltwater · campaign window</div>
+      <div class="kpi-target">Meltwater · selected range</div>
     </div>
     <div class="kpi-card grn">
       <div class="kpi-label">Event Attendance</div>
@@ -678,7 +713,7 @@ body {
   <div class="row-2" style="margin-bottom:16px;">
 
     <div class="card">
-      <div class="card-head">Website Page Views <span id="pages-card-subtitle">GA4 · May 29 – Jun 3</span></div>
+      <div class="card-head">Website Page Views <span id="pages-card-subtitle">GA4 · loading…</span></div>
       <div class="card-body">
         <div id="pages-lift-stats" style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:10px;font-size:11px;"></div>
         <div class="chart-wrap" style="height:200px;">
@@ -688,7 +723,7 @@ body {
     </div>
 
     <div class="card">
-      <div class="card-head">MQL Form Fills <span id="fills-card-subtitle">GA4 · May 29 – Jun 3</span></div>
+      <div class="card-head">MQL Form Fills <span id="fills-card-subtitle">GA4 · loading…</span></div>
       <div class="card-body">
         <div class="chart-wrap" style="height:200px;">
           <canvas id="fillsChart" role="img" aria-label="Bar chart of daily MQL form fills over the campaign window.">Form fills chart.</canvas>
@@ -743,7 +778,7 @@ body {
   </div>
 
   <!-- LINKEDIN ORGANIC PERFORMANCE -->
-  <div class="section-label">LinkedIn Organic Performance</div>
+  <div class="section-label">LinkedIn Organic Performance <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--nb-muted);">&nbsp;&bull;&nbsp;Cumulative - not date filtered</span></div>
   <div id="oktopost-section" class="card" style="margin-bottom:16px;display:none;">
     <div class="card-head">
       LinkedIn (Oktopost)
@@ -988,7 +1023,7 @@ body {
 <div id="tab-events" class="tab-panel">
 <div class="main">
 
-  <div class="section-label">In-person events &mdash; Las Vegas</div>
+  <div class="section-label">In-person events &mdash; Las Vegas <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--nb-muted);">&nbsp;&bull;&nbsp;Cumulative - not date filtered</span></div>
 
   <!-- Event cards -->
   <div class="events-grid">
@@ -1118,7 +1153,7 @@ body {
   </div><!-- /events-grid -->
 
   <!-- Combined summary row -->
-  <div class="section-label">Combined events summary</div>
+  <div class="section-label">Combined events summary <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--nb-muted);">&nbsp;&bull;&nbsp;Cumulative - not date filtered</span></div>
   <div class="card" style="margin-bottom: 20px;">
     <div class="card-head">Both events &mdash; total headcount <span>Stub data &mdash; pending Pipedream Data Store</span></div>
     <div class="card-body">
@@ -1153,7 +1188,7 @@ body {
 <div class="main">
 
   <!-- KPI ROW -->
-  <div class="section-label">Earned media summary <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Meltwater &bull; Campaign window May 29 – Jun 3</span></div>
+  <div class="section-label">Earned media summary <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Meltwater &bull; <span id="media-tab-range-label">Selected range</span></span></div>
   <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
     <div class="kpi-card">
       <div class="kpi-label">Total Mentions</div>
@@ -1253,7 +1288,7 @@ body {
 <div id="tab-social" class="tab-panel">
 <div class="main">
 
-  <div class="section-label">Owned Social Performance <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Oktopost &bull; <span id="social-tab-window">May 18 – Jun 3, 2026</span></span></div>
+  <div class="section-label">Owned Social Performance <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; Oktopost &bull; <span id="social-tab-window">loading…</span></span> <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--nb-muted);">&nbsp;&bull;&nbsp;Cumulative - not date filtered</span></div>
 
   <!-- CHANNEL SUMMARY KPIS (populated when oktopost data arrives) -->
   <div id="social-tab-summary" style="display:none;">
@@ -1312,10 +1347,10 @@ body {
 <div id="tab-utm" class="tab-panel">
 <div class="main">
 
-  <div class="section-label">UTM Link Registry <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; All active campaign links &bull; Campaign window May 29 - Jun 3</span></div>
+  <div class="section-label">UTM Link Registry <span style="font-weight:400;text-transform:none;letter-spacing:0;">&nbsp;&bull;&nbsp; All active campaign links &bull; <span id="utm-range-label">Selected range</span></span></div>
 
   <!-- KPI CARDS -->
-  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px;">
+  <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:20px;">
     <div class="kpi-card">
       <div class="kpi-label">Total Sessions</div>
       <div class="kpi-value" id="utm-kpi-total">—</div>
@@ -1336,11 +1371,16 @@ body {
       <div class="kpi-value" id="utm-kpi-zol">—</div>
       <div class="kpi-target">Tradeshow:Q2FY26_ZOL_*</div>
     </div>
+    <div class="kpi-card" style="border-left-color:#876BCF;">
+      <div class="kpi-label">NB Live Boston Sessions</div>
+      <div class="kpi-value" id="utm-kpi-boston">—</div>
+      <div class="kpi-target">UserEvent:Q3FY26_*</div>
+    </div>
   </div>
 
   <!-- SESSIONS CHART -->
   <div class="card" style="margin-bottom:20px;">
-    <div class="card-head">Sessions by Source by Day <span>GA4 &bull; jtano / gartner / zol campaigns &bull; May 29 - Jun 3</span></div>
+    <div class="card-head">Sessions by Source by Day <span>GA4 &bull; jtano / gartner / zol campaigns &bull; <span id="sessions-range-label">selected range</span></span></div>
     <div class="card-body">
       <div id="utm-chart-wrap" class="chart-wrap" style="height:200px;">
         <canvas id="utmSessionChart" role="img" aria-label="Stacked bar chart of sessions by UTM source per day."></canvas>
@@ -1354,10 +1394,11 @@ body {
   <!-- FILTER BAR -->
   <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;">
     <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-right:4px;">Filter:</span>
-    <button class="utm-filter-btn active" onclick="filterUtm('all',this)">All (11)</button>
+    <button class="utm-filter-btn active" onclick="filterUtm('all',this)">All (14)</button>
     <button class="utm-filter-btn" onclick="filterUtm('jtano',this)">JtANO (6)</button>
     <button class="utm-filter-btn" onclick="filterUtm('gartner',this)">Gartner (2)</button>
     <button class="utm-filter-btn" onclick="filterUtm('zol',this)">ZOL (3)</button>
+    <button class="utm-filter-btn" onclick="filterUtm('boston',this)">NB Live Boston (3)</button>
   </div>
 
   <!-- TABLE -->
@@ -1401,6 +1442,125 @@ body {
 const P = '#200B4E', T = '#FF7347', L = '#876BCF', B = '#007DE7', LB = '#78BDE3', C = '#E3E887';
 
 const DATA_URL = 'https://raw.githubusercontent.com/NetBrainAaron/JtANO-Dashboard/main/data.json';
+
+// ── DATE RANGE PICKER STATE ───────────────────────────────────────────────────
+// RANGE_START / RANGE_END are ISO 'YYYY-MM-DD' strings for the user's currently
+// selected window. Every section that can respond to the picker reads from these
+// two globals instead of a fixed campaign window.
+let RANGE_START = null, RANGE_END = null;
+// Cache of the last successfully fetched data.json payload so the picker can
+// re-render without triggering a new network fetch.
+let lastKPIData = null;
+
+// Fixed pre-launch baseline (May 22-28, 2026) used for lift/comparison calculations.
+// This never moves with the picker -- only the "current" side of a lift calc does.
+const BASELINE_START = '2026-05-22';
+const BASELINE_END   = '2026-05-28';
+// Floor for the "All time" preset if no earlier date is found in the daily arrays.
+const EARLIEST_KNOWN_DATA_DATE = '2026-05-01';
+
+function toISODate(dateObj) {
+  return dateObj.toISOString().split('T')[0];
+}
+function addDaysISO(isoStr, days) {
+  const dt = new Date(isoStr);
+  dt.setDate(dt.getDate() + days);
+  return toISODate(dt);
+}
+function fmtRangeDate(isoStr) {
+  const p = String(isoStr).split('-');
+  const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return p.length === 3 ? `${m[parseInt(p[1],10)-1]} ${parseInt(p[2],10)}` : String(isoStr);
+}
+function getRangeDayCount() {
+  if (!RANGE_START || !RANGE_END) return 1;
+  return Math.max(1, Math.round((new Date(RANGE_END) - new Date(RANGE_START)) / 86400000) + 1);
+}
+
+// Default range: last 30 days, anchored on the most recent date actually present
+// in the fetched data (d.runDate or d.updatedAt) -- NOT the browser clock, since
+// the data feed can lag or go stale.
+function computeDefaultRange(d) {
+  const anchorRaw = (d && (d.runDate || d.updatedAt)) || null;
+  const anchor    = anchorRaw ? String(anchorRaw).split('T')[0] : toISODate(new Date());
+  return { start: addDaysISO(anchor, -29), end: anchor };
+}
+
+// Best-effort scan for the earliest date across the daily-granularity arrays,
+// falling back to EARLIEST_KNOWN_DATA_DATE if nothing earlier is found.
+function findEarliestDataDate(d) {
+  if (!d) return EARLIEST_KNOWN_DATA_DATE;
+  const candidates = [EARLIEST_KNOWN_DATA_DATE];
+  const nbDaily  = d.search?.search?.netbrain?.daily      || d.search?.netbrain?.daily      || [];
+  const anoDaily = d.search?.search?.agenticNetOps?.daily || d.search?.agenticNetOps?.daily || [];
+  if (nbDaily[0]?.date)  candidates.push(nbDaily[0].date);
+  if (anoDaily[0]?.date) candidates.push(anoDaily[0].date);
+  const mqlDates = Object.keys(d.mqls?.byDate || {}).sort();
+  if (mqlDates[0]) candidates.push(mqlDates[0]);
+  const pagesDaily = d.pages?.daily || [];
+  if (pagesDaily[0]?.date) {
+    candidates.push(String(pagesDaily[0].date).replace(/^(\d{4})(\d{2})(\d{2})$/, '$1-$2-$3'));
+  }
+  return candidates.sort()[0];
+}
+
+function setPresetRange(days) {
+  const { end: defaultEnd } = computeDefaultRange(lastKPIData);
+  const end   = defaultEnd;
+  const start = (days == null) ? findEarliestDataDate(lastKPIData) : addDaysISO(end, -(days - 1));
+  document.querySelectorAll('.range-preset-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.days === String(days == null ? 'all' : days));
+  });
+  setRangeAndRerender(start, end);
+}
+
+function applyRangeFromInputs() {
+  const s = document.getElementById('range-start-input')?.value;
+  const e = document.getElementById('range-end-input')?.value;
+  if (!s || !e) return;
+  if (s > e) { showToast('Start date must be before end date', 'warn'); return; }
+  document.querySelectorAll('.range-preset-btn').forEach(btn => btn.classList.remove('active'));
+  setRangeAndRerender(s, e);
+}
+
+// Updates the small static captions that reference the selected window
+// (Media tab, UTM Link Registry, Sessions-by-Source card, and the range bar note).
+function updateRangeCaptions(startStr, endStr) {
+  const label = `Selected range ${fmtRangeDate(startStr)} – ${fmtRangeDate(endStr)}`;
+  ['media-tab-range-label', 'utm-range-label', 'sessions-range-label'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = label;
+  });
+  const noteEl = document.getElementById('range-bar-note');
+  if (noteEl) noteEl.textContent = `Showing ${fmtRangeDate(startStr)} – ${fmtRangeDate(endStr)}`;
+}
+
+// Sets the global range, syncs the picker inputs/captions, and re-renders every
+// picker-aware section against the cached payload (no new fetch needed).
+function setRangeAndRerender(startStr, endStr) {
+  RANGE_START = startStr;
+  RANGE_END   = endStr;
+  const startInput = document.getElementById('range-start-input');
+  const endInput   = document.getElementById('range-end-input');
+  if (startInput) startInput.value = startStr;
+  if (endInput)   endInput.value   = endStr;
+  updateRangeCaptions(startStr, endStr);
+  if (lastKPIData) renderRangeDependentSections(lastKPIData);
+}
+
+// Re-runs every date-range-aware section against the cached payload. Sections
+// intentionally NOT called here (Oktopost/owned social, in-person events) are
+// frozen and always show their full cumulative totals -- see CLAUDE.md.
+function renderRangeDependentSections(d) {
+  if (!d) return;
+  const campaignMqls = renderMqlKpiAndLift(d);
+  renderCvrCard(d, campaignMqls);
+  renderPageViewsChart(d);
+  renderFormFillsChart(d);
+  renderEmailTable(d);
+  if (d.search) renderSearchChart(d.search?.search || d.search);
+  if (d.social && (d.social.combined || d.social.searches)) renderSocialChart(d.social);
+}
 
 // ── REFRESH TIMER ─────────────────────────────────────────────────────────────
 const REFRESH_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes (dashboard auto-refresh)
@@ -1453,181 +1613,26 @@ async function loadKPIs() {
     const lastUpdatedEl = document.getElementById('last-updated-label');
     if (lastUpdatedEl) lastUpdatedEl.textContent = `Updated ${fmtTimestamp(ts)}`;
 
-    // ── MQL card — campaign window only (May 29+) ──
-    const CAMP_START = '2026-05-29';
-    const mqlEl = document.getElementById('kpi-mqls');
-    const campaignMqls = Object.entries(d.mqls?.byDate || {})
-      .filter(([date]) => date >= CAMP_START)
-      .reduce((sum, [, v]) => sum + (typeof v === 'number' ? v : 0), 0);
-    if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
-
-    // ── MQL lift: campaign avg (May 29+) vs pre-launch avg (May 22-28) ──
-    const mqlLiftEl = document.getElementById('kpi-mqls-lift');
-    if (mqlLiftEl) {
-      const allMqlByDate = d.mqls?.byDate || {};
-      const preTotal  = Object.entries(allMqlByDate)
-        .filter(([dt]) => dt >= '2026-05-22' && dt < '2026-05-29')
-        .reduce((s, [, v]) => s + v, 0);
-      const preAvg    = preTotal / 7;
-      const campDays  = Object.keys(allMqlByDate).filter(dt => dt >= CAMP_START).length || 1;
-      const campAvg   = campaignMqls / campDays;
-      if (preAvg > 0) {
-        const lift = Math.round(((campAvg - preAvg) / preAvg) * 100);
-        const sign = lift >= 0 ? '+' : '';
-        const color = lift >= 0 ? '#2EAE5A' : '#D63030';
-        mqlLiftEl.innerHTML = `<span style="color:${color};font-weight:700;">${sign}${lift}%</span> vs pre-launch avg`;
-      } else {
-        mqlLiftEl.textContent = `${campAvg.toFixed(1)}/day campaign avg`;
-      }
+    // ── Cache payload + establish the default date range (last 30 days, anchored
+    // on the most recent date actually present in the data, not the browser clock) ──
+    lastKPIData = d;
+    if (RANGE_START === null || RANGE_END === null) {
+      const def = computeDefaultRange(d);
+      RANGE_START = def.start;
+      RANGE_END   = def.end;
+      const startInput = document.getElementById('range-start-input');
+      const endInput   = document.getElementById('range-end-input');
+      if (startInput) startInput.value = RANGE_START;
+      if (endInput)   endInput.value   = RANGE_END;
+      const thirtyBtn = document.querySelector('.range-preset-btn[data-days="30"]');
+      if (thirtyBtn) thirtyBtn.classList.add('active');
     }
+    updateRangeCaptions(RANGE_START, RANGE_END);
 
-    // ── CVR card (calculated from GA4 pages + MQL form fills, May 29+) ──
-    const cvrEl = document.getElementById('kpi-cvr');
-    if (cvrEl) {
-      const lpViews   = (d.pages?.daily || [])
-        .filter(row => String(row.date).replace(/-/g,'') >= '20260529')
-        .reduce((sum, row) => sum + (row.agenticNetOps || 0), 0);
-      const formFills = campaignMqls;
-      const cvr       = lpViews > 0 ? (formFills / lpViews) * 100 : null;
-      cvrEl.textContent = cvr != null ? cvr.toFixed(2) + '%' : '—';
-      const card = cvrEl.closest('.kpi-card');
-      if (card && cvr != null) {
-        card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
-      }
-    }
-
-    // ── Page views chart (GA4 -- 5 lines) ──
-    const pagesDaily = d.pages?.daily || [];
-    if (pagesDaily.length > 0 && cvrChartInstance) {
-      const formatDate = str => {
-        const s = String(str).replace(/-/g, '');
-        if (s.length === 8) {
-          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
-        }
-        return str;
-      };
-      cvrChartInstance.data.labels = pagesDaily.map(row => formatDate(row.date));
-      PAGE_CONFIGS.forEach((p, i) => {
-        cvrChartInstance.data.datasets[i].data = pagesDaily.map(row =>
-          p.key === 'total'
-            ? PAGE_KEYS.reduce((sum, k) => sum + (row[k] ?? 0), 0)
-            : (row[p.key] ?? 0)
-        );
-      });
-      cvrChartInstance.update();
-
-      // ── Page views lift: May 22-28 avg vs May 29+ avg ──
-      const preRows  = pagesDaily.filter(r => { const d = String(r.date).replace(/-/g,''); return d >= '20260522' && d <= '20260528'; });
-      const campRows = pagesDaily.filter(r => String(r.date).replace(/-/g,'') >= '20260529');
-      const liftEl   = document.getElementById('pages-lift-stats');
-      if (liftEl && preRows.length > 0 && campRows.length > 0) {
-        const avg = (rows, key) => rows.reduce((s, r) => s + (r[key] || 0), 0) / rows.length;
-        const liftPct = (key) => {
-          const pre  = avg(preRows,  key);
-          const camp = avg(campRows, key);
-          if (pre === 0) return null;
-          return Math.round(((camp - pre) / pre) * 100);
-        };
-        const liftItems = [
-          { label: 'Homepage',      key: 'homepage',    color: P },
-          { label: 'Request a Demo', key: 'requestDemo', color: '#2EAE5A' },
-        ];
-        liftEl.innerHTML = liftItems.map(item => {
-          const pct = liftPct(item.key);
-          if (pct === null) return '';
-          const sign  = pct >= 0 ? '+' : '';
-          const color = pct >= 0 ? '#2EAE5A' : '#D63030';
-          return `<span style="display:flex;align-items:center;gap:4px;">
-            <span style="width:8px;height:8px;border-radius:50%;background:${item.color};display:inline-block;flex-shrink:0;"></span>
-            <span style="color:var(--nb-muted);">${item.label}</span>
-            <span style="font-weight:700;color:${color};">${sign}${pct}%</span>
-            <span style="color:var(--nb-muted);font-size:10px;">vs pre-launch</span>
-          </span>`;
-        }).join('');
-      }
-
-      // Update card subtitle with totals
-      const totals = d.pages.totals || {};
-      const subtitle = document.getElementById('pages-card-subtitle');
-      if (subtitle) {
-        const parts = PAGE_CONFIGS
-          .filter(p => (totals[p.key] || 0) > 0)
-          .map(p => `${p.label}: ${totals[p.key].toLocaleString()}`);
-        subtitle.textContent = parts.length > 0 ? parts.join(' · ') : 'GA4 · live';
-      }
-    }
-
-    // ── Form fills chart (stacked bar by form) ──
-    const mqlByDate      = d.mqls?.byDate        || {};
-    const jtanoByDate    = d.mqls?.jtano?.byDate  || {};
-    const gartnerByDate  = d.mqls?.gartner?.byDate || {};
-    const demoByDate     = d.mqls?.requestDemo?.byDate || {};
-
-    // Full date range May 22 → today (no gaps, zero-fill days included)
-    const fillDates = [];
-    const fillEnd = new Date(Math.min(Date.now(), new Date('2026-06-04')));
-    for (let fd = new Date('2026-05-22'); fd <= fillEnd; fd.setDate(fd.getDate() + 1)) {
-      fillDates.push(fd.toISOString().split('T')[0]);
-    }
-
-    if (fillDates.length > 0 && fillsChartInstance) {
-      const formatDate = str => {
-        const s = String(str).replace(/-/g, '');
-        if (s.length === 8) {
-          const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-          return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
-        }
-        return str;
-      };
-      fillsChartInstance.data.labels                  = fillDates.map(formatDate);
-      fillsChartInstance.data.datasets[0].data        = fillDates.map(d => jtanoByDate[d]   || 0);
-      fillsChartInstance.data.datasets[1].data        = fillDates.map(d => gartnerByDate[d] || 0);
-      fillsChartInstance.data.datasets[2].data        = fillDates.map(d => demoByDate[d]    || 0);
-      fillsChartInstance.update();
-
-      const fillsSubtitle = document.getElementById('fills-card-subtitle');
-      const totalFills = d.mqls?.mqlCount || 0;
-      if (fillsSubtitle) fillsSubtitle.textContent = `${totalFills} total · 3 forms`;
-    }
-
-    // ── Email table (dynamic emails array) ──
-    // Normalise: pipeline may return emails as a flat array OR {emails:[...]}
-    const emailsRaw = d.emails || [];
-    const emails = Array.isArray(emailsRaw) ? emailsRaw : (emailsRaw.emails || []);
-
-    if (emails.length > 0) {
-      // Render email breakdown table
-      const tbody = document.getElementById('email-breakdown-body');
-      const tableUpdated = document.getElementById('email-table-updated');
-      if (tableUpdated) tableUpdated.textContent = fmtTimestamp(ts);
-      if (tbody) {
-        tbody.innerHTML = emails.map(e => {
-          const openPct   = (e.openRate  * 100).toFixed(1) + '%';
-          const ctorPct   = (e.ctor      * 100).toFixed(1) + '%';
-          const clickPct  = (e.clickRate * 100).toFixed(1) + '%';
-          const bouncePct = (e.bounceRate* 100).toFixed(1) + '%';
-          const stateLabel = e.state === 'PROCESSING'
-            ? '<span class="badge b-amb">Sending</span>'
-            : e.state === 'PUBLISHED'
-              ? '<span class="badge b-grn">Sent</span>'
-              : `<span class="badge b-info">${e.state}</span>`;
-          return `<tr>
-            <td>
-              <div style="font-weight:600;color:var(--nb-purple);">${e.name}</div>
-              <div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${e.subject || ''}</div>
-            </td>
-            <td style="text-align:right;">${e.sent.toLocaleString()}</td>
-            <td style="text-align:right;">${e.delivered.toLocaleString()}</td>
-            <td style="text-align:right;font-weight:600;">${openPct}</td>
-            <td style="text-align:right;">${ctorPct}</td>
-            <td style="text-align:right;">${clickPct}</td>
-            <td style="text-align:right;">${bouncePct}</td>
-            <td style="text-align:center;">${stateLabel}</td>
-          </tr>`;
-        }).join('');
-      }
-    }
+    // ── Every date-range-aware section (MQL, CVR, GA4 charts, email table,
+    // GSC search chart, Meltwater chart) is rendered from this one entry point so
+    // the picker can re-run the exact same logic later without a new fetch. ──
+    renderRangeDependentSections(d);
 
     // ── Events tab ──
     if (d.events) {
@@ -1636,23 +1641,21 @@ async function loadKPIs() {
       renderCombined(d.events.agentic_netops, d.events.zero_outage_lounge);
     }
 
-    // ── Social (Meltwater earned media) ──
+    // ── Social (Meltwater earned media) — chart + daily avg already rendered by
+    // renderRangeDependentSections() above; renderMediaTab covers the Media tab's
+    // own deep-dive totals/article feed, which stay cumulative (all-time). ──
     if (d.social && (d.social.combined || d.social.searches)) {
-      renderSocialChart(d.social);
       renderMediaTab(d.social);
     }
 
-    // ── Owned Social (Oktopost — all channels) ──
+    // ── Owned Social (Oktopost — all channels) — cumulative, not date filtered ──
     const ownedSocial = d.owned_social || d.oktopost || null;
     if (ownedSocial) {
       renderOktopostSection(ownedSocial);
       renderSocialTab(ownedSocial);
     }
 
-    // ── Branded Search (GSC) ──
-    if (d.search) {
-      renderSearchChart(d.search?.search || d.search);
-    }
+    // ── Branded Search (GSC) already rendered by renderRangeDependentSections() above ──
 
     // ── UTM Traffic (GA4 UTM dimensions -- populated by fetch_ga4_utm step) ──
     if (d.utm_traffic) {
@@ -1676,11 +1679,215 @@ async function loadKPIs() {
       if (gaEl) gaEl.textContent = grp.gartner != null ? Number(grp.gartner).toLocaleString() : '—';
       const zoEl = document.getElementById('utm-kpi-zol');
       if (zoEl) zoEl.textContent = grp.zol != null ? Number(grp.zol).toLocaleString() : '—';
+      const boEl = document.getElementById('utm-kpi-boston');
+      if (boEl) boEl.textContent = grp.boston != null ? Number(grp.boston).toLocaleString() : '—';
     }
 
   } catch(e) {
     console.warn('KPI fetch failed:', e);
   }
+}
+
+// ── MQL KPI CARD + LIFT (range-aware, baseline fixed May 22-28) ──────────────
+function renderMqlKpiAndLift(d) {
+  const mqlEl = document.getElementById('kpi-mqls');
+  const campaignMqls = Object.entries(d.mqls?.byDate || {})
+    .filter(([date]) => date >= RANGE_START && date <= RANGE_END)
+    .reduce((sum, [, v]) => sum + (typeof v === 'number' ? v : 0), 0);
+  if (mqlEl) mqlEl.textContent = campaignMqls > 0 ? campaignMqls : '—';
+
+  // Lift: selected-range avg vs the fixed pre-launch baseline avg (May 22-28) --
+  // the baseline never moves with the picker, only the "current" side does.
+  const mqlLiftEl = document.getElementById('kpi-mqls-lift');
+  if (mqlLiftEl) {
+    const allMqlByDate = d.mqls?.byDate || {};
+    const preTotal  = Object.entries(allMqlByDate)
+      .filter(([dt]) => dt >= BASELINE_START && dt < '2026-05-29')
+      .reduce((s, [, v]) => s + v, 0);
+    const preAvg    = preTotal / 7;
+    const campDays  = Object.keys(allMqlByDate).filter(dt => dt >= RANGE_START && dt <= RANGE_END).length || 1;
+    const campAvg   = campaignMqls / campDays;
+    if (preAvg > 0) {
+      const lift  = Math.round(((campAvg - preAvg) / preAvg) * 100);
+      const sign  = lift >= 0 ? '+' : '';
+      const color = lift >= 0 ? '#2EAE5A' : '#D63030';
+      mqlLiftEl.innerHTML = `<span style="color:${color};font-weight:700;">${sign}${lift}%</span> vs pre-launch avg`;
+    } else {
+      mqlLiftEl.textContent = `${campAvg.toFixed(1)}/day in selected range`;
+    }
+  }
+  return campaignMqls;
+}
+
+// ── CVR KPI CARD (range-aware) ────────────────────────────────────────────────
+function renderCvrCard(d, formFills) {
+  const cvrEl = document.getElementById('kpi-cvr');
+  if (!cvrEl) return;
+  const startCompact = RANGE_START.replace(/-/g, '');
+  const endCompact   = RANGE_END.replace(/-/g, '');
+  const lpViews = (d.pages?.daily || [])
+    .filter(row => { const dt = String(row.date).replace(/-/g,''); return dt >= startCompact && dt <= endCompact; })
+    .reduce((sum, row) => sum + (row.agenticNetOps || 0), 0);
+  const cvr = lpViews > 0 ? (formFills / lpViews) * 100 : null;
+  cvrEl.textContent = cvr != null ? cvr.toFixed(2) + '%' : '—';
+  const card = cvrEl.closest('.kpi-card');
+  if (card && cvr != null) {
+    card.style.borderLeftColor = cvr >= 2.0 ? '#2EAE5A' : '#D63030';
+  }
+}
+
+// ── GA4 PAGE VIEWS CHART + LIFT STATS (range-aware, baseline fixed May 22-28) ─
+function renderPageViewsChart(d) {
+  const pagesDaily = d.pages?.daily || [];
+  if (pagesDaily.length === 0 || !cvrChartInstance) return;
+
+  const startCompact = RANGE_START.replace(/-/g, '');
+  const endCompact    = RANGE_END.replace(/-/g, '');
+  const rangeRows = pagesDaily.filter(row => {
+    const dt = String(row.date).replace(/-/g,'');
+    return dt >= startCompact && dt <= endCompact;
+  });
+
+  const formatDate = str => {
+    const s = String(str).replace(/-/g, '');
+    if (s.length === 8) {
+      const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+    }
+    return str;
+  };
+  cvrChartInstance.data.labels = rangeRows.map(row => formatDate(row.date));
+  PAGE_CONFIGS.forEach((p, i) => {
+    cvrChartInstance.data.datasets[i].data = rangeRows.map(row =>
+      p.key === 'total'
+        ? PAGE_KEYS.reduce((sum, k) => sum + (row[k] ?? 0), 0)
+        : (row[p.key] ?? 0)
+    );
+  });
+  cvrChartInstance.update();
+
+  // ── Page views lift: fixed May 22-28 baseline avg vs selected-range avg ──
+  const preRows  = pagesDaily.filter(r => { const dt = String(r.date).replace(/-/g,''); return dt >= '20260522' && dt <= '20260528'; });
+  const campRows = rangeRows;
+  const liftEl   = document.getElementById('pages-lift-stats');
+  if (liftEl && preRows.length > 0 && campRows.length > 0) {
+    const avg = (rows, key) => rows.reduce((s, r) => s + (r[key] || 0), 0) / rows.length;
+    const liftPct = (key) => {
+      const pre  = avg(preRows,  key);
+      const camp = avg(campRows, key);
+      if (pre === 0) return null;
+      return Math.round(((camp - pre) / pre) * 100);
+    };
+    const liftItems = [
+      { label: 'Homepage',      key: 'homepage',    color: P },
+      { label: 'Request a Demo', key: 'requestDemo', color: '#2EAE5A' },
+    ];
+    liftEl.innerHTML = liftItems.map(item => {
+      const pct = liftPct(item.key);
+      if (pct === null) return '';
+      const sign  = pct >= 0 ? '+' : '';
+      const color = pct >= 0 ? '#2EAE5A' : '#D63030';
+      return `<span style="display:flex;align-items:center;gap:4px;">
+        <span style="width:8px;height:8px;border-radius:50%;background:${item.color};display:inline-block;flex-shrink:0;"></span>
+        <span style="color:var(--nb-muted);">${item.label}</span>
+        <span style="font-weight:700;color:${color};">${sign}${pct}%</span>
+        <span style="color:var(--nb-muted);font-size:10px;">vs pre-launch</span>
+      </span>`;
+    }).join('');
+  } else if (liftEl) {
+    liftEl.innerHTML = '';
+  }
+
+  // Update card subtitle with totals for the selected range (not all-time)
+  const rangeTotals = {};
+  PAGE_KEYS.forEach(k => { rangeTotals[k] = rangeRows.reduce((s, r) => s + (r[k] || 0), 0); });
+  const subtitle = document.getElementById('pages-card-subtitle');
+  if (subtitle) {
+    const parts = PAGE_CONFIGS
+      .filter(p => (rangeTotals[p.key] || 0) > 0)
+      .map(p => `${p.label}: ${rangeTotals[p.key].toLocaleString()}`);
+    subtitle.textContent = parts.length > 0 ? parts.join(' · ') : 'GA4 · selected range';
+  }
+}
+
+// ── MQL FORM FILLS STACKED BAR CHART (range-aware) ────────────────────────────
+function renderFormFillsChart(d) {
+  const mqlByDate      = d.mqls?.byDate        || {};
+  const jtanoByDate    = d.mqls?.jtano?.byDate  || {};
+  const gartnerByDate  = d.mqls?.gartner?.byDate || {};
+  const demoByDate     = d.mqls?.requestDemo?.byDate || {};
+
+  // Zero-filled days across the selected range only (strictly bounded to the picker)
+  const fillDates = [];
+  for (let fd = new Date(RANGE_START); fd <= new Date(RANGE_END); fd.setDate(fd.getDate() + 1)) {
+    fillDates.push(fd.toISOString().split('T')[0]);
+  }
+
+  if (fillDates.length > 0 && fillsChartInstance) {
+    const formatDate = str => {
+      const s = String(str).replace(/-/g, '');
+      if (s.length === 8) {
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m[parseInt(s.slice(4,6),10)-1] + ' ' + parseInt(s.slice(6,8),10);
+      }
+      return str;
+    };
+    fillsChartInstance.data.labels           = fillDates.map(formatDate);
+    fillsChartInstance.data.datasets[0].data = fillDates.map(dt => jtanoByDate[dt]   || 0);
+    fillsChartInstance.data.datasets[1].data = fillDates.map(dt => gartnerByDate[dt] || 0);
+    fillsChartInstance.data.datasets[2].data = fillDates.map(dt => demoByDate[dt]    || 0);
+    fillsChartInstance.update();
+
+    const fillsSubtitle = document.getElementById('fills-card-subtitle');
+    const totalFillsInRange = fillDates.reduce((s, dt) => s + (mqlByDate[dt] || 0), 0);
+    if (fillsSubtitle) fillsSubtitle.textContent = `${totalFillsInRange} in range · 3 forms`;
+  }
+}
+
+// ── EMAIL BREAKDOWN TABLE (filtered by publishDate within the selected range) ─
+function renderEmailTable(d) {
+  const emailsRaw  = d.emails || [];
+  const allEmails  = Array.isArray(emailsRaw) ? emailsRaw : (emailsRaw.emails || []);
+  const emails     = allEmails.filter(e => {
+    const pubDate = (e.publishDate || '').split('T')[0];
+    return pubDate && pubDate >= RANGE_START && pubDate <= RANGE_END;
+  });
+
+  const tableUpdated = document.getElementById('email-table-updated');
+  if (tableUpdated && d.updatedAt) tableUpdated.textContent = fmtTimestamp(new Date(d.updatedAt));
+
+  const tbody = document.getElementById('email-breakdown-body');
+  if (!tbody) return;
+
+  if (emails.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;color:var(--nb-muted);padding:20px;">No emails sent in this range</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = emails.map(e => {
+    const openPct   = (e.openRate  * 100).toFixed(1) + '%';
+    const ctorPct   = (e.ctor      * 100).toFixed(1) + '%';
+    const clickPct  = (e.clickRate * 100).toFixed(1) + '%';
+    const bouncePct = (e.bounceRate* 100).toFixed(1) + '%';
+    const stateLabel = e.state === 'PROCESSING'
+      ? '<span class="badge b-amb">Sending</span>'
+      : e.state === 'PUBLISHED'
+        ? '<span class="badge b-grn">Sent</span>'
+        : `<span class="badge b-info">${e.state}</span>`;
+    return `<tr>
+      <td>
+        <div style="font-weight:600;color:var(--nb-purple);">${e.name}</div>
+        <div style="font-size:11px;color:var(--nb-muted);margin-top:2px;">${e.subject || ''}</div>
+      </td>
+      <td style="text-align:right;">${e.sent.toLocaleString()}</td>
+      <td style="text-align:right;">${e.delivered.toLocaleString()}</td>
+      <td style="text-align:right;font-weight:600;">${openPct}</td>
+      <td style="text-align:right;">${ctorPct}</td>
+      <td style="text-align:right;">${clickPct}</td>
+      <td style="text-align:right;">${bouncePct}</td>
+      <td style="text-align:center;">${stateLabel}</td>
+    </tr>`;
+  }).join('');
 }
 
 // ── SOCIAL CHART RENDERER ─────────────────────────────────────────────────────
@@ -1689,15 +1896,11 @@ function renderSocialChart(social) {
   const total    = combined.total  || 0;
   const byDate   = combined.byDate || {};
 
-  // Update headline stats
+  // Update headline stats -- total mentions stays all-time; daily average is
+  // recomputed over the selected range only.
   const totalEl = document.getElementById('social-total');
   const avgEl   = document.getElementById('social-daily-avg');
   if (totalEl) totalEl.textContent = total.toLocaleString();
-
-  const campaignStart = new Date('2026-05-29');
-  const today         = new Date();
-  const dayCount      = Math.max(1, Math.round((today - campaignStart) / 86400000));
-  if (avgEl) avgEl.textContent = (total / dayCount).toFixed(1);
 
   // Normalise byDate -- pipeline returns array [{date,count}] or legacy object {date:count}
   const byDateRaw = combined.byDate || [];
@@ -1705,9 +1908,14 @@ function renderSocialChart(social) {
     ? Object.fromEntries(byDateRaw.map(({ date, count }) => [date, count]))
     : byDateRaw;
 
-  // Build daily chart from real byDate data, starting May 22
-  const CHART_START = '2026-05-22';
-  const dates = Object.keys(byDateObj).filter(d => d >= CHART_START).sort();
+  const rangeDays  = getRangeDayCount();
+  const rangeTotal = Object.entries(byDateObj)
+    .filter(([dt]) => dt >= RANGE_START && dt <= RANGE_END)
+    .reduce((s, [, v]) => s + (v || 0), 0);
+  if (avgEl) avgEl.textContent = rangeDays > 0 ? (rangeTotal / rangeDays).toFixed(1) : '—';
+
+  // Build daily chart from real byDate data, bounded to the selected range
+  const dates = Object.keys(byDateObj).filter(d => d >= RANGE_START && d <= RANGE_END).sort();
   if (dates.length > 0) {
     const formatDate = str => {
       const s = String(str).replace(/-/g, '');
@@ -1897,7 +2105,7 @@ function renderSocialTab(data) {
       const sign      = growth >= 0 ? '+' : '';
       followerHtml = `
         <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--nb-border);">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:10px;">Follower Growth &bull; Campaign Window (May 29 – Jun 3)</div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:10px;">Follower Growth &bull; Cumulative</div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
             <div style="background:var(--nb-light-bg);border-radius:6px;padding:10px 14px;text-align:center;">
               <div style="font-size:10px;color:var(--nb-muted);font-weight:600;margin-bottom:4px;">Followers at Start</div>
@@ -1920,7 +2128,7 @@ function renderSocialTab(data) {
     } else {
       followerHtml = `
         <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--nb-border);">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:6px;">Follower Growth &bull; Campaign Window</div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--nb-muted);margin-bottom:6px;">Follower Growth &bull; Cumulative</div>
           <div style="font-size:12px;color:var(--nb-muted);font-style:italic;">Add a <code style="background:var(--nb-light-bg);padding:1px 5px;border-radius:3px;font-size:11px;">followers: { start, end, growth, growthPct }</code> object to each channel in the Pipedream normalize_data step to enable this section.</div>
         </div>`;
     }
@@ -2224,13 +2432,22 @@ function renderSearchChart(search) {
   const nb  = search.netbrain      || {};
   const ano = search.agenticNetOps || {};
 
-  // Lift index stat cards
-  const nbLift  = nb.liftIndex  && nb.liftIndex.impressions  != null ? nb.liftIndex.impressions  : null;
-  const anoLift = ano.liftIndex && ano.liftIndex.impressions != null ? ano.liftIndex.impressions : null;
+  // Lift index -- computed client-side against the fixed baselineDailyAvg so it
+  // responds to the selected range: (avg impressions in range / baseline avg) * 100
+  const computeLiftIndex = (series) => {
+    const baseline = series.baselineDailyAvg?.impressions;
+    const daily    = series.daily || [];
+    const inRange  = daily.filter(row => row.date >= RANGE_START && row.date <= RANGE_END);
+    if (!baseline || baseline === 0 || inRange.length === 0) return null;
+    const avgImpressions = inRange.reduce((s, r) => s + (r.impressions || 0), 0) / inRange.length;
+    return Math.round((avgImpressions / baseline) * 100);
+  };
+  const nbLift  = computeLiftIndex(nb);
+  const anoLift = computeLiftIndex(ano);
   const nbLiftEl  = document.getElementById('search-nb-lift');
   const anoLiftEl = document.getElementById('search-ano-lift');
-  if (nbLiftEl  && nbLift  != null) nbLiftEl.textContent  = nbLift;
-  if (anoLiftEl && anoLift != null) anoLiftEl.textContent = anoLift;
+  if (nbLiftEl)  nbLiftEl.textContent  = nbLift  != null ? nbLift  : '—';
+  if (anoLiftEl) anoLiftEl.textContent = anoLift != null ? anoLift : '—';
 
   // Top KPI card (NetBrain lift expressed as +/- % vs baseline)
   const kpiSearchEl = document.getElementById('kpi-search');
@@ -2239,10 +2456,12 @@ function renderSearchChart(search) {
     kpiSearchEl.textContent = (pct >= 0 ? '+' : '') + pct + '%';
   }
 
-  // Dual-line chart -- merge dates from both series
+  // Dual-line chart -- merge dates from both series, bounded to the selected range
   const nbDaily  = nb.daily  || [];
   const anoDaily = ano.daily || [];
-  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])].sort().filter(d => d >= '2026-05-22');
+  const allDates = [...new Set([...nbDaily.map(d => d.date), ...anoDaily.map(d => d.date)])]
+    .sort()
+    .filter(d => d >= RANGE_START && d <= RANGE_END);
 
   if (allDates.length > 0) {
     const formatDate = str => {
@@ -2628,11 +2847,15 @@ function filterMediaArticles() {
     if (date) byDateFiltered[date] = (byDateFiltered[date] || 0) + 1;
   }
 
-  // ── KPI cards ──
-  const campaignStart = new Date('2026-05-29');
-  const dayCount      = Math.max(1, Math.round((new Date() - campaignStart) / 86400000));
-  const total         = nonExcluded.length;
-  const unique        = new Set(nonExcluded.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
+  // ── KPI cards -- total/unique/peak stay all-time (cumulative); the daily
+  // average is recomputed over the selected date range so it responds to the picker ──
+  const total      = nonExcluded.length;
+  const unique     = new Set(nonExcluded.map(a => (a.title || a.url || '').toLowerCase().trim())).size;
+  const rangeDays  = getRangeDayCount();
+  const rangeTotal = Object.entries(byDateFiltered)
+    .filter(([dt]) => dt >= RANGE_START && dt <= RANGE_END)
+    .reduce((s, [, v]) => s + v, 0);
+  const rangeAvg   = rangeDays > 0 ? rangeTotal / rangeDays : 0;
 
   const totalEl   = document.getElementById('media-total');
   const avgEl     = document.getElementById('media-daily-avg');
@@ -2641,7 +2864,7 @@ function filterMediaArticles() {
   const peakDt    = document.getElementById('media-peak-date');
 
   if (totalEl)  totalEl.textContent  = total.toLocaleString();
-  if (avgEl)    avgEl.textContent    = (total / dayCount).toFixed(1);
+  if (avgEl)    avgEl.textContent    = rangeAvg.toFixed(1);
   if (uniqueEl) uniqueEl.textContent = unique.toLocaleString();
 
   // Peak day from filtered byDate
@@ -2682,7 +2905,7 @@ function filterMediaArticles() {
   const socialAvgEl      = document.getElementById('social-daily-avg');
   const mediaMentionsEl  = document.getElementById('kpi-media-mentions');
   if (socialTotalEl)   socialTotalEl.textContent   = total.toLocaleString();
-  if (socialAvgEl)     socialAvgEl.textContent     = (total / dayCount).toFixed(1);
+  if (socialAvgEl)     socialAvgEl.textContent     = rangeAvg.toFixed(1);
   if (mediaMentionsEl) mediaMentionsEl.textContent = total > 0 ? total.toLocaleString() : '—';
 
   // ── Count label ──
@@ -2812,13 +3035,17 @@ var UTM_LINKS = [
   { group:'gartner', campaign:'gartner_market_guide_q2fy26_analyst_report',source:'email',        medium:'text_link',        dest:'/resources/gartner-research/',                    url:'https://www.netbrain.com/resources/gartner-research/?utm_campaign=gartner_market_guide_q2fy26_analyst_report&utm_source=email&utm_medium=text_link' },
   { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'cta_button',       dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=cta_button' },
   { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'header_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=header_graphic' },
-  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'footer_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=footer_graphic' }
+  { group:'zol',     campaign:'Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas',     source:'email',        medium:'footer_graphic',   dest:'/platform/journey-to-agentic-netops/',            url:'https://www.netbrain.com/platform/journey-to-agentic-netops/?utm_campaign=Tradeshow:Q2FY26_ZOL_Cisco-LIVE-Vegas&utm_source=email&utm_medium=footer_graphic' },
+  { group:'boston',  campaign:'UserEvent:Q3FY26_NetBrain-Live-Boston',      source:'email',        medium:'cta_button',       dest:'TBD',                                             url:'' },
+  { group:'boston',  campaign:'UserEvent:Q3FY26_NetBrain-Live-Boston',      source:'email',        medium:'header_graphic',   dest:'TBD',                                             url:'' },
+  { group:'boston',  campaign:'UserEvent:Q3FY26_NetBrain-Live-Boston',      source:'email',        medium:'footer_graphic',   dest:'TBD',                                             url:'' }
 ];
 
 var UTM_GROUP_STYLES = {
   jtano:   { bg:'#EDE8F5', color:'#200B4E', label:'JtANO' },
   gartner: { bg:'#E6F3FE', color:'#007DE7', label:'Gartner' },
-  zol:     { bg:'rgba(255,115,71,0.12)', color:'#FF7347', label:'ZOL' }
+  zol:     { bg:'rgba(255,115,71,0.12)', color:'#FF7347', label:'ZOL' },
+  boston:  { bg:'rgba(135,107,207,0.12)', color:'#876BCF', label:'NB Live Boston' }
 };
 
 var currentUtmFilter  = 'all';
