@@ -1150,29 +1150,72 @@ body {
       </div>
     </div>
 
+    <!-- NetBrain Live card (upcoming — no attendance data yet) -->
+    <div class="event-card">
+      <div class="event-card-head" style="background: linear-gradient(135deg, #007DE7 0%, #200B4E 100%);">
+        <div class="event-card-title">NetBrain Live</div>
+        <div class="event-card-meta">
+          <span>&#128197; September 22&ndash;24, 2026</span>
+          <span>&#128205; Location TBD</span>
+        </div>
+      </div>
+      <div class="event-card-body">
+        <div class="event-stat-row" style="grid-template-columns:repeat(3,1fr);">
+          <div class="event-stat">
+            <div class="event-stat-label">Registered</div>
+            <div class="event-stat-value" id="nbl-registered">&#8212;</div>
+            <div class="event-stat-sub">List 3617</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Comp</div>
+            <div class="event-stat-value" id="nbl-comp">&#8212;</div>
+            <div class="event-stat-sub">List 3540 &middot; subset of registered</div>
+          </div>
+          <div class="event-stat">
+            <div class="event-stat-label">Days Until Event</div>
+            <div class="event-stat-value highlight" id="nbl-days-until">&#8212;</div>
+            <div class="event-stat-sub">as of today</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;padding:10px 12px;background:var(--nb-light-bg);border-radius:var(--radius);font-size:11px;color:var(--nb-muted);">
+          &#9432; Attendance and walk-in tracking will appear here after the event takes place.
+        </div>
+
+        <div class="event-updated">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#6B6880" stroke-width="1.2"/><path d="M6 3.5V6.5L7.5 8" stroke="#6B6880" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Last updated: <span id="nbl-updated">&#8212;</span>
+        </div>
+      </div>
+    </div>
+
   </div><!-- /events-grid -->
 
   <!-- Combined summary row -->
   <div class="section-label">Combined events summary <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--nb-muted);">&nbsp;&bull;&nbsp;Cumulative - not date filtered</span></div>
   <div class="card" style="margin-bottom: 20px;">
-    <div class="card-head">Both events &mdash; total headcount <span>Stub data &mdash; pending Pipedream Data Store</span></div>
+    <div class="card-head">All events &mdash; total headcount <span>Stub data &mdash; pending Pipedream Data Store</span></div>
     <div class="card-body">
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
         <div style="text-align:center;">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Total Registered</div>
           <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-registered">&#8212;</div>
+          <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">AN + ZOL + NetBrain Live</div>
         </div>
         <div style="text-align:center;">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Total Attended</div>
           <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-attended">&#8212;</div>
+          <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">AN + ZOL only</div>
         </div>
         <div style="text-align:center;">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Combined Walk-ins</div>
           <div style="font-size:32px;font-weight:700;color:var(--nb-tangerine);" id="combined-walkins">&#8212;</div>
+          <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">AN + ZOL only</div>
         </div>
         <div style="text-align:center;">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--nb-muted);margin-bottom:6px;">Blended Rate</div>
           <div style="font-size:32px;font-weight:700;color:var(--nb-purple);" id="combined-rate">&#8212;</div>
+          <div style="font-size:10px;color:var(--nb-muted);margin-top:4px;">AN + ZOL only</div>
         </div>
       </div>
     </div>
@@ -1642,7 +1685,8 @@ async function loadKPIs() {
     if (d.events) {
       renderEventCard('an',  d.events.agentic_netops);
       renderEventCard('zol', d.events.zero_outage_lounge);
-      renderCombined(d.events.agentic_netops, d.events.zero_outage_lounge);
+      renderEventCardUpcoming('nbl', d.events.netbrain_live || eventsStub.netbrain_live);
+      renderCombined(d.events.agentic_netops, d.events.zero_outage_lounge, d.events.netbrain_live);
     }
 
     // ── Social (Meltwater earned media) — chart + daily avg already rendered by
@@ -2525,8 +2569,36 @@ var eventsStub = {
     walkins: 0,
     attendance_rate: 0,
     last_updated: ''
+  },
+  netbrain_live: {
+    registered: 0,
+    comp: 0,       // subset of registered, not additive
+    last_updated: ''
   }
 };
+
+// NetBrain Live is a future event (Sept 22-24, 2026) — no attendance data exists
+// yet, so this renders Registered/Comp/Days-Until only, no attendance rate or
+// progress bar. Comp is a SUBSET of Registered (not a separate pool).
+const NETBRAIN_LIVE_START = new Date('2026-09-22T00:00:00');
+
+function renderEventCardUpcoming(prefix, data) {
+  var reg  = data.registered || 0;
+  var comp = data.comp || 0;
+
+  document.getElementById(prefix + '-registered').textContent = reg  > 0 ? reg  : '—';
+  document.getElementById(prefix + '-comp').textContent       = comp > 0 ? comp : '—';
+
+  var daysUntilEl = document.getElementById(prefix + '-days-until');
+  if (daysUntilEl) {
+    var msRemaining = NETBRAIN_LIVE_START - new Date();
+    var daysUntil   = Math.ceil(msRemaining / 86400000);
+    daysUntilEl.textContent = daysUntil > 0 ? daysUntil : (daysUntil === 0 ? 'Today' : 'In progress / past');
+  }
+
+  var ts = data.last_updated;
+  document.getElementById(prefix + '-updated').textContent = ts ? fmtTimestamp(new Date(ts)) : 'Pending live data';
+}
 
 function renderEventCard(prefix, data) {
   var reg     = data.registered;
@@ -2564,16 +2636,22 @@ function renderEventCard(prefix, data) {
   document.getElementById(prefix + '-updated').textContent = ts ? fmtTimestamp(new Date(ts)) : 'Pending live data';
 }
 
-function renderCombined(an, zol) {
-  var totalReg    = an.registered + zol.registered;
+function renderCombined(an, zol, nbl) {
+  // Headline "Total Registered" includes NetBrain Live's registrants.
+  // Attended/Walk-ins/Blended Rate stay scoped to AN + ZOL only, since NetBrain
+  // Live hasn't happened yet and including its (necessarily zero) attendance
+  // would misleadingly dilute those figures. See event card note.
+  var nblReg      = (nbl && nbl.registered) || 0;
+  var totalReg    = an.registered + zol.registered + nblReg;
   var totalAtt    = an.attended + zol.attended;
   var totalWalk   = (an.walkins || 0) + (zol.walkins || 0);
   var totalRegAtt = (an.registeredAttended || 0) + (zol.registeredAttended || 0);
-  var blended     = totalReg > 0 ? Math.round((totalRegAtt / totalReg) * 100) : 0;
+  var attendedBaseReg = an.registered + zol.registered;
+  var blended     = attendedBaseReg > 0 ? Math.round((totalRegAtt / attendedBaseReg) * 100) : 0;
   document.getElementById('combined-registered').textContent = totalReg > 0 ? totalReg : '\u2014';
   document.getElementById('combined-attended').textContent   = totalAtt > 0 ? totalAtt : '\u2014';
-  document.getElementById('combined-walkins').textContent    = totalWalk > 0 ? totalWalk : (totalReg > 0 ? '0' : '\u2014');
-  document.getElementById('combined-rate').textContent       = totalReg > 0 ? blended + '%' : '\u2014';
+  document.getElementById('combined-walkins').textContent    = totalWalk > 0 ? totalWalk : (attendedBaseReg > 0 ? '0' : '\u2014');
+  document.getElementById('combined-rate').textContent       = attendedBaseReg > 0 ? blended + '%' : '\u2014';
 
   // Home tab KPI card
   var kpiAtt    = document.getElementById('kpi-event-attendance');
@@ -2596,14 +2674,16 @@ function renderCombined(an, zol) {
 //   if (data.events) {
 //     renderEventCard('an',  data.events.agentic_netops);
 //     renderEventCard('zol', data.events.zero_outage_lounge);
-//     renderCombined(data.events.agentic_netops, data.events.zero_outage_lounge);
+//     renderEventCardUpcoming('nbl', data.events.netbrain_live);
+//     renderCombined(data.events.agentic_netops, data.events.zero_outage_lounge, data.events.netbrain_live);
 //   }
 // }
 // loadEventsKPIs();
 
 renderEventCard('an',  eventsStub.agentic_netops);
 renderEventCard('zol', eventsStub.zero_outage_lounge);
-renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge);
+renderEventCardUpcoming('nbl', eventsStub.netbrain_live);
+renderCombined(eventsStub.agentic_netops, eventsStub.zero_outage_lounge, eventsStub.netbrain_live);
 
 // ── MEDIA MENTIONS TAB ──────────────────────────────────────────────────────
 
