@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-06T05:44:49.468Z",
+  "updatedAt": "2026-08-06T09:44:57.402Z",
   "runDate": "2026-08-06",
-  "runHour": "05",
+  "runHour": "09",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -232,7 +232,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3883,
-      "last_updated": "2026-08-06T05:44:46.474Z"
+      "last_updated": "2026-08-06T09:44:54.897Z"
     },
     "zero_outage_lounge": {
       "registered": 58,
@@ -240,7 +240,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4828,
-      "last_updated": "2026-08-06T05:44:46.474Z"
+      "last_updated": "2026-08-06T09:44:54.897Z"
     },
     "netbrain_live": null
   },
@@ -257,7 +257,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-08-06T05:44:47.699Z",
+    "fetchedAt": "2026-08-06T09:44:55.756Z",
     "dataWindow": {
       "start": "2026-07-24",
       "end": "2026-08-06"
@@ -365,27 +365,27 @@
       },
       {
         "date": "20260805",
-        "homepage": 327,
+        "homepage": 330,
         "agenticNetOps": 18,
         "gartner": 2,
         "ciscoLive": 0,
-        "requestDemo": 17
+        "requestDemo": 18
       },
       {
         "date": "20260806",
-        "homepage": 1,
-        "agenticNetOps": 0,
+        "homepage": 39,
+        "agenticNetOps": 3,
         "gartner": 0,
         "ciscoLive": 0,
         "requestDemo": 0
       }
     ],
     "totals": {
-      "homepage": 3407,
-      "agenticNetOps": 234,
+      "homepage": 3448,
+      "agenticNetOps": 237,
       "gartner": 80,
       "ciscoLive": 34,
-      "requestDemo": 261
+      "requestDemo": 262
     }
   },
   "search": {
@@ -916,11 +916,18 @@
           "clicks": 115,
           "ctr": 0.3116531165311653,
           "position": 5.2411924119241196
+        },
+        {
+          "date": "2026-08-04",
+          "impressions": 381,
+          "clicks": 103,
+          "ctr": 0.27034120734908135,
+          "position": 7.25984251968504
         }
       ],
       "totals": {
-        "impressions": 23349,
-        "clicks": 5806
+        "impressions": 23730,
+        "clicks": 5909
       },
       "baselineDailyAvg": {
         "impressions": 305.25,
@@ -1450,10 +1457,17 @@
           "clicks": 0,
           "ctr": 0,
           "position": 42.5
+        },
+        {
+          "date": "2026-08-04",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 7.4
         }
       ],
       "totals": {
-        "impressions": 376,
+        "impressions": 381,
         "clicks": 10
       },
       "baselineDailyAvg": {
@@ -1462,7 +1476,7 @@
       },
       "liftIndex": {
         "impressions": 153,
-        "clicks": 84
+        "clicks": 82
       }
     }
   },
@@ -1532,7 +1546,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-08-06T05:44:49.437Z"
+    "fetchedAt": "2026-08-06T09:44:57.371Z"
   },
   "social": {
     "fetchedAt": "2026-08-05T12:00:42.652Z",
