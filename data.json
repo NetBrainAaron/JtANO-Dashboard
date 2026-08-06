@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-06T17:44:54.221Z",
+  "updatedAt": "2026-08-06T21:44:50.275Z",
   "runDate": "2026-08-06",
-  "runHour": "17",
+  "runHour": "21",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -234,7 +234,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3883,
-      "last_updated": "2026-08-06T17:44:51.910Z"
+      "last_updated": "2026-08-06T21:44:47.584Z"
     },
     "zero_outage_lounge": {
       "registered": 58,
@@ -242,7 +242,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4828,
-      "last_updated": "2026-08-06T17:44:51.910Z"
+      "last_updated": "2026-08-06T21:44:47.584Z"
     },
     "netbrain_live": null
   },
@@ -259,7 +259,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-08-06T17:44:52.805Z",
+    "fetchedAt": "2026-08-06T21:44:48.502Z",
     "dataWindow": {
       "start": "2026-07-24",
       "end": "2026-08-06"
@@ -375,19 +375,19 @@
       },
       {
         "date": "20260806",
-        "homepage": 190,
-        "agenticNetOps": 9,
-        "gartner": 1,
+        "homepage": 307,
+        "agenticNetOps": 14,
+        "gartner": 4,
         "ciscoLive": 0,
-        "requestDemo": 6
+        "requestDemo": 10
       }
     ],
     "totals": {
-      "homepage": 3661,
-      "agenticNetOps": 245,
-      "gartner": 83,
+      "homepage": 3778,
+      "agenticNetOps": 250,
+      "gartner": 86,
       "ciscoLive": 34,
-      "requestDemo": 268
+      "requestDemo": 272
     }
   },
   "search": {
@@ -1516,7 +1516,7 @@
         "posts": 0,
         "impressions": 0,
         "engagements": 0,
-        "engagementRate": 0.0011063042832139,
+        "engagementRate": 0.0011049905993337,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -1548,7 +1548,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-08-06T17:44:54.189Z"
+    "fetchedAt": "2026-08-06T21:44:50.257Z"
   },
   "social": {
     "fetchedAt": "2026-08-06T12:00:59.878Z",
