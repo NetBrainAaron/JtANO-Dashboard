@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-14T01:44:49.145Z",
+  "updatedAt": "2026-08-14T05:44:48.878Z",
   "runDate": "2026-08-14",
-  "runHour": "01",
+  "runHour": "05",
   "campaignUtm": "jtano_q2fy26_integrated",
   "campaignWindow": {
     "start": "2026-05-29",
@@ -246,7 +246,7 @@
       "registeredAttended": 73,
       "walkins": 35,
       "attendance_rate": 0.3883,
-      "last_updated": "2026-08-14T01:44:46.588Z"
+      "last_updated": "2026-08-14T05:44:46.554Z"
     },
     "zero_outage_lounge": {
       "registered": 58,
@@ -254,7 +254,7 @@
       "registeredAttended": 28,
       "walkins": 35,
       "attendance_rate": 0.4828,
-      "last_updated": "2026-08-14T01:44:46.588Z"
+      "last_updated": "2026-08-14T05:44:46.554Z"
     },
     "netbrain_live": null
   },
@@ -271,7 +271,7 @@
     }
   },
   "pages": {
-    "fetchedAt": "2026-08-14T01:44:47.448Z",
+    "fetchedAt": "2026-08-14T05:44:47.482Z",
     "dataWindow": {
       "start": "2026-08-01",
       "end": "2026-08-14"
@@ -379,15 +379,15 @@
       },
       {
         "date": "20260813",
-        "homepage": 523,
-        "agenticNetOps": 16,
-        "gartner": 12,
+        "homepage": 567,
+        "agenticNetOps": 21,
+        "gartner": 14,
         "ciscoLive": 3,
-        "requestDemo": 14
+        "requestDemo": 23
       },
       {
         "date": "20260814",
-        "homepage": 0,
+        "homepage": 3,
         "agenticNetOps": 0,
         "gartner": 0,
         "ciscoLive": 0,
@@ -395,11 +395,11 @@
       }
     ],
     "totals": {
-      "homepage": 4124,
-      "agenticNetOps": 203,
-      "gartner": 80,
+      "homepage": 4171,
+      "agenticNetOps": 208,
+      "gartner": 82,
       "ciscoLive": 26,
-      "requestDemo": 253
+      "requestDemo": 262
     }
   },
   "search": {
@@ -1658,7 +1658,7 @@
         "linkClicks": 0
       }
     },
-    "fetchedAt": "2026-08-14T01:44:49.117Z"
+    "fetchedAt": "2026-08-14T05:44:48.853Z"
   },
   "social": {
     "fetchedAt": "2026-08-13T12:00:46.986Z",
